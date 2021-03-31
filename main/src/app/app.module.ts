@@ -37,6 +37,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
+import { CustomerComponent } from './customer/customer.component';
+import { LoginComponent } from './login/login.component';
+
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -64,7 +68,13 @@ const icons = {
     BreadcrumbComponent,
     VerticalSidebarComponent,
     HorizontalNavigationComponent,
-    HorizontalSidebarComponent
+    HorizontalSidebarComponent,
+    
+    CustomerComponent,
+    
+    LoginComponent,
+    
+    
   ],
   imports: [
     CommonModule,

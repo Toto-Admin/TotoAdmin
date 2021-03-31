@@ -12,6 +12,16 @@ export const ROUTES: RouteInfo[] = [
         submenu: []
     },
     {
+        path: '/customer',
+        title: 'Customer',
+        icon: 'mdi mdi-dots-horizontal',
+        class: 'nav-small-cap',
+        extralink: true,
+        label: 'Customer',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: []
+    },
+    {
         path: 'dashboard',
         title: 'Dashboards',
         icon: 'Home',

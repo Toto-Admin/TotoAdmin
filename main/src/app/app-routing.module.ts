@@ -3,13 +3,22 @@ import { Routes } from '@angular/router';
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
+import { LoginComponent } from './login/login.component';
 
 export const Approutes: Routes = [
     {
         path: '',
         component: FullComponent,
         children: [
-            { path: '', redirectTo: '/dashboard/classic', pathMatch: 'full' },
+            { path: '', redirectTo: '/login', pathMatch: 'full' },
+            {
+                path:'login',component:
+            }
+            {
+                path: 'customer',
+                loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule)
+            },
+            
             {
                 path: 'dashboard',
                 loadChildren: () => import('./dashboards/dashboard.module').then(m => m.DashboardModule)
@@ -65,5 +74,6 @@ export const Approutes: Routes = [
     {
         path: '**',
         redirectTo: '/authentication/404'
-    }
+    },
+   
 ];
