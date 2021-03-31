@@ -7,13 +7,17 @@ import { LoginComponent } from './login/login.component';
 
 export const Approutes: Routes = [
     {
-        path: '',
+        path:'',
+        component:LoginComponent,
+        children : [
+            { path: 'login', redirectTo: '/login', pathMatch: 'full' },
+        ]
+    },
+    {
+        path: 'dashboard',
         component: FullComponent,
         children: [
-            { path: '', redirectTo: '/login', pathMatch: 'full' },
-            {
-                path:'login',component:
-            }
+            
             {
                 path: 'customer',
                 loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule)

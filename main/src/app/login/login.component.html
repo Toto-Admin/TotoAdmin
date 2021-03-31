@@ -1,7 +1,6 @@
-<p>login works!</p>
 <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(assets/images/background/login-register.jpg) no-repeat center center;">
     <div class="auth-box m-3 m-md-0">
-        <div id="loginform" [ngClass]="{'d-none': recoverform}">
+        <div >
             <div class="logo">
                 <span class="db"><img src="assets/images/logo-icon.png" alt="logo" /></span>
                 <h5 class="font-medium m-b-20">Sign In to Admin</h5>
@@ -33,7 +32,7 @@
                         </div>
                         <div class="form-group text-center">
                             <div class="col-xs-12 p-b-20">
-                                <a class="btn btn-block btn-lg btn-info" href="/dashboard/dashboard1">Log In</a>
+                                <a class="btn btn-block btn-lg btn-info" href="javascript:void(0)" (click)="logincheck()">Log In</a>
                             </div>
                         </div>
                         <div class="row">
@@ -71,7 +70,7 @@
                     <!-- pwd -->
                     <div class="row m-t-20">
                         <div class="col-12">
-                            <button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Reset</button>
+                            <button class="btn btn-block btn-lg btn-danger" type="submit"  name="action">Reset</button>
                         </div>
                     </div>
                 </form>
