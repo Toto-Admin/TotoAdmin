@@ -1,33 +1,403 @@
 import { RouteInfo } from './vertical-sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
+    // {
+    //     path: '',
+    //     title: 'Personal',
+    //     icon: 'mdi mdi-dots-horizontal',
+    //     class: 'nav-small-cap',
+    //     extralink: true,
+    //     label: '',
+    //     labelClass: '',
+    //     submenu: []
+    // },
     {
-        path: '',
-        title: 'Personal',
-        icon: 'mdi mdi-dots-horizontal',
-        class: 'nav-small-cap',
-        extralink: true,
+        path: 'dashboard',
+        title: 'Dashboard',
+        icon: 'mail',
+        class: '',
+        extralink: false,
         label: '',
         labelClass: '',
         submenu: []
+
     },
     {
-        path: '/customer',
+        path: 'dashboard',
         title: 'Customer',
-        icon: 'mdi mdi-dots-horizontal',
-        class: 'nav-small-cap',
-        extralink: true,
-        label: 'Customer',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
         labelClass: 'badge badge-info sidebar-badge',
-        submenu: []
+        submenu: [
+            {
+                path: '/dashboard/classic',
+                title: 'Dashboard',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Customer List',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+           
+          
+        
+        ]
     },
+   
+    {
+        path: 'dashboard',
+        title: 'Provider',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu:[
+
+            {
+                path: '/dashboard/analytical',
+                title: 'Dashboard',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Provider List',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Assessment',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+
+        ]
+    },
+    {
+        path: 'dashboard',
+        title: 'Jobs',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: [
+            {
+                path: '/dashboard/analytical',
+                title: 'Dashboard',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Task Mangement',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Job Rating',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Unhappy with Provider',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+        ]
+    },
+    {
+        path: 'dashboard',
+        title: 'Payments',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: [
+            {
+                path: '/dashboard/classic',
+                title: 'Dashboard',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Payment Details',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+           
+          
+        
+        ]
+    },
+    {
+        path: 'dashboard',
+        title: 'Mobile Apps',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: [
+            {
+                path: '/dashboard/classic',
+                title: 'FAQ',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Mobile Content',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Knowledge',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Reasons',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Transport',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+          
+        
+        ]
+    },{
+        path: 'dashboard',
+        title: 'Master',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: [
+            {
+                path: '/dashboard/classic',
+                title: 'Services',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Categories',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+           
+          
+        
+        ]
+    },
+    {
+        path: 'dashboard',
+        title: 'Marketing',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: [
+            {
+                path: '/dashboard/classic',
+                title: 'Promo code',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Rewards',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Report',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+           
+          
+        
+        ]
+    },
+    {
+        path: 'dashboard',
+        title: 'Setting',
+        icon: 'Home',
+        class: 'has-arrow',
+        extralink: false,
+        label: '',
+        labelClass: 'badge badge-info sidebar-badge',
+        submenu: [
+            {
+                path: '/dashboard/classic',
+                title: 'General Setting',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Email Template',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Referral ',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'Notification Template',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/dashboard/analytical',
+                title: 'User and permission',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+          
+        
+        ]
+    },
+
+
+   
     {
         path: 'dashboard',
         title: 'Dashboards',
         icon: 'Home',
         class: 'has-arrow',
         extralink: false,
-        label: '10',
+        label: '',
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {

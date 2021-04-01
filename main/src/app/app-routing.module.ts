@@ -4,14 +4,21 @@ import { Routes } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { LoginComponent } from './login/login.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 export const Approutes: Routes = [
+   
     {
         path:'',
         component:LoginComponent,
         children : [
-            { path: 'login', redirectTo: '/login', pathMatch: 'full' },
+            // { path: 'login', redirectTo: '/login', pathMatch: 'full' },
+           
         ]
+    },
+    {
+        path:'login',
+        component:LoginComponent,
     },
     {
         path: 'dashboard',

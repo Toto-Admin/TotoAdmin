@@ -11,10 +11,7 @@ export const AuthenticationRoutes: Routes = [
   {
     path: '',
     children: [
-      {
-        path: '404',
-        component: NotfoundComponent
-      },
+     
       {
         path: 'lock',
         component: LockComponent
@@ -23,10 +20,7 @@ export const AuthenticationRoutes: Routes = [
         path: 'login',
         component: LoginComponent
       },
-      {
-        path: 'login2',
-        component: Login2Component
-      },
+     
       {
         path: 'signup',
         component: SignupComponent
@@ -34,7 +28,11 @@ export const AuthenticationRoutes: Routes = [
       {
         path: 'signup2',
         component: Signup2Component
-      }
+      } ,
+      {
+        path: '404',
+        component: NotfoundComponent
+      },
     ]
   }
 ];

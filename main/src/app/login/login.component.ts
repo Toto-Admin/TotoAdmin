@@ -13,14 +13,23 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  loginform = true;
+  recoverform = false;
+
+  showRecoverForm() {
+    this.loginform = !this.loginform;
+    this.recoverform = !this.recoverform;
+  }
    username = 'admin'; 
   password = '1234'; 
 
 
       logincheck()
       {  
-        debugger
+       
+       
           this.router.navigate(['/dashboard/customer']);
+        
       }
     
   }
