@@ -16,7 +16,7 @@ export const DashboardRoutes: Routes = [
     path: '',
     children: [
       {
-        path: 'classic',
+        path: '',
         component: Dashboard1Component,
         data: {
           title: 'Classic Dashboard',

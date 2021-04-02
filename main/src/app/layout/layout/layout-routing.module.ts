@@ -8,7 +8,7 @@ const routes: Routes = [
   component: FullComponent,
   children: [
     {
-      path: 'dashboard', loadChildren: () => import('../../dashboards/dashboard.module').then(m => m.DashboardModule)
+      path: 'dashboard', loadChildren: () => import('../../Main/dashboard/dashboard.module').then(m => m.DashboardModule)
     },
     {
       path: 'customer', loadChildren: () => import('../../customer/customer.module').then(m => m.CustomerModule)
@@ -16,9 +16,6 @@ const routes: Routes = [
 
   ]
 },
-  // {
-  //     path: 'admin-users', loadChildren: 'app/main/admin-users/admin-users.module#AdminUsersModule'
-  // },
 ];
 
 @NgModule({
