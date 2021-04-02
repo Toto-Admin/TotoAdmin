@@ -26,10 +26,7 @@ export class LoginComponent implements OnInit {
 
       logincheck()
       {  
-       
-       
-          this.router.navigate(['/dashboard/customer']);
-        
+          this.router.navigate(['/dashboard']);
       }
     
   }
