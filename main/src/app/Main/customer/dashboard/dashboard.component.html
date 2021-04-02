@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-lg-3">
+        <div class="card  card-hover">
+            <div class="card-body">
+                <h4 class="card-title">Active Users</h4>
+                <div class="d-flex no-block align-items-center m-t-30">
+                    <div class="">
+                        <h3 class="font-medium m-b-0">50</h3>
+                         <span class="total">Total Active User</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card  card-hover">
+            <div class="card-body">
+                <h4 class="card-title">Inactive Users</h4>
+                <div class="d-flex no-block align-items-center m-t-30">
+                    <div class="">
+                        <h3 class="font-medium m-b-0">10</h3>
+                         <span class="total">Total Inactive User</span> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card  card-hover">
+            <div class="card-body">
+                <h4 class="card-title">Block Users</h4>
+                <div class="d-flex no-block align-items-center m-t-30">
+                    <div class="">
+                        <h3 class="font-medium m-b-0">24</h3>
+                        <span class="total">total Block Users</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card  card-hover">
+            <div class="card-body">
+                <h4 class="card-title">Total User</h4>
+                <div class="d-flex no-block align-items-center m-t-30">
+                    <div class="">
+                        <h3 class="font-medium m-b-0">56</h3>
+                        <span class="total">Total Bounce</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Product Sales</h4>
+        <h5 class="card-subtitle">Total Earnings of the Month</h5>
+        <div class="d-flex flex-column">
+            <apx-chart [series]="productsalesChartOptions.series" [chart]="productsalesChartOptions.chart"
+                [dataLabels]="productsalesChartOptions.dataLabels" [legend]="productsalesChartOptions.legends"
+                [colors]="productsalesChartOptions.colors" [stroke]="productsalesChartOptions.stroke"
+                [labels]="productsalesChartOptions.labels" [tooltip]="productsalesChartOptions.tooltip"
+                [plotOptions]="productsalesChartOptions.plotOptions" [xaxis]="productsalesChartOptions.xaxis"
+                [yaxis]="productsalesChartOptions.yaxis" [fill]="productsalesChartOptions.fill"></apx-chart>
+        </div>
+    </div>
+</div>

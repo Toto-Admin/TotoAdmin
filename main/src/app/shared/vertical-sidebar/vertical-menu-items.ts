@@ -23,7 +23,7 @@ export const ROUTES: RouteInfo[] = [
 
     },
     {
-        path: 'dashboard',
+        path: 'customer',
         title: 'Customer',
         icon: 'fas fa-users',
         class: 'has-arrow',
@@ -32,7 +32,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/classic',
+                path: '/customer/dashboard/',
                 title: 'Dashboard',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -42,7 +42,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/customer/customer-list',
                 title: 'Customer List',
                 icon: 'mdi mdi-adjust',
                 class: '',
