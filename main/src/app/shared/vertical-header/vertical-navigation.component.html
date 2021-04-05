@@ -12,7 +12,7 @@
     <!-- mega menu -->
     <!-- ============================================================== -->
     <li class="nav-item mega-dropdown" ngbDropdown [autoClose]="false">
-        <a ngbDropdownToggle class="nav-link waves-effect waves-dark" href="javascript:void(0)" data-toggle="dropdown"
+        <!-- <a ngbDropdownToggle class="nav-link waves-effect waves-dark" href="javascript:void(0)" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             <span class="d-none d-md-block">Mega
                 <i class="fa fa-angle-down"></i>
@@ -20,7 +20,7 @@
             <span class="d-block d-md-none">
                 <i class="mdi mdi-dialpad font-24"></i>
             </span>
-        </a>
+        </a> -->
         <div class="dropdown-menu" ngbDropdownMenu>
             <div class="mega-dropdown-menu row">
                 <div class="col-lg-3 col-xlg-2 m-b-30">
@@ -128,7 +128,7 @@
     <!-- create new -->
     <!-- ============================================================== -->
     <li class="nav-item dropdown" ngbDropdown>
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
+        <!-- <a ngbDropdownToggle class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="d-none d-md-block">Create New
                 <i class="fa fa-angle-down"></i>
@@ -136,7 +136,7 @@
             <span class="d-block d-md-none">
                 <i class="fa fa-plus"></i>
             </span>
-        </a>
+        </a> -->
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" ngbDropdownMenu>
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
@@ -162,15 +162,16 @@
 <!-- ============================================================== -->
 <!-- Right side toggle and nav items -->
 <!-- ============================================================== -->
-<ul class="navbar-nav float-right">
+<ul class="navbar-nav float-right" style="margin-left: 75%;
+position: absolute;">
     <!-- ============================================================== -->
     <!-- create new -->
     <!-- ============================================================== -->
     <li class="nav-item dropdown" ngbDropdown placement="bottom-right">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
+        <!-- <a ngbDropdownToggle class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="flag-icon flag-icon-{{selectedLanguage.icon}}"></i>
-        </a>
+        </a> -->
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" ngbDropdownMenu>
             <span class="dropdown-item" href="#" *ngFor="let lang of languages" (click)="changeLanguage(lang)">
 
@@ -241,11 +242,11 @@
     <!-- Messages -->
     <!-- ============================================================== -->
     <li class="nav-item dropdown" ngbDropdown placement="bottom-right">
-        <a ngbDropdownToggle class="nav-link dropdown-toggle waves-effect waves-dark" href="javascript:void(0)" id="2"
+        <!-- <a ngbDropdownToggle class="nav-link dropdown-toggle waves-effect waves-dark" href="javascript:void(0)" id="2"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="font-24 mdi mdi-comment-processing"></i>
 
-        </a>
+        </a> -->
         <div class="dropdown-menu dropdown-menu-right mailbox" aria-labelledby="2" ngbDropdownMenu>
             <span class="with-arrow">
                 <span class="bg-danger"></span>
