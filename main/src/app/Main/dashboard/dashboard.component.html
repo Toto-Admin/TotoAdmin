@@ -241,3 +241,519 @@
     </div>
     
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-hover">
+            <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Jobs Booked</h4>
+                        <h5 class="card-subtitle">Jobs Booked By Category</h5>
+                    </div>
+                    <div class="ml-auto align-items-center">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+                <div class="row my-4 py-2">
+                    <!-- column -->
+                    <div class="col-lg-6">
+                        <div class="m-b-20 d-flex align-items-center flex-column">
+                            <apx-chart [series]="mEmailChartOptions.series" [chart]="mEmailChartOptions.chart"
+                                [dataLabels]="mEmailChartOptions.dataLabels" [legend]="mEmailChartOptions.legends"
+                                [colors]="mEmailChartOptions.colors" [stroke]="mEmailChartOptions.stroke"
+                                [labels]="mEmailChartOptions.labels" [tooltip]="mEmailChartOptions.tooltip"
+                                [plotOptions]="mEmailChartOptions.plotOptions"></apx-chart>
+                        </div>
+                    </div>
+                    <!-- column -->
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Total Jobs</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>345</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Total Services</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>7</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-hover">
+            <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Contractor Distribution</h4>
+                        <h5 class="card-subtitle">Contractor Distribution Rate Wise Details</h5>
+                    </div>
+                    <div class="ml-auto align-items-center">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+                <div class="row my-4 py-2">
+                    <!-- column -->
+                    <div class="col-lg-12">
+                        <div class="m-b-20 d-flex align-items-center flex-column">
+                            <apx-chart [series]="mEmailChartOptions1.series" [chart]="mEmailChartOptions1.chart"
+                                [dataLabels]="mEmailChartOptions1.dataLabels" [legend]="mEmailChartOptions1.legends"
+                                [colors]="mEmailChartOptions1.colors" [stroke]="mEmailChartOptions1.stroke"
+                                [labels]="mEmailChartOptions1.labels" [tooltip]="mEmailChartOptions1.tooltip"
+                                [plotOptions]="mEmailChartOptions1.plotOptions"></apx-chart>
+                        </div>
+                    </div>
+                   
+                </div>
+                <!-- column -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-hover">
+            <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Service Sales Performance</h4>
+                        <h5 class="card-subtitle">Service wise sales Performance details</h5>
+                    </div>
+                    <div class="ml-auto align-items-center">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- column -->
+                <div class="row my-4 py-2">
+                    <!-- column -->
+                    <div class="col-lg-12">
+                        <div class="m-b-20 d-flex align-items-center flex-column">
+                            <apx-chart [series]="mEmailChartOptions2.series" [chart]="mEmailChartOptions2.chart"
+                                [dataLabels]="mEmailChartOptions2.dataLabels" [legend]="mEmailChartOptions2.legends"
+                                [colors]="mEmailChartOptions2.colors" [stroke]="mEmailChartOptions2.stroke"
+                                [labels]="mEmailChartOptions2.labels" [tooltip]="mEmailChartOptions2.tooltip"
+                                [plotOptions]="mEmailChartOptions2.plotOptions"></apx-chart>
+                        </div>
+                    </div>
+                    <!-- column -->
+                    <!-- <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Total Jobs</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>345</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Total Services</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>7</h4>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- column -->
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-4">
+        <div class="card card-hover">
+            <div class="card-body" style="max-height: 440px;overflow: auto;">
+                <h4 class="card-title">Schedule</h4>
+                <div class="feed-widget" [perfectScrollbar]="config">
+                    <ul class="list-style-none feed-body m-0 p-b-20">
+                        <li class="feed-item">
+                            <div class="feed-icon bg-info">
+                                <i class="far fa-bell"></i>
+                            </div> Connectivity
+                            <span class="ml-auto font-12 text-muted">34</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-success">
+                                <i class="ti-server"></i>
+                            </div> Stove Repair Service
+                            <span class="ml-auto font-12 text-muted">254</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-warning">
+                                <i class="ti-shopping-cart"></i>
+                            </div> TV
+                            <span class="ml-auto font-12 text-muted">23</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-danger">
+                                <i class="ti-user"></i>
+                            </div> Mobile Hardware
+                            <span class="ml-auto font-12 text-muted">39</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-inverse">
+                                <i class="far fa-bell"></i>
+                            </div> New Network Setup
+                            <span class="ml-auto font-12 text-muted">274</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-info">
+                                <i class="far fa-bell"></i>
+                            </div> ISP
+                            <span class="ml-auto font-12 text-muted">1290</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-danger">
+                                <i class="ti-user"></i>
+                            </div> Poor WIFI Coverage
+                            <span class="ml-auto font-12 text-muted">30</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-danger">
+                                <i class="ti-user"></i>
+                            </div> Voice Modulation
+                            <span class="ml-auto font-12 text-muted">302</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- title -->
+                <div class="d-flex align-items-center m-b-40">
+                    <div>
+                        <h4 class="card-title">Sales Performance</h4>
+                        <h5 class="card-subtitle">Overview of Latest Month</h5>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- title -->
+                <div class=" d-flex flex-column">
+                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                        [yaxis]="chartOptions.yaxis" [grid]="chartOptions.grid" [stroke]="chartOptions.stroke"
+                        [tooltip]="chartOptions.tooltip" [dataLabels]="chartOptions.dataLabels"
+                        [legend]="chartOptions.legend" [colors]="chartOptions.colors" [markers]="chartOptions.markers">
+                    </apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- title -->
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Most Recent Booking</h4>
+                        <h5 class="card-subtitle">Overview of Most Recent Booking</h5>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- title -->
+            </div>
+            <div class="table-responsive">
+                <table class="table v-middle">
+                    <thead>
+                        <tr class="bg-light">
+                            <th class="border-top-0">Services</th>
+                            <th class="border-top-0">Title</th>
+                            <th class="border-top-0">Status</th>
+                            <th class="border-top-0">User name</th>
+                            <th class="border-top-0">Provider Name</th>
+                            <th class="border-top-0">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">New Network Setup</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>On-site</td>
+                            <td><label class="label label-success">Done</label></td>
+                            
+                            <td>Sam</td>
+                            <td>Jenny</td>
+                            <td>View</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">ISP</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>On-site</td>
+                            <td><label class="label label-warning">Draft</label></td>
+                            
+                            <td>Mark Wood</td>
+                            <td>Jenny</td>
+                            <td>View</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">Connectivity</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Remote</td>
+                            <td><label class="label label-success">Done</label></td>
+                            
+                            <td>Sam</td>
+                            <td>Ram Shekhar Jadhav</td>
+                            <td>View</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">New Network Setup</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Remote</td>
+                            <td><label class="label label-success">Done</label></td>
+                            
+                            <td>Jenny</td>
+                            <td>Tom</td>
+                            <td>View</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">New Network Conncection</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>On-site</td>
+                            <td><label class="label label-danger">Cancel</label></td>
+                            
+                            <td>Sam</td>
+                            <td>Jenny</td>
+                            <td>View</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">New Network Setup</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>On-site</td>
+                            <td><label class="label label-success">Done</label></td>
+                            
+                            <td>Sam</td>
+                            <td>Jenny</td>
+                            <td>View</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- title -->
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Top Selling Products</h4>
+                        <h5 class="card-subtitle">Overview of Top Selling Items</h5>
+                    </div>
+                    <div class="ml-auto">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- title -->
+            </div>
+            <div class="table-responsive">
+                <table class="table v-middle">
+                    <thead>
+                        <tr class="bg-light">
+                            <th class="border-top-0">Products</th>
+                            <th class="border-top-0">License</th>
+                            <th class="border-top-0">Support Agent</th>
+                            <th class="border-top-0">Technology</th>
+                            <th class="border-top-0">Tickets</th>
+                            <th class="border-top-0">Sales</th>
+                            <th class="border-top-0">Earnings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="m-r-10">
+                                        <a class="btn btn-circle d-flex btn-info text-white">EA</a>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">Elite Admin</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Single Use</td>
+                            <td>John Doe</td>
+                            <td>
+                                <label class="label label-danger">Angular</label>
+                            </td>
+                            <td>46</td>
+                            <td>356</td>
+                            <td>
+                                <h5 class="m-b-0">$2850.06</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="m-r-10">
+                                        <a class="btn btn-circle d-flex btn-orange text-white">MA</a>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">Monster Admin</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Single Use</td>
+                            <td>Venessa Fern</td>
+                            <td>
+                                <label class="label label-info">Vue Js</label>
+                            </td>
+                            <td>46</td>
+                            <td>356</td>
+                            <td>
+                                <h5 class="m-b-0">$2850.06</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="m-r-10">
+                                        <a class="btn btn-circle d-flex btn-success text-white">MP</a>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">Material Pro Admin</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Single Use</td>
+                            <td>John Doe</td>
+                            <td>
+                                <label class="label label-success">Bootstrap</label>
+                            </td>
+                            <td>46</td>
+                            <td>356</td>
+                            <td>
+                                <h5 class="m-b-0">$2850.06</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="m-r-10">
+                                        <a class="btn btn-circle d-flex btn-purple text-white">AA</a>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="m-b-0 font-16">Ample Admin</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Single Use</td>
+                            <td>John Doe</td>
+                            <td>
+                                <label class="label label-purple">React</label>
+                            </td>
+                            <td>46</td>
+                            <td>356</td>
+                            <td>
+                                <h5 class="m-b-0">$2850.06</h5>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
