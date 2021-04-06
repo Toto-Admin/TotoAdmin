@@ -88,7 +88,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/provider/assessment',
                 title: 'Assessment',
                 icon: 'mdi mdi-adjust',
                 class: '',
