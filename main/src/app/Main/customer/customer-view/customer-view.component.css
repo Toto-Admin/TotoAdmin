@@ -3,3 +3,7 @@
     height: 350px;
     display: flex;
   }
+
+  .checked {
+    color: orange;
+  }
