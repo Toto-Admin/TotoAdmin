@@ -58,7 +58,7 @@ export const ROUTES: RouteInfo[] = [
     },
    
     {
-        path: 'dashboard',
+        path: 'provider',
         title: 'Provider',
         icon: 'fas fa-users',
         class: 'has-arrow',
@@ -68,7 +68,7 @@ export const ROUTES: RouteInfo[] = [
         submenu:[
 
             {
-                path: '/dashboard/analytical',
+                path: '/provider/dashboard',
                 title: 'Dashboard',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -78,7 +78,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/provider/provider-list',
                 title: 'Provider List',
                 icon: 'mdi mdi-adjust',
                 class: '',
