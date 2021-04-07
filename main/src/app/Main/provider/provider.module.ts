@@ -9,12 +9,14 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgApexchartsModule } from "ng-apexcharts";
 
 import { ProviderListComponent } from './provider-list/provider-list.component';
-
+import { ProviderViewComponent } from './provider-view/provider-view.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
-  declarations: [DashboardComponent,  ProviderListComponent],
+  declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent],
   imports: [
     CommonModule,
+    AgmCoreModule,
     ProviderRoutingModule,
     ChartsModule,
     ChartistModule,

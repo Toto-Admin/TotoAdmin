@@ -4,8 +4,10 @@
         <h4 class="card-title">Customer List</h4>
         <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5>
         <div class="d-flex mb-3 mt-3">
-          <input type="text" class="form-control w-25" placeholder="Search by Name or Email" [(ngModel)]='searchTerm'>
-          <button class="btn btn-primary ml-auto" (click)="openModal(editUserModal, null)">Add User</button>
+          <input type="text" class="form-control w-25" placeholder="Search by Name or Email">
+          <button class="btn btn-primary ml-auto" >Add User</button>
+          <!-- [(ngModel)]='searchTerm'
+          (click)="openModal(editUserModal, null)" -->
         </div>
         <div class="table-responsive table-bordered">
           <table class="table table-striped mb-0 no-wrap v-middle">
@@ -97,9 +99,9 @@
             </tbody>
           </table>
         </div>
-        <div class="d-flex justify-content-center mt-5">
+        <!-- <div class="d-flex justify-content-center mt-5">
           <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
