@@ -15,6 +15,9 @@ const routes: Routes = [
     },
     { 
       path:'provider',loadChildren:() => import('../../Main/provider/provider.module').then(m =>m.ProviderModule)
+     },
+     {
+      path:'assessment',loadChildren:()=> import('../../Main/assessment/assessment.module').then(m=>m.AssessmentModule)
      }
   ]
 },

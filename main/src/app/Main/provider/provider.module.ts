@@ -11,6 +11,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
 import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderViewComponent } from './provider-view/provider-view.component';
 import { AgmCoreModule } from '@agm/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent],
@@ -21,7 +22,8 @@ import { AgmCoreModule } from '@agm/core';
     ChartsModule,
     ChartistModule,
     NgxChartsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    NgbModule
    
  
    

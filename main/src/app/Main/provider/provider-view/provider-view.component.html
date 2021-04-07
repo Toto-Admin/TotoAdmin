@@ -105,3 +105,70 @@
         </div>
     </div>
 </div>
+<!-- Contractor tabs -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Basic Nav</h4>
+                <h6 class="card-subtitle">This is basic Default pagination</h6>
+
+
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>Document</a>
+                        <ng-template ngbNavContent>
+                            <!-- <h3>General</h3>
+                            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan
+                                four loko
+                               </p>
+  -->
+                            <app-provider-list></app-provider-list>
+                        </ng-template>
+                    </li>
+                  
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Performance & Skills</a>
+                        <ng-template ngbNavContent>
+                            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan
+                                four loko
+                               </p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink="/provider-list">Availability</a>
+                        <ng-template ngbNavContent>
+                            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id
+                                diam. Nulla facilisi.
+                                .</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>Task History</a>
+                        <ng-template ngbNavContent>
+                            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id
+                                diam. Nulla facilisi.
+                                .</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="5">
+                        <a ngbNavLink>Review And Rating</a>
+                        <ng-template ngbNavContent>
+                            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id
+                                diam. Nulla facilisi.
+                                .</p>
+                        </ng-template>
+                    </li>
+                   
+                </ul>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
