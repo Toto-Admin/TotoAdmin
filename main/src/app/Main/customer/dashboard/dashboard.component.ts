@@ -82,7 +82,73 @@ export class DashboardComponent  {
   @ViewChild('chart') chart1: ChartComponent = Object.create(null);
   public mEmailChartOptions1: Partial<mEmailChartOptions>;
 
+  
+  @ViewChild("chart") chart4: ChartComponent = Object.create(null);
+  public chartOptions!: Partial<ChartOptions>;
+  
   constructor() {
+    this.chartOptions = {
+      series: [
+        {
+          name: 'Sales Performance',
+          data: [30, 400, 100, 400, 150, 275, 135, 200, 218]
+        },
+        
+      ],
+      chart: {
+        fontFamily: 'Nunito Sans,sans-serif',
+        height: 350,
+        type: 'area',
+        toolbar: {
+          show: false
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      markers: {
+        size: 3,
+        strokeColors: "transparent"
+      },
+      stroke: {
+        curve: 'smooth',
+        width: '2',
+      },
+      colors: ['#2962ff'],
+      legend: {
+        show: false,
+      },
+      fill: {
+        opacity: 0.7
+      },
+      grid: {
+        show: true,
+        strokeDashArray: 0,
+        borderColor: 'rgba(0,0,0,0.1)',
+      },
+      xaxis: {
+        type: 'category',
+        categories: [
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct'
+        ],
+        labels: {
+          style: {
+            colors: '#a1aab2'
+          }
+        }
+      },
+      tooltip: {
+        theme: 'dark'
+      }
+    };
     this.CampaignStatsChartOptions = {
       series: [{
         name: 'Ac service',

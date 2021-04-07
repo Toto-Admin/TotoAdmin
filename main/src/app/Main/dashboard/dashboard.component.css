@@ -1,0 +1,14 @@
+.feed-widget {
+    height: 370px;
+    position: relative;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+    touch-action: auto;
+  }
+  /* .ps {
+    overflow: hidden !important;
+    overflow-anchor: none;
+    -ms-overflow-style: none;
+    touch-action: auto;
+    -ms-touch-action: auto;
+} */

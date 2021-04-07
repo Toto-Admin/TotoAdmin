@@ -1,5 +1,7 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { User } from '../user';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-customer-view',
   templateUrl: './customer-view.component.html',
@@ -47,9 +49,42 @@ export class CustomerViewComponent implements OnInit {
       ]
     }
   ];
-  constructor() { }
+
+
+
+  config: any;
+  // editUser: FormGroup | null = null;
+  userDetail: User | null = null;
+
+  filterArray: User[] | null = null;
+
+  joiningDate: string | null = null;
+  editUser: FormGroup | null = null;
+  formsErrors = [];
+  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    this.editUser = this.fb.group({
+      id: [''],
+      Name: ['', Validators.required],
+      Position: ['', Validators.required],
+      Email: ['', Validators.required],
+      Mobile: ['', Validators.required],
+      DateOfJoining: ['', Validators.required],
+      Salary: ['', Validators.required],
+      Projects: ['', Validators.required],
+  });
   }
 
+
+  openModal(targetModal: NgbModal, user: User | null) {
+    this.modalService.open(targetModal, {
+        centered: true,
+        backdrop: 'static'
+    });
+  }
+  closeBtnClick() {
+    this.modalService.dismissAll();
+    this.ngOnInit();
+  }
 }
