@@ -24,9 +24,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgxChartsModule,
     NgApexchartsModule,
     NgbModule
-   
- 
-   
   ]
 })
 export class ProviderModule { }

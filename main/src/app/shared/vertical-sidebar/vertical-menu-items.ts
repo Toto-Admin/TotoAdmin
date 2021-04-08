@@ -110,7 +110,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/analytical',
+                path: '/jobs/dashboard',
                 title: 'Dashboard',
                 icon: 'mdi mdi-adjust',
                 class: '',

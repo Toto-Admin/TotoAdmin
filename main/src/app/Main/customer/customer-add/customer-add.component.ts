@@ -9,7 +9,15 @@ export class CustomerAddComponent implements OnInit {
 
   constructor() { }
 
+  dtOptions: DataTables.Settings = {};
+
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength : 5,
+      lengthMenu : [5,15,25],
+      processing : true
+    };
   }
 
 }

@@ -1,117 +1,182 @@
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Customer List</h4>
+        <h4 class="card-title">Customer List<span style="float: right;"><button class="btn btn-primary ml-auto" (click)="openModal(editUserModal, null)">Add Customer</button></span></h4>
         <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5>
         <div class="d-flex mb-3 mt-3">
-          <input type="text" class="form-control w-25" placeholder="Search by Name or Email">
+          <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
           <!-- (click)="openModal(editUserModal, null)" -->
-          <button class="btn btn-primary ml-auto" (click)="openModal(editUserModal, null)">Add User</button>
+          
         </div>
-        <div class="table-responsive table-bordered">
-          <table class="table table-striped mb-0 no-wrap v-middle">
-            <thead>
-              <tr>
-                <th class="text-center" scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Status</th>
-                
-                <!-- <th scope="col">Action</th> -->
-              </tr>
-            </thead>
-            <tbody>
-              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-  
-                <td class="text-center">
-                  {{user.id}}
-                </td>
-  
-                <td>
-                  <div class="d-flex align-items-center">
-                    <img class="rounded-circle" [src]='user.imagePath' height=" 50px" width="50px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0">{{ user.Name }}</p>
-                      <small>{{user.Position}}</small>
-                    </div>
-                  </div>
-                </td>
-                <td>{{ user.Email }}</td>
-  
-                <td>{{ user.Mobile }}</td>
-                <td>{{ user.DateOfJoining |date :'fullDate' }}</td>
-  
-                <td>{{ user.Salary }}</td>
-                <td>{{ user.Projects }}</td>
-                <td>
-                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
-                    placement="top" ngbTooltip="Edit">
-                    <i-feather name="edit-2" class="feather-sm"></i-feather>
-                  </a>
-                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
-                    ngbTooltip="Delete">
-                    <i-feather name="trash-2" class="feather-sm"></i-feather>
-                  </a>
-                </td>
-              </tr> -->
-              <tr>
-                  <td>1</td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
-                      <div class="ml-3">
-                        <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ajit Sutar</a></p>
-                      </div>
-                    </div>
-                    
-                  </td>
-                  <td>ajitsutar@gmail.com</td>
-                  <td>9090909090</td>
-                  <td>Active</td>
-                  
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><div class="d-flex align-items-center">
-                  <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 50px" width="50px">
-                  <div class="ml-3">
-                    <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sujit Powar</a></p>
-                  </div>
-                </div></td>
-                <td>sujitpatil@gmail.com</td>
-                <td>8976896754</td>
-                <td>Inactive</td>
-                
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><div class="d-flex align-items-center">
-                  <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 50px" width="50px">
-                  <div class="ml-3">
-                    <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                  </div>
-                </div></td>
-                <td>prakashmohite@gmail.com</td>
-                <td>9654356789</td>
-                <td>Active</td>
-               
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><div class="d-flex align-items-center">
-                  <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 50px" width="50px">
-                  <div class="ml-3">
-                    <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sunil Jadhav</a></p>
-                  </div>
-                </div></td>
-                <td>sudhirpawar@gmail.com</td>
-                <td>8987656789</td>
-                <td>Active</td>
-                
-            </tr>
-            </tbody>
-          </table>
+        <div class="">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <div class="card card-hover">
+                <div class="card-body"> -->
+                  <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered">
+                    <thead style="background: #92adfc;">
+                      <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>MOBILE</th>
+                        <th>STATUS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>sushantpatil@gmail.com</td>
+                        <td>9898235323</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ashish Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>ashishpatil@gmail.com</td>
+                        <td>89342343543</td>
+                        <td>Active</td>
+          
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Pradhip Pawar</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sudhir Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>sudhirpawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>pradhippawar@gmail.com</td>
+                        <td>8459495933</td>
+                        <td>Inactive</td>
+                      </tr>
+                    </tbody>
+                  </table>  
+                <!-- </div>
+              </div> -->
+            </div>
+          </div>
+          
+          
         </div>
         <div class="d-flex justify-content-center mt-5">
           <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
@@ -228,3 +293,4 @@
       </form>
     </div>
   </ng-template>
+  

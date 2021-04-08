@@ -1,0 +1,7 @@
+.feed-widget {
+    height: 370px;
+    position: relative;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+    touch-action: auto;
+  }

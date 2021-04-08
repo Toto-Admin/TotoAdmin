@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DataTablesModule } from 'angular-datatables';
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -21,6 +22,8 @@ import { NgApexchartsModule } from "ng-apexcharts";
     CustomerRoutingModule,
     // RouterModule.forChild(CustomerRoutingModule)
     CustomerRoutingModule,
+    DataTablesModule,
+
     NgApexchartsModule
   ]
 })

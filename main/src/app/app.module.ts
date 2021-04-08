@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
-import { DataTablesModule } from 'angular-datatables';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ToastrModule } from 'ngx-toastr';
@@ -40,6 +39,7 @@ import { HttpClient } from '@angular/common/http';
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+// import { DashboardComponent } from './Main/jobs/dashboard/dashboard.component';
 
 
 
@@ -78,6 +78,7 @@ const icons = {
     ForgotPasswordComponent,
     
     
+    
   ],
   imports: [
     CommonModule,
@@ -87,7 +88,6 @@ const icons = {
     ToastrModule.forRoot(),
     FeatherModule.pick(icons),
     ReactiveFormsModule,
-    DataTablesModule,
     HttpClientModule,
     NgbModule,
     FeatherModule,

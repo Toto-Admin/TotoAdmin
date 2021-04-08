@@ -235,7 +235,7 @@ export class DashboardComponent  {
     };
 
     this.mEmailChartOptions = {
-      series: [71, 60, 65, 77,289,172,298],
+      series: [71, 60, 65, 77],
       chart: {
         fontFamily: 'Nunito Sans,sans-serif',
         type: 'donut',
@@ -278,8 +278,8 @@ export class DashboardComponent  {
       legends: {
         show: false,
       },
-      labels: [' AC Service', 'TV Repair Service', 'ISP','Poor Wifi Service','Mobile Hardware','Voice Modulation','Connectivity'],
-      colors: ['#40c4ff', '#2961ff', '#ff821c', '#7e74fb','#40c4ff', '#2961ff', '#ff821c'],
+      labels: [' AC Service', 'ISP','Poor Wifi Service','Mobile Hardware'],
+      colors: ['#40c4ff','#ff821c', '#7e74fb','#ff29a4'],
 
     };
 

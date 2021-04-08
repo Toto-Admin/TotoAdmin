@@ -5,14 +5,14 @@
             <div class="card-body">
                 <div class="d-flex align-items-center m-b-20">
                     <div>
-                        <h1 class="font-bold m-b-0">$6,890.68</h1>
-                        <span>Overview of total Earning</span>
+                        <h1 class="font-bold m-b-0">348</h1>
+                        <span>Overview of total task booking details</span>
                     </div>
                     <div class="ml-auto">
                         <i class="mdi mdi-wallet text-info display-5"></i>
                     </div>
                 </div>
-                <p>show earning graph service wise and compare to last and current month</p>
+                <p>Show Task Booking month wise</p>
                 <a href="javascript: void(0)" class="font-bold">Last Month Summary</a>
             </div>
             <div class="m-t-40 d-flex flex-column">
@@ -29,9 +29,9 @@
             <div class="col-sm-12 col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Active Customer</h4>
+                        <h4 class="card-title">Active Task Customer</h4>
                         <h4 class="font-bold m-t-20 m-b-10">1378</h4>
-                        <h5 class="card-subtitle m-b-0">Overview of total active customer</h5>
+                        <h5 class="card-subtitle m-b-0">Overview of total task active customer</h5>
                     </div>
                     <div class="text-center d-flex flex-column" style="height: 62px;">
                         <apx-chart [series]="totalvisitsChartOptions.series" [chart]="totalvisitsChartOptions.chart"
@@ -48,9 +48,9 @@
             <div class="col-sm-12 col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Active Provider</h4>
+                        <h4 class="card-title">Active Task Provider</h4>
                         <h4 class="font-bold m-t-20 m-b-10">356</h4>
-                        <h5 class="card-subtitle m-b-0">Overview of total active provider</h5>
+                        <h5 class="card-subtitle m-b-0">Overview of total active task provider</h5>
                     </div>
                     <div class="d-flex flex-column">
                         <apx-chart [series]="salesratioChartOptions.series" [chart]="salesratioChartOptions.chart"
@@ -74,26 +74,26 @@
                                 <h4 class="card-title">Jobs Status</h4>
                                 <h5 class="card-subtitle m-b-0">Overview of jobs status</h5>
                                 <div class="row m-t-20">
-                                    <div class="col-3 border-right">
+                                    <div class="col-4 border-right">
                                         <i class="fa fa-circle text-cyan"></i>
-                                        <h3 class="m-b-0 font-medium">548</h3>
-                                        <span>Jobs</span>
+                                        <h3 class="m-b-0 font-medium">90</h3>
+                                        <span>Completed</span>
                                     </div>
-                                    <div class="col-3 border-right">
+                                    <div class="col-4 border-right">
                                         <i class="fa fa-circle text-orange"></i>
-                                        <h3 class="m-b-0 font-medium">954</h3>
-                                        <span>Booked Session</span>
+                                        <h3 class="m-b-0 font-medium">54</h3>
+                                        <span>Dispute</span>
                                     </div>
-                                    <div class="col-3 border-right">
+                                    <div class="col-4 border-right">
                                         <i class="fa fa-circle text-info"></i>
                                         <h3 class="m-b-0 font-medium">36</h3>
-                                        <span>Dispute Raised</span>
+                                        <span>Cancelled</span>
                                     </div>
-                                    <div class="col-3">
+                                    <!-- <div class="col-3">
                                         <i class="fa fa-circle text-info"></i>
                                         <h3 class="m-b-0 font-medium">123</h3>
                                         <span>Transaction</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                           
@@ -354,181 +354,6 @@
     
     </div>
 </div> -->
-<div class="row">
-    <!-- column -->
-    <div class="col-sm-12 col-lg-4">
-        <div class="card card-hover">
-            <div class="card-body">
-                <h4 class="card-title">Active Customer</h4>
-                <div class="d-flex">
-                    <h2>356
-                        <small>
-                            <i class="ti-arrow-up text-success"></i>
-                        </small>
-                    </h2>
-                    <span class="ml-auto">Customer per services</span>
-                </div>
-                <div class="m-t-20 m-b-30">
-                    <div class="text-center d-flex flex-column" style="height: 60px;">
-                        <apx-chart [series]="userChartOptions.series" [chart]="userChartOptions.chart"
-                            [stroke]="userChartOptions.stroke" [tooltip]="userChartOptions.tooltip"
-                            [fill]="userChartOptions.fill">
-                        </apx-chart>
-                    </div>
-                </div>
-                <h5>Top Active Services</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        ISP
-                        <span class="badge badge-light badge-pill">1</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">Connectivity
-                        <span class="badge badge-info badge-pill">4</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Wifi connection<span class="badge badge-info badge-pill">4</span></li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Ac Repari
-                        <span class="badge badge-light badge-pill">14</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- column -->
-    <div class="col-sm-12 col-lg-4">
-        <div class="card card-hover">
-            <div class="card-body" style="padding-bottom: 12%;">
-                <h4 class="card-title">Device Visit</h4>
-                <div class="d-flex flex-column m-auto">
-                    <apx-chart [series]="EmailChartOptions.series" [chart]="EmailChartOptions.chart"
-                        [dataLabels]="EmailChartOptions.dataLabels" [legend]="EmailChartOptions.legends"
-                        [colors]="EmailChartOptions.colors" [stroke]="EmailChartOptions.stroke"
-                        [labels]="EmailChartOptions.labels" [tooltip]="EmailChartOptions.tooltip"
-                        [plotOptions]="EmailChartOptions.plotOptions"></apx-chart>
-                </div>
-
-                <!-- row -->
-                <div class="row m-t-30 m-b-15">
-                    <!-- column -->
-                    <div class="col-4 birder-right text-left">
-                        <h4 class="m-b-0">60%
-                            <small>
-                                <i class="ti-arrow-up text-success"></i>
-                            </small>
-                        </h4>Desktop
-                    </div>
-                    <!-- column -->
-                    <div class="col-4 birder-right text-center">
-                        <h4 class="m-b-0">28%
-                            <small>
-                                <i class="ti-arrow-down text-danger"></i>
-                            </small>
-                        </h4>Mobile
-                    </div>
-                    <!-- column -->
-                    <div class="col-4 text-right">
-                        <h4 class="m-b-0">12%
-                            <small>
-                                <i class="ti-arrow-up text-success"></i>
-                            </small>
-                        </h4>Tablet
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- column -->
-    <div class="col-sm-12 col-lg-4">
-        <div class="card card-hover">
-            <div class="card-body">
-                <h4 class="card-title">Latest Activity
-                </h4>
-                <div class="feed-widget">
-                    <ul class="list-style-none feed-body m-0 p-b-20">
-                        <li class="feed-item">
-                            <div class="feed-icon bg-info">
-                                <i class="ti-user"></i>
-                            </div> Alice Freeman started following you..
-                            <span class="ml-auto font-12 text-muted">Just Now</span>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-icon bg-success">
-                                <i class="ti-user"></i>
-                            </div> Andrew Green sent you a message.
-                            <span class="ml-auto font-12 text-muted">2 Hours ago</span>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-icon bg-warning">
-                                <i class="ti-user"></i>
-                            </div> Garry Newman shared a public post with your group.
-                            <span class="ml-auto font-12 text-muted">31 May</span>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-icon bg-danger">
-                                <i class="ti-user"></i>
-                            </div> Carl Henderson wants to play Fallout Shelter with you.
-                            <span class="ml-auto font-12 text-muted">30 May</span>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-icon bg-inverse">
-                                <i class="ti-user"></i>
-                            </div> Jane Dean started following you.
-                            <span class="ml-auto font-12 text-muted">27 May</span>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-icon bg-info">
-                                <i class="ti-user"></i>
-                            </div> Juan Carpenter sent you a message.
-                            <span class="ml-auto font-12 text-muted">Just Now</span>
-                        </li>
-                        <li class="feed-item">
-                            <div class="feed-icon bg-danger">
-                                <i class="ti-user"></i>
-                            </div> Judith Burton shared a photo with you.
-                            <span class="ml-auto font-12 text-muted">30 May</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-body">
-                <!-- title -->
-                <div class="d-flex align-items-center m-b-40">
-                    <div>
-                        <h4 class="card-title">Sales Performance</h4>
-                        <h5 class="card-subtitle">Overview of Latest Month</h5>
-                    </div>
-                    <div class="ml-auto">
-                        <div class="dl">
-                            <select class="custom-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <!-- title -->
-                <div class=" d-flex flex-column">
-                    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
-                        [yaxis]="chartOptions.yaxis" [grid]="chartOptions.grid" [stroke]="chartOptions.stroke"
-                        [tooltip]="chartOptions.tooltip" [dataLabels]="chartOptions.dataLabels"
-                        [legend]="chartOptions.legend" [colors]="chartOptions.colors" [markers]="chartOptions.markers">
-                    </apx-chart>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -666,6 +491,142 @@
                 </table>
             </div>
         </div>
+    </div>
+</div>
+
+
+<div class="row">
+   
+    <!-- column -->
+    <div class="col-sm-12 col-lg-6">
+        <div class="card card-hover">
+            <div class="card-body" style="padding-bottom: 8%;">
+                <h4 class="card-title">Task Activity</h4>
+                <div class="d-flex flex-column m-auto">
+                    <apx-chart [series]="EmailChartOptions.series" [chart]="EmailChartOptions.chart"
+                        [dataLabels]="EmailChartOptions.dataLabels" [legend]="EmailChartOptions.legends"
+                        [colors]="EmailChartOptions.colors" [stroke]="EmailChartOptions.stroke"
+                        [labels]="EmailChartOptions.labels" [tooltip]="EmailChartOptions.tooltip"
+                        [plotOptions]="EmailChartOptions.plotOptions"></apx-chart>
+                </div>
+
+                <!-- row -->
+                <div class="row m-t-30 m-b-15">
+                    <!-- column -->
+                    <div class="col-3 birder-right text-left">
+                        <h4 class="m-b-0">45
+                            <small>
+                                <i class="ti-arrow-up text-success"></i>
+                            </small>
+                        </h4>Rescheduel
+                    </div>
+                    <!-- column -->
+                    <div class="col-3 birder-right text-center">
+                        <h4 class="m-b-0">15
+                            <small>
+                                <i class="ti-arrow-down text-danger"></i>
+                            </small>
+                        </h4>No Shows
+                    </div>
+                    <!-- column -->
+                    <div class="col-3 text-right">
+                        <h4 class="m-b-0">27
+                            <small>
+                                <i class="ti-arrow-up text-success"></i>
+                            </small>
+                        </h4>Provider Report
+                    </div>
+                    <div class="col-3 text-right">
+                        <h4 class="m-b-0">18
+                            <small>
+                                <i class="ti-arrow-up text-success"></i>
+                            </small>
+                        </h4>Return Visit
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- column -->
+    <div class="col-sm-12 col-lg-6">
+        <div class="card card-hover">
+            <div class="card-body">
+                <h4 class="card-title">Provider Latest Activity
+                </h4>
+                <div class="feed-widget">
+                    <ul class="list-style-none feed-body m-0 p-b-20">
+                        <li class="feed-item">
+                            <div class="feed-icon bg-info">
+                                <i class="ti-user"></i>
+                            </div> Alice Freeman started following you..
+                            <span class="ml-auto font-12 text-muted">Just Now</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-success">
+                                <i class="ti-user"></i>
+                            </div> Andrew Green sent you a message.
+                            <span class="ml-auto font-12 text-muted">2 Hours ago</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-warning">
+                                <i class="ti-user"></i>
+                            </div> Garry Newman shared a public post with your group.
+                            <span class="ml-auto font-12 text-muted">31 May</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-danger">
+                                <i class="ti-user"></i>
+                            </div> Carl Henderson wants to play Fallout Shelter with you.
+                            <span class="ml-auto font-12 text-muted">30 May</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-inverse">
+                                <i class="ti-user"></i>
+                            </div> Jane Dean started following you.
+                            <span class="ml-auto font-12 text-muted">27 May</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-info">
+                                <i class="ti-user"></i>
+                            </div> Juan Carpenter sent you a message.
+                            <span class="ml-auto font-12 text-muted">Just Now</span>
+                        </li>
+                        <li class="feed-item">
+                            <div class="feed-icon bg-danger">
+                                <i class="ti-user"></i>
+                            </div> Judith Burton shared a photo with you.
+                            <span class="ml-auto font-12 text-muted">30 May</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-6">
+          <div class="card">
+              <div class="card-body">
+                  <h4 class="card-title">Booking by task Category</h4>
+                  <h6 class="card-subtitle">How much task in each service</h6>
+                  <canvas baseChart height="150px" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                   [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
+                  </canvas> 
+              </div>
+           </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Disputes by Category</h4>
+                <h6 class="card-subtitle">How much disputes in each service</h6>
+                <canvas baseChart height="150px" [data]="pieChartData1" [labels]="pieChartLabels1" [chartType]="pieChartType1"
+                 [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
+                </canvas> 
+            </div>
+         </div>
     </div>
 </div>
 

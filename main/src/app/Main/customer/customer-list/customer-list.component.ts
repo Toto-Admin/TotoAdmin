@@ -17,10 +17,15 @@ export class CustomerListComponent implements OnInit {
 
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
+  dtOptions: DataTables.Settings = {};
 
   constructor(private fb: FormBuilder,private modalService: NgbModal) { }
   formsErrors = [];
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength:5,
+    };
     this.editUser = this.fb.group({
       id: [''],
       Name: ['', Validators.required],

@@ -18,6 +18,9 @@ const routes: Routes = [
      },
      {
       path:'assessment',loadChildren:()=> import('../../Main/assessment/assessment.module').then(m=>m.AssessmentModule)
+     },
+     {
+      path:'jobs',loadChildren:()=> import('../../Main/jobs/jobs.module').then(m=>m.JobsModule)
      }
   ]
 },
