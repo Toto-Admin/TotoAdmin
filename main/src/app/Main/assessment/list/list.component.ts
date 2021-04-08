@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private router : Router) { }
   ngOnInit(): void {
+  }
+  btnClick(){
+    this.router.navigate(['/assessment/add']);
+  }
+  closeBtnClick(){
+    // this.router.navigate(['/assessment/list']);
   }
 
 }

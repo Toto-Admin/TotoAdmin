@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
+  
 
-  constructor() { }
+  
+  constructor(private router : Router,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    
   }
+  closeBtnClick(){
+     this.router.navigate(['/assessment/list']);
+  }
+ 
 
+  addQue(){
+  
+  }
 }

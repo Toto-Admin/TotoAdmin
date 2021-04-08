@@ -1,12 +1,13 @@
-<p>list works!</p>
+
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Provider List</h4>
-        <h5 class="card-subtitle">Here is the Provider list you can add, edit or delete the Provider</h5>
+        <h4 class="card-title">Assessment
+          </h4>
+        <h5 class="card-subtitle">Here is the assessment list you can add, edit or delete the assessment</h5>
         <div class="d-flex mb-3 mt-3">
-          <input type="text" class="form-control w-25" placeholder="Search by Name or Email" >
-          <button class="btn btn-primary ml-auto">Add Provider</button>
+          <input type="text" class="form-control w-25" placeholder="Search by Name or Service" >
+          <button class="btn btn-primary ml-auto"  (click)="btnClick();">Add</button>
           <!-- " (click)="openModal(editUserModal, null)" -->
         </div>
         <div class="table-responsive table-bordered">
@@ -18,7 +19,7 @@
                 <th scope="col">Service</th>
                 <th scope="col">Passing Cut Off</th>
                 <th scope="col">Duration</th>
-                <th scope="col">Action</th>
+                
                 
                 <!-- <th scope="col">Action</th> -->
               </tr>
@@ -59,54 +60,46 @@
               </tr> -->
               <tr>
                   <td>1</td>
-                  <td><a [routerLink]="['/provider/provider-view']">
-                    Ajit Sutar
-                  </a></td>
-                  <td>ajitsutar@gmail.com</td>
-                  <td>9090909090</td>
-                  <td>Active</td>
+                  <td>
+                    Exam Name</td>
+                  <td>Tv Repair</td>
+                  <td>50</td>
+                  <td>1 hour</td>
                   
               </tr>
               <tr>
                 <td>2</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  Sujit Patil
-                </a></td>
-                <td>sujitpatil@gmail.com</td>
-                <td>8976896754</td>
-                <td>Inactive</td>
+                <td>Exam Name</td>
+                <td>AC Repair</td>
+                <td>30</td>
+                <td>45 minute</td>
                 
             </tr>
             <tr>
                 <td>3</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  Prakash Mohite
-                </a></td>
-                <td>prakashmohite@gmail.com</td>
-                <td>9654356789</td>
-                <td>Active</td>
+                <td>Exam Name</td>
+                <td>ISP</td>
+                <td>35</td>
+                <td>	15 minute</td>
                
             </tr>
             <tr>
                 <td>4</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  Sudhir Pawar
-                </a></td>
-                <td>sudhirpawar@gmail.com</td>
-                <td>8987656789</td>
-                <td>Active</td>
+                <td>  Exam Name</td>
+                <td>Poor WiFi Coverage</td>
+                <td>40</td>
+                <td>40 minute</td>
                 
             </tr>
             <tr>
-                <td>5</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  Sonal Pawar
-                </a></td>
-                <td>sonalpawar@gmail.com</td>
-                <td>8987656999</td>
-                <td>Inactive</td>
-                
-            </tr>
+              <td>5</td>
+              <td> Exam Name</td>
+              <td>TV Service</td>
+              <td>30</td>
+              <td>40 minute</td>
+              
+          </tr>
+           
             </tbody>
           </table>
         </div>
@@ -213,14 +206,14 @@
   
   
   
-  
+<!--   
   
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
+          <button  class="btn btn-secondary" (click)="closeBtnClick()">Close</button>&nbsp;&nbsp;&nbsp;
   
           <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
         </div>
-  
+   -->
         
       </form>
     </div>

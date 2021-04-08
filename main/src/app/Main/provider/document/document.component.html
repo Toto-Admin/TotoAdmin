@@ -1,11 +1,12 @@
+
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Provider List</h4>
-        <h5 class="card-subtitle">Here is the Provider list you can add, edit or delete the Provider</h5>
+        <!-- <h4 class="card-title">Provider List</h4>
+        <h5 class="card-subtitle">Here is the Provider list you can add, edit or delete the Provider</h5> -->
         <div class="d-flex mb-3 mt-3">
-          <input type="text" class="form-control w-25" placeholder="Search by Name or Email" >
-          <button class="btn btn-primary ml-auto"  (click)="openModal(editUserModal, null)"  >Add Provider</button>
+          <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email" >
+          <button class="btn btn-primary ml-auto"  (click)="openModal(editUserModal, null)"  >Add Provider</button> -->
           <!-- " (click)="openModal(editUserModal, null)" -->
         </div>
         <div class="table-responsive table-bordered">
@@ -14,9 +15,11 @@
               <tr>
                 <th class="text-center" scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Status</th>
+                <th scope="col">Type</th>
+                <th scope="col">Verified</th>
+                <th scope="col">Reject</th>
+                <th scope="col">Reject Reason</th>
+                
                 
                 <!-- <th scope="col">Action</th> -->
               </tr>
@@ -57,59 +60,49 @@
               </tr> -->
               <tr>
                   <td>1</td>
-                  <td><a [routerLink]="['/provider/provider-view']">
-                    <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                    Johan Anderson
-                  </a></td>
-                  <td>johan@gmail.com</td>
-                  <td>9090909090</td>
-                  <td>Active</td>
+                  <td>Name1</td>
+                  <td>DBS Certificate</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                  <td></td>
                   
               </tr>
               <tr>
-                <td>2</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                  Sujit Patil
-                </a></td>
-                <td>sujitpatil@gmail.com</td>
-                <td>8976896754</td>
-                <td>Inactive</td>
+                  <td>2</td>
+                <td>Name2</td>
+                  <td>DBS Certificate</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                <td>Not correct document</td>
                 
             </tr>
             <tr>
                 <td>3</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                  Prakash Mohite
-                </a></td>
-                <td>prakashmohite@gmail.com</td>
-                <td>9654356789</td>
-                <td>Active</td>
+                <td>Name3</td>
+                  <td>DBS Certificate</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                   <td>Not Correct Document</td>
+               
+            </tr> <tr>
+                <td>4</td>
+                <td>Name3</td>
+                  <td>Work Permit</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  
+                  <td>Not Correct Document</td>
+
+            </tr> <tr>
+                <td>5</td>
+                <td>Name3</td>
+                  <td>Insurance</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>Not Correct Document</td>
                
             </tr>
-            <tr>
-                <td>4</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
-                  Sudhir Pawar
-                </a></td>
-                <td>sudhirpawar@gmail.com</td>
-                <td>8987656789</td>
-                <td>Active</td>
-                
-            </tr>
-            <tr>
-                <td>5</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/4.jpg">&nbsp;
-                  Sonal Pawar
-                </a></td>
-                <td>sonalpawar@gmail.com</td>
-                <td>8987656999</td>
-                <td>Inactive</td>
-                
-            </tr>
+            
             </tbody>
           </table>
         </div>
