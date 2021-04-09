@@ -2,15 +2,15 @@
     <div class="col-12">
       <div class="card card-body">
         <h4 class="card-title">Provider List</h4>
-        <h5 class="card-subtitle">Here is the Provider list you can add, edit or delete the Provider</h5>
+        <h5 class="card-subtitle">Here is the provider list you can add, edit or delete the provider</h5>
         <div class="d-flex mb-3 mt-3">
           <input type="text" class="form-control w-25" placeholder="Search by Name or Email" >
           <button class="btn btn-primary ml-auto"  (click)="openModal(editUserModal, null)"  >Add Provider</button>
           <!-- " (click)="openModal(editUserModal, null)" -->
         </div>
         <div class="table-responsive table-bordered">
-          <table class="table table-striped mb-0 no-wrap v-middle">
-            <thead>
+          <table  class="table table-striped mb-0 no-wrap v-middle">
+            <thead style="background: #92adfc;">
               <tr>
                 <th class="text-center" scope="col">#</th>
                 <th scope="col">Name</th>
@@ -69,7 +69,7 @@
               <tr>
                 <td>2</td>
                 <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
+                <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
                   Sujit Patil
                 </a></td>
                 <td>sujitpatil@gmail.com</td>

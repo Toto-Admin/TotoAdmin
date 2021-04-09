@@ -161,7 +161,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/classic',
+                path: '/payment/dashboard/',
                 title: 'Dashboard',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -171,7 +171,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/payment/payment-detail',
                 title: 'Payment Details',
                 icon: 'mdi mdi-adjust',
                 class: '',

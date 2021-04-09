@@ -92,5 +92,6 @@ export class ProviderViewComponent implements OnInit {
     this.tabs.push(this.counter++);
     event.preventDefault();
   }
+  
 
 }

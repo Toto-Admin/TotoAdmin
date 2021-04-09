@@ -9,6 +9,9 @@ import { Provider } from '../provider';
   styleUrls: ['./provider-list.component.css']
 })
 export class ProviderListComponent implements OnInit {
+
+
+  
   config: any;
   // editUser: FormGroup | null = null;
   providerDetail: Provider | null = null;
@@ -20,7 +23,9 @@ export class ProviderListComponent implements OnInit {
 
   constructor(private fb: FormBuilder,private modalService: NgbModal) { }
   formsErrors = [];
+  
   ngOnInit(): void {
+
     this.editUser = this.fb.group({
       id: [''],
       Name: ['', Validators.required],
@@ -28,6 +33,8 @@ export class ProviderListComponent implements OnInit {
       Mobile: ['', Validators.required],
       
   });
+  
+  
   }
 
   openModal(targetModal: NgbModal, provider: Provider | null) {

@@ -21,6 +21,9 @@ const routes: Routes = [
      },
      {
       path:'jobs',loadChildren:()=> import('../../Main/jobs/jobs.module').then(m=>m.JobsModule)
+     },
+     {
+       path:'payment',loadChildren:()=> import('../../Main/payment/payment.module').then(m=>m.PaymentModule)
      }
   ]
 },
