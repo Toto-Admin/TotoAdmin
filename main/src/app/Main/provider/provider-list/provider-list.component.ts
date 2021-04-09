@@ -10,8 +10,6 @@ import { Provider } from '../provider';
 })
 export class ProviderListComponent implements OnInit {
 
-
-  
   config: any;
   // editUser: FormGroup | null = null;
   providerDetail: Provider | null = null;
@@ -25,6 +23,8 @@ export class ProviderListComponent implements OnInit {
   formsErrors = [];
   
   ngOnInit(): void {
+
+   
 
     this.editUser = this.fb.group({
       id: [''],

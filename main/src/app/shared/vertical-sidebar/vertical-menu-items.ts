@@ -120,7 +120,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/jobs/task',
                 title: 'Task Mangement',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -129,18 +129,18 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
+            // {
+            //     path: '/dashboard/analytical',
+            //     title: 'Job Rating',
+            //     icon: 'mdi mdi-adjust',
+            //     class: '',
+            //     extralink: false,
+            //     label: '',
+            //     labelClass: '',
+            //     submenu: []
+            // },
             {
-                path: '/dashboard/analytical',
-                title: 'Job Rating',
-                icon: 'mdi mdi-adjust',
-                class: '',
-                extralink: false,
-                label: '',
-                labelClass: '',
-                submenu: []
-            },
-            {
-                path: '/dashboard/analytical',
+                path: '/jobs/unhappycustomer',
                 title: 'Unhappy with Provider',
                 icon: 'mdi mdi-adjust',
                 class: '',
