@@ -180,9 +180,6 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
-           
-          
-        
         ]
     },
     {
