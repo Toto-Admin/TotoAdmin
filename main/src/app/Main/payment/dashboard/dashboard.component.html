@@ -1,11 +1,11 @@
 
-<div class="row">
+<div class="row total">
     <!-- Column -->
     <div class="col-lg-4">
-        <div class="card">
+        <div class="card ">
             <div class="card-body pb-0">
-                <h4 class="card-title">Earnings</h4>
-                <h5 class="card-subtitle">Total earnings from customer</h5>
+                <h4 class="card-title">Total earning from customer</h4>
+                <!-- <h5 class="card-subtitle"></h5> -->
                 <h2 class="font-medium"> <i class="mdi mdi-currency-gbp"></i>43,567.53</h2>
             </div>
             <div class="m-t-5 d-flex flex-column" style="height: 90px;">
@@ -22,8 +22,8 @@
     <div class="col-lg-4">
         <div class="card">
             <div class="card-body pb-0">
-                <h4 class="card-title">Earnings</h4>
-                <h5 class="card-subtitle">Total paid to provider</h5>
+                <h4 class="card-title">Total paid to provider</h4>
+                <!-- <h5 class="card-subtitle">Total paid to provider</h5> -->
                 <h2 class="font-medium"> <i class="mdi mdi-currency-gbp"></i>51,567</h2>
             </div>
             <div class="m-t-5 d-flex flex-column" style="height: 90px;">
@@ -39,12 +39,12 @@
     </div>
 
     <div class="col-lg-4">
-        <div class="card bg-info text-white  card-hover">
-            <div class="card-body">
+        <div class="card bg-info text-black  card-hover" >
+            <div class="card-body" style="background-color:white;">
                 <h4 class="card-title">Total Refund</h4>
                 <p>Total money refunded by toto</p>
                 <div class="d-flex align-items-center m-t-30">
-                    <div class="mt-3 d-flex flex-column" style="height: 75px; width: 100px">
+                    <div class="mt-3 d-flex flex-column" style="height: 60px; width: 100px">
                         <apx-chart [series]="RevenueChartOptions.series" [chart]="RevenueChartOptions.chart"
                             [stroke]="RevenueChartOptions.stroke" [tooltip]="RevenueChartOptions.tooltip"
                             [fill]="RevenueChartOptions.fill">
@@ -124,10 +124,11 @@
 <!-- Toto earning -->
 <div class="col-sm-12 col-lg-6">
     <div class="card bg-info">
-        <div class="card-body">
-            <h3 >Total earning of Toto</h3>
-            <h2 class="text-white"><i class="mdi mdi-currency-gbp"></i>6,890.68</h2>
-            <div class="d-flex flex-column" style="height: 260px">
+        <div class="card-body" style="background-color:white;">
+            <h4 class="card-title">Total earning of toto</h4>
+            
+            <h5 class="text-black"><i class="mdi mdi-currency-gbp"></i>6,890.68</h5>
+            <div class="d-flex flex-column" style="height: 280px">
                 <apx-chart [series]="earningChartOptions.series" [chart]="earningChartOptions.chart"
                     [xaxis]="earningChartOptions.xaxis" [yaxis]="earningChartOptions.yaxis"
                     [grid]="earningChartOptions.grid" [stroke]="earningChartOptions.stroke"
@@ -143,7 +144,7 @@
                         <div class="m-r-10">
                             <a class="btn btn-circle btn-lg btn-cyan text-white d-flex">EA</a>
                         </div>
-                        <div class="text-white">
+                        <div class="text-black">
                             <span class="font-14 op-5 d-block">Product A</span>
                             <span class="font-16 font-medium"><i class="mdi mdi-currency-gbp"></i>15.56K</span>
                         </div>
@@ -156,7 +157,7 @@
                         <div class="m-r-10">
                             <a class="btn btn-circle btn-lg btn-cyan text-white d-flex">EA</a>
                         </div>
-                        <div class="text-white">
+                        <div class="text-black">
                             <span class="font-14 op-5 d-block">Product B</span>
                             <span class="font-16 font-medium"><i class="mdi mdi-currency-gbp"></i>15.56K</span>
                         </div>
@@ -169,8 +170,8 @@
                         <div class="m-r-10">
                             <a class="btn btn-circle btn-lg btn-cyan text-white d-flex">EA</a>
                         </div>
-                        <div class="text-white">
-                            <span class="font-14 op-5 d-block">Product C</span>
+                        <div class="text-black">
+                            <span class="font-14 op-5 d-block ">Product C</span>
                             <span class="font-16 font-medium"><i class="mdi mdi-currency-gbp"></i>15.56K</span>
                         </div>
                     </div>

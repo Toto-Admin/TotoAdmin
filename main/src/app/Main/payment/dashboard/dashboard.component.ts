@@ -160,7 +160,7 @@ export class DashboardComponent implements OnInit {
         }
       },
       fill: {
-        colors: ['#fff'],
+        colors: ['black'],
         opacity: 0.7,
 
       },
@@ -257,7 +257,7 @@ export class DashboardComponent implements OnInit {
         curve: 'smooth',
         width: '1',
       },
-      colors: ['#fff'],
+      colors: ['#668cff'],
       legend: {
         show: false,
       },
