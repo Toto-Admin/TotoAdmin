@@ -1,0 +1,55 @@
+
+<!-- Contractor tabs -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Job Details</h4>
+                <h6 class="card-subtitle">In Details Task Descripation</h6>
+
+
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>Task Details</a>
+                        <ng-template ngbNavContent>
+                            <app-task-details></app-task-details>
+                        </ng-template>
+                    </li>
+                  
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Task History</a>
+                        <ng-template ngbNavContent>
+                          <app-task-history></app-task-history>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink="/provider-list">Attachment</a>
+                        <ng-template ngbNavContent>
+                            <app-document></app-document>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>Payment</a>
+                        <ng-template ngbNavContent>
+                           <app-payment></app-payment>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="5">
+                        <a ngbNavLink>Activity</a>
+                        <ng-template ngbNavContent>
+                           <app-activity></app-activity>
+                        </ng-template>
+                    </li>
+                   
+                </ul>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

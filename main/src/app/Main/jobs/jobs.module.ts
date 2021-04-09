@@ -9,9 +9,18 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { ChartsModule } from 'ng2-charts';
 import { ChartistModule } from 'ng-chartist';
 import { AgmCoreModule } from '@agm/core';
-
+import { TaskComponent } from './task/task.component';
+import { DataTablesModule } from 'angular-datatables';
+import { JobDetailsComponent } from './job-details/job-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DocumentComponent } from './document/document.component';
+import { TaskDetailsComponent } from './task-details/task-details.component';
+import { TaskHistoryComponent } from './task-history/task-history.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ActivityComponent } from './activity/activity.component';
+import { UnhappywithproviderComponent } from './unhappywithprovider/unhappywithprovider.component';
 @NgModule({
-  declarations: [JobDashboardComponent],
+  declarations: [JobDashboardComponent, TaskComponent, JobDetailsComponent, DocumentComponent, TaskDetailsComponent, TaskHistoryComponent, PaymentComponent, ActivityComponent, UnhappywithproviderComponent],
   imports: [
     CommonModule,
     NgApexchartsModule,
@@ -19,7 +28,9 @@ import { AgmCoreModule } from '@agm/core';
     JobsRoutingModule,
     ChartsModule,
     ChartistModule,
-    AgmCoreModule
+    AgmCoreModule,
+    NgbModule,
+    DataTablesModule
   ]
 })
 export class JobsModule { }

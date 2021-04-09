@@ -362,8 +362,8 @@
                 <!-- title -->
                 <div class="d-md-flex align-items-center">
                     <div>
-                        <h4 class="card-title">Most Recent Booking</h4>
-                        <h5 class="card-subtitle">Overview of Most Recent Booking</h5>
+                        <h4 class="card-title">Active Booking</h4>
+                        <h5 class="card-subtitle">Overview of Most Active Booking</h5>
                     </div>
                     <div class="ml-auto">
                         <div class="dl">
@@ -382,111 +382,96 @@
                 <table class="table v-middle">
                     <thead>
                         <tr class="bg-light">
-                            <th class="border-top-0">Services</th>
-                            <th class="border-top-0">Title</th>
+                            <th class="border-top-0">Customer Name</th>
                             <th class="border-top-0">Status</th>
-                            <th class="border-top-0">Customer name</th>
-                            <th class="border-top-0">Provider Name</th>
-                            <th class="border-top-0">Action</th>
+                            <th class="border-top-0">Category</th>
+                            <th class="border-top-0">Type</th>
+                            <th class="border-top-0">Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New Network Setup</h4>
+                                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 32px" width="32px">
+                                    <div class="ml-3">
+                                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
                                     </div>
                                 </div>
                             </td>
                             <td>On-site</td>
+                            <td>Connectivity</td>
                             <td><label class="label label-success">Done</label></td>
                             
-                            <td>Sam</td>
-                            <td>Jenny</td>
-                            <td>View</td>
+                            <td>14-03-2021</td>
+                            
                             
                         </tr>
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">ISP</h4>
+                                    <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 32px" width="32px">
+                                    <div class="ml-3">
+                                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sam Wood</a></p>
                                     </div>
                                 </div>
                             </td>
                             <td>On-site</td>
-                            <td><label class="label label-warning">Draft</label></td>
+                            <td>WIFI Connection</td>
+                            <td><label class="label label-warning">Working</label></td>
                             
-                            <td>Mark Wood</td>
-                            <td>Jenny</td>
-                            <td>View</td>
+                            <td>13-03-2021</td>
                             
                         </tr>
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">Connectivity</h4>
+                                    <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 32px" width="32px">
+                                    <div class="ml-3">
+                                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ashitosh Parab</a></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>On-site</td>
+                            <td>Connectivity</td>
+                            <td><label class="label label-success">Done</label></td>
+                            
+                            <td>14-03-2021</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 32px" width="32px">
+                                    <div class="ml-3">
+                                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Prakash Jadhav</a></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>On-site</td>
+                            <td>ISP</td>
+                            <td><label class="label label-success">Done</label></td>
+                            
+                            <td>14-03-2021</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 32px" width="32px">
+                                    <div class="ml-3">
+                                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sudhir Pawar</a></p>
                                     </div>
                                 </div>
                             </td>
                             <td>Remote</td>
+                            <td>Connectivity</td>
                             <td><label class="label label-success">Done</label></td>
                             
-                            <td>Sam</td>
-                            <td>Ram Shekhar Jadhav</td>
-                            <td>View</td>
+                            <td>14-03-2021</td>
                             
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New Network Setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Remote</td>
-                            <td><label class="label label-success">Done</label></td>
-                            
-                            <td>Jenny</td>
-                            <td>Tom</td>
-                            <td>View</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New Network Conncection</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>On-site</td>
-                            <td><label class="label label-danger">Cancel</label></td>
-                            
-                            <td>Sam</td>
-                            <td>Jenny</td>
-                            <td>View</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New Network Setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>On-site</td>
-                            <td><label class="label label-success">Done</label></td>
-                            
-                            <td>Sam</td>
-                            <td>Jenny</td>
-                            <td>View</td>
-                            
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -611,7 +596,7 @@
               <div class="card-body">
                   <h4 class="card-title">Booking by task Category</h4>
                   <h6 class="card-subtitle">How much task in each service</h6>
-                  <canvas baseChart height="150px" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                  <canvas baseChart height="132px" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
                    [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
                   </canvas> 
               </div>
@@ -622,7 +607,7 @@
             <div class="card-body">
                 <h4 class="card-title">Disputes by Category</h4>
                 <h6 class="card-subtitle">How much disputes in each service</h6>
-                <canvas baseChart height="150px" [data]="pieChartData1" [labels]="pieChartLabels1" [chartType]="pieChartType1"
+                <canvas baseChart height="132px" [data]="pieChartData1" [labels]="pieChartLabels1" [chartType]="pieChartType1"
                  [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
                 </canvas> 
             </div>
