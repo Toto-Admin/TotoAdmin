@@ -1,4 +1,74 @@
 <div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="card border-left card-hover border-orange">
+            <div class="card-body ">
+                <div class="d-flex no-block align-items-center">
+                    <div>
+                        <span class="text-orange display-6">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="ml-auto">
+                        <h2>290</h2>
+                        <h6 class="text-orange">Active Customers</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="card border-left card-hover border-info">
+            <div class="card-body ">
+                <div class="d-flex no-block align-items-center">
+                    <div>
+                        <span class="text-info display-6">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="ml-auto">
+                        <h2>120</h2>
+                        <h6 class="text-info">Inactive Customer</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="card border-left card-hover border-cyan">
+            <div class="card-body ">
+                <div class="d-flex no-block align-items-center">
+                    <div>
+                        <span class="text-cyan display-6">
+                            <i class="fas fa-user-times"></i>
+                        </span>
+                    </div>
+                    <div class="ml-auto">
+                        <h2>600</h2>
+                        <h6 class="text-cyan">Blocked Customer</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="card border-left card-hover border-success">
+            <div class="card-body ">
+                <div class="d-flex no-block align-items-center">
+                    <div>
+                        <span class="text-success display-6">
+                            <i class="fas fa-users"></i>
+                        </span>
+                    </div>
+                    <div class="ml-auto">
+                        <h2>270</h2>
+                        <h6 class="text-success">Total Customer</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
     <div class="col-lg-3">
         <div class="card  card-hover">
             <div class="card-body">
@@ -73,7 +143,7 @@
             </div>
         </div>
     </div> 
-</div>
+</div> -->
 
 <!-- service -->
 <div class="row">
@@ -83,16 +153,16 @@
                 <!-- title -->
                 <div class="d-flex align-items-center m-b-40">
                     <div>
-                        <h4 class="card-title">Customer Visitor</h4>
+                        <h4 class="card-title">Customer Visitor [ Total Customer Visit Count 2345 ]</h4>
                         <h5 class="card-subtitle">Overview of customer visitor month wise</h5>
                     </div>
                     <div class="ml-auto">
                         <div class="dl">
                             <select class="custom-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
+                                <option value="0" >2020</option>
+                                <option value="1" selected>2021</option>
+                                <option value="2">2022</option>
+                                <option value="3">2023</option>
                             </select>
                         </div>
                     </div>
@@ -136,12 +206,13 @@
                 <table class="table v-middle">
                     <thead>
                         <tr class="bg-light">
-                            <th class="border-top-0">Services</th>
-                            <th class="border-top-0">Title</th>
-                            <th class="border-top-0">Status</th>
-                            <th class="border-top-0">Customer name</th>
-                            <th class="border-top-0">Provider Name</th>
-                            <th class="border-top-0">Action</th>
+                            <th class="border-top-0 backgroundColor">Services</th>
+                            <th class="border-top-0 backgroundColor">Type</th>
+                            <th class="border-top-0 backgroundColor">Status</th>
+                            <th class="border-top-0 backgroundColor">Customer name</th>
+                            <th class="border-top-0 backgroundColor">Provider Name</th>
+                            <th class="border-top-0 backgroundColor">Rating</th>
+                            <th class="border-top-0 backgroundColor">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,7 +229,12 @@
                             
                             <td>Sam</td>
                             <td>Jenny</td>
-                            <td>View</td>
+                            <td><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span></td>
+                            <td><a [routerLink]="['/customer/view']">View</a></td>
                             
                         </tr>
                         <tr>
@@ -174,7 +250,12 @@
                             
                             <td>Mark Wood</td>
                             <td>Jenny</td>
-                            <td>View</td>
+                            <td><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span></td>
+                            <td><a [routerLink]="['/customer/view']">View</a></td>
                             
                         </tr>
                         <tr>
@@ -190,7 +271,12 @@
                             
                             <td>Sam</td>
                             <td>Ram Shekhar Jadhav</td>
-                            <td>View</td>
+                            <td><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span></td>
+                            <td><a [routerLink]="['/customer/view']">View</a></td>
                             
                         </tr>
                         <tr>
@@ -206,7 +292,12 @@
                             
                             <td>Jenny</td>
                             <td>Tom</td>
-                            <td>View</td>
+                            <td><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span></td>
+                            <td><a [routerLink]="['/customer/view']">View</a></td>
                             
                         </tr>
                         <tr>
@@ -222,7 +313,12 @@
                             
                             <td>Sam</td>
                             <td>Jenny</td>
-                            <td>View</td>
+                            <td><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span></td>
+                            <td><a [routerLink]="['/customer/view']">View</a></td>
                             
                         </tr>
                         <tr>
@@ -238,7 +334,12 @@
                             
                             <td>Sam</td>
                             <td>Jenny</td>
-                            <td>View</td>
+                            <td><span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span></td>
+                            <td><a [routerLink]="['/customer/view']">View</a></td>
                             
                         </tr>
                     </tbody>
@@ -271,7 +372,7 @@
                 <!-- column -->
                 <div class="row my-4 py-2">
                     <!-- column -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <div class="m-b-20 d-flex align-items-center flex-column">
                             <apx-chart [series]="mEmailChartOptions.series" [chart]="mEmailChartOptions.chart"
                                 [dataLabels]="mEmailChartOptions.dataLabels" [legend]="mEmailChartOptions.legends"
@@ -281,7 +382,7 @@
                         </div>
                     </div>
                     <!-- column -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <!-- <h1 class="display-6 m-b-0 font-medium"></h1>
                         <span>Open Ratio for Campaigns</span> -->
                         <ul class="list-style-none">

@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) +    "-es5." + {"0":"67691429b3244735e69c","1":"6988353c21db7bfe9076","2":"bd2eb2b35b5b01a5d70f","3":"eb28ee38130ef48e84d8","4":"9b3934d10420516d80fc","5":"9b5ff80872da021f72ad","6":"216637bdf2feb62aa7e9","7":"1dc9e789d83dae9c0c20","8":"dd38b467e36f7f378bb9","9":"8d97b513eef331169290","10":"b9e26c2ace8f525d025f","11":"778370a9a247b2906798"}[chunkId] + ".js"
+/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) + "-es2015." + {"0":"67691429b3244735e69c","1":"6988353c21db7bfe9076","2":"bd2eb2b35b5b01a5d70f","3":"eb28ee38130ef48e84d8","4":"9b3934d10420516d80fc","5":"8db96931063551137c64","6":"b9a0ec2b7c8a9854b6cd","7":"1dc9e789d83dae9c0c20","8":"dd38b467e36f7f378bb9","9":"03e25d861efc1b80667f","10":"b9e26c2ace8f525d025f","11":"778370a9a247b2906798"}[chunkId] + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function

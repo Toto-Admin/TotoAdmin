@@ -274,7 +274,7 @@
                 }
               },
               fill: {
-                colors: ['#fff'],
+                colors: ['black'],
                 opacity: 0.7
               },
               stroke: {
@@ -363,7 +363,7 @@
                 curve: 'smooth',
                 width: '1'
               },
-              colors: ['#fff'],
+              colors: ['#668cff'],
               legend: {
                 show: false
               },
@@ -424,9 +424,9 @@
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.chart2 = _t.first);
             }
           },
-          decls: 135,
+          decls: 131,
           vars: 47,
-          consts: [[1, "row"], [1, "col-lg-4"], [1, "card"], [1, "card-body", "pb-0"], [1, "card-title"], [1, "card-subtitle"], [1, "font-medium"], [1, "mdi", "mdi-currency-gbp"], [1, "m-t-5", "d-flex", "flex-column", 2, "height", "90px"], [3, "series", "chart", "xaxis", "yaxis", "grid", "stroke", "tooltip", "dataLabels", "legend", "colors", "markers"], [1, "card", "bg-info", "text-white", "card-hover"], [1, "card-body"], [1, "d-flex", "align-items-center", "m-t-30"], [1, "mt-3", "d-flex", "flex-column", 2, "height", "75px", "width", "100px"], [3, "series", "chart", "stroke", "tooltip", "fill"], [1, "ml-auto"], [1, "font-medium", "white-text", "m-b-0"], [1, "col-6"], [1, "card", "card-hover"], [1, "d-md-flex", "align-items-center"], [1, "ml-auto", "align-items-center"], [1, "dl"], [1, "custom-select"], ["value", "0", "selected", ""], ["value", "1"], ["value", "2"], ["value", "3"], [1, "row", "my-4", "py-2"], [1, "col-lg-6"], [1, "m-b-20", "d-flex", "align-items-center", "flex-column"], [3, "series", "chart", "dataLabels", "legend", "colors", "stroke", "labels", "tooltip", "plotOptions"], [1, "list-style-none"], [1, "m-t-20"], [1, "fas", "fa-circle", "m-r-5", "text-cyan", "font-12"], [1, "float-right"], [1, "fas", "fa-circle", "m-r-5", "text-info", "font-12"], [1, "fas", "fa-circle", "m-r-5", "text-orange", "font-12"], [1, "fas", "fa-circle", "m-r-5", "text-primary", "font-12"], [1, "col-sm-12", "col-lg-6"], [1, "card", "bg-info"], [1, "text-white"], [1, "d-flex", "flex-column", 2, "height", "260px"], [1, "col-sm-12", "col-lg-4"], [1, "d-flex", "align-items-center", "m-t-5", "m-b-5"], [1, "m-r-10"], [1, "btn", "btn-circle", "btn-lg", "btn-cyan", "text-white", "d-flex"], [1, "font-14", "op-5", "d-block"], [1, "font-16", "font-medium"], [1, "d-flex", "no-block", "align-items-center", "m-t-5", "m-b-5"]],
+          consts: [[1, "row", "total"], [1, "col-lg-4"], [1, "card"], [1, "card-body", "pb-0"], [1, "card-title"], [1, "font-medium"], [1, "mdi", "mdi-currency-gbp"], [1, "m-t-5", "d-flex", "flex-column", 2, "height", "90px"], [3, "series", "chart", "xaxis", "yaxis", "grid", "stroke", "tooltip", "dataLabels", "legend", "colors", "markers"], [1, "card", "bg-info", "text-black", "card-hover"], [1, "card-body", 2, "background-color", "white"], [1, "d-flex", "align-items-center", "m-t-30"], [1, "mt-3", "d-flex", "flex-column", 2, "height", "60px", "width", "100px"], [3, "series", "chart", "stroke", "tooltip", "fill"], [1, "ml-auto"], [1, "font-medium", "white-text", "m-b-0"], [1, "col-6"], [1, "card", "card-hover"], [1, "card-body"], [1, "d-md-flex", "align-items-center"], [1, "card-subtitle"], [1, "ml-auto", "align-items-center"], [1, "dl"], [1, "custom-select"], ["value", "0", "selected", ""], ["value", "1"], ["value", "2"], ["value", "3"], [1, "row", "my-4", "py-2"], [1, "col-lg-6"], [1, "m-b-20", "d-flex", "align-items-center", "flex-column"], [3, "series", "chart", "dataLabels", "legend", "colors", "stroke", "labels", "tooltip", "plotOptions"], [1, "list-style-none"], [1, "m-t-20"], [1, "fas", "fa-circle", "m-r-5", "text-cyan", "font-12"], [1, "float-right"], [1, "fas", "fa-circle", "m-r-5", "text-info", "font-12"], [1, "fas", "fa-circle", "m-r-5", "text-orange", "font-12"], [1, "fas", "fa-circle", "m-r-5", "text-primary", "font-12"], [1, "col-sm-12", "col-lg-6"], [1, "card", "bg-info"], [1, "text-black"], [1, "d-flex", "flex-column", 2, "height", "280px"], [1, "row"], [1, "col-sm-12", "col-lg-4"], [1, "d-flex", "align-items-center", "m-t-5", "m-b-5"], [1, "m-r-10"], [1, "btn", "btn-circle", "btn-lg", "btn-cyan", "text-white", "d-flex"], [1, "font-14", "op-5", "d-block"], [1, "font-16", "font-medium"], [1, "d-flex", "no-block", "align-items-center", "m-t-5", "m-b-5"]],
           template: function DashboardComponent_Template(rf, ctx) {
             if (rf & 1) {
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -439,29 +439,23 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h4", 4);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Earnings");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Total earning from customer");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h5", 5);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h2", 5);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Total earnings from customer");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "h2", 6);
-
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "i", 7);
-
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "43,567.53");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "43,567.53");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 8);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 7);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "apx-chart", 9);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "apx-chart", 8);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -469,37 +463,31 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 1);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 1);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 2);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 2);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 3);
-
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "h4", 4);
-
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Earnings");
-
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 3);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "h5", 5);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "h4", 4);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Total paid to provider");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Total paid to provider");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "h2", 6);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "h2", 5);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "51,567");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "51,567");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 8);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 7);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "apx-chart", 9);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "apx-chart", 8);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -507,39 +495,39 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 1);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 1);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 10);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 9);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 11);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 10);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "h4", 4);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "h4", 4);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Total Refund");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Total Refund");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "p");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "p");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Total money refunded by toto");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Total money refunded by toto");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 12);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 11);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 13);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 12);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "apx-chart", 14);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "apx-chart", 13);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 15);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 14);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "h3", 16);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "h3", 15);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](37, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "33,501");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "33,501");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -553,57 +541,57 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 17);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 16);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 18);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 17);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 11);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 18);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 19);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 19);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "h4", 4);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "h4", 4);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "Service wise earning");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Service wise earning");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "h5", 5);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "h5", 20);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "Total amount of earned by service");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Total amount of earned by service");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 20);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div", 21);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 21);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 22);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "select", 22);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "select", 23);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "option", 23);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "option", 24);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, "Monthly");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "Monthly");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "option", 24);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "option", 25);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, "Daily");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, "Daily");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "option", 25);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "option", 26);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Weekly");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, "Weekly");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "option", 26);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "option", 27);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Yearly");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, "Yearly");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -615,87 +603,87 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 27);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div", 28);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "div", 28);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "div", 29);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 29);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "div", 30);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](62, "apx-chart", 30);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](58, "apx-chart", 31);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "div", 28);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 29);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "h4");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "h4");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "Services");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "Services");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "ul", 31);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "ul", 32);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "li", 32);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "li", 33);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](68, "i", 33);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](64, "i", 34);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, "Ac Service ");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "Ac Service ");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "span", 34);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "span", 35);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](71, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](67, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "23,000");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, "23,000");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "li", 32);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "li", 33);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](74, "i", 35);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](70, "i", 36);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](75, "Voice Modulation ");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, "Voice Modulation ");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "span", 34);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "span", 35);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](77, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](73, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](78, "41,000");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "41,000");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "li", 32);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "li", 33);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](80, "i", 36);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](76, "i", 37);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "Internate Speed ");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, "Internate Speed ");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "span", 34);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "span", 35);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](83, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](79, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](84, "23,890");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, "23,890");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "li", 32);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "li", 33);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](86, "i", 37);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](82, "i", 38);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](87, "Poor Wifi Coverage ");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](83, "Poor Wifi Coverage ");
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "span", 34);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "span", 35);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](89, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](85, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](90, "09,000");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](86, "09,000");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -713,61 +701,61 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](91, "div", 38);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "div", 39);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "div", 39);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "div", 40);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "div", 11);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "div", 10);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "h3");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "h4", 4);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](95, "Total earning of Toto");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, "Total earning of toto");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "h2", 40);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "h5", 41);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](97, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](93, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](98, "6,890.68");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](94, "6,890.68");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "div", 41);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "div", 42);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](100, "apx-chart", 9);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](96, "apx-chart", 8);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "div", 0);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "div", 43);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "div", 42);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "div", 44);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "div", 43);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "div", 45);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "div", 44);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "div", 46);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "a", 45);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "a", 47);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](106, "EA");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](102, "EA");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "div", 40);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "div", 41);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "span", 46);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "span", 48);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, "Product A");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, "Product A");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "span", 47);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "span", 49);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](111, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](107, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](112, "15.56K");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](108, "15.56K");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -777,33 +765,33 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](113, "div", 42);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "div", 44);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "div", 48);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "div", 50);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](115, "div", 44);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](111, "div", 46);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "a", 45);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "a", 47);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](117, "EA");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, "EA");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "div", 40);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "div", 41);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](119, "span", 46);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](115, "span", 48);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](120, "Product B");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](116, "Product B");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](121, "span", 47);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](117, "span", 49);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](122, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](118, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](123, "15.56K");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, "15.56K");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -813,33 +801,33 @@
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](124, "div", 42);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "div", 44);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "div", 48);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](121, "div", 50);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](126, "div", 44);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "div", 46);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](127, "a", 45);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](123, "a", 47);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](128, "EA");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](124, "EA");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "div", 40);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "div", 41);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](130, "span", 46);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](126, "span", 48);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](131, "Product C");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](127, "Product C");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](132, "span", 47);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](128, "span", 49);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](133, "i", 7);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](129, "i", 6);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](134, "15.56K");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](130, "15.56K");
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -861,11 +849,11 @@
             }
 
             if (rf & 2) {
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", ctx.earningboxChartOptions.series)("chart", ctx.earningboxChartOptions.chart)("xaxis", ctx.earningboxChartOptions.xaxis)("yaxis", ctx.earningboxChartOptions.yaxis)("grid", ctx.earningboxChartOptions.grid)("stroke", ctx.earningboxChartOptions.stroke)("tooltip", ctx.earningboxChartOptions.tooltip)("dataLabels", ctx.earningboxChartOptions.dataLabels)("legend", ctx.earningboxChartOptions.legend)("colors", ctx.earningboxChartOptions.colors)("markers", ctx.earningboxChartOptions.markers);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", ctx.earningboxChartOptions.series)("chart", ctx.earningboxChartOptions.chart)("xaxis", ctx.earningboxChartOptions.xaxis)("yaxis", ctx.earningboxChartOptions.yaxis)("grid", ctx.earningboxChartOptions.grid)("stroke", ctx.earningboxChartOptions.stroke)("tooltip", ctx.earningboxChartOptions.tooltip)("dataLabels", ctx.earningboxChartOptions.dataLabels)("legend", ctx.earningboxChartOptions.legend)("colors", ctx.earningboxChartOptions.colors)("markers", ctx.earningboxChartOptions.markers);
 
@@ -938,18 +926,117 @@
         PaymentDetailComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
           type: PaymentDetailComponent,
           selectors: [["app-payment-detail"]],
-          decls: 2,
+          decls: 33,
           vars: 0,
+          consts: [[1, "card-group"], [1, "card"], [1, "card-body", "text-center"], [1, "card-title"], [1, "profile-pic", "m-b-20", "m-t-20"], ["src", "assets/images/users/5.jpg", "width", "150", "alt", "user", 1, "rounded-circle"], [1, "m-t-20", "m-b-0"], ["href", "mailto:danielkristeen@gmail.com"], [1, "badge", "badge-pill", "badge-light", "font-16"]],
           template: function PaymentDetailComponent_Template(rf, ctx) {
             if (rf & 1) {
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "payment-detail works!");
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h4", 3);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Provider Details");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "img", 5);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h4", 6);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Daniel Kristeen");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 7);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "danielkristeen@gmail.com");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 8);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "+917276703608");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 8);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "30/12/1995");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 8);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Male");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 1);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 2);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h4", 3);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Customer Details");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 4);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "img", 5);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "h4", 6);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Daniel Kristeen");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "a", 7);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "danielkristeen@gmail.com");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 8);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "+917276703608");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 8);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "30/12/1995");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Male");
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+              _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
               _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             }
           },
-          styles: [""]
+          styles: [".card-title[_ngcontent-%COMP%]{\r\n    text-align: left;\r\n}\r\n.card-subtitle[_ngcontent-%COMP%]{\r\n    text-align: left;\r\n}"]
         });
         return PaymentDetailComponent;
       }();

@@ -541,7 +541,7 @@ export class DashboardComponent implements OnInit {
 
 
     this.EmailChartOptions = {
-      series: [45, 15, 27, 18],
+      series: [60, 40],
       chart: {
         fontFamily: 'Nunito Sans,sans-serif',
         type: 'donut',
@@ -584,8 +584,8 @@ export class DashboardComponent implements OnInit {
       legends: {
         show: false,
       },
-      labels: ['Desktop', 'Mobile', 'Tablet', 'Other'],
-      colors: ['#40c4ff', '#2961ff', '#ff821c', '#7e74fb'],
+      labels: ['Ios', 'Android'],
+      colors: ['#40c4ff', '#2961ff'],
 
     };
 
