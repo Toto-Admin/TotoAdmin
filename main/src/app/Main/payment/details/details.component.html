@@ -1,0 +1,42 @@
+<p>details works!</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Payment history in detail</h4>
+                <!-- <h6 class="card-subtitle">This is basic Default pagination</h6> -->
+
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" style="background-color:hsl(253, 41%, 82%); ">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink >Task Details</a>
+                        <ng-template ngbNavContent>
+                            <app-task-detail></app-task-detail>
+                        </ng-template>
+                    </li>
+                  
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Payment details</a>
+                        <ng-template ngbNavContent>
+                          <app-total-payment></app-total-payment>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>Report</a>
+                        <ng-template ngbNavContent>
+                          <app-report></app-report>
+                        </ng-template>
+                    </li>
+                   
+                </ul>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+            </div>
+        </div>
+    </div> 
+</div> 
+
+

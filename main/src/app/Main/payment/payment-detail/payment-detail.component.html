@@ -1,9 +1,9 @@
-<div class="card-group">
+<!-- <div class="card-group">
 <div class="card">
     <div class="card-body text-center">
         <h4 class="card-title">Provider Details</h4>
         <!-- <h5 class="card-subtitle"></h5> -->
-        <div class="profile-pic m-b-20 m-t-20">
+        <!-- <div class="profile-pic m-b-20 m-t-20">
             <img src="assets/images/users/5.jpg" width="150" class="rounded-circle" alt="user" />
             <h4 class="m-t-20 m-b-0">Daniel Kristeen</h4>
             <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a>
@@ -17,18 +17,180 @@
 </div>
 <div class="card">
     <div class="card-body text-center">
-        <h4 class="card-title">Customer Details</h4>
+        <h4 class="card-title">Customer Details</h4> -->
         <!-- <h5 class="card-subtitle">Here is the provider list you can add, edit or delete the provider</h5> -->
-        <div class="profile-pic m-b-20 m-t-20">
+        <!-- <div class="profile-pic m-b-20 m-t-20">
             <img src="assets/images/users/5.jpg" width="150" class="rounded-circle" alt="user" />
-            <h4 class="m-t-20 m-b-0">Daniel Kristeen</h4>
-            <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a>
+            <h4 class="m-t-20 m-b-0">Johan Anderson</h4>
+            <a href="mailto:danielkristeen@gmail.com">johan12@gmail.com</a>
         </div>
-        <div class="badge badge-pill badge-light font-16">+917276703608</div>
-        <div class="badge badge-pill badge-light font-16">30/12/1995</div>
+        <div class="badge badge-pill badge-light font-16">+918276703699</div>
+        <div class="badge badge-pill badge-light font-16">30/12/1993</div>
          <div class="badge badge-pill badge-light font-16">Male</div> 
       
     </div>
    
 </div>
-</div>
+</div>  -->
+
+<div class="row">
+    <div class="col-12">
+          <h5 lass="card-title">Payment Details</h5>
+      <div class="card card-body">
+        <!-- <h4 class="card-title">Customer List<span style="float: right;"><button class="btn btn-primary ml-auto">Add Customer</button></span></h4> -->
+        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+     
+        <div class="d-flex mb-3 mt-3">
+          <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
+          <!-- (click)="openModal(editUserModal, null)" -->
+          
+        </div>
+        <div class="">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- <div class="card card-hover">
+                <div class="card-body"> -->
+                  <table  class="row-border hover table table-bordered">
+                    <thead style="background: #92adfc;">
+                      <tr>
+                          <th>Id</th>
+                        <th>Customer Name</th>
+                        <th>Provider Name</th>
+                        <th>Service</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Payment Status</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                          <td>1</td>
+                        <td><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                            </div>
+                          </div></td>
+                        <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                        <td>AC Service</td>
+                        <td>Remote</td>
+                        <td>Debit</td>
+                        <td>Refund</td>
+                        <td>20/03/2021</td>
+                        <td><i class="mdi mdi-currency-gbp"></i>20</td>
+                        <td><i class="fas fa-eye "></i></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                      <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                      <td><div class="d-flex align-items-center">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>Mobile Service</td>
+                      <td>Remote</td>
+                      <td>Debit</td>
+                      <td>Refund</td>
+                      <td>20/03/2021</td>
+                      <td><i class="mdi mdi-currency-gbp"></i>20</td>
+                      <td><i class="fas fa-eye "></i></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                      <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                      <td><div class="d-flex align-items-center">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>Poor Wifi Coverage</td>
+                      <td>Online</td>
+                      <td>Debit</td>
+                      <td>Refund</td>
+                      <td>20/03/2021</td>
+                      <td><i class="mdi mdi-currency-gbp"></i>20</td>
+                      <td><i class="fas fa-eye "></i></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                      <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                      <td><div class="d-flex align-items-center">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>ISP Service</td>
+                      <td>Remote</td>
+                      <td>Debit</td>
+                      <td>Done</td>
+                      <td>20/03/2021</td>
+                      <td><i class="mdi mdi-currency-gbp"></i>20</td>
+                      <td><i class="fas fa-eye "></i></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                      <td><div class="d-flex align-items-center">
+                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                          </div>
+                        </div></td>
+                      <td><div class="d-flex align-items-center">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 35px" width="35px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>Tv Service</td>
+                      <td>Online</td>
+                      <td>Credit</td>
+                      <td>Refund</td>
+                      <td>20/03/2021</td>
+                      <td><i class="mdi mdi-currency-gbp"></i>20</td>
+                      <td><i class="fas fa-eye "></i></td>
+                    </tr>
+                      
+                    </tbody>
+                  </table>  
+                <!-- </div>
+              </div> -->
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+

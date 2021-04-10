@@ -18,7 +18,7 @@ import { AvailabilityComponent } from './availability/availability.component';
 import { TaskHistoryComponent } from './task-history/task-history.component';
 import { ReviewRatingComponent } from './review-rating/review-rating.component';
 import { DataTablesModule } from 'angular-datatables';
-// import { FullcalendarComponent } from './fullcalendar/fullcalendar.component';
+
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
