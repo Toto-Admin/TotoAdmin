@@ -183,7 +183,7 @@ export const ROUTES: RouteInfo[] = [
         ]
     },
     {
-        path: 'dashboard',
+        path: '/mobile-apps',
         title: 'Mobile Apps',
         icon: ' fas fa-mobile-alt',
         class: 'has-arrow',
@@ -192,17 +192,38 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/classic',
+                path: '/mobile-apps',
                 title: 'FAQ',
-                icon: 'mdi mdi-adjust',
-                class: '',
+                icon: 'fas fa-question',
+                class: 'has-arrow',
                 extralink: false,
                 label: '',
                 labelClass: '',
-                submenu: []
+                submenu: [
+                    {
+                        path: '/mobile-apps/questions',
+                        title: 'Questions',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                    {
+                        path: '/mobile-apps/category',
+                        title: 'Category',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                ]
             },
             {
-                path: '/dashboard/analytical',
+                path: '/mobile-apps/mobile-content',
                 title: 'Mobile Content',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -212,7 +233,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/mobile-apps/knowledge',
                 title: 'Knowledge',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -222,17 +243,68 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/mobile-apps/reasons',
                 title: 'Reasons',
-                icon: 'mdi mdi-adjust',
-                class: '',
+                icon: 'fas fa-user-circle',
+                class: 'has-arrow',
                 extralink: false,
                 label: '',
                 labelClass: '',
-                submenu: []
+                submenu: [
+                    {
+                        path: '/mobile-apps/like',
+                        title: 'Like Reason',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                    {
+                        path: '/mobile-apps/cancel',
+                        title: 'Cancel Reason',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                    {
+                        path: '/mobile-apps/reject',
+                        title: 'Reject Reason',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                    {
+                        path: '/mobile-apps/dispute',
+                        title: 'Dispute Reason',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                    {
+                        path: '/mobile-apps/block',
+                        title: 'Block Reason',
+                        icon: 'mdi mdi-adjust',
+                        class: '',
+                        extralink: false,
+                        label: '',
+                        labelClass: '',
+                        submenu: []
+                    },
+                ]
             },
             {
-                path: '/dashboard/analytical',
+                path: '/mobile-apps/transport',
                 title: 'Transport',
                 icon: 'mdi mdi-adjust',
                 class: '',

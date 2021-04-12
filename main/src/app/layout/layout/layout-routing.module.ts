@@ -17,13 +17,16 @@ const routes: Routes = [
       path:'provider',loadChildren:() => import('../../Main/provider/provider.module').then(m =>m.ProviderModule)
      },
      {
-      path:'assessment',loadChildren:()=> import('../../Main/assessment/assessment.module').then(m=>m.AssessmentModule)
+      path:'assessment',loadChildren:() => import('../../Main/assessment/assessment.module').then(m =>m.AssessmentModule)
      },
      {
-      path:'jobs',loadChildren:()=> import('../../Main/jobs/jobs.module').then(m=>m.JobsModule)
+      path:'jobs',loadChildren:() => import('../../Main/jobs/jobs.module').then(m =>m.JobsModule)
      },
      {
-       path:'payment',loadChildren:()=> import('../../Main/payment/payment.module').then(m=>m.PaymentModule)
+       path:'payment',loadChildren:() => import('../../Main/payment/payment.module').then(m =>m.PaymentModule)
+     },
+     {
+       path:'mobile-apps',loadChildren:() => import('../../Main/mobile-apps/mobile-apps.module').then(m =>m.MobileAppsModule)
      }
   ]
 },
