@@ -8,3 +8,36 @@
   .dataTables_filter input {
     border: 1px solid #0d0d0d !important;
   }
+  .dataTables_wrapper .dataTables_length select{
+    border: 1px solid #0d0d0d !important;
+  }
+
+  .reqNote{
+    color : red;
+    font-size:  14px;
+  }
+
+  .form-control {
+    border: 1px solid #414141 !important;
+  }
+
+  .checked {
+    color: orange;
+  }
+
+  .infoData {
+    margin-right: 3px;  
+  }
+
+  .scroll-sidebar {
+    height: calc(100% - 20px);
+    position: relative;
+  }
+
+  .ps {
+    overflow: hidden !important;
+    overflow-anchor: none;
+    -ms-overflow-style: none;
+    touch-action: auto;
+    -ms-touch-action: auto;
+  }

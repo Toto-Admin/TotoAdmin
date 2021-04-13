@@ -1,218 +1,395 @@
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Provider List</h4>
-        <h5 class="card-subtitle">Here is the provider list you can add, edit or delete the provider</h5>
-        <div class="d-flex mb-3 mt-3">
-          <input type="text" class="form-control w-25" placeholder="Search by Name or Email" >
-          <button class="btn btn-primary ml-auto"  (click)="openModal(editUserModal, null)"  >Add Provider</button>
-          <!-- " (click)="openModal(editUserModal, null)" -->
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Provider List<span style="float: right;"><button class="btn btn-primary backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add provider</button></span></h4>
+      <!-- <h5 class="card-subtitle">Here is the provider list you can add, edit or delet the provider</h5> -->
+      <div class="d-flex mb-3 mt-3">
+        <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
+        <!-- (click)="openModal(editUserModal, null)" -->
+        
+      </div>
+      <div class="">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <div class="card card-hover">
+              <div class="card-body"> -->
+                <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered">
+                  <thead style="background: #92adfc;">
+                    <tr>
+                      <th class="backgroundColor">ID</th>
+                      <th class="backgroundColor">NAME</th>
+                      <th class="backgroundColor">EMAIL</th>
+                      <th class="backgroundColor">MOBILE</th>
+                      <th class="backgroundColor">REG. DATE</th>
+                      <th class="backgroundColor">LAST LOGIN</th>
+                      <th class="backgroundColor">STATUS</th>
+                      <th class="backgroundColor">ACTION</th>
+                    </tr>
+                  </thead>
+                  <!-- <thead>
+                    <tr>
+                      <th><input type="text" placeholder="Search ID" name="search-id"/></th>
+                      <th><input type="text" placeholder="Search name" name="search-name"/></th>
+                      <th><input type="text" placeholder="Search name" name="search-email"/></th>
+                      <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
+                      <th><input type="text" placeholder="Search status" name="search-status"/></th>
+                    </tr>
+                  </thead> -->
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>sushantpatil@gmail.com</td>
+                      <td>9898235323</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Active</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ashish Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>ashishpatil@gmail.com</td>
+                      <td>89342343543</td>
+                      <td>14/12/2020</td>
+                      <td>23/03/2021 3:30PM</td>
+                      <td>Active</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+        
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Pradhip Pawar</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>22/12/2020</td>
+                      <td>24/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sudhir Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>sudhirpawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/10/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Active</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td><div class="d-flex">
+                        <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 30px" width="30px">
+                        <div class="ml-3">
+                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Sushant Patil</a></p>
+                        </div>
+                      </div></td>
+                      <td>pradhippawar@gmail.com</td>
+                      <td>8459495933</td>
+                      <td>12/12/2020</td>
+                      <td>20/03/2021 3:30PM</td>
+                      <td>Inactive</td>
+                      <td><a [routerLink]="['/provider/provider-view']">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>  
+              <!-- </div>
+            </div> -->
+          </div>
         </div>
-        <div class="table-responsive table-bordered">
-          <table   class="table table-striped mb-0 no-wrap v-middle">
-            <thead style="background: #92adfc;">
-              <tr>
-                <th class="text-center" scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Status</th>
-                
-                <!-- <th scope="col">Action</th> -->
-              </tr>
-            </thead>
-            <tbody>
-              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-  
-                <td class="text-center">
-                  {{user.id}}
-                </td>
-  
-                <td>
-                  <div class="d-flex align-items-center">
-                    <img class="rounded-circle" [src]='user.imagePath' height=" 50px" width="50px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0">{{ user.Name }}</p>
-                      <small>{{user.Position}}</small>
-                    </div>
-                  </div>
-                </td>
-                <td>{{ user.Email }}</td>
-  
-                <td>{{ user.Mobile }}</td>
-                <td>{{ user.DateOfJoining |date :'fullDate' }}</td>
-  
-                <td>{{ user.Salary }}</td>
-                <td>{{ user.Projects }}</td>
-                <td>
-                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
-                    placement="top" ngbTooltip="Edit">
-                    <i-feather name="edit-2" class="feather-sm"></i-feather>
-                  </a>
-                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
-                    ngbTooltip="Delete">
-                    <i-feather name="trash-2" class="feather-sm"></i-feather>
-                  </a>
-                </td>
-              </tr> -->
-              <tr>
-                  <td>1</td>
-                  <td><a [routerLink]="['/provider/provider-view']">
-                    <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                    Johan Anderson
-                  </a></td>
-                  <td>johan@gmail.com</td>
-                  <td>9090909090</td>
-                  <td>Active</td>
-                  
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                  Sujit Patil
-                </a></td>
-                <td>sujitpatil@gmail.com</td>
-                <td>8976896754</td>
-                <td>Inactive</td>
-                
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                  Prakash Mohite
-                </a></td>
-                <td>prakashmohite@gmail.com</td>
-                <td>9654356789</td>
-                <td>Active</td>
-               
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
-                  Sudhir Pawar
-                </a></td>
-                <td>sudhirpawar@gmail.com</td>
-                <td>8987656789</td>
-                <td>Active</td>
-                
-            </tr>
-            <tr>
-                <td>5</td>
-                <td><a [routerLink]="['/provider/provider-view']">
-                  <img  height=" 50px" width="50px" class="rounded-circle" src="assets/images/users/4.jpg">&nbsp;
-                  Sonal Pawar
-                </a></td>
-                <td>sonalpawar@gmail.com</td>
-                <td>8987656999</td>
-                <td>Inactive</td>
-                
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+        
+        
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header">
-  
-      <h5 class="modal-title" id="editUserLabel">Add Provider</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-  
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">First Name</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
-              {{formsErrors.Name}}
-            </span>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Last Name</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
-              {{formsErrors.Name}}
-            </span>
-          </div>
-        </div>
-  
-  
-        <div class="form-group row">
-          <label for="position" class="col-sm-4 col-form-label">Email</label>
-          <div class="col-sm-8">
-            <input type="email" class="form-control" formControlName="Position" id="position"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Position">
-              {{formsErrors.Position}}
-            </span>
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <label for="Password" class="col-sm-4 col-form-label">Password</label>
-          <div class="col-sm-8">
-            <input type="email" class="form-control" formControlName="Email" id="email"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Email">
-              {{formsErrors.Email}}
-            </span>
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <label for="mobile" class="col-sm-4 col-form-label">Mobile</label>
-          <div class="col-sm-8">
-            <input type="tel" class="form-control" formControlName="Mobile" id="mobile"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Mobile">
-              {{formsErrors.Mobile}}
-            </span>
-          </div>
-        </div>
-  
+</div>
 
-        <div class="form-group row">
-          <label for="projects" class="col-sm-4 col-form-label">Date of Birth</label>
-          <div class="col-sm-8">
-            <input type="Date" class="form-control" formControlName="Projects" id="projects"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Projects">
-              {{formsErrors.Projects}}
-            </span>
-          </div>
-        </div> 
-  
-  
-  
-  
-  
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
-  
-          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header backgroundColor">
+
+    <h5 class="modal-title" id="editUserLabel">Add provider</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">First Name<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Name">
+            {{formsErrors.Name}}
+          </span>
         </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">Last Name<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Name">
+            {{formsErrors.Name}}
+          </span>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="position" class="col-sm-4 col-form-label">Email<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Position" id="position"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Position">
+            {{formsErrors.Position}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="email" class="col-sm-4 col-form-label">Password<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="email" class="form-control" formControlName="Email" id="email"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Email">
+            {{formsErrors.Email}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="mobile" class="col-sm-4 col-form-label">Latitude</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Mobile" id="mobile"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Mobile">
+            {{formsErrors.Mobile}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="mobile" class="col-sm-4 col-form-label">Longitude</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Mobile" id="mobile"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Mobile">
+            {{formsErrors.Mobile}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="mobile" class="col-sm-4 col-form-label">Mobile<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Mobile" id="mobile"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Mobile">
+            {{formsErrors.Mobile}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="mobile" class="col-sm-4 col-form-label">
+          Referral Code
+        </label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Mobile" id="mobile"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Mobile">
+            {{formsErrors.Mobile}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="doj" class="col-sm-4 col-form-label">Date Of Birth</label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" formControlName="DateOfJoining" [(ngModel)]="joiningDate" id="doj"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.DateOfJoining">
+            {{formsErrors.DateOfJoining}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="salary" class="col-sm-4 col-form-label">Gender<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <div class="form-check form-check-inline">
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked">
+                <label class="custom-control-label" for="customControlValidation2">Male</label>
+            </div>
+        </div>
+        <div class="form-check form-check-inline">
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked">
+                <label class="custom-control-label" for="customControlValidation3">Female</label>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="projects" class="col-sm-4 col-form-label">Profile Image</label>
+        <div class="col-sm-8">
+          <input type="file" class="form-control" formControlName="Projects" id="projects"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Projects">
+            {{formsErrors.Projects}}
+          </span>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
+
+        <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+      </div>
+
+      
+    </form>
+  </div>
+</ng-template>
