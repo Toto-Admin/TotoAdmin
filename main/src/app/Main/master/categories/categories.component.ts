@@ -5,12 +5,13 @@ import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-like-reason',
-  templateUrl: './like-reason.component.html',
-  styleUrls: ['./like-reason.component.css']
+  selector: 'app-categories',
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.css']
 })
-export class LikeReasonComponent implements OnInit {
+export class CategoriesComponent implements OnInit {
 
+  
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
   config: any;

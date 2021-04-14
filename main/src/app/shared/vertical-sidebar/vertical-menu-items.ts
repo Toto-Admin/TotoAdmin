@@ -317,7 +317,7 @@ export const ROUTES: RouteInfo[] = [
         
         ]
     },{
-        path: 'dashboard',
+        path: 'master',
         title: 'Master',
         icon: 'fas fa-th',
         class: 'has-arrow',
@@ -326,7 +326,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/classic',
+                path: '/master/services',
                 title: 'Services',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -336,7 +336,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/master/categories',
                 title: 'Categories',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -351,7 +351,7 @@ export const ROUTES: RouteInfo[] = [
         ]
     },
     {
-        path: 'dashboard',
+        path: 'marketing',
         title: 'Marketing',
         icon: 'fas fa-th',
         class: 'has-arrow',
@@ -360,7 +360,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/classic',
+                path: '/marketing/promocodes',
                 title: 'Promo code',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -370,7 +370,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/marketing/rewards',
                 title: 'Rewards',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -380,7 +380,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/marketing/reports',
                 title: 'Report',
                 icon: 'mdi mdi-adjust',
                 class: '',

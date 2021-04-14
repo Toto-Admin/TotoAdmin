@@ -27,7 +27,13 @@ const routes: Routes = [
      },
      {
        path:'mobile-apps',loadChildren:() => import('../../Main/mobile-apps/mobile-apps.module').then(m =>m.MobileAppsModule)
-     }
+     },
+     {
+       path:'master',loadChildren:() => import('../../Main/master/master.module').then(m =>m.MasterModule)
+     },
+    {
+      path:'marketing',loadChildren:() => import('../../Main/marketing/marketing.module').then(m =>m.MarketingModule)
+    }
   ]
 },
 ];

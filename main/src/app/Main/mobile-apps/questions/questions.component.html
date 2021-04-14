@@ -1,6 +1,3 @@
-
-<p>Questions list works</p>
-<!-- //Questions List -->
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
@@ -43,7 +40,7 @@
                         <td>Application</td>
                         <td>Payment</td>
                         <td>
-                            <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -57,7 +54,7 @@
                         <td>Application</td>
                         <td>Payment</td>
                         <td>
-                            <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -71,7 +68,7 @@
                         <td>Application</td>
                         <td>Payment</td>
                         <td>
-                            <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -85,7 +82,7 @@
                         <td>Application</td>
                         <td>Payment</td>
                         <td>
-                            <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -99,7 +96,7 @@
                         <td>Application</td>
                         <td>Payment</td>
                         <td>
-                            <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -113,7 +110,7 @@
                         <td>Application</td>
                         <td>Payment</td>
                         <td>
-                            <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -142,7 +139,7 @@
   
     <div class="modal-header backgroundColor">
   
-      <h5 class="modal-title" id="editUserLabel">Add FAQ</h5>
+      <h5 class="modal-title" id="editUserLabel">Add or Edit FAQ</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>

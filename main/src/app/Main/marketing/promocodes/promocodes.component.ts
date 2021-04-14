@@ -1,15 +1,16 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-like-reason',
-  templateUrl: './like-reason.component.html',
-  styleUrls: ['./like-reason.component.css']
+  selector: 'app-promocodes',
+  templateUrl: './promocodes.component.html',
+  styleUrls: ['./promocodes.component.css']
 })
-export class LikeReasonComponent implements OnInit {
+export class PromocodesComponent implements OnInit {
 
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;

@@ -1,7 +1,8 @@
+
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Like Reasons<span style="float: right;">
+        <h4 class="card-title">Promo Code<span style="float: right;">
             <button class="btn btn-primary backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         <div class="d-flex mb-3 mt-3">
@@ -15,13 +16,17 @@
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
                   <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered">
-                    <thead style="background: #92adfc;">
+                    <thead >
                       <tr>
              
-                        <th class="backgroundColor">REASON</th>
-                        <th class="backgroundColor">TYPE</th>
-                        <th class="backgroundColor">REVIEW START</th>
-                        <th class="backgroundColor">STATUS</th>
+                        <th class="backgroundColor">NAME</th>
+                        <th class="backgroundColor">MAX USES</th>
+                        <th class="backgroundColor">MAX USES USER</th>
+                        <th class="backgroundColor">DISCOUNT TYPE</th>
+                        <th class="backgroundColor">IS FIXED</th>
+                        <th class="backgroundColor">DISCOUNT AMOUNT</th>
+                        <th class="backgroundColor">STARTS AT</th>
+                        <th class="backgroundColor">EXPIRES AT</th>
                         <th class="backgroundColor">ACTION</th>
                       </tr>
                     </thead>
@@ -35,78 +40,78 @@
                       </tr>
                     </thead> -->
                     <tbody>
-                      <tr>
-                        <td>Good customer</td>
-                        <td>Provider</td>
-                        <td>4</td>
-                        <td>Active</td>
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Good service</td>
-                        <td>Customer</td>
-                        <td>4</td>
-                        <td>Active</td>
-                        <td>
+                        <tr>
+                          <td>Totodiw</td>
+                          <td>10</td>
+                          <td>10</td>
+                          <td>Fixed</td>
+                          <td>0</td>
+                          <td class="mdi mdi-currency-gbp">10</td>
+                          <td>02/04/2021</td>
+                          <td>04/04/2021</td>
+                          <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
                                 <i class="ti-trash"></i>
                             </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Good service</td>
-                        <td>Customer</td>
-                        <td>4</td>
-                        <td>Active</td>
-                        <td>
+                         </td>
+                        </tr>
+                        <tr>
+                          <td>SummerFest</td>
+                          <td>100</td>
+                          <td>10</td>
+                          <td>Fixed</td>
+                          <td>1</td>
+                          <td class="mdi mdi-currency-gbp">10</td>
+                          <td>02/04/2021</td>
+                          <td>04/04/2021</td>
+                          <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
                                 <i class="ti-trash"></i>
                             </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Good customer</td>
-                        <td>Provider</td>
-                        <td>4</td>
-                        <td>Active</td>
-                        <td>
+                         </td>
+                        </tr>
+                        <tr>
+                          <td>seasonfest</td>
+                          <td>100</td>
+                          <td>05</td>
+                          <td>Fixed</td>
+                          <td>1</td>
+                          <td class="mdi mdi-currency-gbp">10</td>
+                          <td>10/04/2021</td>
+                          <td>15/04/2021</td>
+                          <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
                                 <i class="ti-trash"></i>
                             </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Good customer</td>
-                        <td>Provider</td>
-                        <td>3</td>
-                        <td>Active</td>
-                        <td>
+                         </td>
+                        </tr>
+                        <tr>
+                          <td>Totofest</td>
+                          <td>200</td>
+                          <td>10</td>
+                          <td>Fixed</td>
+                          <td>0</td>
+                          <td class="mdi mdi-currency-gbp">20</td>
+                          <td>07/04/2021</td>
+                          <td>11/04/2021</td>
+                          <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
                                 <i class="ti-trash"></i>
                             </a>
-                        </td>
-                      </tr>
-                     
-                   
+                         </td>
+                        </tr>
                     </tbody>
                   </table>  
                 <!-- </div>
@@ -128,7 +133,7 @@
   
     <div class="modal-header backgroundColor">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Like Reasons</h5>
+      <h5 class="modal-title" id="editUserLabel">Add or Edit Block Reasons</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -181,4 +186,3 @@
       </form>
     </div>
   </ng-template>
-  

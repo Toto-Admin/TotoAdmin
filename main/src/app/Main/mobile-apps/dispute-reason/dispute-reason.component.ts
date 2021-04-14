@@ -3,7 +3,8 @@ import {  ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
-import { User } from 'src/app/apps/users/user';
+import { User } from '../user';
+
 @Component({
   selector: 'app-dispute-reason',
   templateUrl: './dispute-reason.component.html',
