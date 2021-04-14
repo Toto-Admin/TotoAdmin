@@ -13,6 +13,8 @@ import { CancelReasonComponent } from './cancel-reason/cancel-reason.component';
 import { RejectReasonComponent } from './reject-reason/reject-reason.component';
 import { DisputeReasonComponent } from './dispute-reason/dispute-reason.component';
 import { BlockReasonComponent } from './block-reason/block-reason.component';
+import { DataTablesModule } from 'angular-datatables';
+import { QuillModule } from 'ngx-quill';
 
 
 @NgModule({
@@ -20,7 +22,11 @@ import { BlockReasonComponent } from './block-reason/block-reason.component';
   ],
   imports: [
     CommonModule,
-    MobileAppsRoutingModule
+    QuillModule,
+    MobileAppsRoutingModule,
+    DataTablesModule,
+    
+
   ]
 })
 export class MobileAppsModule { }
