@@ -21,10 +21,12 @@ import { DataTablesModule } from 'angular-datatables';
 
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { AssessmentComponent } from './assessment/assessment.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent, DocumentComponent, PerformanceComponent, 
-    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent],
+    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent],
   imports: [
     CommonModule,
     AgmCoreModule,

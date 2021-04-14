@@ -64,7 +64,7 @@ export class ProviderViewComponent implements OnInit {
   disabled = true;
 
   
-  tabs = [1, 2, 3, 4, 5];
+  tabs = [1, 2, 3, 4, 5,6,7];
   counter = this.tabs.length + 1;
   activeDynamic=1;
 

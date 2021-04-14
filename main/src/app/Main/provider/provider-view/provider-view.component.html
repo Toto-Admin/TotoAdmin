@@ -16,14 +16,26 @@
                     <!-- column -->
                     <div class="col-lg-4" style="text-align: center;">
                         <div class="profile-pic m-b-20 m-t-20">
-                            <img src="assets/images/users/5.jpg" width="150" class="rounded-circle" alt="user" />
-                            <h4 class="m-t-20 m-b-0">Johan Anderson</h4>
-                            <a href="mailto:danielkristeen@gmail.com">johan12@gmail.com</a><br>
-                            <label>Mumbai,India</label>
+                            <img src="assets/images/users/5.jpg" width="120" class="rounded-circle" alt="user" />
+                            <h4 class="m-t-20 m-b-0">Daniel Kristeen</h4>
+                            <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a><br>
+                            <label>Royal Mail
+                                Flat 9, Wheatstone House</label><br>
+                            <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
                         </div>
-                        <div class="badge badge-pill badge-light font-14">+917276703608</div>
-                        <div class="badge badge-pill badge-light font-14">Male</div>
-                        <div class="badge badge-pill badge-light font-14">30/12/1995</div>
+                        
+                        <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">Male</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">30/12/1993</div>
+                        <hr>
+                        <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div>
+                        <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
+                        <div class="badge badge-pill badge-success font-14 infoData">Active</div>
+                        
                         <!-- <div class="badge badge-pill badge-info font-14" data-toggle="tooltip" data-placement="top" title="3 more">+3</div> -->
                     </div>
                     <!-- column -->
@@ -110,13 +122,13 @@
 <!-- Contractor tabs -->
 <div class="row">
     <div class="col-md-12">
-        <div class="card">
+        <div class="card " >
             <div class="card-body">
                 <h4 class="card-title">All Details of Provider</h4>
                 <!-- <h6 class="card-subtitle">This is basic Default pagination</h6> -->
 
 
-                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" style="background-color:#bbd1d4; ">
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
                     <li [ngbNavItem]="1">
                         <a ngbNavLink >Document</a>
                         <ng-template ngbNavContent>
@@ -151,6 +163,18 @@
                         <a ngbNavLink>Review And Rating</a>
                         <ng-template ngbNavContent>
                            <app-review-rating></app-review-rating>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="6">
+                        <a ngbNavLink>Assesment</a>
+                        <ng-template ngbNavContent>
+                            <app-assessment></app-assessment>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="7">
+                        <a ngbNavLink>Timeline</a>
+                        <ng-template ngbNavContent>
+                           <app-timeline></app-timeline>
                         </ng-template>
                     </li>
                    

@@ -3,3 +3,7 @@
     height: 350px;
     display: flex;
   }
+  .active {
+    background-color: #2962ff !important;
+    color :white !important;
+  }

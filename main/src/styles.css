@@ -5,8 +5,11 @@
     background-color: #2962ff;
     color :white;
   }
+
+  
   .dataTables_filter input {
     border: 1px solid #0d0d0d !important;
+    border-radius: 15px !important;
   }
   .dataTables_wrapper .dataTables_length select{
     border: 1px solid #0d0d0d !important;
@@ -41,3 +44,12 @@
     touch-action: auto;
     -ms-touch-action: auto;
   }
+
+  .table td {
+    padding: 10px !important;
+  }
+
+  .box {
+    box-shadow: 0 13px 21px -13px black;
+  }
+  

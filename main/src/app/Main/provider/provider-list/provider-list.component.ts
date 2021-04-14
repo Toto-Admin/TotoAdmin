@@ -29,9 +29,9 @@ export class ProviderListComponent implements OnInit {
     
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength:8,
+      pageLength:10,
       ordering : false,
-      lengthMenu :[[8,25,50,100,-1],[8,25,50,100,'All']],
+      lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
      
     };
     this.editUser = this.fb.group({
@@ -63,12 +63,12 @@ export class ProviderListComponent implements OnInit {
     });
   }
 
-  // openModal(targetModal: NgbModal, user: User | null) {
-  //   this.modalService.open(targetModal, {
-  //       centered: true,
-  //       backdrop: 'static'
-  //   });
-  // }
+  openModal(targetModal: NgbModal) {
+    this.modalService.open(targetModal, {
+        centered: true,
+        backdrop: 'static'
+    });
+  }
   closeBtnClick() {
     this.modalService.dismissAll();
     this.ngOnInit();

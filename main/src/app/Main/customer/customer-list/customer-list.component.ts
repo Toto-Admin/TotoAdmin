@@ -28,9 +28,9 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
     
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength:8,
+      pageLength:10,
       ordering : false,
-      lengthMenu :[[8,25,50,100,-1],[8,25,50,100,'All']],
+      lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
      
     };
     this.editUser = this.fb.group({

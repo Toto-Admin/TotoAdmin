@@ -7,3 +7,6 @@
   .checked {
     color: orange;
   }
+  ::-webkit-scrollbar {
+    display:none;
+}
