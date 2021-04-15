@@ -395,7 +395,7 @@ export const ROUTES: RouteInfo[] = [
         ]
     },
     {
-        path: 'dashboard',
+        path: 'setting',
         title: 'Setting',
         icon: 'fas fa-cog',
         class: 'has-arrow',
@@ -404,7 +404,7 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
-                path: '/dashboard/classic',
+                path: '/setting/general-setting',
                 title: 'General Setting',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -414,7 +414,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/setting/email-template',
                 title: 'Email Template',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -424,7 +424,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/setting/referral',
                 title: 'Referral ',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -434,7 +434,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/setting/notification-template',
                 title: 'Notification Template',
                 icon: 'mdi mdi-adjust',
                 class: '',
@@ -444,7 +444,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             },
             {
-                path: '/dashboard/analytical',
+                path: '/setting/user-permission',
                 title: 'User and permission',
                 icon: 'mdi mdi-adjust',
                 class: '',

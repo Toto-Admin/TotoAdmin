@@ -5,11 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.css']
 })
-export class ReportComponent implements OnInit {
+export class ReportComponent  {
 
-  constructor() { }
+  public doughnutChartLabels: string[] = [
+ 
+    'Customer Used Promocode',
+    'Earn Rewards'
+  ];
+  public doughnutChartData: number[] = [350, 450];
+  public doughnutChartType = 'doughnut';
 
-  ngOnInit(): void {
+  public chartClicked(e: any): void {
+    // console.log(e);
+  }
+
+  public chartHovered(e: any): void {
+    // console.log(e);
   }
 
 }

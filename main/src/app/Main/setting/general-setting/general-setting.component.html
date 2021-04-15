@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">General Settings</h4>
+                <!-- <h6 class="card-subtitle">This is basic Default pagination</h6> -->
+
+                <ul ngbNav #nav="ngbNav"  class="nav-tabs" style="background-color:#cfe1e6; ">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink >General</a>
+                        <ng-template ngbNavContent>
+                            <app-general></app-general>
+                        </ng-template>
+                    </li>
+                  
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Charges</a>
+                        <ng-template ngbNavContent>
+                          <app-charges></app-charges>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>Email</a>
+                        <ng-template ngbNavContent>
+                          <app-email></app-email>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>Main Dashboard Menu</a>
+                        <ng-template ngbNavContent>
+                          <app-menu></app-menu>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="5">
+                        <a ngbNavLink>Referral</a>
+                        <ng-template ngbNavContent>
+                          <app-referral-tab></app-referral-tab>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="6">
+                        <a ngbNavLink>Info</a>
+                        <ng-template ngbNavContent>
+                          <app-info></app-info>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="7">
+                        <a ngbNavLink>Configuration</a>
+                        <ng-template ngbNavContent>
+                          <app-config></app-config>
+                        </ng-template>
+                    </li>
+                   
+                </ul>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+            </div>
+        </div>
+    </div> 
+</div> 
+
+

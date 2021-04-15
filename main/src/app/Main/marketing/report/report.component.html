@@ -1,1 +1,14 @@
-<p>report works!</p>
+
+<div class="row">
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Report of Promo Code and Reward</h4>
+            <h6 class="card-subtitle"> how much customer use promocode and earn rewards in details</h6>
+            <canvas baseChart height="165px" [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+                (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)" [colors]="[{backgroundColor: [ '#36bea6', '#2962FF']}]">
+            </canvas>
+        </div>
+    </div>
+</div>
+</div>

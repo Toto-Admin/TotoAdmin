@@ -6,13 +6,14 @@ import { PromocodesComponent } from './promocodes/promocodes.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { ReportComponent } from './report/report.component';
 import { DataTablesModule } from 'angular-datatables';
-
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [PromocodesComponent, RewardsComponent, ReportComponent],
   imports: [
     CommonModule,
     MarketingRoutingModule,
-    DataTablesModule
+    DataTablesModule,
+    ChartsModule
   ]
 })
 export class MarketingModule { }

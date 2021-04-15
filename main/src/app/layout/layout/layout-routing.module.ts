@@ -33,6 +33,9 @@ const routes: Routes = [
      },
     {
       path:'marketing',loadChildren:() => import('../../Main/marketing/marketing.module').then(m =>m.MarketingModule)
+    },
+    {
+      path:'setting',loadChildren:() => import('../../Main/setting/setting.module').then(m =>m.SettingModule)
     }
   ]
 },
