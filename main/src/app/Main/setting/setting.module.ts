@@ -16,14 +16,15 @@ import { ReferralTabComponent } from './referral-tab/referral-tab.component';
 import { InfoComponent } from './info/info.component';
 import { ConfigComponent } from './config/config.component';
 import { QuillModule } from 'ngx-quill';
-
+import { DataTablesModule } from 'angular-datatables';
 @NgModule({
   declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent],
   imports: [
     CommonModule,
     SettingRoutingModule,
     NgbModule,
-    QuillModule
+    QuillModule.forRoot(),
+    DataTablesModule
   ]
 })
 export class SettingModule { }
