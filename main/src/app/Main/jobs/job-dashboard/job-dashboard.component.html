@@ -12,7 +12,7 @@
                         <i class="mdi mdi-wallet text-info display-5"></i>
                     </div>
                 </div>
-                <p>Show Task Booking month wise</p>
+                <!-- <p>Show Task Booking month wise</p> -->
                 <a href="javascript: void(0)" class="font-bold">Last Month Summary</a>
             </div>
             <div class="m-t-40 d-flex flex-column">
@@ -363,7 +363,7 @@
                 <div class="d-md-flex align-items-center">
                     <div>
                         <h4 class="card-title">Active Booking</h4>
-                        <h5 class="card-subtitle">Overview of Most Active Booking</h5>
+                        <!-- <h5 class="card-subtitle">Overview of Most Active Booking</h5> -->
                     </div>
                     <div class="ml-auto">
                         <div class="dl">
@@ -382,15 +382,19 @@
                 <table class="table v-middle">
                     <thead>
                         <tr class="bg-light">
-                            <th class="border-top-0">Customer Name</th>
-                            <th class="border-top-0">Status</th>
-                            <th class="border-top-0">Category</th>
-                            <th class="border-top-0">Type</th>
-                            <th class="border-top-0">Time</th>
+                            <th class="border-top-0 backgroundColor">JobID</th>
+                            <th class="border-top-0 backgroundColor">Customer Name</th>
+                            <th class="border-top-0 backgroundColor">Status</th>
+                            <th class="border-top-0 backgroundColor">Category</th>
+                            <th class="border-top-0 backgroundColor">Type</th>
+                            <th class="border-top-0 backgroundColor">Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td>1</td>
+                            <td>Connectivity</td>
+                            <td>On-site</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 32px" width="32px">
@@ -399,15 +403,15 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td>Connectivity</td>
                             <td><label class="label label-success">Done</label></td>
-                            
                             <td>14-03-2021</td>
                             
                             
                         </tr>
                         <tr>
+                            <td>2</td>
+                            <td>WIFI Connection</td>
+                            <td>On-site</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 32px" width="32px">
@@ -416,14 +420,15 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td>WIFI Connection</td>
                             <td><label class="label label-warning">Working</label></td>
                             
                             <td>13-03-2021</td>
                             
                         </tr>
                         <tr>
+                            <td>3</td>
+                            <td>Connectivity</td>
+                            <td>On-site</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 32px" width="32px">
@@ -432,14 +437,17 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td>Connectivity</td>
                             <td><label class="label label-success">Done</label></td>
                             
                             <td>14-03-2021</td>
                             
                         </tr>
                         <tr>
+                            <td>4</td>
+                            <td>ISP</td>
+
+                            
+                            <td>On-site</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 32px" width="32px">
@@ -448,14 +456,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td>ISP</td>
                             <td><label class="label label-success">Done</label></td>
                             
                             <td>14-03-2021</td>
                             
                         </tr>
                         <tr>
+                            <td>5</td>
+                            <td>Connectivity</td>
+                            
+                            <td>Remote</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 32px" width="32px">
@@ -464,8 +474,6 @@
                                     </div>
                                 </div>
                             </td>
-                            <td>Remote</td>
-                            <td>Connectivity</td>
                             <td><label class="label label-success">Done</label></td>
                             
                             <td>14-03-2021</td>
@@ -503,7 +511,7 @@
                             <small>
                                 <i class="ti-arrow-up text-success"></i>
                             </small>
-                        </h4>Rescheduel
+                        </h4>Reschedule
                     </div>
                     <!-- column -->
                     <div class="col-3 birder-right text-center">
@@ -538,7 +546,7 @@
             <div class="card-body">
                 <h4 class="card-title">Provider Latest Activity
                 </h4>
-                <div class="feed-widget">
+                <div class="feed-widget" style="overflow-y:scroll">
                     <ul class="list-style-none feed-body m-0 p-b-20">
                         <li class="feed-item">
                             <div class="feed-icon bg-info">

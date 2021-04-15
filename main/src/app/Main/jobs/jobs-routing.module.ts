@@ -17,30 +17,30 @@ const routes: Routes = [
   },
   {
     path:'task', component:TaskComponent,
-    data: {
-      title: 'Task Details',
-      urls: [
-        { title: 'Task', url: '/jobs/task' },
-      ]
-    }
+    // data: {
+    //   title: 'Task Details',
+    //   urls: [
+    //     { title: 'Task', url: '/jobs/task' },
+    //   ]
+    // }
   },
   {
     path:'jobview', component:JobDetailsComponent,
-    data: {
-      title: 'Task Details',
-      urls: [
-        { title: 'Task', url: '/jobs/jobview' },
-      ]
-    }
+    // data: {
+    //   title: 'Task Details',
+    //   urls: [
+    //     { title: 'Task', url: '/jobs/jobview' },
+    //   ]
+    // }
   },
   {
     path:'unhappycustomer', component:UnhappywithproviderComponent,
-    data: {
-      title: 'Unhappy with Customer',
-      urls: [
-        { title: 'Task', url: '/jobs/unhappycustomer' },
-      ]
-    }
+    // data: {
+    //   title: 'Unhappy with Customer',
+    //   urls: [
+    //     { title: 'Task', url: '/jobs/unhappycustomer' },
+    //   ]
+    // }
   },
 
 ];

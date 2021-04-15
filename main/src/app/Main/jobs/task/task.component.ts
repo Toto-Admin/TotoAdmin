@@ -13,7 +13,9 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength:5,
+      pageLength:8,
+      ordering : false,
+      lengthMenu :[[8,25,50,100,-1],[8,25,50,100,'All']],
     };
   }
 

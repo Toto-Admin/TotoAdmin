@@ -7,8 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  dtOptions: DataTables.Settings = {};
+
   constructor(private router : Router) { }
   ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength:10,
+      ordering : false,
+      lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
+     
+    };
   }
   btnClick(){
     this.router.navigate(['/assessment/add']);
