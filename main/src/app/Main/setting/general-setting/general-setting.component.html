@@ -5,7 +5,7 @@
                 <h4 class="card-title">General Settings</h4>
                 <!-- <h6 class="card-subtitle">This is basic Default pagination</h6> -->
 
-                <ul ngbNav #nav="ngbNav"  class="nav-tabs" style="background-color:#cfe1e6; ">
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
                     <li [ngbNavItem]="1">
                         <a ngbNavLink >General</a>
                         <ng-template ngbNavContent>
@@ -25,12 +25,12 @@
                           <app-email></app-email>
                         </ng-template>
                     </li>
-                    <li [ngbNavItem]="4">
+                    <!-- <li [ngbNavItem]="4">
                         <a ngbNavLink>Main Dashboard Menu</a>
                         <ng-template ngbNavContent>
                           <app-menu></app-menu>
                         </ng-template>
-                    </li>
+                    </li> -->
                     <li [ngbNavItem]="5">
                         <a ngbNavLink>Referral</a>
                         <ng-template ngbNavContent>

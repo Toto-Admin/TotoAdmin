@@ -33,7 +33,7 @@ export const ROUTES: RouteInfo[] = [
         submenu: [
             {
                 path: '/customer/dashboard/',
-                title: 'Customer Dashboard',
+                title: 'Dashboard',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
