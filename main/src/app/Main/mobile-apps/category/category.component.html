@@ -120,7 +120,7 @@
   
     <div class="modal-header backgroundColor">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit FAQ Category</h5>
+      <h5 class="modal-title" id="editUserLabel">Add or Edit Category</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -156,21 +156,16 @@
             <label for="name" class="col-sm-4 col-form-label">Description<span class="reqNote">*</span></label>
             <div class="col-sm-8">
                <textarea class="form-control" rows="3" placeholder="description here..."></textarea>   
+               <!-- <quill-editor style="height: 150px;"></quill-editor> -->
+
             </div>
         </div>
-       
-
-  
-  
-  
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
-  
-          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
-        </div>
-  
-        
       </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
+
+      <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
     </div>
   </ng-template>
   

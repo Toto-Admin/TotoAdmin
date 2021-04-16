@@ -9,6 +9,7 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TotalPaymentComponent } from './total-payment/total-payment.component';
 import { DetailsComponent } from './details/details.component';
 import { ReportComponent } from './report/report.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ReportComponent } from './report/report.component';
     CommonModule,
     PaymentRoutingModule,
     NgApexchartsModule,
-    NgbModule
+    NgbModule,
+    DataTablesModule
    
 
   ]

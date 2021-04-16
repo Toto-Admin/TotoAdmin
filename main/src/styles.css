@@ -24,6 +24,10 @@
     border: 1px solid #414141 !important;
   }
 
+  .input-group-text{
+    border: 1px solid #414141 !important;
+  }
+
   .checked {
     color: orange;
   }
@@ -51,5 +55,9 @@
 
   .box {
     box-shadow: 0 13px 21px -13px black;
+  }
+
+  .card-title{
+    text-align: left !important;
   }
   

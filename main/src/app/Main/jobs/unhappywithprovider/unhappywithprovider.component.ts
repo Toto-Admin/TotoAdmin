@@ -14,7 +14,9 @@ export class UnhappywithproviderComponent implements OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength:5,
+      pageLength:10,
+      ordering : false,
+      lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
     };
   }
 

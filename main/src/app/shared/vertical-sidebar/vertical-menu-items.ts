@@ -353,7 +353,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'marketing',
         title: 'Marketing',
-        icon: 'fas fa-th',
+        icon: 'fas fa-chart-line',
         class: 'has-arrow',
         extralink: false,
         label: '',

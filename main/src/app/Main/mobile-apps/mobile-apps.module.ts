@@ -22,7 +22,7 @@ import { QuillModule } from 'ngx-quill';
   ],
   imports: [
     CommonModule,
-    QuillModule,
+    QuillModule.forRoot(),
     MobileAppsRoutingModule,
     DataTablesModule,
     

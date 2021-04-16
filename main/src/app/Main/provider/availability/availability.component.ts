@@ -148,7 +148,8 @@ export class AvailabilityComponent implements OnInit {
   On Day Click
   ////////////////////////////////////*/
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
-    if (isSameMonth(date, this.viewDate)) {
+    if (isSameMonth(date, this.viewDate)) 
+    {
       if (
         (isSameDay(this.viewDate, date) && this.activeDayIsOpen === true) ||
         events.length === 0
