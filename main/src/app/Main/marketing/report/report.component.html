@@ -1,5 +1,192 @@
-
 <div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Referral</h4>
+                <h5 class="card-subtitle">Total referral of the month</h5>
+                <h2 class="text-info font-bold m-b-5">245</h2>
+                <span class="font-bold text-muted">16.5%
+                    <i class="fas fa-arrow-up text-info font-bold"></i>
+                </span>
+                <div>
+                    <div class="text-center d-flex flex-column">
+                        <apx-chart [series]="earning1ChartOptions.series" [chart]="earning1ChartOptions.chart"
+                            [xaxis]="earning1ChartOptions.xaxis" [yaxis]="earning1ChartOptions.yaxis"
+                            [grid]="earning1ChartOptions.grid" [stroke]="earning1ChartOptions.stroke"
+                            [tooltip]="earning1ChartOptions.tooltip" [dataLabels]="earning1ChartOptions.dataLabels"
+                            [legend]="earning1ChartOptions.legend" [colors]="earning1ChartOptions.colors"
+                            [markers]="earning1ChartOptions.markers" [fill]="earning1ChartOptions.fill">
+                        </apx-chart>
+                    </div>
+                </div>
+                <hr>
+                <span class="text-muted">Last Month Referral</span>
+                <h3 class="font-bold">256</h3>
+                <button class="btn btn-lg btn-info waves-effect waves-light mt-3 m-b-20">Check Full Report</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Promo code userd summary</h4>
+                <h5 class="card-subtitle"></h5>
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-sm-12 col-md-6 col-lg-8">
+                        <div class="m-t-25 d-flex flex-column">
+                            <apx-chart [series]="saleslocationchartOptions.series" [chart]="saleslocationchartOptions.chart"
+                                [dataLabels]="saleslocationchartOptions.dataLabels"
+                                [plotOptions]="saleslocationchartOptions.plotOptions" [yaxis]="saleslocationchartOptions.yaxis"
+                                [legend]="saleslocationchartOptions.legend" [fill]="saleslocationchartOptions.fill"
+                                [stroke]="saleslocationchartOptions.stroke" [tooltip]="saleslocationchartOptions.tooltip"
+                                [xaxis]="saleslocationchartOptions.xaxis"></apx-chart>
+                        </div>
+                    </div>
+                    <!-- column -->
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <ul class="list-style-none">
+                            <!-- <li class="m-t-30">
+                                <div class="d-flex align-items-center m-b-10">
+                                    <div>
+                                        <span class="text-muted">Total</span>
+                                        <h4 class="m-b-0">3234
+                                            <span class="font-16">($3,549.54)</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <ngb-progressbar type="info" [value]="47"></ngb-progressbar>
+                            </li> -->
+                            <li class="m-t-30">
+                                <div class="d-flex align-items-center m-b-10">
+                                    <div>
+                                        <span class="text-muted">Promocode Used</span>
+                                        <h4 class="m-b-0">1548
+                                            <span class="font-16"></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <ngb-progressbar type="cyan" [value]="47"></ngb-progressbar>
+                            </li>
+                            <li class="m-t-30 m-b-40">
+                                <div class="d-flex align-items-center m-b-10">
+                                    <div>
+                                        <span class="text-muted">Net Discount</span>
+                                        <h4 class="m-b-0">
+                                            <span class="font-16">$3,274.79</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <ngb-progressbar type="muted" [value]="47"></ngb-progressbar>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card e-campaign">
+            <div class="card-body">
+                <h4 class="card-title">Promocode Campaign</h4>
+                <div class="row m-t-40">
+                    <div class="col-sm-12 col-md-6 text-center">
+                        <div class="css-bar css-bar-75 css-bar-xlg css-bar-primary">
+                            <div class="data-text">
+                                <h1 class="success-rate text-info font-light">75
+                                    <span class="icon">%</span>
+                                </h1>
+                                <div class="rate-label font-15">Success used Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="w-75 c-cost">
+                            <div class="d-inline-block align-middle">
+                                <i class="mdi mdi-wallet text-info"></i>
+                            </div>
+                            <div class="d-inline-block align-middle m-l-10">
+                                <span class="text-muted font-14">Campaign Cost</span>
+                                <h2 class="text-info font-bold m-b-0">$435.68</h2>
+                            </div>
+                        </div>
+                        <ul class="list-style-none stats m-t-30">
+                            <li class="m-t-10">
+                                <i class="fa fa-circle m-r-5 text-success font-12"></i> 25% promocode broke the target </li>
+                            <li class="m-t-10">
+                                <i class="fa fa-circle m-r-5 text-info font-12"></i> 75% promocode are used Successfull </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-info">
+            <div class="card-body">
+                <h4 class="card-title text-white">Referral Revenue Statistics</h4>
+                <div class="d-flex align-items-center m-t-30">
+                    <div class="d-flex flex-column" style="height: 70px; width: 100px">
+                        <apx-chart [series]="Revenue2ChartOptions.series" [chart]="Revenue2ChartOptions.chart"
+                            [stroke]="Revenue2ChartOptions.stroke" [tooltip]="Revenue2ChartOptions.tooltip"
+                            [fill]="Revenue2ChartOptions.fill">
+                        </apx-chart>
+                    </div>
+                    <div class="ml-auto">
+                        <h3 class="text-white m-b-0">
+                            <i class="ti-arrow-up"></i>$351</h3>
+                        <span class="text-white op-5">Jan 10 - Dec 20</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-cyan">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h5 class="card-title text-white">Total Promocode used</h5>
+                        <h3 class="text-white m-b-0">
+                            <i class="ti-arrow-up"></i> 6548</h3>
+                    </div>
+                    <div class="ml-auto">
+                        <ul class="list-style-none m-b-0">
+                            <li class="text-white">
+                                <!-- <i class="fa fa-circle m-r-5 text-white font-12 op-3"></i> Visit </li> -->
+                            <li class="text-white">
+                                <!-- <i class="fa fa-circle m-r-5 text-white font-12"></i> Page Views </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column" style="height: 70px;">
+                <apx-chart [series]="Pageview2ChartOptions.series" [chart]="Pageview2ChartOptions.chart"
+                    [stroke]="Pageview2ChartOptions.stroke" [tooltip]="Pageview2ChartOptions.tooltip"
+                    [colors]="Pageview2ChartOptions.colors" [fill]="Pageview2ChartOptions.fill">
+                </apx-chart>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
 <div class="col-lg-6">
     <div class="card">
         <div class="card-body">
@@ -11,4 +198,6 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
+
+

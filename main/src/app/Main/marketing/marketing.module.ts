@@ -7,13 +7,17 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { ReportComponent } from './report/report.component';
 import { DataTablesModule } from 'angular-datatables';
 import { ChartsModule } from 'ng2-charts';
+import { NgApexchartsModule } from "ng-apexcharts";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
 @NgModule({
   declarations: [PromocodesComponent, RewardsComponent, ReportComponent],
   imports: [
     CommonModule,
     MarketingRoutingModule,
     DataTablesModule,
-    ChartsModule
+    ChartsModule,
+    NgApexchartsModule,
+    NgxChartsModule
   ]
 })
 export class MarketingModule { }

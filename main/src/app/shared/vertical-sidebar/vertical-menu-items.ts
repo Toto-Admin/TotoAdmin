@@ -360,6 +360,16 @@ export const ROUTES: RouteInfo[] = [
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
             {
+                path: '/marketing/reports',
+                title: 'Dashboard',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
                 path: '/marketing/promocodes',
                 title: 'Promo code',
                 icon: 'mdi mdi-adjust',
@@ -379,16 +389,7 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
-            {
-                path: '/marketing/reports',
-                title: 'Report',
-                icon: 'mdi mdi-adjust',
-                class: '',
-                extralink: false,
-                label: '',
-                labelClass: '',
-                submenu: []
-            },
+            
            
           
         

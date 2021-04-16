@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
     CommonModule,
     DashboardRoutingModule,
     NgApexchartsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    PerfectScrollbarModule
   ]
 })
 export class DashboardModule { }

@@ -30,7 +30,7 @@ export class ProviderListComponent implements OnInit {
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,
-      ordering : false,
+      ordering : true,
       lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
      
     };

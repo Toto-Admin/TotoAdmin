@@ -38,7 +38,7 @@ export class QuestionsComponent implements OnInit,AfterViewInit {
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:8,
-      ordering : false,
+      ordering : true,
       lengthMenu :[[8,25,50,100,-1],[8,25,50,100,'All']],
      
     };
