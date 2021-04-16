@@ -9,6 +9,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { ChartsModule } from 'ng2-charts';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [PromocodesComponent, RewardsComponent, ReportComponent],
   imports: [
@@ -17,7 +19,8 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
     DataTablesModule,
     ChartsModule,
     NgApexchartsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    NgbModule
   ]
 })
 export class MarketingModule { }
