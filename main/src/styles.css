@@ -124,5 +124,10 @@
   }
   /* Switch Button css end */
 
+  /* td text align left side */
+  .tdLeft {
+    text-align: left !important;
+  }
+
 
  

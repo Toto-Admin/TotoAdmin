@@ -383,9 +383,11 @@
                     <thead>
                         <tr class="bg-light">
                             <th class="border-top-0 backgroundColor">JobID</th>
-                            <th class="border-top-0 backgroundColor">Customer Name</th>
-                            <th class="border-top-0 backgroundColor">Status</th>
                             <th class="border-top-0 backgroundColor">Category</th>
+
+                            <th class="border-top-0 backgroundColor">Status</th>
+                            <th class="border-top-0 backgroundColor">Customer Name</th>
+
                             <th class="border-top-0 backgroundColor">Type</th>
                             <th class="border-top-0 backgroundColor">Time</th>
                         </tr>
@@ -509,7 +511,7 @@
                     <div class="col-3 birder-right text-left">
                         <h4 class="m-b-0">45
                             <small>
-                                <i class="ti-arrow-up text-success"></i>
+                                <i class="fa fa-circle " style="color: #40c4ff;"></i>
                             </small>
                         </h4>Reschedule
                     </div>
@@ -517,7 +519,7 @@
                     <div class="col-3 birder-right text-center">
                         <h4 class="m-b-0">15
                             <small>
-                                <i class="ti-arrow-down text-danger"></i>
+                                <i class="fa fa-circle" style="color: #2961ff;"></i>
                             </small>
                         </h4>No Shows
                     </div>
@@ -525,14 +527,14 @@
                     <div class="col-3 text-right">
                         <h4 class="m-b-0">27
                             <small>
-                                <i class="ti-arrow-up text-success"></i>
+                                <i class="fa fa-circle" style="color: #ff821c;"></i>
                             </small>
                         </h4>Provider Report
                     </div>
                     <div class="col-3 text-right">
                         <h4 class="m-b-0">18
                             <small>
-                                <i class="ti-arrow-up text-success"></i>
+                                <i class="fa fa-circle" style="color: #7e74fb;"></i>
                             </small>
                         </h4>Return Visit
                     </div>
@@ -602,7 +604,7 @@
     <div class="col-lg-6">
           <div class="card">
               <div class="card-body">
-                  <h4 class="card-title">Booking by task Category</h4>
+                  <h4 class="card-title">Booking by task Service</h4>
                   <h6 class="card-subtitle">How much task in each service</h6>
                   <canvas baseChart height="132px" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
                    [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
@@ -613,7 +615,7 @@
       <div class="col-lg-6">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Disputes by Category</h4>
+                <h4 class="card-title">Disputes by Service</h4>
                 <h6 class="card-subtitle">How much disputes in each service</h6>
                 <canvas baseChart height="132px" [data]="pieChartData1" [labels]="pieChartLabels1" [chartType]="pieChartType1"
                  [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
