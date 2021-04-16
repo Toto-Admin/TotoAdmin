@@ -1,3 +1,17 @@
 .table-responsive{
     text-align: center;
 }
+.round {
+    /* line-height: 48px;
+    color: #fff;
+    width: 60px !important;
+    height: 33px !important;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 100%;
+    background: #2962ff;
+    line-height: 52px; */
+    width: 60px !important;
+    height: 30px !important;
+}
