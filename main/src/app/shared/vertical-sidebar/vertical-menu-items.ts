@@ -121,7 +121,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/jobs/task',
-                title: 'Task Mangement',
+                title: 'Task Management',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -141,7 +141,7 @@ export const ROUTES: RouteInfo[] = [
             // },
             {
                 path: '/jobs/unhappycustomer',
-                title: 'Unhappy with Provider',
+                title: 'Unhappy With Provider',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -224,7 +224,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/mobile-apps/mobile-content',
-                title: 'Mobile Content',
+                title: 'Mobile Contents',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -234,7 +234,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/mobile-apps/knowledge',
-                title: 'Knowledge',
+                title: 'Knowledges',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -253,7 +253,7 @@ export const ROUTES: RouteInfo[] = [
                 submenu: [
                     {
                         path: '/mobile-apps/like',
-                        title: 'Like Reason',
+                        title: 'Like Reasons',
                         icon: 'mdi mdi-adjust',
                         class: '',
                         extralink: false,
@@ -263,7 +263,7 @@ export const ROUTES: RouteInfo[] = [
                     },
                     {
                         path: '/mobile-apps/cancel',
-                        title: 'Cancel Reason',
+                        title: 'Cancel Reasons',
                         icon: 'mdi mdi-adjust',
                         class: '',
                         extralink: false,
@@ -273,7 +273,7 @@ export const ROUTES: RouteInfo[] = [
                     },
                     {
                         path: '/mobile-apps/reject',
-                        title: 'Reject Reason',
+                        title: 'Reject Reasons',
                         icon: 'mdi mdi-adjust',
                         class: '',
                         extralink: false,
@@ -283,7 +283,7 @@ export const ROUTES: RouteInfo[] = [
                     },
                     {
                         path: '/mobile-apps/dispute',
-                        title: 'Dispute Reason',
+                        title: 'Dispute Reasons',
                         icon: 'mdi mdi-adjust',
                         class: '',
                         extralink: false,
@@ -293,7 +293,7 @@ export const ROUTES: RouteInfo[] = [
                     },
                     {
                         path: '/mobile-apps/block',
-                        title: 'Block Reason',
+                        title: 'Block Reasons',
                         icon: 'mdi mdi-adjust',
                         class: '',
                         extralink: false,
@@ -337,7 +337,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/master/categories',
-                title: 'Categories',
+                title: 'Category',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -406,7 +406,7 @@ export const ROUTES: RouteInfo[] = [
         submenu: [
             {
                 path: '/setting/general-setting',
-                title: 'General Setting',
+                title: 'General Settings',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -416,7 +416,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/setting/email-template',
-                title: 'Email Template',
+                title: 'Email Templates',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -426,7 +426,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/setting/referral',
-                title: 'Referral ',
+                title: 'Referral Management ',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -436,7 +436,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/setting/notification-template',
-                title: 'Notification Template',
+                title: 'Notification Templates',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -446,7 +446,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/setting/user-permission',
-                title: 'User and permission',
+                title: 'User And Permission',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
