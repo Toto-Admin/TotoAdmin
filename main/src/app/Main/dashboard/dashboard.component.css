@@ -27,3 +27,6 @@
   touch-action: auto;
   -ms-touch-action: auto;
 }
+td,th{
+  text-align: center;
+}
