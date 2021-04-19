@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Frequently asked questions<span style="float: right;">
+        <h4 class="card-title">Questions<span style="float: right;">
             <button class="btn btn-primary backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add FAQ</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         <div class="d-flex mb-3 mt-3">
@@ -17,11 +17,11 @@
                   <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered">
                     <thead style="background: #92adfc;">
                       <tr>
-                        <th class="backgroundColor">QUESTION</th>
-                        <th class="backgroundColor">ANSWER</th>
-                        <th class="backgroundColor">PLATFORM</th>
-                        <th class="backgroundColor">CATEGORY</th>
-                        <th class="backgroundColor">ACTION</th>
+                        <th class="backgroundColor tdLeft">QUESTION</th>
+                        <th class="backgroundColor tdLeft">ANSWER</th>
+                        <th class="backgroundColor tdLeft">PLATFORM</th>
+                        <th class="backgroundColor tdLeft">CATEGORY</th>
+                        <th class="backgroundColor ">ACTION</th>
                       </tr>
                     </thead>
                     <!-- <thead>
@@ -35,10 +35,10 @@
                     </thead> -->
                     <tbody>
                         <tr>
-                        <td>If my air conditioner is broken?</td>
-                        <td>If your thermostat still is not working, it may be time to replace it.</td>
-                        <td>Application</td>
-                        <td>Conditioning</td>
+                        <td class="tdLeft">If my air conditioner is broken?</td>
+                        <td class="tdLeft">If your thermostat still is not working, it may be time to replace it.</td>
+                        <td class="tdLeft">Application</td>
+                        <td class="tdLeft">Conditioning</td>
                         <td>
                             <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -49,10 +49,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> How do you change my air filter?</td>
-                        <td>Remove your old filter and measure it, and replace new filter</td>
-                        <td>Application</td>
-                        <td>Conditioning</td>
+                        <td class="tdLeft"> How do you change my air filter?</td>
+                        <td class="tdLeft">Remove your old filter and measure it, and replace new filter</td>
+                        <td class="tdLeft">Application</td>
+                        <td class="tdLeft">Conditioning</td>
                         <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -63,10 +63,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Why our applications are responding very slowly?</td>
-                        <td>Try to restart your pc </td>
-                        <td>Web</td>
-                        <td>Network</td>
+                        <td class="tdLeft">Why our applications are responding very slowly?</td>
+                        <td class="tdLeft">Try to restart your pc </td>
+                        <td class="tdLeft">Web</td>
+                        <td class="tdLeft">Network</td>
                         <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -77,10 +77,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Which technique is used for mobile communication systems?</td>
-                        <td>Frequency modulation</td>
-                        <td>Web</td>
-                        <td>Mobile</td>
+                        <td class="tdLeft">Which technique is used for mobile communication systems?</td>
+                        <td class="tdLeft">Frequency modulation</td>
+                        <td class="tdLeft">Web</td>
+                        <td class="tdLeft">Mobile</td>
                         <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -91,10 +91,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Mobile security is also known as?</td>
-                        <td>Wireless security </td>
-                        <td>Application</td>
-                        <td>Mobile</td>
+                        <td class="tdLeft">Mobile security is also known as?</td>
+                        <td class="tdLeft">Wireless security </td>
+                        <td class="tdLeft">Application</td>
+                        <td class="tdLeft">Mobile</td>
                         <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -105,10 +105,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>  DECT stands for?</td>
-                        <td>Digital European Cordless Telephone</td>
-                        <td>Application</td>
-                        <td>Ac</td>
+                        <td class="tdLeft">  DECT stands for?</td>
+                        <td class="tdLeft">Digital European Cordless Telephone</td>
+                        <td class="tdLeft">Application</td>
+                        <td class="tdLeft">Ac</td>
                         <td>
                             <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>

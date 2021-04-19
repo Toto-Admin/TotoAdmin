@@ -2,3 +2,7 @@
     background-color: #2962ff !important;
     color :white !important;
   }
+  li{
+  width:120px;
+  text-align: center;
+  }

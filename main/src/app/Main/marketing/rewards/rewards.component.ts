@@ -32,6 +32,9 @@ export class RewardsComponent implements OnInit {
       pageLength:8,
       ordering : true,
       lengthMenu :[[8,25,50,100,-1],[8,25,50,100,'All']],
+      columnDefs: [
+        { orderable: false, targets: -1 }
+      ]
      
     };
     this.editUser = this.fb.group({

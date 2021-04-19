@@ -17,14 +17,14 @@
                     <thead>
                       <tr>
                         
-                        <th class="backgroundColor">CATEGORY</th> 
-                        <th class="backgroundColor">SERVICE NAME</th>
-                        <!-- <th class="backgroundColor">SLUG</th> -->
-                        <th class="backgroundColor">IMAGE</th>
-                        <th class="backgroundColor">PRICE</th>
-                        <th class="backgroundColor">DURATION</th>
-                        <th class="backgroundColor">STATSTICS</th>
-                        <th class="backgroundColor">Action</th>
+                        <th class="backgroundColor tdLeft">CATEGORY</th> 
+                        <th class="backgroundColor tdLeft">SERVICE</th>
+                        <th class="backgroundColor tdLeft">SLUG</th>
+                        <th class="backgroundColor ">IMAGE</th>
+                        <th class="backgroundColor tdLeft">DURATION</th>
+                        <th class="backgroundColor tdLeft">STATSTICS</th>
+                         <th class="backgroundColor">AMOUNT</th>
+                        <th class="backgroundColor">ACTION</th>
                       </tr>
                     </thead>
                     <!-- <thead>
@@ -39,17 +39,15 @@
                     <tbody>
                         <tr>
                           
-                          <td>Ac Service</td>
-                            <td>Service1</td>
-                            <!-- <td>Slug</td> -->
-                            <td><img height="30" width="30" src="./assets/ac.jpg" 
-                                class="ng-tns-c40-50 ng-star-inserted"></td>                           
-                             <td class="mdi mdi-currency-gbp">20</td>
-                            <td >1 hour</td>
-                            <td>Increase</td>
-                         
-                            <td>
-                                    <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                          <td class="tdLeft">Ac</td>
+                            <td class="tdLeft">Ac Repair</td>
+                            <td class="tdLeft">www.google.com</td>
+                            <td><img height="30" width="30" src="./assets/ac1.jpg" 
+                              class="ng-tns-c40-50 ng-star-inserted"></td>  
+                              <td class="tdLeft">1 hour</td>
+                            <td class="tdLeft">Increase</td>
+                            <td class="mdi mdi-currency-gbp">20</td>
+                            <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                         <i class="ti-marker-alt"></i>
                                     </a>
                                     <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -60,108 +58,81 @@
                         </tr>
                         <tr>
                           
-                          <td>Tv</td>
-                          <td>Tv Service</td>
-                          <!-- <td>Slug</td> -->
-                          <td><img height="30" width="30" src="./assets/ac.jpg" 
-                              class="ng-tns-c40-50 ng-star-inserted"></td>                           
-                           <td class="mdi mdi-currency-gbp">50</td>
-                          <td >1 hour</td>
-                          <td>Increase</td>
-                       
-                          <td>
-                                  <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                      <i class="ti-marker-alt"></i>
-                                  </a>
-                                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                      <i class="ti-trash"></i>
-                                  </a>
-                          </td>
+                          <td class="tdLeft">TV</td>
+                            <td class="tdLeft">Tv screen</td>
+                            <td class="tdLeft">www.google.com</td>
+                            <td><img height="30" width="30" src="./assets/tv1.png" 
+                              class="ng-tns-c40-50 ng-star-inserted"></td>  
+                              <td class="tdLeft"> 2 hour</td>
+                            <td class="tdLeft">Decrease</td>
+                            <td class="mdi mdi-currency-gbp">30</td>
+                            <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                        <i class="ti-marker-alt"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                        <i class="ti-trash"></i>
+                                    </a>
+                            </td>
 
-                      </tr>
-                      <tr>
-                        
-                        <td>Network</td>
-                        <td>Connectivity</td>
-                        <!-- <td>Slug</td> -->
-                        <td><img height="30" width="30" src="./assets/ac.jpg" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>                           
-                         <td class="mdi mdi-currency-gbp">30</td>
-                        <td >3 hour</td>
-                        <td>Increase</td>
+                        </tr>
+                        <tr>
+                          
+                          <td class="tdLeft">Mobile</td>
+                            <td class="tdLeft">Software</td>
+                            <td class="tdLeft">www.google.com</td>
+                            <td><img height="30" width="30" src="./assets/mb.png" 
+                              class="ng-tns-c40-50 ng-star-inserted"></td>  
+                              <td class="tdLeft">40 minute</td>
+                            <td class="tdLeft">Increase</td>
+                            <td class="mdi mdi-currency-gbp">20</td>
+                            <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                        <i class="ti-marker-alt"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                        <i class="ti-trash"></i>
+                                    </a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                          
+                          <td class="tdLeft">Mobile</td>
+                            <td class="tdLeft">Hardware</td>
+                            <td class="tdLeft">www.google.com</td>
+                            <td><img height="30" width="30" src="./assets/mobile.jpg" 
+                              class="ng-tns-c40-50 ng-star-inserted"></td>  
+                              <td class="tdLeft">4 hour</td>
+                            <td class="tdLeft">Increase</td>
+                            <td class="mdi mdi-currency-gbp">20</td>
+                            <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                        <i class="ti-marker-alt"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                        <i class="ti-trash"></i>
+                                    </a>
+                            </td>
+
+                        </tr>
+                        <tr>
+                          
+                          <td class="tdLeft">Network</td>
+                            <td class="tdLeft">Connectivity</td>
+                            <td class="tdLeft">www.google.com</td>
+                            <td><img height="30" width="30" src="./assets/s1.jpg" 
+                              class="ng-tns-c40-50 ng-star-inserted"></td>  
+                              <td class="tdLeft">1 hour</td>
+                            <td class="tdLeft">Decrease</td>
+                            <td class="mdi mdi-currency-gbp">50</td>
+                            <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                        <i class="ti-marker-alt"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                        <i class="ti-trash"></i>
+                                    </a>
+                            </td>
+
+                        </tr>
                      
-                        <td>
-                                <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-
-                    </tr>
-                    <tr>
-                      
-                      <td>Mobile</td>
-                      <td>Hardware service</td>
-                      <!-- <td>Slug</td> -->
-                      <td><img height="30" width="30" src="./assets/ac.jpg" 
-                          class="ng-tns-c40-50 ng-star-inserted"></td>                           
-                       <td class="mdi mdi-currency-gbp">10</td>
-                      <td >1 hour</td>
-                      <td>Increase</td>
-                   
-                      <td>
-                              <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                  <i class="ti-marker-alt"></i>
-                              </a>
-                              <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                  <i class="ti-trash"></i>
-                              </a>
-                      </td>
-
-                  </tr>
-                  <tr>
-                    
-                    <td>Network</td>
-                    <td>ISP</td>
-                    <!-- <td>Slug</td> -->
-                    <td><img height="30" width="30" src="./assets/ac.jpg" 
-                        class="ng-tns-c40-50 ng-star-inserted"></td>                           
-                     <td class="mdi mdi-currency-gbp">20</td>
-                    <td >40 Minute</td>
-                    <td>Decrease</td>
-                 
-                    <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                    </td>
-
-                </tr>
-                <tr>
-                  <td>TV</td>
-                  <td>TV Service</td>
-                  <!-- <td>Slug</td> -->
-                  <td><img height="30" width="30" src="./assets/ac.jpg" 
-                      class="ng-tns-c40-50 ng-star-inserted"></td>                           
-                   <td class="mdi mdi-currency-gbp">20</td>
-                  <td >2 hour</td>
-                  <td>Fix</td>
-               
-                  <td>
-                          <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                              <i class="ti-marker-alt"></i>
-                          </a>
-                          <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                              <i class="ti-trash"></i>
-                          </a>
-                  </td>
-
-              </tr>
                     </tbody>
                   </table>  
                 <!-- </div>
