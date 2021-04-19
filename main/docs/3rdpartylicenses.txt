@@ -1260,6 +1260,9 @@ SOFTWARE.
 ngx-perfect-scrollbar
 MIT
 
+ngx-quill
+MIT
+
 ngx-toastr
 MIT
 The MIT License (MIT)

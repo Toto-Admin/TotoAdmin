@@ -12,12 +12,12 @@
                   <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered table-striped">
                     <thead style="background: #92adfc;">
                       <tr>
-                        <th class="backgroundColor">ID</th>
-                        <th class="backgroundColor">NAME</th>
-                        <th class="backgroundColor">EMAIL</th>
-                        <th class="backgroundColor">MOBILE</th>
-                        <th class="backgroundColor">REG. DATE</th>
-                        <th class="backgroundColor">LAST LOGIN</th>
+                        <th class="backgroundColor tdLeft">ID</th>
+                        <th class="backgroundColor tdLeft">NAME</th>
+                        <th class="backgroundColor tdLeft">EMAIL</th>
+                        <th class="backgroundColor tdLeft">MOBILE</th>
+                        <th class="backgroundColor tdLeft">REG. DATE</th>
+                        <th class="backgroundColor tdLeft">LAST LOGIN</th>
                         <th class="backgroundColor">STATUS</th>
                         <th class="backgroundColor">ACTION</th>
                       </tr>
@@ -267,7 +267,8 @@
                         <td class="tdLeft">8459495933</td>
                         <td class="tdLeft">12/12/2020</td>
                         <td class="tdLeft">20/03/2021 3:25PM</td>
-                        <td><div class="badge badge-pill badge-warning font-14 infoData">Inactive</div></td>
+                        <td><div class="badge badge-pill badge-warning font-14 infoData">Inactive</div>
+                        </td>
                         <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a><a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
