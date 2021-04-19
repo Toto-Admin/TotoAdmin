@@ -128,3 +128,18 @@
   .tdLeft {
     text-align: left !important;
   }
+
+  .tdRight {
+    text-align: right !important;
+  }
+
+  .tdCenter {
+    text-align: center;
+  }
+
+  th{
+    text-transform:uppercase;
+  }
+
+
+ 

@@ -9,13 +9,13 @@
           <table   class="table table-striped mb-0 no-wrap v-middle">
             <thead>
               <tr>
-                <th class="text-center  backgroundColor" scope="col">ID</th>
-                <th class="text-center  backgroundColor" scope="col">TYPE</th>
-                <th class="text-center  backgroundColor" scope="col">DESCRIPTION</th>
-                <th class="text-center  backgroundColor" scope="col">WORK TIME</th>
-                <th class="text-center  backgroundColor" scope="col">PAYMENT STATUS</th>
-                <th class="text-center  backgroundColor" scope="col">CREATED AT</th>
-                <th class="text-center  backgroundColor" scope="col">UPDATED AT</th>
+                <th class="tdLeft backgroundColor" scope="col">#</th>
+                <th class="tdLeft backgroundColor" scope="col">TYPE</th>
+                <th class="tdLeft backgroundColor" scope="col">DESCRIPTION</th>
+                <th class="tdLeft backgroundColor" scope="col">WORK TIME</th>
+                <th class="tdLeft backgroundColor" scope="col">PAYMENT STATUS</th>
+                <th class="tdLeft backgroundColor" scope="col">CREATED AT</th>
+                <th class="tdLeft backgroundColor" scope="col">UPDATED AT</th>
                
               </tr>
               
@@ -27,7 +27,7 @@
                   {{user.id}}
                 </td>
   
-                <td>
+                <td class="tdLeft">
                   <div class="d-flex align-items-center">
                     <img class="rounded-circle" [src]='user.imagePath' height=" 50px" width="50px">
                     <div class="ml-3">
@@ -36,14 +36,14 @@
                     </div>
                   </div>
                 </td>
-                <td>{{ user.Email }}</td>
+                <td class="tdLeft">{{ user.Email }}</td>
   
-                <td>{{ user.Mobile }}</td>
-                <td>{{ user.DateOfJoining |date :'fullDate' }}</td>
+                <td class="tdLeft">{{ user.Mobile }}</td>
+                <td class="tdLeft">{{ user.DateOfJoining |date :'fullDate' }}</td>
   
-                <td>{{ user.Salary }}</td>
-                <td>{{ user.Projects }}</td>
-                <td>
+                <td class="tdLeft">{{ user.Salary }}</td>
+                <td class="tdLeft">{{ user.Projects }}</td>
+                <td class="tdLeft">
                   <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
                     placement="top" ngbTooltip="Edit">
                     <i-feather name="edit-2" class="feather-sm"></i-feather>
@@ -55,52 +55,52 @@
                 </td>
               </tr> -->
               <tr>
-                  <td>1</td>
-                 <td>Remote</td>
-                 <td>Description</td>
-                 <td>02:05:00</td>
-                 <td>Paid</td>
-                 <td>04/09/2021 04:27 PM</td>
-                 <td>04/09/2021 07:27 PM</td>
+                  <td class="tdLeft">1</td>
+                 <td class="tdLeft">Remote</td>
+                 <td class="tdLeft">Description</td>
+                 <td class="tdLeft">02:05:00</td>
+                 <td class="tdLeft">Paid</td>
+                 <td class="tdLeft">04/09/2021 04:27 PM</td>
+                 <td class="tdLeft">04/09/2021 07:27 PM</td>
                   
               </tr>
               <tr>
-                <td>2</td>
-               <td>Remote</td>
-               <td>Description</td>
-               <td>02:05:00</td>
-               <td>Paid</td>
-               <td>04/09/2021 04:27 PM</td>
-               <td>04/09/2021 07:27 PM</td>
+                <td class="tdLeft">2</td>
+               <td class="tdLeft">Remote</td>
+               <td class="tdLeft">Description</td>
+               <td class="tdLeft">02:05:00</td>
+               <td class="tdLeft">Paid</td>
+               <td class="tdLeft">04/09/2021 04:27 PM</td>
+               <td class="tdLeft">04/09/2021 07:27 PM</td>
                 
             </tr>
             <tr>
-                <td>3</td>
-               <td>Onsite</td>
-               <td>Description</td>
-               <td>02:05:00</td>
-               <td>Unpaid</td>
-               <td>04/09/2021 04:27 PM</td>
-               <td>04/09/2021 07:27 PM</td>
+                <td class="tdLeft">3</td>
+               <td class="tdLeft">On-site</td>
+               <td class="tdLeft">Description</td>
+               <td class="tdLeft">02:05:00</td>
+               <td class="tdLeft">Unpaid</td>
+               <td class="tdLeft">04/09/2021 04:27 PM</td>
+               <td class="tdLeft">04/09/2021 07:27 PM</td>
                 
             </tr> <tr>
-                <td>4</td>
-               <td>Remote</td>
-               <td>Description</td>
-               <td>02:05:00</td>
-               <td>Paid</td>
-               <td>04/09/2021 04:27 PM</td>
-               <td>04/09/2021 07:27 PM</td>
+                <td class="tdLeft">4</td>
+               <td class="tdLeft">Remote</td>
+               <td class="tdLeft">Description</td>
+               <td class="tdLeft">02:05:00</td>
+               <td class="tdLeft">Paid</td>
+               <td class="tdLeft">04/09/2021 04:27 PM</td>
+               <td class="tdLeft">04/09/2021 07:27 PM</td>
                 
             </tr>
             <tr>
-                <td>5</td>
-               <td>Onsite</td>
-               <td>Description</td>
-               <td>02:05:00</td>
-               <td>UnPaid</td>
-               <td>04/09/2021 04:27 PM</td>
-               <td>04/09/2021 07:27 PM</td>
+                <td class="tdLeft">5</td>
+               <td class="tdLeft">On-site</td>
+               <td class="tdLeft">Description</td>
+               <td class="tdLeft">02:05:00</td>
+               <td class="tdLeft">UnPaid</td>
+               <td class="tdLeft">04/09/2021 04:27 PM</td>
+               <td class="tdLeft">04/09/2021 07:27 PM</td>
                 
             </tr>
               

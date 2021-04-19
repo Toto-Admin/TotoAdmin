@@ -9,7 +9,7 @@
                         </span>
                     </div>
                     <div class="ml-auto">
-                        <h2>290</h2>
+                        <h2 class="tdRight">290</h2>
                         <h6 class="text-orange">Active Customers</h6>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                         </span>
                     </div>
                     <div class="ml-auto">
-                        <h2>120</h2>
+                        <h2 class="tdRight">120</h2>
                         <h6 class="text-info">Inactive Customer</h6>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         </span>
                     </div>
                     <div class="ml-auto">
-                        <h2>600</h2>
+                        <h2 class="tdRight">600</h2>
                         <h6 class="text-cyan">Blocked Customer</h6>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         </span>
                     </div>
                     <div class="ml-auto">
-                        <h2>270</h2>
+                        <h2 class="tdRight">270</h2>
                         <h6 class="text-success">Total Customer</h6>
                     </div>
                 </div>
@@ -203,16 +203,16 @@
                 <!-- title -->
             </div>
             <div class="table-responsive">
-                <table class="table v-middle">
+                <table class="table table-striped">
                     <thead>
-                        <tr class="bg-light">
-                            <th class="border-top-0 backgroundColor">SERVICES</th>
-                            <th class="border-top-0 backgroundColor">TYPE</th>
-                            <th class="border-top-0 backgroundColor">STATUS</th>
-                            <th class="border-top-0 backgroundColor">CUSTOMER</th>
-                            <th class="border-top-0 backgroundColor">PROVIDER</th>
-                            <th class="border-top-0 backgroundColor">RATINGS</th>
-                            <th class="border-top-0 backgroundColor">ACTION</th>
+                        <tr>
+                            <th class="border-top-0 backgroundColor tdLeft">SERVICES</th>
+                            <th class="border-top-0 backgroundColor tdLeft">TYPE</th>
+                            <th class="border-top-0 backgroundColor tdLeft">STATUS</th>
+                            <th class="border-top-0 backgroundColor tdLeft">CUSTOMER</th>
+                            <th class="border-top-0 backgroundColor tdLeft">PROVIDER</th>
+                            <th class="border-top-0 backgroundColor tdLeft">RATINGS</th>
+                            <th class="border-top-0 backgroundColor tdCenter">ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -235,7 +235,7 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span></td>
                             
-                         <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                         <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                             <i class="fas fa-eye "></i></a>
                          </td>
                             
@@ -258,10 +258,9 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span></td>
-                                <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="fas fa-eye "></i></a>
                                  </td>
-                            
                         </tr>
                         <tr>
                             <td>
@@ -281,7 +280,7 @@
                                 <span class="fa fa-star "></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span></td>
-                                <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="fas fa-eye "></i></a>
                                  </td>
                             
@@ -304,7 +303,7 @@
                                 <span class="fa fa-star "></span>
                                 <span class="fa fa-star "></span>
                                 <span class="fa fa-star"></span></td>
-                                <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="fas fa-eye "></i></a>
                                  </td>
                             
@@ -327,7 +326,7 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span></td>
-                                <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="fas fa-eye "></i></a>
                                  </td>
                             
@@ -350,7 +349,7 @@
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span></td>
-                                <td><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="fas fa-eye "></i></a>
                                  </td>
                             
@@ -458,7 +457,7 @@
                         <span>Open Ratio for Campaigns</span> -->
                         <ul class="list-style-none">
                             <li class="m-t-20">
-                                <i class="fas fa-circle m-r-5 text-cyan font-12"></i> Not good service
+                                <i class="fas fa-circle m-r-5 text-cyan font-12"></i> Not Good Service
                                 <span class="float-right">71</span>
                             </li>
                             <li class="m-t-20">
@@ -483,9 +482,9 @@
                 <div class="col-sm-12 col-lg-4">
                     <div class="card-body">
                         <h4 class="card-title">Reviews</h4>
-                        <h5 class="card-subtitle">Overview of Review</h5>
+                        <h5 class="card-subtitle">Overview of review</h5>
                         <h2 class="font-medium m-t-40 m-b-0">2542</h2>
-                        <span class="text-muted">This month we got 346 New Reviews</span>
+                        <span class="text-muted">This month we got 346 new reviews</span>
                         <div class="image-box m-t-30 m-b-30">
                             <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Simmons">
                                 <img src="assets/images/users/1.jpg" class="rounded-circle" width="45" alt="user">

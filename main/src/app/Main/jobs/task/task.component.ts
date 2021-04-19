@@ -16,6 +16,9 @@ export class TaskComponent implements OnInit {
       pageLength:8,
       ordering : true,
       lengthMenu :[[8,25,50,100,-1],[8,25,50,100,'All']],
+      columnDefs: [
+        { orderable: false, targets: -1 }
+     ]
     };
   }
 

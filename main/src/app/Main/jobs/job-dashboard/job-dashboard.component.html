@@ -379,25 +379,25 @@
                 <!-- title -->
             </div>
             <div class="table-responsive">
-                <table class="table v-middle">
+                <table class="table v-middle table-striped">
                     <thead>
                         <tr class="bg-light">
-                            <th class="border-top-0 backgroundColor">JOB ID</th>
-                            <th class="border-top-0 backgroundColor">CATEGORY</th>
+                            <th class="border-top-0 backgroundColor tdLeft">JobID</th>
+                            <th class="border-top-0 backgroundColor tdLeft">Category</th>
 
-                            <th class="border-top-0 backgroundColor">TYPE</th>
-                            <th class="border-top-0 backgroundColor">CUSTOMER</th>
+                            <th class="border-top-0 backgroundColor tdLeft">Status</th>
+                            <th class="border-top-0 backgroundColor tdLeft">Customer</th>
 
-                            <th class="border-top-0 backgroundColor">STATUS</th>
-                            <th class="border-top-0 backgroundColor">TIME</th>
+                            <th class="border-top-0 backgroundColor tdLeft">Type</th>
+                            <th class="border-top-0 backgroundColor tdLeft">Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td>Connectivity</td>
-                            <td>On-site</td>
-                            <td>
+                            <td class="tdLeft">1</td>
+                            <td class="tdLeft">Connectivity</td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 32px" width="32px">
                                     <div class="ml-3">
@@ -405,16 +405,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><label class="label label-success">Done</label></td>
-                            <td>14-03-2021</td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
+                            <td class="tdLeft">14-03-2021</td>
                             
                             
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>WIFI Connection</td>
-                            <td>On-site</td>
-                            <td>
+                            <td class="tdLeft">2</td>
+                            <td class="tdLeft">WIFI Connection</td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 32px" width="32px">
                                     <div class="ml-3">
@@ -422,16 +422,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><label class="label label-warning">Working</label></td>
+                            <td class="tdLeft"><label class="label label-warning">Working</label></td>
                             
-                            <td>13-03-2021</td>
+                            <td class="tdLeft">13-03-2021</td>
                             
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Connectivity</td>
-                            <td>On-site</td>
-                            <td>
+                            <td class="tdLeft">3</td>
+                            <td class="tdLeft">Connectivity</td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 32px" width="32px">
                                     <div class="ml-3">
@@ -439,18 +439,18 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>14-03-2021</td>
+                            <td class="tdLeft">14-03-2021</td>
                             
                         </tr>
                         <tr>
-                            <td>4</td>
-                            <td>ISP</td>
+                            <td class="tdLeft">4</td>
+                            <td class="tdLeft">ISP</td>
 
                             
-                            <td>On-site</td>
-                            <td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 32px" width="32px">
                                     <div class="ml-3">
@@ -458,17 +458,17 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>14-03-2021</td>
+                            <td class="tdLeft">14-03-2021</td>
                             
                         </tr>
                         <tr>
-                            <td>5</td>
-                            <td>Connectivity</td>
+                            <td class="tdLeft">5</td>
+                            <td class="tdLeft">Connectivity</td>
                             
-                            <td>Remote</td>
-                            <td>
+                            <td class="tdLeft">Remote</td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 32px" width="32px">
                                     <div class="ml-3">
@@ -476,9 +476,9 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>14-03-2021</td>
+                            <td class="tdLeft">14-03-2021</td>
                             
                         </tr>
                         
@@ -604,7 +604,7 @@
     <div class="col-lg-6">
           <div class="card">
               <div class="card-body">
-                  <h4 class="card-title">Booking by task Service</h4>
+                  <h4 class="card-title">Booking by Task Service</h4>
                   <h6 class="card-subtitle">How much task in each service</h6>
                   <canvas baseChart height="132px" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
                    [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#00FFFF','#4863A0','#6960EC']}]">
@@ -660,99 +660,99 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <div class="">
                                         <h4 class="m-b-0 font-16">New Network Setup</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>Sam</td>
-                            <td>Jenny</td>
-                            <td>View</td>
+                            <td class="tdLeft">Sam</td>
+                            <td class="tdLeft">Jenny</td>
+                            <td class="tdLeft">View</td>
                             
                         </tr>
                         <tr>
-                            <td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <div class="">
                                         <h4 class="m-b-0 font-16">ISP</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td><label class="label label-warning">Draft</label></td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft"><label class="label label-warning">Draft</label></td>
                             
-                            <td>Mark Wood</td>
-                            <td>Jenny</td>
-                            <td>View</td>
+                            <td class="tdLeft">Mark Wood</td>
+                            <td class="tdLeft">Jenny</td>
+                            <td class="tdLeft">View</td>
                             
                         </tr>
                         <tr>
-                            <td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <div class="">
                                         <h4 class="m-b-0 font-16">Connectivity</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>Remote</td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft">Remote</td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>Sam</td>
-                            <td>Ram Shekhar Jadhav</td>
-                            <td>View</td>
+                            <td class="tdLeft">Sam</td>
+                            <td class="tdLeft">Ram Shekhar Jadhav</td>
+                            <td class="tdLeft">View</td>
                             
                         </tr>
                         <tr>
-                            <td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <div class="">
                                         <h4 class="m-b-0 font-16">New Network Setup</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>Remote</td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft">Remote</td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>Jenny</td>
-                            <td>Tom</td>
-                            <td>View</td>
+                            <td class="tdLeft">Jenny</td>
+                            <td class="tdLeft">Tom</td>
+                            <td class="tdLeft">View</td>
                             
                         </tr>
                         <tr>
-                            <td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <div class="">
                                         <h4 class="m-b-0 font-16">New Network Conncection</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td><label class="label label-danger">Cancel</label></td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft"><label class="label label-danger">Cancel</label></td>
                             
-                            <td>Sam</td>
-                            <td>Jenny</td>
-                            <td>View</td>
+                            <td class="tdLeft">Sam</td>
+                            <td class="tdLeft">Jenny</td>
+                            <td class="tdLeft">View</td>
                             
                         </tr>
                         <tr>
-                            <td>
+                            <td class="tdLeft">
                                 <div class="d-flex align-items-center">
                                     <div class="">
                                         <h4 class="m-b-0 font-16">New Network Setup</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>On-site</td>
-                            <td><label class="label label-success">Done</label></td>
+                            <td class="tdLeft">On-site</td>
+                            <td class="tdLeft"><label class="label label-success">Done</label></td>
                             
-                            <td>Sam</td>
-                            <td>Jenny</td>
-                            <td>View</td>
+                            <td class="tdLeft">Sam</td>
+                            <td class="tdLeft">Jenny</td>
+                            <td class="tdLeft">View</td>
                         </tr>
                     </tbody>
                 </table>

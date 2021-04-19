@@ -32,7 +32,9 @@ export class ProviderListComponent implements OnInit {
       pageLength:10,
       ordering : true,
       lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
-     
+      columnDefs: [
+        { orderable: false, targets: -1 }
+     ]
     };
     this.editUser = this.fb.group({
       id: [''],

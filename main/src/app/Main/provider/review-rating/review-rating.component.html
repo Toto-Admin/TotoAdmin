@@ -13,13 +13,13 @@
           <table class="table table-striped mb-0 no-wrap v-middle">
             <thead>
               <tr>
-                <th class="text-center backgroundColor" scope="col">ID</th>
+                <th class="text-center backgroundColor tdLeft" scope="col">#</th>
          
-                <th scope="col" class="backgroundColor">CUSTOMER </th>
-                <th scope="col" class="backgroundColor">SERVICE</th>
-                <th scope="col" class="backgroundColor">REVIEW DATE</th>
-                <th scope="col" class="backgroundColor">RATING</th>
-                <th scope="col" class="backgroundColor">ACTION</th>
+                <th scope="col" class="backgroundColor tdLeft">CUSTOMER </th>
+                <th scope="col" class="backgroundColor tdLeft">SERVICE</th>
+                <th scope="col" class="backgroundColor tdLeft">REVIEW DATE</th>
+                <th scope="col" class="backgroundColor tdLeft">RATING</th>
+                <th scope="col" class="backgroundColor tdCenter">ACTION</th>
                 
                 
                 <!-- <th scope="col">Action</th> -->
@@ -32,7 +32,7 @@
                   {{user.id}}
                 </td>
   
-                <td>
+                <td class="tdLeft">
                   <div class="d-flex align-items-center">
                     <img class="rounded-circle" [src]='user.imagePath' height=" 30px" width="30px">
                     <div class="ml-3">
@@ -41,14 +41,14 @@
                     </div>
                   </div>
                 </td>
-                <td>{{ user.Email }}</td>
+                <td class="tdLeft">{{ user.Email }}</td>
   
-                <td>{{ user.Mobile }}</td>
-                <td>{{ user.DateOfJoining |date :'fullDate' }}</td>
+                <td class="tdLeft">{{ user.Mobile }}</td>
+                <td class="tdLeft">{{ user.DateOfJoining |date :'fullDate' }}</td>
   
-                <td>{{ user.Salary }}</td>
-                <td>{{ user.Projects }}</td>
-                <td>
+                <td class="tdLeft">{{ user.Salary }}</td>
+                <td class="tdLeft">{{ user.Projects }}</td>
+                <td class="tdLeft">
                   <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
                     placement="top" ngbTooltip="Edit">
                     <i-feather name="edit-2" class="feather-sm"></i-feather>
@@ -60,62 +60,62 @@
                 </td>
               </tr> -->
               <tr>
-                  <td>1</td>
-                  <td><a [routerLink]="['/customer/view']">
+                  <td class="tdLeft">1</td>
+                  <td class="tdLeft"><a [routerLink]="['/customer/view']">
                     <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
                     Johan Anderson
                   </a></td>
-                  <td>AC Service</td>
-                  <td>12/02/2021</td>
-                  <td><span class="fa fa-star checked"></span>
+                  <td class="tdLeft">AC Service</td>
+                  <td class="tdLeft">12/02/2021</td>
+                  <td class="tdLeft"><span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span></td>
-                  <td>View</td>
+                  <td class="tdCenter"><i class="fas fa-eye "></i></td>
                
               </tr>
-             <tr> <td>2</td>
-              <td><a [routerLink]="['/customer/view']">
+             <tr> <td class="tdLeft">2</td>
+              <td class="tdLeft"><a [routerLink]="['/customer/view']">
                 <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
                 Johan Anderson
               </a></td>
-              <td>Mobile Service</td>
-              <td>25/12/2020</td>
-              <td><span class="fa fa-star checked"></span>
+              <td class="tdLeft">Mobile Service</td>
+              <td class="tdLeft">25/12/2020</td>
+              <td class="tdLeft"><span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span></td>
-              <td>View</td>
+              <td class="tdCenter"><i class="fas fa-eye "></i></td>
             </tr>
-            <tr> <td>3</td>
-                <td><a [routerLink]="['/customer/view']">
+            <tr> <td class="tdLeft">3</td>
+                <td class="tdLeft"><a [routerLink]="['/customer/view']">
                   <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/3.jpg">&nbsp;
                   Johan Anderson
                 </a></td>
-                <td>Network Setup</td>
-                <td>12/11/2020</td>
-                <td><span class="fa fa-star checked"></span>
+                <td class="tdLeft">Network Setup</td>
+                <td class="tdLeft">12/11/2020</td>
+                <td class="tdLeft"><span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star "></span>
                   <span class="fa fa-star"></span></td>
-                <td>View</td>
+                <td class="tdCenter"><i class="fas fa-eye "></i></td>
               </tr>
-              <tr> <td>4</td>
-                <td><a [routerLink]="['/customer/view']">
+              <tr> <td class="tdLeft">4</td>
+                <td class="tdLeft"><a [routerLink]="['/customer/view']">
                   <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
                   Johan Anderson
                 </a></td>
-                <td>Poor Wifi Coverage</td>
-                <td>12/10/2020</td>
-                <td><span class="fa fa-star checked"></span>
+                <td class="tdLeft">Poor Wifi Coverage</td>
+                <td class="tdLeft">12/10/2020</td>
+                <td class="tdLeft"><span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star "></span>
                   <span class="fa fa-star"></span></td>
-                <td>View</td>
+                <td class="tdCenter"><i class="fas fa-eye "></i></td>
               </tr>
              
             </tbody>
