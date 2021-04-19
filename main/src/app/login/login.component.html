@@ -1,5 +1,5 @@
 <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" 
-style="background-image: radial-gradient(circle, #d85be6 0%, #00d4ff 100%);">
+style="background-image: radial-gradient(circle, #d85be6 0%, #00d4ff 100%); height: 250px; ">
 
 
     <div class="auth-box m-3 m-md-0">
@@ -22,12 +22,12 @@ style="background-image: radial-gradient(circle, #d85be6 0%, #00d4ff 100%);">
                             </div>
                             
                             <input type="text" class="form-control" placeholder="Enter your username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
+                        </div><br>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon2"><i class="ti-pencil"></i></span>
+                                <span class="input-group-text" id="basic-addon2"><i class="ti-lock"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Enter your password" aria-label="Password" aria-describedby="basic-addon1">
+                            <input type="password" class="form-control" placeholder="Enter your password" aria-label="Password" aria-describedby="basic-addon1">
                         </div>
                         <div class="form-group row">
                             <div class="col-md-12">
@@ -37,7 +37,7 @@ style="background-image: radial-gradient(circle, #d85be6 0%, #00d4ff 100%);">
                                     <a  (click)="showRecoverForm()" href="javascript:void(0)" id="to-recover" class="text-dark font-14 ml-auto"><i class="fa fa-lock m-r-5"></i> Forgot password?</a>
                                 </div>
                             </div>
-                        </div>
+                        </div><br><br>
                         <div class="form-group text-center">
                             <div class="col-xs-12 p-b-20">
                                 <a class="btn btn-block btn-lg btn-info" href="javascript:void(0)"  (click)="logincheck()">Log In</a>
