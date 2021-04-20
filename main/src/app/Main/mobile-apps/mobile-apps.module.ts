@@ -15,10 +15,12 @@ import { DisputeReasonComponent } from './dispute-reason/dispute-reason.componen
 import { BlockReasonComponent } from './block-reason/block-reason.component';
 import { DataTablesModule } from 'angular-datatables';
 import { QuillModule } from 'ngx-quill';
+import { KnowledgeListComponent } from './knowledge-list/knowledge-list.component';
+import { KnowledgDetailsComponent } from './knowledg-details/knowledg-details.component';
 
 
 @NgModule({
-  declarations: [MobileContentComponent, KnowledgeComponent,  TransportComponent,CategoryComponent,QuestionsComponent, LikeReasonComponent, CancelReasonComponent, RejectReasonComponent, DisputeReasonComponent, BlockReasonComponent,
+  declarations: [MobileContentComponent, KnowledgeComponent,  TransportComponent,CategoryComponent,QuestionsComponent, LikeReasonComponent, CancelReasonComponent, RejectReasonComponent, DisputeReasonComponent, BlockReasonComponent, KnowledgeListComponent, KnowledgDetailsComponent,
   ],
   imports: [
     CommonModule,
