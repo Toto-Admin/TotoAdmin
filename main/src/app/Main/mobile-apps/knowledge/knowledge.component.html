@@ -1,198 +1,85 @@
-<!-- //Questions List -->
-<div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Knowledges<span style="float: right;">
-            <button class="btn btn-primary backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        <div class="d-flex mb-3 mt-3">
-          <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
-          <!-- (click)="openModal(editUserModal, null)" -->
-          
-        </div>
-        <div class="">
-          <div class="row">
-            <div class="col-md-12">
-              <!-- <div class="card card-hover">
-                <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered table-striped">
-                    <thead >
-                      <tr>
-                        <th class="backgroundColor tdLeft">NAME</th>
-                        <!-- <th class="backgroundColor">SLUG</th> -->
-                        <th class="backgroundColor tdLeft">SKILL</th>
-                        <th class="backgroundColor">IMAGE</th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
-                    <tbody>
-                        <tr>  
-                        <td class="tdLeft">TV</td>
-                        <!-- <td>Slug</td> -->
-                        <td class="tdLeft">Automatically TV switched off or on</td>
-                        <td><img height="30" width="30" src="assets/tv1.png" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">TV</td>
-                        <!-- <td>Slug</td> -->
-                        <td class="tdLeft">LED TV displays picture but not plays sound</td>
-                        <td><img height="30" width="30" src="assets/s1.jpg" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>
-                        <td>
-                                <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Mobile</td>
-                        <!-- <td>Slug</td> -->
-                        <td class="tdLeft">Hardware</td>
-                        <td><img height="30" width="30" src="assets/mb.png" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>
-                        <td>
-                                <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Mobile</td>
-                        <!-- <td>Slug</td> -->
-                        <td class="tdLeft">Software</td>
-                        <td><img height="30" width="30" src="assets/mobile.jpg" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>
-                        <td>
-                                <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Air Conditioner</td>
-                        <!-- <td>Slug</td> -->
-                        <td class="tdLeft">Water Leak</td>
-                        <td ><img height="30" width="30" src="assets/ac1.jpg" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
+<!--============= Banner Section Starts Here =============-->
 
-                    </tbody>
-                  </table>  
-                <!-- </div>
-              </div> -->
-            </div>
-          </div>
-          
-          
-        </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+<div class="container-fluid1">
+  <img src="../../../../assets/images/banner/banner-1.jpg" alt="Snow" style="width:100%;margin-top:-3%;height: 300px;">
+  <div class="type1">How Can We Help You?</div>
+  <div class="type2">Have questions? Search through our Help Center</div>
+  <div class="type3">
+    <div class="search-form">
+      <div>
+        <input type="text" class="textData form-control" placeholder="Start typing your search..."></div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row" style="margin-top: -25px;">
+    <div class="col-md-4">
+      <div class="card card-hover card-body">
+       <div class="row">
+         <div class="col-md-12 text-center">
+            <img src="../../../../assets/images/knowledge/know2.png" style="width: 30%;">
+            <h3><a [routerLink]="['/mobile-apps/knowledge-list']">How to use Toto</a></h3>
+            <h5>Helpful information on how to use deskoto.</h5>
+         </div>
+       </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-hover card-body">
+       <div class="row">
+         <div class="col-md-12 text-center">
+          <img src="../../../../assets/images/how/how2.png" style="width: 33%;">
+          <h3><a [routerLink]="['/mobile-apps/knowledge-list']">Community Forums</a></h3>
+          <h5>Ask questions and share your ideas!.</h5>
+         </div>
+       </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-hover card-body">
+       <div class="row">
+         <div class="col-md-12 text-center">
+          <img src="../../../../assets/images/how/how3.png" style="width: 42%;">
+          <h3><a [routerLink]="['/mobile-apps/knowledge-list']">Ticket System</a></h3>
+          <h5>Built to help you solve issues faster.</h5>
+         </div>
+       </div>
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header backgroundColor">
-  
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Knowledge</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-        <div class="form-group row">
-            <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-              <span class="help-block" *ngIf="formsErrors.Name">
-                {{formsErrors.Name}}
-              </span>
-            </div>
+  <div class="row" >
+    <div class="col-md-4">
+      <div class="card card-hover card-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+           <img src="../../../../assets/images/bill/bill4.png" style="width: 30%;">
+           <h3><a [routerLink]="['/mobile-apps/knowledge-list']">FAQ</a></h3>
+           <h5>Frequently asked questions list</h5>
           </div>
-          <div class="form-group row">
-            <label for="name" class="col-sm-4 col-form-label">Slug<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-              <span class="help-block" *ngIf="formsErrors.Name">
-                {{formsErrors.Name}}
-              </span>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="name" class="col-sm-4 col-form-label">Skill<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-              <span class="help-block" *ngIf="formsErrors.Name">
-                {{formsErrors.Name}}
-              </span>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="projects" class="col-sm-4 col-form-label">Add Image</label>
-            <div class="col-sm-8">
-              <input type="file" formControlName="Projects" id="projects"
-                (blur)=logValidationErrors(editUser)>
-              <span class="help-block" *ngIf="formsErrors.Projects">
-                {{formsErrors.Projects}}
-              </span>
-            </div>
-          </div>
-    
-
-    
-  
-  
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
-  
-          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
         </div>
-  
-        
-      </form>
+       </div>
     </div>
-  </ng-template>
-  
+    <div class="col-md-4">
+      <div class="card card-hover card-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+           <img src="../../../../assets/images/bill/bill1.png" style="width: 30%;">
+           <h3><a [routerLink]="['/mobile-apps/knowledge-list']">Billing and Payments</a></h3>
+           <h5>How to withdraw your money</h5>
+          </div>
+        </div>
+       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-hover card-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+           <img src="../../../../assets/images/bill/bill3.png" style="width: 30%;">
+           <h3><a [routerLink]="['/mobile-apps/knowledge-list']">Features</a></h3>
+           <h5>Lorem ipsum dolor sit amet. </h5>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,98 @@
 .table-responsive{
     text-align: center;
 }
+
+.container-fluid1 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .type1{
+    position: absolute;
+    top: 31px;
+    left: 65px;
+    font-size: 42px;
+    font-weight: 800;
+  }
+
+  .type2{
+    position: absolute;
+    top: 82px;
+    left: 65px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .type3{
+    position: absolute;
+    top: 140px;
+    left: 65px;
+    
+  }
+
+  .search-form {
+    position: relative;
+    background: #e7e9fa;
+    padding: 1px 27px;
+    -webkit-border-radius: 25px 25px 25px 25px;
+    -moz-border-radius: 8px 8px 0 0;
+    border-radius: 25px 25px 25px 25px;
+    border-bottom: 1px solid #ccc8e1;
+    width: 460px;
+}
+.textData {
+    background: transparent;
+    border: none;
+    height: 50px;
+    padding: 0;
+    color : rgb(97, 97, 97);
+}
+
+.form-control {
+    border: 1px solid #e7e9fa !important;
+}
+
+.card {
+    border-radius: 14px !important;
+}
+
+a{
+    color: #445b6f;
+}
