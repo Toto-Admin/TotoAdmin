@@ -142,4 +142,7 @@
   }
 
 
- 
+  .table th, .table td {
+    padding: 10px !important;
+  }
+    

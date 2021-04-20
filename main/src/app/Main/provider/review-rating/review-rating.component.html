@@ -2,13 +2,7 @@
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <!-- <h4 class="card-title">Provider List</h4>
-        <h5 class="card-subtitle">Here is the Provider list you can add, edit or delete the Provider</h5> -->
-        <div class="d-flex mb-3 mt-3">
-          <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email" >
-          <button class="btn btn-primary ml-auto"  (click)="openModal(editUserModal, null)"  >Add Provider</button> -->
-          <!-- " (click)="openModal(editUserModal, null)" -->
-        </div>
+      
         <div class="table-responsive table-bordered">
           <table class="table table-striped mb-0 no-wrap v-middle">
             <thead>
@@ -65,14 +59,22 @@
                     <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
                     Johan Anderson
                   </a></td>
-                  <td class="tdLeft">AC Service</td>
+                  <td class="tdLeft">Ac service</td>
                   <td class="tdLeft">12/02/2021</td>
                   <td class="tdLeft"><span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span></td>
-                  <td class="tdCenter"><i class="fas fa-eye "></i></td>
+                    <td><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                          
+                      <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                          <i class="ti-marker-alt"></i>
+                      </a>
+                      <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                          <i class="ti-trash"></i>
+                      </a> -->
+                    </td>
                
               </tr>
              <tr> <td class="tdLeft">2</td>
@@ -80,42 +82,66 @@
                 <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
                 Johan Anderson
               </a></td>
-              <td class="tdLeft">Mobile Service</td>
+              <td class="tdLeft">Mobile service</td>
               <td class="tdLeft">25/12/2020</td>
               <td class="tdLeft"><span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span></td>
-              <td class="tdCenter"><i class="fas fa-eye "></i></td>
+                <td><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                          
+                  <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a> -->
+                </td>
             </tr>
             <tr> <td class="tdLeft">3</td>
                 <td class="tdLeft"><a [routerLink]="['/customer/view']">
                   <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/3.jpg">&nbsp;
                   Johan Anderson
                 </a></td>
-                <td class="tdLeft">Network Setup</td>
+                <td class="tdLeft">Network setup</td>
                 <td class="tdLeft">12/11/2020</td>
                 <td class="tdLeft"><span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star "></span>
                   <span class="fa fa-star"></span></td>
-                <td class="tdCenter"><i class="fas fa-eye "></i></td>
+                  <td><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                          
+                    <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                        <i class="ti-trash"></i>
+                    </a> -->
+                  </td>
               </tr>
               <tr> <td class="tdLeft">4</td>
                 <td class="tdLeft"><a [routerLink]="['/customer/view']">
                   <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
                   Johan Anderson
                 </a></td>
-                <td class="tdLeft">Poor Wifi Coverage</td>
+                <td class="tdLeft">Poor wifi coverage</td>
                 <td class="tdLeft">12/10/2020</td>
                 <td class="tdLeft"><span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star "></span>
-                  <span class="fa fa-star"></span></td>
-                <td class="tdCenter"><i class="fas fa-eye "></i></td>
+                  <span class="fa fa-star"></span></td> 
+                  <td><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                          
+                    <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                        <i class="ti-trash"></i>
+                    </a>-->
+                  </td> 
               </tr>
              
             </tbody>
