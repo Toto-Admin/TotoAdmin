@@ -1,6 +1,8 @@
 import { ViewChild } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { User } from '../user';
 
 @Component({
   selector: 'app-provider-view',
@@ -49,10 +51,7 @@ export class ProviderViewComponent implements OnInit {
       ]
     }
   ];
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  
 
   currentJustify = 'start';
 
@@ -91,6 +90,42 @@ export class ProviderViewComponent implements OnInit {
   add(event: MouseEvent) {
     this.tabs.push(this.counter++);
     event.preventDefault();
+  }
+  
+  config: any;
+  // editUser: FormGroup | null = null;
+  userDetail: User | null = null;
+
+  filterArray: User[] | null = null;
+
+  joiningDate: string | null = null;
+  editUser: FormGroup | null = null;
+  formsErrors = [];
+  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
+
+  ngOnInit(): void {
+    this.editUser = this.fb.group({
+      id: [''],
+      Name: ['', Validators.required],
+      Position: ['', Validators.required],
+      Email: ['', Validators.required],
+      Mobile: ['', Validators.required],
+      DateOfJoining: ['', Validators.required],
+      Salary: ['', Validators.required],
+      Projects: ['', Validators.required],
+  });
+  }
+
+
+  openModal(targetModal: NgbModal, user: User | null) {
+    this.modalService.open(targetModal, {
+        centered: true,
+        backdrop: 'static'
+    });
+  }
+  closeBtnClick() {
+    this.modalService.dismissAll();
+    this.ngOnInit();
   }
   
 
