@@ -371,7 +371,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/marketing/promocodes',
-                title: 'Promo code',
+                title: 'Promo Code',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
