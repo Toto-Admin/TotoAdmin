@@ -146,3 +146,6 @@
     padding: 10px !important;
   }
     
+  .sidebar-nav ul .sidebar-item .sidebar-link i-feather {
+    margin: 0px 8px -11px 5px !important;
+}
