@@ -2,6 +2,12 @@
     text-align: center;
 }
 
+.imgClass{
+  width:103%;
+  margin-top:-3%;
+  margin-left: -1%;
+  height: 300px;
+}
 .container-fluid1 {
     position: relative;
     text-align: center;
@@ -96,3 +102,49 @@
 a{
     color: #445b6f;
 }
+
+  /* media query for mobile  */
+  /* media query for width min 600px */
+  @media only screen and (max-width: 600px) {
+    .imgClass {
+      width: 114%;
+      margin-top: -13%;
+      margin-left: -7%;
+      height: 300px;
+    }
+
+    .type1{
+      position: absolute;
+      top: 21px;
+      left: 10px;
+      font-size: 23px;
+      font-weight: 800;
+      color: white;
+    }
+
+    .type2{
+      position: absolute;
+      top: 57px;
+      left: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .type3 {
+      position: absolute;
+      top: 100px;
+      left: 10px;
+    }
+
+    .search-form {
+      position: relative;
+      background: #e7e9fa;
+      padding: 1px 27px;
+      -webkit-border-radius: 25px 25px 25px 25px;
+      -moz-border-radius: 8px 8px 0 0;
+      border-radius: 25px 25px 25px 25px;
+      border-bottom: 1px solid #ccc8e1;
+      width: 290px;
+  }
+  }
