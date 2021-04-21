@@ -8,12 +8,12 @@ const routes: Routes = [
   {path:'', component:JobDashboardComponent},
   {
     path:'dashboard', component:JobDashboardComponent,
-    data: {
-      title: 'Dashboard',
-      urls: [
-        { title: 'Jobs', url: '/jobs/dashboard' },
-      ]
-    }
+    // data: {
+    //   title: 'Dashboard',
+    //   urls: [
+    //     { title: 'Jobs', url: '/jobs/dashboard' },
+    //   ]
+    // }
   },
   {
     path:'task', component:TaskComponent,

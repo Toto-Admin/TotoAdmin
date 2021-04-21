@@ -9,13 +9,13 @@ const routes: Routes = [
       {
         path: '',
         component: DashboardComponent,
-        data: {
-          title: 'Master Dashboard',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: '' }
-          ]
-        }
+        // data: {
+        //   title: 'Master Dashboard',
+        //   urls: [
+        //     { title: 'Dashboard', url: '/dashboard' },
+        //     { title: '' }
+        //   ]
+        // }
       },
     ]
   }
