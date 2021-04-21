@@ -125,10 +125,10 @@ public doughnutChartType = 'doughnut';
 
 //service wise provider
 public pieChartLabels: string[] = [
-  'AC Service',
-  'TV Service',
-  'ISP',
-  'Poor wifi Coverage',
+  'Ac Service',
+  'Tv Service',
+  'Internate Speed',
+  'Poor Wifi Coverage',
   'Connectivity',
   'Voice Modulation'
 
