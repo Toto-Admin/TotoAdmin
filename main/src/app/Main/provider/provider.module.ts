@@ -23,10 +23,12 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AssessmentComponent } from './assessment/assessment.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent, DocumentComponent, PerformanceComponent, 
-    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent],
+    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent, AddComponent, EditComponent],
   imports: [
     CommonModule,
     AgmCoreModule,

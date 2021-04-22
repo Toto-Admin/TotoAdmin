@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 // import 
 import { NgApexchartsModule } from "ng-apexcharts";
 import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
+import{ReactiveFormsModule} from '@angular/forms'
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
     PerfectScrollbarModule,
     CustomerRoutingModule,
     DataTablesModule,
-
+ReactiveFormsModule,
     NgApexchartsModule
   ]
 })

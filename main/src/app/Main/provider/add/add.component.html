@@ -1,0 +1,328 @@
+
+<!-- <div class="row">
+  <div class="col-md-12">
+    <div class="card card-hover">
+      <div class="card-body">
+        <table datatable class="row-border hover table table-bordered">
+          <thead style="background: #92adfc;">
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>MOBILE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>sushantpatil@gmail.com</td>
+              <td>9898235323</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ashish Patil</a></p>
+                </div>
+              </div></td>
+              <td>ashishpatil@gmail.com</td>
+              <td>89342343543</td>
+              <td>Active</td>
+
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Pradhip Pawar</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sudhir Patil</a></p>
+                </div>
+              </div></td>
+              <td>sudhirpawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><div class="d-flex align-items-center">
+                <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 50px" width="50px">
+                <div class="ml-3">
+                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                </div>
+              </div></td>
+              <td>pradhippawar@gmail.com</td>
+              <td>8459495933</td>
+              <td>Inactive</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+<!-- <p>customer add works</p> -->
+<!-- Reactive Form Validaton Starts -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header backgroundColor" >
+                <h4 class="card-title mb-0 text-white">Add Provider Details</h4>
+            </div>
+            <div class="card-body">
+                <div class="card-block">
+                    <form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="onReactiveFormSubmit()" novalidate>
+
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label for="inputFirstname">Firstname<span class="reqNote">*</span></label>
+                          <input type="text" class="form-control" id="inputFirstname" formControlName="inputFirstname" required>
+                           <small class="form-text text-danger"
+                           *ngIf="!regularForm.get('inputFirstname').valid && (regularForm.get('inputFirstname').dirty || regularForm.get('inputFirstname').touched)">
+                           Firstname is required and must be characters  
+                           </small>
+
+                     </div>
+
+                      <div class="form-group col-md-6">
+                        <label for="inputLastname">Lastname<span class="reqNote">*</span></label>
+                        <input type="text" class="form-control" id="inputLastname" formControlName="inputLastname" required>
+                        <small class="form-text text-danger"
+                       *ngIf="!regularForm.get('inputLastname').valid && (regularForm.get('inputLastname').dirty || regularForm.get('inputLastname').touched)">
+                           Lastname is required and must be characters </small>
+                    </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Email<span class="reqNote">*</span></label>
+                            <input type="email" class="form-control" id="inputEmail" formControlName="inputEmail" required>
+                            <small class="form-text text-danger"
+                         *ngIf="!regularForm.get('inputEmail').valid && (regularForm.get('inputEmail').dirty || regularForm.get('inputEmail').touched)">Please
+                                enter a valid email!</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="password">Password<span class="reqNote">*</span></label>
+  
+                            <input type="password" class="form-control" id="password" formControlName="password" required>
+                            <small class="form-text text-danger"
+                                *ngIf="!regularForm.get('password').valid && (regularForm.get('password').dirty || regularForm.get('password').touched)">Password
+                                characters length must be between 4 and 24 !</small>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="latitude">Latitude</label>
+                            <input type="text" class="form-control" id="latitude" formControlName="latitude" required>
+                     
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="longitude">Longitude</label>
+                          <input type="text" class="form-control" id="longitude" formControlName="longitude" required>
+                     
+                      </div>
+                       
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                           <label for="mobile">Mobile<span class="reqNote">*</span></label>
+                            <input type="tel" class="form-control" id="mobile" formControlName="mobile" required>
+                            <small class="form-text text-danger"
+                         *ngIf="!regularForm.get('mobile').valid && (regularForm.get('mobile').dirty || regularForm.get('mobile').touched)">
+                                Mobile number is required and must be numeric</small> 
+  
+  
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="referral">Referral code</label>
+  
+                            <input type="text" class="form-control" id="referral" formControlName="referral" required>
+                        
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="dob">Date of birth</label>
+                            <input type="date" class="form-control" id="dob" formControlName="dob" required>
+                        </div>
+                       <div class="form-group col-md-6">
+                            <label class>Gender</label>
+  
+                            <div class="" *ngFor="let radioOption of radioOptions">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" class="custom-control-input"
+                                        [value]="radioOption" formControlName="radioOption">
+                                    <label class="custom-control-label" for="customRadio2">{{ radioOption }}</label>
+                                </div>
+  
+                            </div>
+                        </div> 
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                        <label for="services">Sevices</label>
+                        <select class="form-control" id="services">
+                            <option>Voice Modulation</option>
+                            <option>Ac</option>
+                            <option>Tv</option>
+                            <option>Network</option>
+                            <option>Connectivity</option>
+                        </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="status">Status</label>
+                            <select class="form-control" id="status">
+                                <option>Inactive</option>
+                                <option>Active</option>
+                            </select>
+                            </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="vatname">Vat name<span class="reqNote">*</span></label>
+                            <input type="text" class="form-control" id="vatname" formControlName="vatname" required>
+                             <small class="form-text text-danger"
+                               *ngIf="!regularForm.get('vatname').valid && (regularForm.get('vatname').dirty || regularForm.get('vatname').touched)">
+                              Vat number is required              
+                              </small>
+
+                       </div>
+
+                        <div class="form-group col-md-6">
+                          <label for="vatnum">Vat number<span class="reqNote">*</span></label>
+                          <input type="text" class="form-control" id="vatnum" formControlName="vatnum" required>
+                          <small class="form-text text-danger"
+                         *ngIf="!regularForm.get('vatnum').valid && (regularForm.get('vatnum').dirty || regularForm.get('vatnum').touched)">Please
+                              Vat name is required</small>
+                      </div>
+                    </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="insurance">Insurance file</label>
+                            <input type="file" class="form-control" id="insurance" formControlName="insurance" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="pimg">Profile image</label>
+                            <input type="file" class="form-control" id="pimg" formControlName="pimg" required>
+                        </div>
+                      </div>
+  
+  
+  
+                        
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary backgroundColor ml-auto"
+                                [disabled]="!regularForm.valid">Submit</button>&nbsp;
+                            <button type="button" class="btn btn-dark btn-raised"  (click)="cancelBtnClick()">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Reactive Form Validaton Ends -->

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddComponent } from './add/add.component';
 import { AvailabilityComponent } from './availability/availability.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'perform',component:PerformanceComponent},
   {path:'task',component:TaskHistoryComponent},
   {path:'review',component:ReviewRatingComponent},
-  {path:'availability', component:AvailabilityComponent}
+  {path:'availability', component:AvailabilityComponent},
+  {path:'add',component:AddComponent}
 ];
 
 @NgModule({

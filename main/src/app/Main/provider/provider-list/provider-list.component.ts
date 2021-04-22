@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 // import { User } from '../user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataTableDirective } from 'angular-datatables';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-provider-list',
@@ -23,7 +24,7 @@ export class ProviderListComponent implements OnInit {
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private router:Router) { }
   formsErrors = [];
   ngOnInit(): void {
     
@@ -75,4 +76,9 @@ export class ProviderListComponent implements OnInit {
     this.modalService.dismissAll();
     this.ngOnInit();
   }
+  btnClick() {
+   
+    this.router.navigate(['/provider/add']);
+  
+}
 }

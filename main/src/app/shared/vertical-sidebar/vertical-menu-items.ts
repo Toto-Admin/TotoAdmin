@@ -191,37 +191,37 @@ export const ROUTES: RouteInfo[] = [
         label: '',
         labelClass: 'badge badge-info sidebar-badge',
         submenu: [
-            {
-                path: '/mobile-apps',
-                title: 'FAQ',
-                icon: 'fas fa-question',
-                class: 'has-arrow',
-                extralink: false,
-                label: '',
-                labelClass: '',
-                submenu: [
-                    {
-                        path: '/mobile-apps/questions',
-                        title: 'Questions',
-                        icon: 'mdi mdi-adjust',
-                        class: '',
-                        extralink: false,
-                        label: '',
-                        labelClass: '',
-                        submenu: []
-                    },
-                    {
-                        path: '/mobile-apps/category',
-                        title: 'Category',
-                        icon: 'mdi mdi-adjust',
-                        class: '',
-                        extralink: false,
-                        label: '',
-                        labelClass: '',
-                        submenu: []
-                    },
-                ]
-            },
+            // {
+            //     path: '/mobile-apps',
+            //     title: 'FAQ',
+            //     icon: 'fas fa-question',
+            //     class: 'has-arrow',
+            //     extralink: false,
+            //     label: '',
+            //     labelClass: '',
+            //     submenu: [
+            //         {
+            //             path: '/mobile-apps/questions',
+            //             title: 'Questions',
+            //             icon: 'mdi mdi-adjust',
+            //             class: '',
+            //             extralink: false,
+            //             label: '',
+            //             labelClass: '',
+            //             submenu: []
+            //         },
+            //         {
+            //             path: '/mobile-apps/category',
+            //             title: 'Category',
+            //             icon: 'mdi mdi-adjust',
+            //             class: '',
+            //             extralink: false,
+            //             label: '',
+            //             labelClass: '',
+            //             submenu: []
+            //         },
+            //     ]
+            // },
             {
                 path: '/mobile-apps/mobile-content',
                 title: 'Mobile Contents',
@@ -249,7 +249,7 @@ export const ROUTES: RouteInfo[] = [
                 class: 'has-arrow',
                 extralink: false,
                 label: '',
-                labelClass: '',
+                labelClass: 'badge badge-info sidebar-badge',
                 submenu: [
                     {
                         path: '/mobile-apps/like',
