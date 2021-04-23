@@ -4,16 +4,19 @@
         <div class="card">
             <div class="card-body">
               
-                <form class="m-t-30">
+                <form *ngIf='regularForm' [formGroup]="regularForm" class="m-t-30">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Referral Discount in Percentage<span class="reqNote">*</span></label>
-                        <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="10">
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        <label for="disc">Referral Discount in Percentage<span class="reqNote">*</span></label>
+                        <input type="number" class="form-control" id="disc" formControlName="disc">
+                        <small class="form-text text-danger"
+                        *ngIf="!regularForm.get('disc').valid && (regularForm.get('disc').dirty || regularForm.get('disc').touched)">
+                        Please enter referral discount!
+                        </small>
                     </div>
                    
                     <div class="form-group">
-                        <label>Referral Detail</label>
-                        <textarea class="form-control" rows="3" ></textarea>
+                        <label for="ref_detail">Referral Detail</label>
+                        <textarea class="form-control" rows="3"  id="ref_detail" formControlName="disc" ></textarea>
                     </div>
                    
                     <button type="submit" class="btn btn-primary">Save</button>

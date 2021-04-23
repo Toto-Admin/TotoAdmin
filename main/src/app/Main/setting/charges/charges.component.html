@@ -4,26 +4,38 @@
         <div class="card">
             <div class="card-body">
               
-                <form class="m-t-30">
+                <form *ngIf='regularForm' [formGroup]="regularForm" class="m-t-30">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Customer Charges<span class="reqNote">*</span></label>
-                        <input type="tel"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value=10%>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        <label for="cust_charg">Customer Charges<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control"   formControlName="cust_charg" id="cust_charg" >
+                        <small class="form-text text-danger"
+                        *ngIf="!regularForm.get('cust_charg').valid && (regularForm.get('cust_charg').dirty || regularForm.get('cust_charg').touched)">
+                        This field is required
+                        </small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Provider Charges<span class="reqNote">*</span></label>
-                        <input type="tel"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value=10%>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        <label for="pro_charg">Provider Charges<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" id="pro_charg" formControlName="pro_charg" >
+                        <small class="form-text text-danger"
+                        *ngIf="!regularForm.get('pro_charg').valid && (regularForm.get('pro_charg').dirty || regularForm.get('pro_charg').touched)">
+                        This field is required
+                        </small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Vat Charges<span class="reqNote">*</span></label>
-                        <input type="tel"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value=10%>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        <label for="vat_charg">Vat Charges<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" id="vat_charg" formControlName="vat_charg">
+                        <small class="form-text text-danger"
+                        *ngIf="!regularForm.get('vat_charg').valid && (regularForm.get('vat_charg').dirty || regularForm.get('vat_charg').touched)">
+                        This field is required
+                        </small>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Poor Performance<span class="reqNote">*</span></label>
-                        <input type="tel"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value=10 >
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                        <label for="poor">Poor Performance<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" id="poor"  formControlName="poor">
+                        <small class="form-text text-danger"
+                        *ngIf="!regularForm.get('poor').valid && (regularForm.get('poor').dirty || regularForm.get('poor').touched)">
+                        This field is required
+                        </small>
                     </div>
                    
                    

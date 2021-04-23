@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-email',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmailComponent implements OnInit {
 
+  regularForm: FormGroup=Object.create(null);
   constructor() { }
 
   ngOnInit(): void {
+    this.regularForm = new FormGroup({
+      
+      'toEmail': new FormControl(null, [Validators.required, Validators.email]),
+      'fromEmail': new FormControl(null, [Validators.required, Validators.email]),
+  
+      
+
+  }, {updateOn: 'blur'});
   }
 
 }
