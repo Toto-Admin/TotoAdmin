@@ -25,6 +25,7 @@ import { AssessmentComponent } from './assessment/assessment.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
+import {ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent, DocumentComponent, PerformanceComponent, 
@@ -38,6 +39,7 @@ import { EditComponent } from './edit/edit.component';
     NgxChartsModule,
     NgApexchartsModule,
     NgbModule,
+    ReactiveFormsModule,
     DataTablesModule,
     CalendarModule.forRoot({
       provide: DateAdapter,

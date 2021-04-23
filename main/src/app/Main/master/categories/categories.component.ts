@@ -40,14 +40,9 @@ export class CategoriesComponent implements OnInit {
      
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      service: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      category:['', Validators.required],
+      status:['', Validators.required],
   });
   }
   ngAfterViewInit(): void {

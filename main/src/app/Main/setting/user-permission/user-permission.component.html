@@ -130,17 +130,18 @@
       <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
 
         <div class="form-group row">
-            <label for="name" class="col-sm-4 col-form-label">Role<span class="reqNote">*</span></label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-              <span class="help-block" *ngIf="formsErrors.Name">
-                {{formsErrors.Name}}
-              </span>
-            </div>
+          <label for="role" class="col-sm-4 col-form-label">Role<span class="reqNote">*</span></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" formControlName="role" id="role" (blur)=logValidationErrors(editUser)>
+           
+            <small class="form-text text-danger"
+              *ngIf="!editUser.get('role').valid && (editUser.get('role').dirty || editUser.get('role').touched)">
+              Role Field is required 
+              </small> 
           </div>
-
+        </div>
           <div class="form-group row">
-            <label for="name" class="col-sm-12 col-form-label">Permission<span class="reqNote">*</span></label> <br>
+            <label for="permission" class="col-sm-12 col-form-label">Permission</label> <br>
             <div class="col-sm-4" >
                     <fieldset class="checkbox">
                         <label>

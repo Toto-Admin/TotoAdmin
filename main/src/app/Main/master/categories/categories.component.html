@@ -151,25 +151,33 @@
       <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
   
         <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Service Name<span class="reqNote">*</span></label>
+          <label for="service" class="col-sm-4 col-form-label">Service<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
+            <input type="text" class="form-control" formControlName="service" id="service" (blur)=logValidationErrors(editUser)>
+            <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
-            </span>
+            </span> -->
+            <small class="form-text text-danger"
+            *ngIf="!editUser.get('service').valid && (editUser.get('service').dirty || editUser.get('service').touched)">
+            Service is required 
+            </small> 
           </div>
         </div>
        
         <div class="form-group row">
-          <label for="position" class="col-sm-4 col-form-label">Category<span class="reqNote">*</span></label>
+          <label for="category" class="col-sm-4 col-form-label">Category<span class="reqNote">*</span></label>
           <div class="col-sm-8">
 
-                <select class="form-control custom-select"name="service_id" formControlName="service_id" placeholder="Choose a Service" tabindex="1">
+                <select class="form-control custom-select"name="category" formControlName="category"  tabindex="1">
                     <option value="Category 1">AC Service</option>
                     <option value="Category 2">Voice Modulation</option>
                     <option value="Category 3">Poor Wifi Coverage</option>
                     <option value="Category 4">New Network Setup</option>
                 </select>
+                <small class="form-text text-danger"
+                *ngIf="!editUser.get('category').valid && (editUser.get('category').dirty || editUser.get('category').touched)">
+                Category is required 
+                </small> 
        
           </div>
         </div> <div class="form-group row">
@@ -183,7 +191,7 @@
           </div>
         </div>
        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Description<span class="reqNote">*</span></label>
+          <label for="name" class="col-sm-4 col-form-label">Description</label>
           <div class="col-sm-8">
             <div class="form-group">
                 <textarea class="form-control" rows="3" placeholder="description Here..."></textarea>
@@ -191,13 +199,17 @@
         </div>
         </div>
         <div class="form-group row">
-          <label for="position" class="col-sm-4 col-form-label">Status<span class="reqNote">*</span></label>
+          <label for="status" class="col-sm-4 col-form-label">Status<span class="reqNote">*</span></label>
           <div class="col-sm-8">
 
-                <select class="form-control custom-select"name="service_id" formControlName="service_id" placeholder="Choose a Service" tabindex="1">
+                <select class="form-control custom-select"name="status" formControlName="status"tabindex="1">
                     <option value="Category 1">Active</option>
                     <option value="Category 2">Inactive</option>
                 </select>
+                <small class="form-text text-danger"
+                *ngIf="!editUser.get('status').valid && (editUser.get('status').dirty || editUser.get('status').touched)">
+                Status is required 
+                </small> 
        
           </div>
           </div>

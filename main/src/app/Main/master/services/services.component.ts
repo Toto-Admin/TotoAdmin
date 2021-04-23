@@ -39,14 +39,15 @@ export class ServicesComponent implements OnInit {
      
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      service: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      slug:['', Validators.required],
+      duration:['', Validators.required],
+      dur_type:[''],
+      descrip:[''],
+      tool:[''],
+      scope:[''],
+      img:[''],
+
   });
   }
   ngAfterViewInit(): void {

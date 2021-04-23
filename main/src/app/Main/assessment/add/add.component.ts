@@ -17,6 +17,8 @@ export class AddComponent implements OnInit {
   constructor(private router : Router,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
+    
     
   }
   closeBtnClick(){

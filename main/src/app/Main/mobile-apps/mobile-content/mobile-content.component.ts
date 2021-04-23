@@ -29,6 +29,7 @@ export class MobileContentComponent implements OnInit {
     
    }
   formsErrors = [];
+  
   ngOnInit(): void {
     
     this.dtOptions = {
@@ -41,14 +42,18 @@ export class MobileContentComponent implements OnInit {
      ]
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      // id: [''],
+      customer: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      provider: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      slug:[''],
+      usertype:['', Validators.required],
+      platform:['', Validators.required],
+      // Position: ['', Validators.required],
+      // Email: ['', Validators.required],
+      // Mobile: ['', Validators.required],
+      // DateOfJoining: ['', Validators.required],
+      // Salary: ['', Validators.required],
+      // Projects: ['', Validators.required],
   });
   }
   ngAfterViewInit(): void {
@@ -80,5 +85,7 @@ export class MobileContentComponent implements OnInit {
     this.ngOnInit();
   }
 
+
+  
 
 }

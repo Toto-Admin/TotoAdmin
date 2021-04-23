@@ -40,14 +40,18 @@ export class PromocodesComponent implements OnInit {
      
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      name: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      use:['', Validators.required],
+      no_of_time:['',Validators.required],
+      no_of_time_use:['',Validators.required],
+      dis_type:['',Validators.required],
+      dis_amt:['',Validators.required],
+      desc:['',Validators.required],
+      start_dt:['',Validators.required],
+      expire_dt:['',Validators.required],
+
+
+
   });
   }
   ngAfterViewInit(): void {

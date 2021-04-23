@@ -182,7 +182,7 @@
                             <input type="text" class="form-control" id="inputFirstname" formControlName="inputFirstname" required>
                              <small class="form-text text-danger"
                              *ngIf="!regularForm.get('inputFirstname').valid && (regularForm.get('inputFirstname').dirty || regularForm.get('inputFirstname').touched)">
-                             Firstname is required and must be characters  
+                             Firstname is required and must be characters(a-zA-Z)
                              </small>
 
                        </div>
@@ -192,7 +192,7 @@
                           <input type="text" class="form-control" id="inputLastname" formControlName="inputLastname" required>
                           <small class="form-text text-danger"
                          *ngIf="!regularForm.get('inputLastname').valid && (regularForm.get('inputLastname').dirty || regularForm.get('inputLastname').touched)">
-                             Lastname is required and must be characters </small>
+                             Lastname is required and must be characters(a-zA-Z)</small>
                       </div>
                     </div>
                     <div class="row">
@@ -269,11 +269,9 @@
                     </div>
                     <div class="row">
                       <div class="form-group col-sm-12">
-                          <label for="inputEmail">Profile image</label>
-                          <input type="file" class="form-control" id="inputEmail" formControlName="inputEmail" required>
-                          <!-- <small class="form-text text-danger"
-                       *ngIf="!regularForm.get('inputEmail').valid && (regularForm.get('inputEmail').dirty || regularForm.get('inputEmail').touched)">Please
-                              enter a valid email!</small> -->
+                          <label for="pimg">Profile image</label>
+                          <input type="file" class="form-control" id="pimg" formControlName="pimg" required>
+               
                       </div>
                     </div>
 

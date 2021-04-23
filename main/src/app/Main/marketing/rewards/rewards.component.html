@@ -149,31 +149,37 @@
       <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
   
         <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
+          <label for="name" class="col-sm-4 col-form-label">Offer<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
+            <input type="text" class="form-control" formControlName="name" id="name" (blur)=logValidationErrors(editUser)>
+            <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
-            </span>
+            </span> -->
+            <small class="form-text text-danger"
+              *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
+              Offer is required 
+              </small> 
           </div>
         </div>
         <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Amount<span class="reqNote">*</span></label>
+          <label for="amt" class="col-sm-4 col-form-label">Amount<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="number" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
+            <input type="text" class="form-control" formControlName="amt" id="amt" (blur)=logValidationErrors(editUser)>
+            <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
-            </span>
+            </span> -->
+            <small class="form-text text-danger"
+              *ngIf="!editUser.get('amt').valid && (editUser.get('amt').dirty || editUser.get('amt').touched)">
+              Amount is required 
+              </small> 
           </div>
         </div>
         <div class="form-group row">
-          <label for="projects" class="col-sm-4 col-form-label">Add Image</label>
+          <label for="addimg" class="col-sm-4 col-form-label">Add Image</label>
           <div class="col-sm-8">
-            <input type="file"  formControlName="Projects" id="projects"
+            <input type="file"  formControlName="addimg" id="addimg"
               (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Projects">
-              {{formsErrors.Projects}}
-            </span>
+           
           </div>
         </div>
   

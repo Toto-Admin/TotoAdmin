@@ -38,14 +38,9 @@ export class RewardsComponent implements OnInit {
      
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      name: ['', Validators.required],
+      amt:['', Validators.required],
+      addimg:['',Validators.required],
   });
   }
   ngAfterViewInit(): void {

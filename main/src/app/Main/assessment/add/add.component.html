@@ -12,7 +12,7 @@
                         <div class="row p-t-20">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label">Name</label>
+                                    <label class="control-label">Name<span class="reqNote">*</span></label>
                                     <input type="text" name="name" formControlName="name" class="form-control" placeholder="enter exam name">
                                     <!-- <small class="form-control-feedback"> This is inline help </small> -->
                                 </div>
@@ -20,7 +20,7 @@
                             <!--/span-->
                             <div class="col-md-6">
                                 <div class="form-group has-danger">
-                                    <label class="control-label">Passing Rank</label>
+                                    <label class="control-label">Passing Rank<span class="reqNote">*</span></label>
                                     <input type="number" name="passing_rank" formControlName="passing_rank" class="form-control form-control-danger" placeholder="enter passing rank">
                                     <!-- <small class="form-control-feedback"> This field has error. </small> -->
                                 </div>
@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group has-danger">
-                                    <label class="control-label">Duration</label>
+                                    <label class="control-label">Duration<span class="reqNote">*</span></label>
                                     <input type="number" name="duration" formControlName="duration" class="form-control form-control-danger" placeholder="enter duration">
                                     <!-- <small class="form-control-feedback"> This field has error. </small> -->
                                 </div>
@@ -41,7 +41,7 @@
                             <!--/span-->
                             <div class="col-md-6">
                                 <div class="form-group has-success">
-                                    <label class="control-label">Duration Type</label>
+                                    <label class="control-label">Duration Type<span class="reqNote">*</span></label>
                                     <select class="form-control custom-select"name="duration_type" formControlName="duration_type">
                                         <option value="">Hour</option>
                                         <option value="">Minute</option>
@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">Services</label>
+                                    <label class="control-label">Services<span class="reqNote">*</span></label>
                                     <select class="form-control custom-select"name="service_id" formControlName="service_id" placeholder="Choose a Service" tabindex="1">
                                         <option value="Category 1">AC Service</option>
                                         <option value="Category 2">Voice Modulation</option>
@@ -91,14 +91,14 @@
                         <div class="row">
                             <div class="col-md-6 ">
                                 <div class="form-group">
-                                    <label>Question 1</label>
+                                    <label>Question 1<span class="reqNote">*</span></label>
                                     <input type="text"  class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="control-label" >Answer</label>
+                                    <label class="control-label" >Answer<span class="reqNote">*</span></label>
                                     <!-- Default inline 1--><br>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">

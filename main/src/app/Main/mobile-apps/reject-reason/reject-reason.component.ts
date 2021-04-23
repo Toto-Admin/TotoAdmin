@@ -40,14 +40,9 @@ export class RejectReasonComponent implements OnInit {
      
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      
+      reason: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      type:['', Validators.required],
   });
   }
   ngAfterViewInit(): void {

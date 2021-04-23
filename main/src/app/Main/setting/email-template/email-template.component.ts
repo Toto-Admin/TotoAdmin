@@ -41,14 +41,10 @@ export class EmailTemplateComponent  {
      
     };
     this.editUser = this.fb.group({
-      id: [''],
-      Name: ['', Validators.required],
-      Position: ['', Validators.required],
-      Email: ['', Validators.required],
-      Mobile: ['', Validators.required],
-      DateOfJoining: ['', Validators.required],
-      Salary: ['', Validators.required],
-      Projects: ['', Validators.required],
+      name: ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      subject:['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
+      key:['', Validators.required],
+      content:[''],
   });
   }
   ngAfterViewInit(): void {
