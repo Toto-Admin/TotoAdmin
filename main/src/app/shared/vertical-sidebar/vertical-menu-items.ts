@@ -184,7 +184,7 @@ export const ROUTES: RouteInfo[] = [
     },
     {
         path: 'ticket',
-        title: 'Ticket Data',
+        title: 'Ticket',
         icon: ' fas fa-ticket-alt',
         class: '',
         extralink: false,
