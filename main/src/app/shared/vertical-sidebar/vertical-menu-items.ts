@@ -183,6 +183,17 @@ export const ROUTES: RouteInfo[] = [
         ]
     },
     {
+        path: 'ticket',
+        title: 'Ticket Data',
+        icon: ' fas fa-ticket-alt',
+        class: '',
+        extralink: false,
+        label: '',
+        labelClass: '',
+        submenu: []
+
+    },
+    {
         path: '/mobile-apps',
         title: 'Mobile Apps',
         icon: ' fas fa-mobile-alt',

@@ -1,0 +1,306 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-body">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card bg-info">
+            <div class="card-body text-white">
+                <div class="d-flex flex-row">
+                    
+                    <div class="p-10 align-self-center">
+                        <h4 class="m-b-0 text-white">Total Ticket</h4>
+                        <!-- <span>Income</span> -->
+                    </div>
+                    <div class="ml-auto align-self-center" style="font-size: 37px;">
+                       12
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card bg-warning">
+            <div class="card-body text-white">
+                <div class="d-flex flex-row">
+                    
+                    <div class="p-10 align-self-center">
+                        <h4 class="m-b-0 text-white">Pending</h4>
+                        <!-- <span>Income</span> -->
+                    </div>
+                    <div class="ml-auto align-self-center" style="font-size: 37px;">
+                       5
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card bg-success">
+            <div class="card-body text-white">
+                <div class="d-flex flex-row">
+                    
+                    <div class="p-10 align-self-center">
+                        <h4 class="m-b-0 text-white">Open</h4>
+                        <!-- <span>Income</span> -->
+                    </div>
+                    <div class="ml-auto align-self-center" style="font-size: 37px;">
+                       4
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card bg-danger">
+            <div class="card-body text-white">
+                <div class="d-flex flex-row">
+                    
+                    <div class="p-10 align-self-center">
+                        <h4 class="m-b-0 text-white">Closed</h4>
+                        <!-- <span>Income</span> -->
+                    </div>
+                    <div class="ml-auto align-self-center" style="font-size: 37px;">
+                       3
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <!-- <input type="search" class="form-control-lg" placeholder="Search here..." controls="DataTables_Table_0"> -->
+        </div>
+        <div class="col-md-9">
+          <button class="btn btn-lg btn-cyan text-white" style="float: right;" (click)="openModal(editTicketModal, null)"><i class="fa fa-plus-square mr-2"></i>Add Ticket</button>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+            <thead style="background: #92adfc;">
+              <tr>
+                <th class="backgroundColor tdLeft">Ticket id</th>
+                <th class="backgroundColor tdLeft">status</th>
+                <th class="backgroundColor tdLeft">ticket details</th>
+                <th class="backgroundColor">Assign</th>
+                <th class="backgroundColor">Date</th>
+                <th class="backgroundColor">Action</th>
+
+
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>#92adfc</b></td>
+                <td><div class="badge badge-pill badge-success font-14 infoData">Open</div></td>
+                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><b>#96akfc</b></td>
+                <td><div class="badge badge-pill badge-warning font-14 infoData">Pending</div></td>
+                <td class="tdLeft"><h5>Consequuntur magni dolores eos qui ratione</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Steve</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><b>#89adfc</b></td>
+                <td><div class="badge badge-pill badge-success font-14 infoData">Open</div></td>
+                <td class="tdLeft"><h5>Exercitationem ullam corporis</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><b>#92adfc</b></td>
+                <td><div class="badge badge-pill badge-success font-14 infoData">Open</div></td>
+                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><b>#92adfc</b></td>
+                <td><div class="badge badge-pill badge-warning font-14 infoData">Pending</div></td>
+                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><b>#780df</b></td>
+                <td><div class="badge badge-pill badge-danger font-14 infoData">Closed</div></td>
+                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td><b>#790gc</b></td>
+                <td><div class="badge badge-pill badge-danger font-14 infoData">Closed</div></td>
+                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                </h6></td>
+                <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                <td>a year ago</td>
+                <td>
+                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                  </a>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #editTicketModal let-modal>
+
+  <div class="modal-header">
+
+    <h5 class="modal-title" id="editUserLabel">Ticket</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <label for="title" class="col-sm-4 col-form-label">Title</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control"  id="title"
+            (input)=logValidationErrors(editTicket)>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="description" class="col-sm-4 col-form-label">Ticket Description</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control"  id="description"
+            (input)=logValidationErrors(editTicket)>
+          <!-- <span class="help-block" *ngIf="formsErrors.ticketDescription">
+            {{formsErrors.ticketDescription}}
+          </span> -->
+
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="date" class="col-sm-4 col-form-label">Date</label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control"  id="date" [(ngModel)]="ticketDate"
+            (input)=logValidationErrors(editTicket)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Date">
+            {{formsErrors.Date}}
+          </span> -->
+
+
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="status" class="col-sm-4 col-form-label">Status</label>
+        <div class="col-sm-8">
+          <select class="form-control"  (blur)=logValidationErrors(editTicket)>
+            <option selected>Closed</option>
+            <option>Open</option>
+            <option>In Process</option>
+          </select>
+          <!-- <span class="help-block" *ngIf="formsErrors.Status">
+            {{formsErrors.Status}}
+          </span> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="agent" class="col-sm-4 col-form-label">Assign To</label>
+        <div class="col-sm-8">
+          <select class="form-control"  (blur)=logValidationErrors(editTicket)>
+            <option>Steve</option>
+            <option>Jack</option>
+            <option>John</option>
+            <option>Liam</option>
+          </select>
+          <!-- <span class="help-block" *ngIf="formsErrors.AgentName">
+            {{formsErrors.AgentName}}
+          </span> -->
+        </div>
+      </div>
+      <div class="form-group row mt-4">
+        <span class="col-sm-4 col-form-label"></span>
+        <div class="col-sm-8">
+          <button type="button" class="btn btn-secondary mr-2" (click)="closeBtnClick()">Close</button>
+
+          <button type="submit" class="btn btn-primary" [disabled]="editTicket.invalid">Save</button>
+        </div>
+      </div>
+      <div class="text-center"><small>New ticket will be shown on second page.</small></div>
+    </form>
+  </div>
+</ng-template>

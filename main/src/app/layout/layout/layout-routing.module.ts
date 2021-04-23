@@ -36,6 +36,9 @@ const routes: Routes = [
     },
     {
       path:'setting',loadChildren:() => import('../../Main/setting/setting.module').then(m =>m.SettingModule)
+    },
+    {
+      path:'ticket',loadChildren:() => import('../../Main/ticket/ticket.module').then(m =>m.TicketModule)
     }
   ]
 },
