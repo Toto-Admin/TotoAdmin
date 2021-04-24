@@ -200,6 +200,89 @@
 </div>
 
 
+<!-- Most Recent Booking Customer details -->
+<div class="row">
+    <div class="col-md-8 col-sm-12">
+        <div class="card card-body">
+
+            <!-- title -->
+            <div class="d-md-flex align-items-center">
+                <div>
+                    <h4 class="card-title">Most Recent Booking</h4>
+                </div>
+            </div>
+            <!-- title -->
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
+                <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
+                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="latA" [longitude]="lngA"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
+                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="latB" [longitude]="lngB"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
+                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="latC" [longitude]="lngC"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
+                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                </agm-marker>
+            </agm-map>
+        </div>
+    </div>
+    <!-- column -->
+    <div class="col-sm-12 col-lg-4">
+        <div class="card">
+            <div class="card-body" style="padding-bottom:   10%;">
+                <h4 class="card-title">Ticket Status</h4>
+                <div class="d-flex flex-column m-auto">
+                    <apx-chart [series]="EmailChartOptions.series" [chart]="EmailChartOptions.chart"
+                        [dataLabels]="EmailChartOptions.dataLabels" [legend]="EmailChartOptions.legends"
+                        [colors]="EmailChartOptions.colors" [stroke]="EmailChartOptions.stroke"
+                        [labels]="EmailChartOptions.labels" [tooltip]="EmailChartOptions.tooltip"
+                        [plotOptions]="EmailChartOptions.plotOptions">
+                    </apx-chart>
+                </div>
+
+                <!-- row -->
+                <div class="row m-t-30 m-b-15">
+                    <!-- column -->
+                    <div class="col-3 birder-right text-left">
+                        <h4 class="m-b-0">12
+                            <small>
+                                <i class="fa fa-circle " style="color: #32A100;"></i>
+                            </small>
+                        </h4>Open
+                    </div>
+                    <!-- column -->
+                    <div class="col-3 birder-right text-center">
+                        <h4 class="m-b-0">15
+                            <small>
+                                <i class="fa fa-circle" style="color: #FA9E08;"></i>
+                            </small>
+                        </h4>Pending
+                    </div>
+                    <!-- column -->
+                    <div class="col-3 text-right">
+                        <h4 class="m-b-0">14
+                            <small>
+                                <i class="fa fa-circle" style="color: #FA0825;"></i>
+                            </small>
+                        </h4>Closed
+                    </div>
+                    <div class="col-3 text-right">
+                        <h4 class="m-b-0">41
+                            <small>
+                                <i class="fa fa-circle" style="color: #7e74fb;"></i>
+                            </small>
+                        </h4>Total Ticket
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- column -->
+</div>
+<!-- Most recent End -->
+
 
 <!-- Service wise Provider -->
 <div class="row">
@@ -221,7 +304,7 @@
                 <!-- <h6 class="card-subtitle">This is the simple example of Doughnut chart</h6> 
                 (chartHover)="chartHovered($event)"   (chartClick)="chartClicked($event)" -->
               
-                <canvas baseChart height="142px" [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+                <canvas baseChart height="130px" [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
                   [colors]="[{backgroundColor: ['#a1aab2', '#36bea6', '#2962FF','#686868','#a65959']}]">
                 </canvas>
             </div>
@@ -604,66 +687,123 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="row">
-                <div class="col-sm-12 col-lg-4">
-                    <div class="card-body">
-                        <h4 class="card-title">Reviews</h4>
-                        <!-- <h5 class="card-subtitle">Overview of review</h5> -->
-                        <h2 class="font-medium m-t-40 m-b-0">2542</h2>
-                        <span class="text-muted">This month we got 346 new reviews</span>
-                        <div class="image-box m-t-30 m-b-30">
-                            <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Simmons">
-                                <img src="assets/images/users/1.jpg" class="rounded-circle" width="45" alt="user">
-                            </a>
-                            <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Fitz">
-                                <img src="assets/images/users/2.jpg" class="rounded-circle" width="45" alt="user">
-                            </a>
-                            <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Phil">
-                                <img src="assets/images/users/3.jpg" class="rounded-circle" width="45" alt="user">
-                            </a>
-                            <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Melinda">
-                                <img src="assets/images/users/4.jpg" class="rounded-circle" width="45" alt="user">
-                            </a>
+    <div class="col-md-4 col-sm-12">
+        <div class="card card-body e-campaign">
+            <h4 class="card-title">Average Provider Rate</h4>
+            <div class="row m-t-40">
+                <div class="col-sm-12 col-md-6 text-center" style="margin-left: 18%;margin-bottom: 16%;">
+                    <div class="css-bar css-bar-80 css-bar-xlg css-bar-primary">
+                        <div class="data-text">
+                            <h1 class="success-rate text-info font-light">4.5
+                                <span class="icon"><i class="fas fa-star"></i></span>
+                            </h1>
+                            <div class="rate-label font-15">Toto Rate</div>
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-lg btn-info waves-effect waves-light">Checkout All Reviews</a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-8 border-left">
-                    <div class="card-body">
-                        <ul class="list-style-none">
-                            <li class="m-t-30">
-                                <div class="d-flex align-items-center">
-                                    <i class="mdi mdi-emoticon-happy display-5 text-muted"></i>
-                                    <div class="m-l-10">
-                                        <h5 class="m-b-0">Positive Reviews</h5>
-                                        <span class="text-muted">2554 Reviews</span>
-                                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card-body" style="margin-bottom: 27%;">
+                                <h4 class="card-title">Reviews</h4>
+                                <!-- <h5 class="card-subtitle">Overview of review</h5> -->
+                                <h2 class="font-medium m-t-40 m-b-0">2542</h2>
+                                <span class="text-muted">This month we got 346 new reviews</span>
+                                <div class="image-box m-t-30 m-b-30">
+                                    <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Simmons">
+                                        <img src="assets/images/users/1.jpg" class="rounded-circle" width="45" alt="user">
+                                    </a>
+                                    <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Fitz">
+                                        <img src="assets/images/users/2.jpg" class="rounded-circle" width="45" alt="user">
+                                    </a>
+                                    <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Phil">
+                                        <img src="assets/images/users/3.jpg" class="rounded-circle" width="45" alt="user">
+                                    </a>
+                                    <a href="#" class="m-r-10" data-toggle="tooltip" data-placement="top" title="Melinda">
+                                        <img src="assets/images/users/4.jpg" class="rounded-circle" width="45" alt="user">
+                                    </a>
                                 </div>
-                                <ngb-progressbar type="success" [value]="47"></ngb-progressbar>
-                            </li>
-                            <li class="m-t-40">
-                                <div class="d-flex align-items-center">
-                                    <i class="mdi mdi-emoticon-sad display-5 text-muted"></i>
-                                    <div class="m-l-10">
-                                        <h5 class="m-b-0">Negative Reviews</h5>
-                                        <span class="text-muted">554 Reviews</span>
-                                    </div>
-                                </div>
-                                <ngb-progressbar type="orange" [value]="33"></ngb-progressbar>
-                            </li>
-                            <li class="m-t-40 m-b-40">
-                                <div class="d-flex align-items-center">
-                                    <i class="mdi mdi-emoticon-neutral display-5 text-muted"></i>
-                                    <div class="m-l-10">
-                                        <h5 class="m-b-0">Neutral Reviews</h5>
-                                        <span class="text-muted">54 Reviews</span>
-                                    </div>
-                                </div>
-                                <ngb-progressbar type="info" [value]="20"></ngb-progressbar>
-                            </li>
-                        </ul>
+                                <a href="javascript:void(0)" class="btn btn-lg btn-info waves-effect waves-light">Checkout All Reviews</a>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-12 col-lg-8 border-left">
+                            <div class="card-body">
+                                <ul class="list-style-none">
+                                    <li class="m-t-30">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-emoticon-happy display-5 text-muted"></i>
+                                            <div class="m-l-10">
+                                                <h5 class="m-b-0">Positive Reviews</h5>
+                                                <span class="text-muted">2554 Reviews</span>
+                                            </div>
+                                        </div>
+                                        <ngb-progressbar type="success" [value]="47"></ngb-progressbar>
+                                    </li>
+                                    <li class="m-t-40">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-emoticon-sad display-5 text-muted"></i>
+                                            <div class="m-l-10">
+                                                <h5 class="m-b-0">Negative Reviews</h5>
+                                                <span class="text-muted">554 Reviews</span>
+                                            </div>
+                                        </div>
+                                        <ngb-progressbar type="orange" [value]="33"></ngb-progressbar>
+                                    </li>
+                                    <li class="m-t-40 m-b-40">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-emoticon-neutral display-5 text-muted"></i>
+                                            <div class="m-l-10">
+                                                <h5 class="m-b-0">Neutral Reviews</h5>
+                                                <span class="text-muted">54 Reviews</span>
+                                            </div>
+                                        </div>
+                                        <ngb-progressbar type="info" [value]="20"></ngb-progressbar>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">No. of Provider by Task Type</h4>
+                <div class="d-flex flex-column m-auto">
+                    <apx-chart [series]="EmailChartOptions1.series" [chart]="EmailChartOptions1.chart"
+                        [dataLabels]="EmailChartOptions1.dataLabels" [legend]="EmailChartOptions1.legends"
+                        [colors]="EmailChartOptions1.colors" [stroke]="EmailChartOptions1.stroke"
+                        [labels]="EmailChartOptions1.labels" [tooltip]="EmailChartOptions1.tooltip"
+                        [plotOptions]="EmailChartOptions1.plotOptions">
+                    </apx-chart>
+                </div>
+
+                <!-- row -->
+                <div class="row text-center" style="margin-left: 26%;margin-top: 15%;">
+                   
+                    <div class="col-3 text-right">
+                        <h4 class="m-b-0">120
+                            <small>
+                                <i class="fa fa-circle" style="color: #99abb4;"></i>
+                            </small>
+                        </h4>On-Site
+                    </div>
+                    <div class="col-3 text-right">
+                        <h4 class="m-b-0">155
+                            <small>
+                                <i class="fa fa-circle" style="color: #7e74fb;"></i>
+                            </small>
+                        </h4>Remote
                     </div>
                 </div>
             </div>

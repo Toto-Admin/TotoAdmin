@@ -39,9 +39,13 @@
                     <!-- column -->
                     <div class="col-lg-8">
                         <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
-                            <agm-marker [latitude]="lat" [longitude]="lng">
-                                <agm-info-window>InfoWindow content</agm-info-window>
-                            </agm-marker>
+                            <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
+                                <agm-info-window><a [routerLink]="['/customer/view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                                </agm-marker>
+
+                            <!-- <agm-marker [latitude]="latA" [longitude]="lngA">
+                                <agm-info-window><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" /></agm-info-window>
+                            </agm-marker> -->
                         </agm-map>
                     </div>
                     <!-- column -->

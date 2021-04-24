@@ -34,6 +34,18 @@ export interface CampaignStatsChartOptions {
   fill: ApexFill,
   plotOptions: ApexPlotOptions
 }
+export interface EmailChartOptions {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  stroke: ApexStroke;
+  dataLabels: ApexDataLabels;
+  legends: ApexLegend;
+  labels: any;
+  name: any;
+  tooltip: ApexTooltip;
+  colors: string[];
+  plotOptions: ApexPlotOptions
+}
 
 export interface mEmailChartOptions {
   series: ApexNonAxisChartSeries;
@@ -85,6 +97,56 @@ export class DashboardComponent  {
   
   @ViewChild("chart") chart4: ChartComponent = Object.create(null);
   public chartOptions!: Partial<ChartOptions>;
+
+  @ViewChild('chart') chart8: ChartComponent = Object.create(null);
+  public EmailChartOptions!: Partial<EmailChartOptions>;
+
+  @ViewChild('map4', { static: true }) map4:any = Object.create(null);
+  lat = -34.397;
+  lng = 150.644;
+  latA = -34.754764;
+  lngA = 149.736246;
+  latB = -34.758767;
+  lngB = 148.176563;
+  latC = -35.754764;
+  lngC = 148.736246;
+  zoom = 8;
+  icon = {
+    url: 'assets/images/users/5.jpg',
+    scaledSize: { width: 45, height: 45,  anchor : {x:19, y:19} }, labelOrigin:{x:12,y:27}
+  }
+  img1 = "assets/images/users/5.jpg";
+  styles: any = [
+    {
+      featureType: 'all',
+      stylers: [
+        {
+          saturation: -80
+        }
+      ]
+    },
+    {
+      featureType: 'road.arterial',
+      elementType: 'geometry',
+      stylers: [
+        {
+          hue: '#00ffee'
+        },
+        {
+          saturation: 50
+        }
+      ]
+    },
+    {
+      featureType: 'poi.business',
+      elementType: 'labels',
+      stylers: [
+        {
+          visibility: 'off'
+        }
+      ]
+    }
+  ];
   
   constructor() {
     this.chartOptions = {
@@ -329,6 +391,55 @@ export class DashboardComponent  {
       },
       labels: ['Not Good Service', ' unsatisfied '],
       colors: ['#40c4ff', '#2961ff'],
+
+    };
+
+    this.EmailChartOptions = {
+      series: [12, 15, 14],
+      chart: {
+        fontFamily: 'Nunito Sans,sans-serif',
+        type: 'donut',
+        height: 270
+      },
+      plotOptions: {
+        pie: {
+          donut: {
+            size: '73px',
+            labels: {
+              show: true,
+              name: {
+                show: true,
+                fontSize: '18px',
+                color: undefined,
+                offsetY: 10
+              },
+              value: {
+                show: false,
+                color: '#99abb4',
+              },
+              total: {
+                show: true,
+                label: 'Visits',
+                color: '#99abb4',
+              }
+            }
+          }
+        }
+      },
+      tooltip: {
+        fillSeriesColor: false,
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        width: 0
+      },
+      legends: {
+        show: false,
+      },
+      labels: ['Open', 'Pending', 'Closed'],
+      colors: ['#32A100', '#FA9E08', '#FA0825'],
 
     };
   }

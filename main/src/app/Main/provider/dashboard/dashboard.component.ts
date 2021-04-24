@@ -1,115 +1,198 @@
 import { AfterViewInit, Component,  ViewChild } from '@angular/core';
-// import {
-//   ApexAxisChartSeries,
-//   ApexChart,
-//   ChartComponent,
-//   ApexDataLabels,
-//   ApexYAxis,
-//   ApexLegend,
-//   ApexXAxis,
-//   ApexTooltip,
-//   ApexTheme,
-//   ApexGrid,
-//   ApexFill
-// } from 'ng-apexcharts';
 
-// export type ChartOptions = {
-//   series: ApexAxisChartSeries;
-//   chart: ApexChart;
-//   xaxis: ApexXAxis;
-//   yaxis: ApexYAxis;
-//   stroke: any;
-//   theme: ApexTheme;
-//   tooltip: ApexTooltip;
-//   dataLabels: ApexDataLabels;
-//   legend: ApexLegend;
-//   colors: string[];
-//   markers: any;
-//   fill: ApexFill;
-//   grid: ApexGrid;
-// };
+import {
+  ApexChart,
+  ChartComponent,
+  ApexDataLabels,
+  ApexLegend,
+  ApexStroke,
+  ApexTooltip,
+  ApexAxisChartSeries,
+  ApexXAxis,
+  ApexYAxis,
+  ApexGrid,
+  ApexMarkers,
+  ApexFill,
+  ApexPlotOptions,
+  ApexNonAxisChartSeries,
+  ApexTheme
+} from 'ng-apexcharts';
 
+
+export interface EmailChartOptions {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  stroke: ApexStroke;
+  dataLabels: ApexDataLabels;
+  legends: ApexLegend;
+  labels: any;
+  name: any;
+  tooltip: ApexTooltip;
+  colors: string[];
+  plotOptions: ApexPlotOptions
+}
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
+
 export class DashboardComponent  {
 
-  // @ViewChild("chart") chart: ChartComponent = Object.create(null);
-  // public chartOptions: Partial<ChartOptions>;
-  // constructor() {
-  //   this.chartOptions = {
-  //     series: [
-  //       {
-  //         name: 'Sales Performance',
-  //         data: [30, 400, 100, 400, 150, 275, 135, 200, 218]
-  //       },
-        // {
-        //   name: 'Site B',
-        //   data: [130, 340, 200, 350, 250, 130, 189, 135, 258]
-        // }
-//       ],
-//       chart: {
-//         fontFamily: 'Nunito Sans,sans-serif',
-//         height: 350,
-//         type: 'area',
-//         toolbar: {
-//           show: false
-//         }
-//       },
-//       dataLabels: {
-//         enabled: false
-//       },
-//       markers: {
-//         size: 3,
-//         strokeColors: "transparent"
-//       },
-//       stroke: {
-//         curve: 'smooth',
-//         width: '2',
-//       },
-//       colors: ['#2962ff', '#4fc3f7'],
-//       legend: {
-//         show: false,
-//       },
-//       fill: {
-//         opacity: 0.7
-//       },
-//       grid: {
-//         show: true,
-//         strokeDashArray: 0,
-//         borderColor: 'rgba(0,0,0,0.1)',
-//       },
-//       xaxis: {
-//         type: 'category',
-//         categories: [
-//           'Feb',
-//           'Mar',
-//           'Apr',
-//           'May',
-//           'Jun',
-//           'Jul',
-//           'Aug',
-//           'Sep',
-//           'Oct'
-//         ],
-//         labels: {
-//           style: {
-//             colors: '#a1aab2'
-//           }
-//         }
-//       },
-//       tooltip: {
-//         theme: 'dark'
-//       }
-//     };
-//   }
-//   ngAfterViewInit(): void {
-//     throw new Error('Method not implemented.');
-//   }
+  @ViewChild('chart') chart8: ChartComponent = Object.create(null);
+  public EmailChartOptions!: Partial<EmailChartOptions>;
 
- 
+  @ViewChild('chart') chart9: ChartComponent = Object.create(null);
+  public EmailChartOptions1!: Partial<EmailChartOptions>;
+
+  @ViewChild('map4', { static: true }) map4:any = Object.create(null);
+  lat = -34.397;
+  lng = 150.644;
+  latA = -34.754764;
+  lngA = 149.736246;
+  latB = -34.758767;
+  lngB = 148.176563;
+  latC = -35.754764;
+  lngC = 148.736246;
+  zoom = 8;
+  icon = {
+    url: 'assets/images/users/5.jpg',
+    scaledSize: { width: 45, height: 45,  anchor : {x:19, y:19} }, labelOrigin:{x:12,y:27}
+  }
+  img1 = "assets/images/users/5.jpg";
+  styles: any = [
+    {
+      featureType: 'all',
+      stylers: [
+        {
+          saturation: -80
+        }
+      ]
+    },
+    {
+      featureType: 'road.arterial',
+      elementType: 'geometry',
+      stylers: [
+        {
+          hue: '#00ffee'
+        },
+        {
+          saturation: 50
+        }
+      ]
+    },
+    {
+      featureType: 'poi.business',
+      elementType: 'labels',
+      stylers: [
+        {
+          visibility: 'off'
+        }
+      ]
+    }
+  ];
+
+
+ constructor(){
+  this.EmailChartOptions = {
+    series: [12, 15, 14],
+    chart: {
+      fontFamily: 'Nunito Sans,sans-serif',
+      type: 'donut',
+      height: 270
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '73px',
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              fontSize: '18px',
+              color: undefined,
+              offsetY: 10
+            },
+            value: {
+              show: false,
+              color: '#99abb4',
+            },
+            total: {
+              show: true,
+              label: 'Visits',
+              color: '#99abb4',
+            }
+          }
+        }
+      }
+    },
+    tooltip: {
+      fillSeriesColor: false,
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      width: 0
+    },
+    legends: {
+      show: false,
+    },
+    labels: ['Open', 'Pending', 'Closed'],
+    colors: ['#32A100', '#FA9E08', '#FA0825'],
+
+  };
+
+  this.EmailChartOptions1 = {
+    series: [120, 155],
+    chart: {
+      fontFamily: 'Nunito Sans,sans-serif',
+      type: 'donut',
+      height: 270
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: '73px',
+          labels: {
+            show: true,
+            name: {
+              show: true,
+              fontSize: '18px',
+              color: undefined,
+              offsetY: 10
+            },
+            value: {
+              show: false,
+              color: '#99abb4',
+            },
+            total: {
+              show: true,
+              label: 'Visits',
+              color: '#99abb4',
+            }
+          }
+        }
+      }
+    },
+    tooltip: {
+      fillSeriesColor: false,
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      width: 0
+    },
+    legends: {
+      show: false,
+    },
+    labels: ['On-Site','Remote'],
+    colors: ['#99abb4','#7e74fb'],
+
+  };
+ }
 
  public doughnutChartLabels: string[] = [
   '1 Star' ,
