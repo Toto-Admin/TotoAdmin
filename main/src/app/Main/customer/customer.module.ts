@@ -15,7 +15,6 @@ import { NgApexchartsModule } from "ng-apexcharts";
 import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
 import{ReactiveFormsModule} from '@angular/forms'
 
-
 @NgModule({
   declarations: [DashboardComponent, CustomerListComponent, CustomerAddComponent, CustomerEditComponent, CustomerViewComponent],
   imports: [
@@ -27,7 +26,8 @@ import{ReactiveFormsModule} from '@angular/forms'
     CustomerRoutingModule,
     DataTablesModule,
 ReactiveFormsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+  
   ]
 })
 export class CustomerModule { }

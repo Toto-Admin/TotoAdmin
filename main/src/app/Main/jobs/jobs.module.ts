@@ -19,8 +19,11 @@ import { TaskHistoryComponent } from './task-history/task-history.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ActivityComponent } from './activity/activity.component';
 import { UnhappywithproviderComponent } from './unhappywithprovider/unhappywithprovider.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { ChatComponent } from './chat/chat.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 @NgModule({
-  declarations: [JobDashboardComponent, TaskComponent, JobDetailsComponent, DocumentComponent, TaskDetailsComponent, TaskHistoryComponent, PaymentComponent, ActivityComponent, UnhappywithproviderComponent],
+  declarations: [JobDashboardComponent, TaskComponent, JobDetailsComponent, DocumentComponent, TaskDetailsComponent, TaskHistoryComponent, PaymentComponent, ActivityComponent, UnhappywithproviderComponent, ReviewsComponent, ChatComponent, InvoicesComponent],
   imports: [
     CommonModule,
     NgApexchartsModule,

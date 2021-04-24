@@ -1,0 +1,297 @@
+
+<div class="row">
+    <div class="col-12">
+
+      <div class="card card-body">
+        <br>
+      <div class="table-responsive table-bordered table-striped"><br>
+          <table datatable [dtOptions]="dtOptions" class="table table-striped mb-0 no-wrap v-middle">
+            <thead>
+              <tr>
+                <th scope="col" class=" backgroundColor tdLeft" >JOBID</th>
+                <th scope="col" class="backgroundColor tdLeft">PROVIDER</th>
+                <th scope="col" class="backgroundColor tdLeft">CUSTOMER </th>
+                <th scope="col" class="backgroundColor tdLeft">SERVICE</th>
+                <th scope="col" class="backgroundColor tdLeft">REVIEW DATE</th>
+                <th scope="col" class="backgroundColor tdLeft">REASON</th>
+                <th scope="col" class="backgroundColor tdLeft">RATING</th>
+                <th scope="col" class="backgroundColor tdCenter">ACTION</th>
+             
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+  
+                <td class="text-center">
+                  {{user.id}}
+                </td>
+  
+                <td class="tdLeft">
+                  <div class="d-flex align-items-center">
+                    <img class="rounded-circle" [src]='user.imagePath' height=" 30px" width="30px">
+                    <div class="ml-3">
+                      <p class="font-medium mb-0">{{ user.Name }}</p>
+                      <small>{{user.Position}}</small>
+                    </div>
+                  </div>
+                </td>
+                <td class="tdLeft">{{ user.Email }}</td>
+  
+                <td class="tdLeft">{{ user.Mobile }}</td>
+                <td class="tdLeft">{{ user.DateOfJoining |date :'fullDate' }}</td>
+  
+                <td class="tdLeft">{{ user.Salary }}</td>
+                <td class="tdLeft">{{ user.Projects }}</td>
+                <td class="tdLeft">
+                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
+                    placement="top" ngbTooltip="Edit">
+                    <i-feather name="edit-2" class="feather-sm"></i-feather>
+                  </a>
+                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
+                    ngbTooltip="Delete">
+                    <i-feather name="trash-2" class="feather-sm"></i-feather>
+                  </a>
+                </td>
+              </tr> -->
+              <tr>
+                  <td class="tdLeft">1</td>
+                 <td class="tdLeft"><a [routerLink]="['/provider/provider-view']">
+                    Ronald Anderson
+                  </a></td>
+                  <td class="tdLeft"><a [routerLink]="['/customer/view']">
+                    Johan Anderson
+                  </a></td>
+                  <td class="tdLeft">Ac service</td>
+                  <td class="tdLeft">12/02/2021</td>
+                  <td class="tdLeft">Product quality is good</td>
+                  <td class="tdLeft"><span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span></td>
+                          
+                    <td class="tdCenter"> <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                          <i class="ti-marker-alt"></i>
+                      </a>
+                      <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                          <i class="ti-trash"></i>
+                      </a> 
+                    </td>
+               
+              </tr>
+              <tr>
+                <td class="tdLeft">2</td>
+                <td class="tdLeft"><a [routerLink]="['/provider/provider-view']">
+                    Mark King
+                  </a></td>
+                <td class="tdLeft"><a [routerLink]="['/customer/view']">
+                  Johan Smith
+                </a></td>
+                <td class="tdLeft">Mobile service</td>
+                <td class="tdLeft">21/01/2021</td>
+                <td class="tdLeft">Product quality is best</td>
+                <td class="tdLeft">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span></td>
+                        
+                  <td class="tdCenter"> <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                        <i class="ti-trash"></i>
+                    </a> 
+                  </td>
+             
+            </tr>
+            <tr>
+                <td class="tdLeft">3</td>
+                <td class="tdLeft"><a [routerLink]="['/provider/provider-view']">
+                    Johan King
+                </a></td>
+                <td class="tdLeft"><a [routerLink]="['/customer/view']">
+                  Johan Anderson
+                </a></td>
+                <td class="tdLeft">Network set up</td>
+                <td class="tdLeft">12/02/2021</td>
+                <td class="tdLeft">Service is bad</td>
+                <td class="tdLeft"><span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span></td>
+                        
+                  <td class="tdCenter"> <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                        <i class="ti-trash"></i>
+                    </a> 
+                  </td>
+             
+            </tr>
+            <tr>
+                <td class="tdLeft">4</td>
+                
+                <td class="tdLeft"><a [routerLink]="['/provider/provider-view']">
+                    Ronald Anderson
+                  </a></td>
+                <td class="tdLeft"><a [routerLink]="['/customer/view']">
+                    Steven White
+                </a></td>
+                <td class="tdLeft">Poor wifi coverage</td>
+                <td class="tdLeft">12/02/2021</td>
+                <td class="tdLeft">Satisfied</td>
+                <td class="tdLeft"><span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star"></span></td>
+                        
+                  <td class="tdCenter"> <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                        <i class="ti-trash"></i>
+                    </a> 
+                  </td>
+             
+            </tr>
+            <tr>
+                <td class="tdLeft">5</td>
+                
+                <td class="tdLeft"><a [routerLink]="['/provider/provider-view']">
+                    Mark Harris
+                </a></td>
+                <td class="tdLeft"><a [routerLink]="['/customer/view']">
+                    Daniel Kristeen
+                </a></td>
+                <td class="tdLeft">Ac service</td>
+                <td class="tdLeft">10/04/2021</td>
+                <td class="tdLeft">Bad service</td>
+                <td class="tdLeft"><span class="fa fa-star checked"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star"></span></td>
+                        
+                  <td class="tdCenter"> <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                        <i class="ti-trash"></i>
+                    </a> 
+                  </td>
+             
+            </tr>
+           
+            
+             
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--   
+  <ng-template #editUserModal let-modal>
+  
+    <div class="modal-header">
+  
+      <h5 class="modal-title" id="editUserLabel">Add Provider</h5>
+  
+      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  
+    </div>
+  
+    <div class="modal-body">
+  
+      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+  
+        <div class="form-group row">
+          <label for="name" class="col-sm-4 col-form-label">First Name</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
+            <span class="help-block" *ngIf="formsErrors.Name">
+              {{formsErrors.Name}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="name" class="col-sm-4 col-form-label">Last Name</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
+            <span class="help-block" *ngIf="formsErrors.Name">
+              {{formsErrors.Name}}
+            </span>
+          </div>
+        </div>
+  
+  
+        <div class="form-group row">
+          <label for="position" class="col-sm-4 col-form-label">Email</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" formControlName="Position" id="position"
+              (blur)=logValidationErrors(editUser)>
+            <span class="help-block" *ngIf="formsErrors.Position">
+              {{formsErrors.Position}}
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="Password" class="col-sm-4 col-form-label">Password</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" formControlName="Email" id="email"
+              (blur)=logValidationErrors(editUser)>
+            <span class="help-block" *ngIf="formsErrors.Email">
+              {{formsErrors.Email}}
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="mobile" class="col-sm-4 col-form-label">Mobile</label>
+          <div class="col-sm-8">
+            <input type="tel" class="form-control" formControlName="Mobile" id="mobile"
+              (blur)=logValidationErrors(editUser)>
+            <span class="help-block" *ngIf="formsErrors.Mobile">
+              {{formsErrors.Mobile}}
+            </span>
+          </div>
+        </div>
+  
+
+        <div class="form-group row">
+          <label for="projects" class="col-sm-4 col-form-label">Date of Birth</label>
+          <div class="col-sm-8">
+            <input type="Date" class="form-control" formControlName="Projects" id="projects"
+              (blur)=logValidationErrors(editUser)>
+            <span class="help-block" *ngIf="formsErrors.Projects">
+              {{formsErrors.Projects}}
+            </span>
+          </div>
+        </div> 
+  
+  
+  
+  
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
+  
+          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+        </div>
+  
+        
+      </form>
+    </div>
+  </ng-template> -->
