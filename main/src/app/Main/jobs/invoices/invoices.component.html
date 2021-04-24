@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Invoice<span style="float: right;"><button class="btn btn-primary backgroundColor ml-auto" (click)="btnClick()">Add Invoice</button></span></h4>
+        <h4 class="card-title">Invoice<span style="float: right;"><button class="btn btn-primary backgroundColor ml-auto">Add Invoice</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         
         <div class="">
@@ -23,22 +23,97 @@
                     </thead>
                    
                     <tbody>
-                      <!-- <tr>
-                        <td class="tdLeft">1</td>
-                        <td class="tdLeft">Fortune creation</td>
-                        <td class="tdLeft">Soft solution</td>
-                        <td><i class="tdRight mdi mdi-currency-gbp">50</i></td>
-                        <td><label class="label label-success">Pending<td>
-                        <td> 
-                             <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                            </td>
+                        <tr>
+                            <td class="tdLeft">1</td>
+                            <td class="tdLeft">Fortune creation</td>
+                            <td class="tdLeft">Soft solution</td>
+                            <td class="tdRight mdi mdi-currency-gbp">10</td>
+                            <td ><label class="label label-warning">Pending</label></td>
+                            <td> 
+                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+
+                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                       <i class="ti-marker-alt"></i>
+                                   </a>
+                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                       <i class="ti-trash"></i>
+                                   </a>
+                               </td>
+                        </tr>
+                        <tr>
+                            <td class="tdLeft">2</td>
+                            <td class="tdLeft">Fortune creation</td>
+                            <td class="tdLeft">Soft solution</td>
+                            <td class="tdRight mdi mdi-currency-gbp">55</td>
+                            <td ><label class="label label-warning">Pending</label></td>
+                            <td> 
+                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+
+                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                       <i class="ti-marker-alt"></i>
+                                   </a>
+                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                       <i class="ti-trash"></i>
+                                   </a>
+                               </td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="tdLeft">3</td>
+                            <td class="tdLeft">Fortune creation</td>
+                            <td class="tdLeft">Soft solution</td>
+                            <td class="tdRight mdi mdi-currency-gbp">80</td>
+                            <td ><label class="label label-danger">Delivered</label></td>
+                            <td> 
+                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+
+                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                       <i class="ti-marker-alt"></i>
+                                   </a>
+                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                       <i class="ti-trash"></i>
+                                   </a>
+                               </td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="tdLeft">4</td>
+                            <td class="tdLeft">Fortune creation</td>
+                            <td class="tdLeft">Soft solution</td>
+                            <td class="tdRight mdi mdi-currency-gbp">60</td>
+                            <td ><label class="label label-success">Shipped</label></td>
+                            <td> 
+                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+
+                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                       <i class="ti-marker-alt"></i>
+                                   </a>
+                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                       <i class="ti-trash"></i>
+                                   </a>
+                               </td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="tdLeft">5</td>
+                            <td class="tdLeft">Fortune creation</td>
+                            <td class="tdLeft">Soft solution</td>
+                            <td class="tdRight mdi mdi-currency-gbp">60</td>
+                            <td ><label class="label label-warning">Pending</label></td>
+                            <td> 
+                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+
+                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                       <i class="ti-marker-alt"></i>
+                                   </a>
+                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                       <i class="ti-trash"></i>
+                                   </a>
+                               </td>
+                            
+                        </tr>
                         
-                      </tr> -->
+                  
                  
                     </tbody>
                   </table>  

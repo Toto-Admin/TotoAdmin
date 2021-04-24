@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
+import { InvoiceViewComponent } from './invoice-view/invoice-view.component';
 import { InvoicesComponent } from './invoices/invoices.component';
 import { JobDashboardComponent} from './job-dashboard/job-dashboard.component'
 import { JobDetailsComponent } from './job-details/job-details.component';
@@ -47,7 +48,8 @@ const routes: Routes = [
   },
   {path:'reviews',component:ReviewsComponent},
   {path:'chat',component:ChatComponent},
-  {path:'invoice',component:InvoicesComponent}
+  {path:'invoice',component:InvoicesComponent},
+  {path:'invoice-view',component:InvoiceViewComponent }
 
 ];
 
