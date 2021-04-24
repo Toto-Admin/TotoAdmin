@@ -1,1 +1,37 @@
-<p>chat works!</p>
+
+<!-- Contractor tabs -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body"> 
+                <!-- <h4 class="card-title">Job Details</h4>
+                <h6 class="card-subtitle">Task Descripation</h6> -->
+
+
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>Customer and provider</a>
+                        <ng-template ngbNavContent>
+                            <app-chatting></app-chatting>
+                        </ng-template>
+                    </li>
+                  
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Support</a>
+                        <ng-template ngbNavContent>
+                            <app-support></app-support>
+                        </ng-template>
+                    </li>
+                   
+                </ul>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

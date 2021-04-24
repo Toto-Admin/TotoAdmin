@@ -23,8 +23,10 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { ChatComponent } from './chat/chat.component';
 import { InvoicesComponent } from './invoices/invoices.component';
 import { InvoiceViewComponent } from './invoice-view/invoice-view.component';
+import { SupportComponent } from './support/support.component';
+import { ChattingComponent } from './chatting/chatting.component';
 @NgModule({
-  declarations: [JobDashboardComponent, TaskComponent, JobDetailsComponent, DocumentComponent, TaskDetailsComponent, TaskHistoryComponent, PaymentComponent, ActivityComponent, UnhappywithproviderComponent, ReviewsComponent, ChatComponent, InvoicesComponent, InvoiceViewComponent],
+  declarations: [JobDashboardComponent, TaskComponent, JobDetailsComponent, DocumentComponent, TaskDetailsComponent, TaskHistoryComponent, PaymentComponent, ActivityComponent, UnhappywithproviderComponent, ReviewsComponent, ChatComponent, InvoicesComponent, InvoiceViewComponent, SupportComponent, ChattingComponent],
   imports: [
     CommonModule,
     NgApexchartsModule,

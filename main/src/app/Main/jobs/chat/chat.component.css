@@ -1,0 +1,8 @@
+.active {
+    background-color: #2962ff !important;
+    color :white !important;
+  }
+  li{
+    width:180px;
+    text-align: center;
+    }
