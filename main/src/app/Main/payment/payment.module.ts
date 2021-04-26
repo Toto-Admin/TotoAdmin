@@ -10,19 +10,20 @@ import { TotalPaymentComponent } from './total-payment/total-payment.component';
 import { DetailsComponent } from './details/details.component';
 import { ReportComponent } from './report/report.component';
 import { DataTablesModule } from 'angular-datatables';
+import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
+import { NgxPrintModule } from 'ngx-print';
 
 
 @NgModule({
   declarations: [DashboardComponent, PaymentDetailComponent, TaskDetailComponent, TotalPaymentComponent, 
-    DetailsComponent, ReportComponent],
+    DetailsComponent, ReportComponent, InvoiceDetailsComponent],
   imports: [
     CommonModule,
     PaymentRoutingModule,
     NgApexchartsModule,
     NgbModule,
-    DataTablesModule
-   
-
+    DataTablesModule,
+    NgxPrintModule
   ]
 })
 export class PaymentModule { }

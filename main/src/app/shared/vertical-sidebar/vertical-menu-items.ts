@@ -180,6 +180,16 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
+            {
+                path: '/payment/invoice-details',
+                title: 'Invoice Details',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            }
         ]
     },
     {

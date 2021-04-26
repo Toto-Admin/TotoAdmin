@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 import { User } from '../user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-provider-view',
@@ -101,7 +102,7 @@ export class ProviderViewComponent implements OnInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   formsErrors = [];
-  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private router:Router) { }
 
   ngOnInit(): void {
     this.editUser = this.fb.group({
@@ -128,5 +129,8 @@ export class ProviderViewComponent implements OnInit {
     this.ngOnInit();
   }
   
-
+  btnClick() 
+  {
+    this.router.navigate(['/provider/add']);
+  }
 }

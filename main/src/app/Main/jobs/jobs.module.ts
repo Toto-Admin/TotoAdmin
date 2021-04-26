@@ -25,6 +25,8 @@ import { InvoicesComponent } from './invoices/invoices.component';
 import { InvoiceViewComponent } from './invoice-view/invoice-view.component';
 import { SupportComponent } from './support/support.component';
 import { ChattingComponent } from './chatting/chatting.component';
+// import { NgxPrintModule} from 'ngx-print';
+
 @NgModule({
   declarations: [JobDashboardComponent, TaskComponent, JobDetailsComponent, DocumentComponent, TaskDetailsComponent, TaskHistoryComponent, PaymentComponent, ActivityComponent, UnhappywithproviderComponent, ReviewsComponent, ChatComponent, InvoicesComponent, InvoiceViewComponent, SupportComponent, ChattingComponent],
   imports: [
@@ -36,7 +38,8 @@ import { ChattingComponent } from './chatting/chatting.component';
     ChartistModule,
     AgmCoreModule,
     NgbModule,
-    DataTablesModule
+    DataTablesModule,
+    // NgxPrintModule
   ]
 })
 export class JobsModule { }

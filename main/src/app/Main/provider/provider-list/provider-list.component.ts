@@ -76,9 +76,8 @@ export class ProviderListComponent implements OnInit {
     this.modalService.dismissAll();
     this.ngOnInit();
   }
-  btnClick() {
-   
+  btnClick() 
+  {
     this.router.navigate(['/provider/add']);
-  
-}
+  }
 }

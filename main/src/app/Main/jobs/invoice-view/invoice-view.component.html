@@ -1,98 +1,119 @@
 <!-- <p>invoice-view works!</p> -->
-<h4>View Invoice</h4>
-<div class="card">
+<div class="row">
+    <div class="col-md-9">
+        <!-- <h4>View Invoice</h4> -->
+        <div class="card" style="font-size: 16px;">
 
-    <!-- card Header-->
-    <div class="p-3">
-        <div class="d-md-flex align-items-center">
-            
-            <div class="ml-auto mt-3 mt-md-0">
-                <h4 class="mb-0">Invoice Id : #1 </h4>
+            <!-- card Header-->
+            <div class="p-3">
+                <div class="d-md-flex align-items-center">
+                    <!-- <button class="btn btn-info"printSectionId="print-section" ngxPrint>print</button> -->
+                    <img src="assets/images/logo-header.png" style="width: 9%;">
+                    <div class="ml-auto mt-3 mt-md-0">
+                        <h4 class="mb-0">Invoice #4989 </h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card Body-->
+            <div class="card-body" id="print-section">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <h5>Order Status:</h5>
+                        <span class="badge badge-info font-medium px-3">Shipped</span>
+                    </div>
+                    <div class="col-md-6 text-left text-md-right">
+                        <h5 class="mt-2">Order Date:</h5>
+                        <span>
+                            <i class="mdi mdi-calendar mr-1 text-dark font-18"></i>
+                            Saturday, April 24, 2021
+                        </span>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <h5>Bill From:</h5>
+                        <!-- <span>{{invoiceDetail.billFrom}}</span>
+                        <span class="d-block">{{invoiceDetail.billFromEmail}}</span>
+                        <span class="d-block">{{invoiceDetail.billFromAddress}}</span>
+                        <span class="d-block">{{invoiceDetail.billFromPhone}}</span> -->
+                    <span >Fortune creation</span><br>
+                    <span>fortune@gmail.com</span><br>
+                    <span>Johan Smith ,Mumbai</span><br>
+                    <span>9097979889</span>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <h5>Bill To:</h5>
+                        <!-- <span class="d-block">{{invoiceDetail.billTo}}</span>
+                        <span class="d-block">
+                            {{invoiceDetail.billToEmail}}
+                        </span>
+                        <span class="d-block">
+                            {{invoiceDetail.billToAddress}}
+                        </span>
+                        <span class="d-block">{{invoiceDetail.billToPhone}}</span> -->
+                        <span >Software solution</span><br>
+                    <span>softwaresol@gmail.com</span><br>
+                    <span>Ronald Smith ,Mumbai</span><br>
+                    <span>9797979889</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover no-wrap v-middle">
+                            <thead style="background: #dedede;">
+                                <tr>
+                                    <th class="border-bottom-0"> Name</th>
+                                    <th class="border-bottom-0 text-center">Unit Price</th>
+                                    <th class="border-bottom-0 text-center">Unit</th>
+                                    <th class="border-bottom-0 text-info text-right">Total Price</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <!-- <td>{{ order.itemName }} </td>
+                                    <td class="text-center">{{ order.unitPrice }} </td>
+                                    <td class="text-center">{{ order.units }}</td>
+                                    <td class="text-center">{{ order.unitTotalPrice }}</td> -->
+                                    <td class="tdLeft">Ac</td>
+                                    <td class="text-center">100</td>
+                                    <td class="text-center">9</td>
+                                    <td class="text-right mdi mdi-currency-gbp">900</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="text-right mt-4">
+                    <h5><span>Subtotal amount: <i class="mdi mdi-currency-gbp">900</i></span></h5>
+                    <h5><span>Vat: <i class="mdi mdi-currency-gbp">90</i></span></h5>
+                    <hr/>
+                <h3><span class="font-weight-bold mr-2">Total:</span> <i class="mdi mdi-currency-gbp">999</i></h3>
+
+                    <!-- <h3><span class="font-weight-bold mr-2">Total:</span>${{invoiceDetail.grandTotal}} </h3> -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-12 distance">
+                    <button class="btn btn-info" style="width: 100%;">Send Invoice</button>
+                </div>
+                <div class="col-md-12 distance">
+                    <button class="btn"  style="width: 100%;">Download</button>
+                </div>
+                <div class="col-md-12 distance">
+                    <button class="btn"  style="width: 100%;">Print</button>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- card Body-->
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-6 text-left">
-                <h5>Order Status:</h5>
-                <span class="badge badge-info font-medium px-3">Shipped</span>
-            </div>
-            <div class="col-md-6 text-left text-md-right">
-                <h5 class="mt-2">Order Date:</h5>
-                <span>
-                    <i class="mdi mdi-calendar mr-1 text-dark font-18"></i>
-                    Saturday, April 24, 2021
-                </span>
-            </div>
-        </div>
-        <hr />
-        <div class="row">
-            <div class="col-md-6 text-left">
-                <h5>Bill From:</h5>
-                <!-- <span>{{invoiceDetail.billFrom}}</span>
-                <span class="d-block">{{invoiceDetail.billFromEmail}}</span>
-                <span class="d-block">{{invoiceDetail.billFromAddress}}</span>
-                <span class="d-block">{{invoiceDetail.billFromPhone}}</span> -->
-              <span >Fortune creation</span><br>
-              <span>fortune@gmail.com</span><br>
-              <span>Johan Smith ,Mumbai</span><br>
-              <span>9097979889</span>
-            </div>
-            <div class="col-md-6 text-right">
-                <h5>Bill To:</h5>
-                <!-- <span class="d-block">{{invoiceDetail.billTo}}</span>
-                <span class="d-block">
-                    {{invoiceDetail.billToEmail}}
-                </span>
-                <span class="d-block">
-                    {{invoiceDetail.billToAddress}}
-                </span>
-                <span class="d-block">{{invoiceDetail.billToPhone}}</span> -->
-                <span >Software solution</span><br>
-              <span>softwaresol@gmail.com</span><br>
-              <span>Ronald Smith ,Mumbai</span><br>
-              <span>9797979889</span>
-            </div>
-        </div>
-        <div class="mt-4">
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover no-wrap v-middle">
-                    <thead>
-                        <tr>
-                            <th class="border-bottom-0"> Name</th>
-                            <th class="border-bottom-0 text-center">Unit Price</th>
-                            <th class="border-bottom-0 text-center">Unit</th>
-                            <th class="border-bottom-0 text-info text-center">Total Price</th>
-                        </tr>
-                    </thead>
-                    <tbody >
-                        <tr>
-                            <!-- <td>{{ order.itemName }} </td>
-                            <td class="text-center">{{ order.unitPrice }} </td>
-                            <td class="text-center">{{ order.units }}</td>
-                            <td class="text-center">{{ order.unitTotalPrice }}</td> -->
-                            <td class="tdLeft">Ac</td>
-                            <td class="text-center">100</td>
-                            <td class="text-center">9</td>
-                            <td class="text-center mdi mdi-currency-gbp">900</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-        <div class="text-right mt-4">
-            <h5><span>Subtotal amount: <i class="mdi mdi-currency-gbp">900</i></span></h5>
-            <h5><span>Vat: <i class="mdi mdi-currency-gbp">90</i></span></h5>
-            <hr/>
-        <h3><span class="font-weight-bold mr-2">Total:</span> <i class="mdi mdi-currency-gbp">999</i></h3>
-
-            <!-- <h3><span class="font-weight-bold mr-2">Total:</span>${{invoiceDetail.grandTotal}} </h3> -->
-        </div>
-    </div>
-
 
 </div>

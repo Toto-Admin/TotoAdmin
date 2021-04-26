@@ -77,8 +77,6 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
   }
 
   btnClick() {
-   
     this.router.navigate(['/customer/add']);
-  
-}
+  }
 }

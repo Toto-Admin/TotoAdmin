@@ -55,7 +55,7 @@ export class DashboardComponent  {
   lngB = 148.176563;
   latC = -35.754764;
   lngC = 148.736246;
-  zoom = 8;
+  zoom = 6;
   icon = {
     url: 'assets/images/users/5.jpg',
     scaledSize: { width: 45, height: 45,  anchor : {x:19, y:19} }, labelOrigin:{x:12,y:27}

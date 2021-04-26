@@ -2,6 +2,8 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { User } from '../user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-customer-view',
   templateUrl: './customer-view.component.html',
@@ -64,7 +66,7 @@ export class CustomerViewComponent implements OnInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   formsErrors = [];
-  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private router: Router) { }
 
   ngOnInit(): void {
     this.editUser = this.fb.group({
@@ -89,5 +91,9 @@ export class CustomerViewComponent implements OnInit {
   closeBtnClick() {
     this.modalService.dismissAll();
     this.ngOnInit();
+  }
+
+  btnClick() {
+    this.router.navigate(['/customer/add']);
   }
 }

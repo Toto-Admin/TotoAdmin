@@ -1,185 +1,143 @@
-
-<div class="row total">
-    <!-- Column -->
-    <div class="col-lg-4">
-        <div class="card ">
-            <div class="card-body pb-0">
-                <h4 class="card-title">Total Earning From Customer</h4>
-                <!-- <h5 class="card-subtitle"></h5> -->
-                <h2 class="font-medium"> <i class="mdi mdi-currency-gbp"></i>43,567.53</h2>
-            </div>
-            <div class="m-t-5 d-flex flex-column" style="height: 90px;">
-                <apx-chart [series]="earningboxChartOptions.series" [chart]="earningboxChartOptions.chart"
-                    [xaxis]="earningboxChartOptions.xaxis" [yaxis]="earningboxChartOptions.yaxis"
-                    [grid]="earningboxChartOptions.grid" [stroke]="earningboxChartOptions.stroke"
-                    [tooltip]="earningboxChartOptions.tooltip" [dataLabels]="earningboxChartOptions.dataLabels"
-                    [legend]="earningboxChartOptions.legend" [colors]="earningboxChartOptions.colors"
-                    [markers]="earningboxChartOptions.markers">
-                </apx-chart>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4">
+<!-- Ajit Created Payment UI -->
+<div class="row">
+    <div class="col-md-12 col-sm-12">
         <div class="card">
-            <div class="card-body pb-0">
-                <h4 class="card-title">Total Paid To Provider</h4>
-                <!-- <h5 class="card-subtitle">Total paid to provider</h5> -->
-                <h2 class="font-medium"> <i class="mdi mdi-currency-gbp"></i>32,236</h2>
-            </div>
-            <div class="m-t-5 d-flex flex-column" style="height: 90px;">
-                <apx-chart [series]="earningboxChartOptions.series" [chart]="earningboxChartOptions.chart"
-                    [xaxis]="earningboxChartOptions.xaxis" [yaxis]="earningboxChartOptions.yaxis"
-                    [grid]="earningboxChartOptions.grid" [stroke]="earningboxChartOptions.stroke"
-                    [tooltip]="earningboxChartOptions.tooltip" [dataLabels]="earningboxChartOptions.dataLabels"
-                    [legend]="earningboxChartOptions.legend" [colors]="earningboxChartOptions.colors"
-                    [markers]="earningboxChartOptions.markers">
-                </apx-chart>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-lg-4">
-        <div class="card bg-info text-black  card-hover" >
-            <div class="card-body" style="background-color:white;">
-                <h4 class="card-title">Total Refund</h4>
-                
-                <p>Total money refunded by Toto</p>
-                <div class="d-flex align-items-center m-t-30">
-                    <div class="mt-3 d-flex flex-column" style="height: 60px; width: 100px">
-                        <apx-chart [series]="RevenueChartOptions.series" [chart]="RevenueChartOptions.chart"
-                            [stroke]="RevenueChartOptions.stroke" [tooltip]="RevenueChartOptions.tooltip"
-                            [fill]="RevenueChartOptions.fill">
-                        </apx-chart>
+            <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Sales Summary</h4>
+                        <h5 class="card-subtitle">Overview of Latest Month</h5>
                     </div>
-                    <div class="ml-auto">
-                        <h3 class="font-medium white-text m-b-0"><i class="mdi mdi-currency-gbp"></i>21,500,00</h3>
-                        <!-- <span class="white-text op-5">Jan 10 - Jan 20</span> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-   
- </div>   
- 
- <!-- //Total refund -->
- <div class="col-md-6 col-sm-12">
- <div class="card card-hover">
-    <div class="card-body">
-        <div class="d-md-flex align-items-center">
-            <div>
-                <h4 class="card-title">Service Wise Earning</h4>
-                <h5 class="card-subtitle">Total amount of earned by service</h5>
-            </div>
-            <div class="ml-auto align-items-center">
-                <div class="dl">
-                    <select class="custom-select">
-                        <option value="0" selected>Monthly</option>
-                        <option value="1">Daily</option>
-                        <option value="2">Weekly</option>
-                        <option value="3">Yearly</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <!-- column -->
-        <div class="row my-4 py-2">
-            <!-- column -->
-            <div class="col-lg-6">
-                <div class="m-b-20 d-flex align-items-center flex-column"  >
-                    <apx-chart [series]="mEmailChartOptions.series" [chart]="mEmailChartOptions.chart"
-                        [dataLabels]="mEmailChartOptions.dataLabels" [legend]="mEmailChartOptions.legends"
-                        [colors]="mEmailChartOptions.colors" [stroke]="mEmailChartOptions.stroke"
-                        [labels]="mEmailChartOptions.labels" [tooltip]="mEmailChartOptions.tooltip"
-                        [plotOptions]="mEmailChartOptions.plotOptions"></apx-chart>
-                </div>
-            </div>
-            <!-- column -->
-            <div class="col-lg-6">
-                <h4>Services</h4>
-                <!-- <span></span> -->
-                <ul class="list-style-none">
-                    <li class="m-t-20">
-                        <i class="fas fa-circle m-r-5 text-cyan font-12"></i>Ac Service
-                        <span class="float-right"> <i class="mdi mdi-currency-gbp"></i>23,000</span>
-                    </li>
-                    <li class="m-t-20">
-                        <i class="fas fa-circle m-r-5 text-info font-12"></i>Voice Modulation 
-                        <span class="float-right"> <i class="mdi mdi-currency-gbp"></i>41,000</span>
-                    </li>
-                    <li class="m-t-20">
-                        <i class="fas fa-circle m-r-5 text-orange font-12"></i>Internate Speed
-                        <span class="float-right"> <i class="mdi mdi-currency-gbp"></i>23,890</span>
-                    </li>
-                    <li class="m-t-20">
-                        <i class="fas fa-circle m-r-5 text-primary font-12"></i>Poor Wifi Coverage
-                        <span class="float-right"> <i class="mdi mdi-currency-gbp"></i>09,000</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- column -->
-    </div>
-</div>
-</div>
-
-<!-- Toto earning -->
-<div class="col-sm-12 col-lg-6">
-    <div class="card bg-info">
-        <div class="card-body" style="background-color:white;">
-            <h4 class="card-title">Total Earning Of Toto</h4>
-            
-            <h5 class="text-black"><i class="mdi mdi-currency-gbp"></i>60,890.68</h5>
-            <div class="d-flex flex-column" style="height: 280px">
-                <apx-chart [series]="earningChartOptions.series" [chart]="earningChartOptions.chart"
-                    [xaxis]="earningChartOptions.xaxis" [yaxis]="earningChartOptions.yaxis"
-                    [grid]="earningChartOptions.grid" [stroke]="earningChartOptions.stroke"
-                    [tooltip]="earningChartOptions.tooltip" [dataLabels]="earningChartOptions.dataLabels"
-                    [legend]="earningChartOptions.legend" [colors]="earningChartOptions.colors"
-                    [markers]="earningChartOptions.markers">
-                </apx-chart>
-            </div>
-            <div class="row">
-                <!-- Column -->
-                <div class="col-sm-12 col-lg-4">
-                    <div class="d-flex align-items-center m-t-5 m-b-5">
-                        <div class="m-r-10">
-                            <a class="btn btn-circle btn-lg btn-cyan text-white d-flex">EA</a>
-                        </div>
-                        <div class="text-black">
-                            <span class="font-14 op-5 d-block">AC</span>
-                            <span class="font-16 font-medium"><i class="mdi mdi-currency-gbp"></i>25,500,00</span>
+                    <div class="ml-auto d-flex no-block align-items-center">
+                        <ul class="list-inline font-12 dl m-r-15 m-b-0">
+                            <li class="list-inline-item text-cyan">
+                                <i class="fa fa-circle"></i> WIFI Connectiviy</li>
+                            <li class="list-inline-item text-info">
+                                <i class="fa fa-circle"></i> ISP</li>
+                        </ul>
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <!-- Column -->
-                <!-- Column -->
-                <div class="col-sm-12 col-lg-4">
-                    <div class="d-flex no-block align-items-center m-t-5 m-b-5">
-                        <div class="m-r-10">
-                            <a class="btn btn-circle btn-lg btn-cyan text-white d-flex">EA</a>
-                        </div>
-                        <div class="text-black">
-                            <span class="font-14 op-5 d-block">TV </span>
-                            <span class="font-16 font-medium"><i class="mdi mdi-currency-gbp"></i>15,250.00</span>
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-lg-4">
+                        <h1 class="m-b-0 m-t-30">$6,890.68</h1>
+                        <h6 class="font-light text-muted">Current Month Earnings</h6>
+                        <h3 class="m-t-30 m-b-0">1,540</h3>
+                        <h6 class="font-light text-muted">Current Month Sales</h6>
+                        <a class="btn btn-info m-t-20 p-15 p-l-25 p-r-25 m-b-20" href="javascript:void(0)">Last Month
+                            Summary</a>
+                    </div>
+                    <!-- column -->
+                    <div class="col-lg-8">
+                        <div class="linearea linechart" style="height: 300px;">
+                            <div class="d-flex flex-column w-100">
+                                <apx-chart [series]="salesChartOptions.series" [chart]="salesChartOptions.chart"
+                                    [xaxis]="salesChartOptions.xaxis" [yaxis]="salesChartOptions.yaxis"
+                                    [grid]="salesChartOptions.grid" [stroke]="salesChartOptions.stroke"
+                                    [tooltip]="salesChartOptions.tooltip" [dataLabels]="salesChartOptions.dataLabels"
+                                    [legend]="salesChartOptions.legend" [colors]="salesChartOptions.colors"
+                                    [markers]="salesChartOptions.markers">
+                                </apx-chart>
+                            </div>
                         </div>
                     </div>
+                    <!-- column -->
                 </div>
-                <!-- Column -->
-                <!-- Column -->
-                <div class="col-sm-12 col-lg-4">
-                    <div class="d-flex no-block align-items-center m-t-5 m-b-5">
-                        <div class="m-r-10">
-                            <a class="btn btn-circle btn-lg btn-cyan text-white d-flex">EA</a>
-                        </div>
-                        <div class="text-black">
-                            <span class="font-14 op-5 d-block ">Mobile</span>
-                            <span class="font-16 font-medium"><i class="mdi mdi-currency-gbp"></i>20,360,00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column -->
             </div>
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card card-body">
+            <h4 class="card-title">Toto Earnings</h4>            
+            <div class="col-md-12 col-lg-12">
+                <div class="d-flex flex-column">
+                  <apx-chart [series]="CampaignStatsChartOptions.series" [chart]="CampaignStatsChartOptions.chart"
+                    [dataLabels]="CampaignStatsChartOptions.dataLabels" [legend]="CampaignStatsChartOptions.legends"
+                    [colors]="CampaignStatsChartOptions.colors" [stroke]="CampaignStatsChartOptions.stroke"
+                    [labels]="CampaignStatsChartOptions.labels" [xaxis]="CampaignStatsChartOptions.xaxis"
+                    [yaxis]="CampaignStatsChartOptions.yaxis" [tooltip]="CampaignStatsChartOptions.tooltip"
+                    [markers]="CampaignStatsChartOptions.markers" [fill]="CampaignStatsChartOptions.fill"
+                    [plotOptions]="CampaignStatsChartOptions.plotOptions"></apx-chart>
+                </div>
+                <div class="row m-b-0 m-t-20 text-center">
+                  <!-- col -->
+                  <div class="col-sm-12 col-md-4 m-b-10">
+                    <span>Total Revenue</span>
+                    <h3 class="m-b-0">$3,567.56</h3>
+                  </div>
+                  <!-- col -->
+                  <!-- col -->
+                  <div class="col-sm-12 col-md-4 m-b-10">
+                    <span>Total Revenue by Accessories</span>
+                    <h3 class="m-b-0">$769.08</h3>
+                  </div>
+                  <!-- col -->
+                  <!-- col -->
+                  <div class="col-sm-12 col-md-4 m-b-10">
+                    <span>Estimated Sales</span>
+                    <h3 class="m-b-0">5489</h3>
+                  </div>
+                  <!-- col -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+            <div class="card bg-info">
+                <div class="card-body">
+                    <h4 class="card-title text-white">Total Refund</h4>
+                    <div class="d-flex align-items-center m-t-30">
+                        <div class="d-flex flex-column" style="height: 70px; width: 100px">
+                            <apx-chart [series]="Revenue2ChartOptions.series" [chart]="Revenue2ChartOptions.chart"
+                                [stroke]="Revenue2ChartOptions.stroke" [tooltip]="Revenue2ChartOptions.tooltip"
+                                [fill]="Revenue2ChartOptions.fill">
+                            </apx-chart>
+                        </div>
+                        <div class="ml-auto">
+                            <h3 class="text-white m-b-0">
+                                <i class="ti-arrow-up mdi mdi-currency-gbp"></i>351</h3>
+                            <span class="text-white op-5">Jan 10 - Dec 20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-cyan">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <h5 class="card-title text-white">Total Payout Provider</h5>
+                            <h3 class="text-white m-b-0">
+                                <i class="ti-arrow-up mdi mdi-currency-gbp"></i> 6548</h3>
+                        </div>
+                        <div class="ml-auto">
+                            <ul class="list-style-none m-b-0">
+                                <li class="text-white">
+                                    <!-- <i class="fa fa-circle m-r-5 text-white font-12 op-3"></i> Visit </li> -->
+                                <li class="text-white">
+                                    <!-- <i class="fa fa-circle m-r-5 text-white font-12"></i> Page Views </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column" style="height: 70px;">
+                    <apx-chart [series]="Pageview2ChartOptions.series" [chart]="Pageview2ChartOptions.chart"
+                        [stroke]="Pageview2ChartOptions.stroke" [tooltip]="Pageview2ChartOptions.tooltip"
+                        [colors]="Pageview2ChartOptions.colors" [fill]="Pageview2ChartOptions.fill">
+                    </apx-chart>
+                </div>
+            </div>
+        </div>
+    
+</div>
+<!-- End Payment UI -->
 
