@@ -12,8 +12,11 @@ import { NgxChartsModule } from "@swimlane/ngx-charts";
 import {ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { from } from 'rxjs';
+import { CoverageAreaComponent } from './coverage-area/coverage-area.component';
+import { AgmCoreModule } from '@agm/core';
+import { AgmPolygonDirective } from './agm-polygon.directive';
 @NgModule({
-  declarations: [PromocodesComponent, RewardsComponent, ReportComponent],
+  declarations: [PromocodesComponent, RewardsComponent, ReportComponent, CoverageAreaComponent, AgmPolygonDirective],
   imports: [
     CommonModule,
     MarketingRoutingModule,
@@ -22,7 +25,8 @@ import { from } from 'rxjs';
     NgApexchartsModule,
     NgxChartsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    AgmCoreModule.forRoot({libraries:['places','drawing']})
   ]
 })
 export class MarketingModule { }

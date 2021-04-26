@@ -18,9 +18,13 @@ import { QuillModule } from 'ngx-quill';
 import { KnowledgeListComponent } from './knowledge-list/knowledge-list.component';
 import { KnowledgDetailsComponent } from './knowledg-details/knowledg-details.component';
 import{ReactiveFormsModule} from '@angular/forms';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { FeedbackViewComponent } from './feedback-view/feedback-view.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
-  declarations: [MobileContentComponent, KnowledgeComponent,  TransportComponent,CategoryComponent,QuestionsComponent, LikeReasonComponent, CancelReasonComponent, RejectReasonComponent, DisputeReasonComponent, BlockReasonComponent, KnowledgeListComponent, KnowledgDetailsComponent,
+  declarations: [MobileContentComponent, KnowledgeComponent,  TransportComponent,CategoryComponent,QuestionsComponent, LikeReasonComponent, CancelReasonComponent, RejectReasonComponent, DisputeReasonComponent, BlockReasonComponent, KnowledgeListComponent, KnowledgDetailsComponent, FeedbackComponent, FeedbackViewComponent,
   ],
   imports: [
     CommonModule,
@@ -28,6 +32,7 @@ import{ReactiveFormsModule} from '@angular/forms';
     QuillModule.forRoot(),
     MobileAppsRoutingModule,
     DataTablesModule,
+    NgbModule
    
     
 

@@ -324,6 +324,16 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
+            {
+                path: '/mobile-apps/feedback',
+                title: 'Feedback',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
           
         
         ]
@@ -393,6 +403,16 @@ export const ROUTES: RouteInfo[] = [
             {
                 path: '/marketing/rewards',
                 title: 'Rewards',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
+            {
+                path: '/marketing/coverage-area',
+                title: 'Coverage Area',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,

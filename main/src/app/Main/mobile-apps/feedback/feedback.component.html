@@ -2,9 +2,9 @@
 <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Invoice</h4>
+        <h4 class="card-title">Feedback</h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        
+        <br>
         <div class="">
           <div class="row">
             <div class="col-md-12">
@@ -14,105 +14,78 @@
                     <thead>
                       <tr>
                         <th class="backgroundColor tdLeft">ID</th>
-                        <th class="backgroundColor tdLeft">BILL FROM</th>
-                        <th class="backgroundColor tdLeft">BILL TO</th>
-                        <th class="backgroundColor tdRight">AMOUNT</th>
-                        <th class="backgroundColor">STATUS</th>
-                        <th class="backgroundColor">ACTION</th>
+                        <th class="backgroundColor tdLeft">NAME</th>
+                        <!-- <th class="backgroundColor tdLeft">EMAIL</th>
+                        <th class="backgroundColor tdLeft">DATE</th> -->
+                        <th class="backgroundColor ">TYPE</th>
+                        <th class="backgroundColor tdLeft">DESCRIBE YOUR FEEDBACK</th>
+                        <!-- <th class="backgroundColor tdLeft">RATING </th> -->
+                      <th class="backgroundColor">ACTION</th>
                       </tr>
                     </thead>
                    
                     <tbody>
                         <tr>
                             <td class="tdLeft">1</td>
-                            <td class="tdLeft">Fortune creation</td>
-                            <td class="tdLeft">Soft solution</td>
-                            <td class="tdRight mdi mdi-currency-gbp">10</td>
-                            <td ><label class="label label-warning">Pending</label></td>
+                            <td class="tdLeft">Johan Smith</td>
+                            <!-- <td class="tdLeft">johan@gmail.com</td> -->
+                            <!-- <td class="tdLeft">17/04/2021</td> -->
+                            <td class="tdCenter">Comment</td>
+                            <td class="tdLeft">Application is good</td>
+                          
                             <td> 
-                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
-
-                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                       <i class="ti-marker-alt"></i>
-                                   </a>
-                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                       <i class="ti-trash"></i>
-                                   </a>
-                               </td>
+                                <a [routerLink]="['/mobile-apps/feedback-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="tdLeft">2</td>
-                            <td class="tdLeft">Fortune creation</td>
-                            <td class="tdLeft">Soft solution</td>
-                            <td class="tdRight mdi mdi-currency-gbp">55</td>
-                            <td ><label class="label label-warning">Pending</label></td>
+                            <td class="tdLeft">Mark</td>
+                            <!-- <td class="tdLeft">mark12@gmail.com</td> -->
+                            <!-- <td class="tdLeft">07/04/2021</td> -->
+                            <td class="tdCenter">Problem</td>
+                            <td class="tdLeft">After updated in totoapp,loding issue please resolve it</td>
+                         
                             <td> 
-                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
-
-                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                       <i class="ti-marker-alt"></i>
-                                   </a>
-                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                       <i class="ti-trash"></i>
-                                   </a>
-                               </td>
-                            
+                                <a [routerLink]="['/mobile-apps/feedback-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="tdLeft">3</td>
-                            <td class="tdLeft">Fortune creation</td>
-                            <td class="tdLeft">Soft solution</td>
-                            <td class="tdRight mdi mdi-currency-gbp">80</td>
-                            <td ><label class="label label-danger">Delivered</label></td>
+                            <td class="tdLeft">Johan King</td>
+                            <!-- <td class="tdLeft">mark12@gmail.com</td> -->
+                            <!-- <td class="tdLeft">09/04/2021</td> -->
+                            <td class="tdCenter">Problem</td>
+                            <td class="tdLeft">After updated in totoapp,loding issue please resolve it</td>
+                         
                             <td> 
-                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
-
-                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                       <i class="ti-marker-alt"></i>
-                                   </a>
-                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                       <i class="ti-trash"></i>
-                                   </a>
-                               </td>
-                            
+                                <a [routerLink]="['/mobile-apps/feedback-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="tdLeft">4</td>
-                            <td class="tdLeft">Fortune creation</td>
-                            <td class="tdLeft">Soft solution</td>
-                            <td class="tdRight mdi mdi-currency-gbp">60</td>
-                            <td ><label class="label label-success">Shipped</label></td>
+                            <td class="tdLeft">Ronald Anderson</td>
+                            <!-- <td class="tdLeft">mark12@gmail.com</td> -->
+                            <!-- <td class="tdLeft">09/05/2021</td> -->
+                            <td class="tdCenter">Question</td>
+                            <td class="tdLeft">How to paid money to provider?</td>
+                          
                             <td> 
-                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
-
-                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                       <i class="ti-marker-alt"></i>
-                                   </a>
-                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                       <i class="ti-trash"></i>
-                                   </a>
-                               </td>
-                            
+                                <a [routerLink]="['/mobile-apps/feedback-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                            </td>
                         </tr>
                         <tr>
                             <td class="tdLeft">5</td>
-                            <td class="tdLeft">Fortune creation</td>
-                            <td class="tdLeft">Soft solution</td>
-                            <td class="tdRight mdi mdi-currency-gbp">60</td>
-                            <td ><label class="label label-warning">Pending</label></td>
+                            <td class="tdLeft">Daniel Kristeen</td>
+                            <!-- <td class="tdLeft">mark12@gmail.com</td> -->
+                            <!-- <td class="tdLeft">09/10/2020</td> -->
+                            <td class="tdCenter">Suggestion</td>
+                            <td class="tdLeft">Not getting notification of new product,please do that </td>
+                          
                             <td> 
-                                <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
-
-                                <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                       <i class="ti-marker-alt"></i>
-                                   </a>
-                                   <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                       <i class="ti-trash"></i>
-                                   </a>
-                               </td>
-                            
+                                <a [routerLink]="['/mobile-apps/feedback-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
+                            </td>
                         </tr>
-                        
+                      
                   
                  
                     </tbody>

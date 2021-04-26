@@ -4,6 +4,8 @@ import { BlockReasonComponent } from './block-reason/block-reason.component';
 import { CancelReasonComponent } from './cancel-reason/cancel-reason.component';
 import { CategoryComponent } from './category/category.component';
 import { DisputeReasonComponent } from './dispute-reason/dispute-reason.component';
+import { FeedbackViewComponent } from './feedback-view/feedback-view.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 import { KnowledgDetailsComponent } from './knowledg-details/knowledg-details.component';
 import { KnowledgeListComponent } from './knowledge-list/knowledge-list.component';
 
@@ -28,7 +30,10 @@ const routes: Routes = [
   {path:'reject',component:RejectReasonComponent},
   {path:'block',component:BlockReasonComponent},
   {path:'knowledge-list',component : KnowledgeListComponent},
-  {path:'knowledge-details',component:KnowledgDetailsComponent}
+  {path:'knowledge-details',component:KnowledgDetailsComponent},
+  {path:'feedback',component:FeedbackComponent},
+  {path:'feedback-view',component:FeedbackViewComponent}
+
 ];
 
 @NgModule({

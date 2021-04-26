@@ -21,7 +21,7 @@ export class ReviewsComponent implements OnInit {
       ordering : true,
       lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
       columnDefs: [
-        { orderable: false, targets: -1 }
+        { orderable: false, targets: [-1,-2] }
      ]
     };
    
