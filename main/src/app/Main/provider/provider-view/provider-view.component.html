@@ -25,7 +25,9 @@
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span><span></span>
+                                <div class="badge badge-pill badge-success font-14 infoData" style="margin-left: 2%;">Active</div>
+
                         </div>
                         
                         <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
@@ -34,7 +36,6 @@
                         <hr>
                         <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div>
                         <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
-                        <div class="badge badge-pill badge-success font-14 infoData">Active</div>
                         <hr>
                         <div class="row text-center ">
                             <div class="col-4">
@@ -303,18 +304,10 @@
         <div class="card " >
             <div class="card-body">
                 <h4 class="card-title">All Details of Provider</h4>
-                <!-- <h6 class="card-subtitle">This is basic Default pagination</h6> -->
-
-
                 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
                     <li [ngbNavItem]="1">
                         <a ngbNavLink >Document</a>
                         <ng-template ngbNavContent>
-                            <!-- <h3>General</h3>
-                            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan
-                                four loko
-                               </p>
-  -->
                             <app-document></app-document>
                         </ng-template>
                     </li>
@@ -350,18 +343,26 @@
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="7">
+                        <a ngbNavLink>Tickets</a>
+                        <ng-template ngbNavContent>
+                            <app-tickets></app-tickets>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="8">
+                        <a ngbNavLink>Chats</a>
+                        <ng-template ngbNavContent>
+                            <app-chats></app-chats>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="9">
                         <a ngbNavLink>Timeline</a>
                         <ng-template ngbNavContent>
                            <app-timeline></app-timeline>
                         </ng-template>
                     </li>
-                   
                 </ul>
 
                 <div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-
-
             </div>
         </div>
     </div>

@@ -25,11 +25,13 @@ import { AssessmentComponent } from './assessment/assessment.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
+import { TicketsComponent } from './tickets/tickets.component';
+import { ChatsComponent } from './chats/chats.component'
 
 @NgModule({
   declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent, DocumentComponent, PerformanceComponent, 
-    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent, AddComponent, EditComponent],
+    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent, AddComponent, EditComponent, TicketsComponent, ChatsComponent],
   imports: [
     CommonModule,
     AgmCoreModule,

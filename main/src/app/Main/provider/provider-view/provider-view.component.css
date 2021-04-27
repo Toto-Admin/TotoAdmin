@@ -8,6 +8,15 @@
     color :white !important;
   }
   li{
-    width:165px;
+    /* width:165px; */
     text-align: center;
     }
+
+  /* media query for mobile  */
+  /* media query for width min 600px */
+  @media only screen and (max-width: 600px) {
+    li{
+      width:145px;
+      text-align: center;
+      }
+  }

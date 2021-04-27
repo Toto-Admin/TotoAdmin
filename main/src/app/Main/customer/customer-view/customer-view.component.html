@@ -24,6 +24,8 @@
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
+                                <div class="badge badge-pill badge-success font-14 infoData" style="margin-left: 2%;">Active</div>
+
                         </div>
                         
                         <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
@@ -32,7 +34,6 @@
                         <hr>
                         <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div>
                         <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
-                        <div class="badge badge-pill badge-success font-14 infoData">Active</div>
                         <hr>
                         <div class="row text-center ">
                             <div class="col-4">
@@ -310,6 +311,115 @@
     </div>
 </div>
 <!-- Job History End -->
+
+<!-- Ticket Details -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- title -->
+                <div class="d-md-flex align-items-center">
+                    <div>
+                        <h4 class="card-title">Ticket History</h4>
+                        <!-- <h5 class="card-subtitle">Overview of jobs history</h5> -->
+                    </div>
+                    <div class="ml-auto">
+                        <div class="dl">
+                            <select class="custom-select">
+                                <option value="0" selected>Monthly</option>
+                                <option value="1">Daily</option>
+                                <option value="2">Weekly</option>
+                                <option value="3">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- title -->
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="bg-light">
+                            <th class="backgroundColor tdLeft">Ticket id</th>
+                            <th class="backgroundColor tdLeft">status</th>
+                            <th class="backgroundColor tdLeft">ticket details</th>
+                            <th class="backgroundColor">Assign</th>
+                            <th class="backgroundColor">Date</th>
+                            <th class="backgroundColor">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
+                            <td><div class="badge badge-pill badge-success font-14 infoData">Open</div></td>
+                            <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                            </h6></td>
+                            <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                            <td>a year ago</td>
+                            <td>
+                              <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
+                                  <i class="ti-marker-alt"></i>
+                              </a>
+                              <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                  <i class="ti-trash"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><b><a [routerLink]="['/ticket/ticket-details']">#96akfc</a></b></td>
+                            <td><div class="badge badge-pill badge-warning font-14 infoData">Pending</div></td>
+                            <td class="tdLeft"><h5>Consequuntur magni dolores eos qui ratione</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                            </h6></td>
+                            <td><h6>Assign to:</h6><h5>Steve</h5></td>
+                            <td>a year ago</td>
+                            <td>
+                              <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
+                                  <i class="ti-marker-alt"></i>
+                              </a>
+                              <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                  <i class="ti-trash"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><b><a [routerLink]="['/ticket/ticket-details']">#89adfc</a></b></td>
+                            <td><div class="badge badge-pill badge-success font-14 infoData">Open</div></td>
+                            <td class="tdLeft"><h5>Exercitationem ullam corporis</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                            </h6></td>
+                            <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                            <td>a year ago</td>
+                            <td>
+                              <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
+                                  <i class="ti-marker-alt"></i>
+                              </a>
+                              <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                  <i class="ti-trash"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
+                            <td><div class="badge badge-pill badge-success font-14 infoData">Open</div></td>
+                            <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                            </h6></td>
+                            <td><h6>Assign to:</h6><h5>Liam</h5></td>
+                            <td>a year ago</td>
+                            <td>
+                              <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
+                                  <i class="ti-marker-alt"></i>
+                              </a>
+                              <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                  <i class="ti-trash"></i>
+                              </a>
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Ticket Details -->
 <div class="row">
     <div class="col-md-12">
         <div class="card">

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddComponent } from './add/add.component';
 import { AvailabilityComponent } from './availability/availability.component';
+import { ChatsComponent } from './chats/chats.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DocumentComponent } from './document/document.component';
@@ -10,21 +11,25 @@ import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderViewComponent } from './provider-view/provider-view.component';
 import { ReviewRatingComponent } from './review-rating/review-rating.component';
 import { TaskHistoryComponent } from './task-history/task-history.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 const routes: Routes = [
 
   {path:'', component:DashboardComponent},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'provider-list',component:ProviderListComponent},
-  {path:'provider-view',component:ProviderViewComponent},
-  {path:'document', component:DocumentComponent},
+  {path:'dashboard', component:DashboardComponent ,data:{title : 'Dashboard'}},
+  {path:'provider-list',component:ProviderListComponent,data:{title : 'Provider-list'}},
+  {path:'provider-view',component:ProviderViewComponent,data:{title : 'Provider-view'}},
+  {path:'document', component:DocumentComponent,data:{title : 'Provider-view'}},
   {path:'availability',component:AvailabilityComponent },
-  {path:'perform',component:PerformanceComponent},
-  {path:'task',component:TaskHistoryComponent},
-  {path:'review',component:ReviewRatingComponent},
-  {path:'availability', component:AvailabilityComponent},
-  {path:'add',component:AddComponent}
+  {path:'perform',component:PerformanceComponent,data:{title : 'Provider-view'}},
+  {path:'task',component:TaskHistoryComponent,data:{title : 'Provider-view'}},
+  {path:'review',component:ReviewRatingComponent,data:{title : 'Provider-view'}},
+  {path:'availability', component:AvailabilityComponent,data:{title : 'Provider-view'}},
+  {path:'add',component:AddComponent},
+  {path:'tickets',component:TicketsComponent},
+  {path:'chats',component:ChatsComponent}
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

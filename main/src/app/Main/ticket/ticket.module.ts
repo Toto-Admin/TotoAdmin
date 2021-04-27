@@ -5,13 +5,16 @@ import { TicketRoutingModule } from './ticket-routing.module';
 import { TicketComponent } from './ticket.component';
 // import { TicketService } from './tickets.service';
 import { DataTablesModule } from 'angular-datatables';
+import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
-  declarations: [TicketComponent],
+  declarations: [TicketComponent, TicketDetailsComponent],
   imports: [
     CommonModule,
     TicketRoutingModule,
-    DataTablesModule
+    DataTablesModule,
+    QuillModule.forRoot(),
   ],
   providers:[
     // TicketService,

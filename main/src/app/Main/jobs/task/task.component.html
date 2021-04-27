@@ -21,214 +21,216 @@
             <div class="col-md-12">
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered">
-                    <thead style="background: #92adfc;">
-                      <tr>
-                        <th class="backgroundColor tdLeft">SERVICE</th>
-                        <th class="backgroundColor tdLeft">DURATION</th>
-                        <th class="backgroundColor tdLeft">CUSTOMER</th>
-                        <th class="backgroundColor tdLeft">PROVIDER</th>
-                        <th class="backgroundColor ">TYPE</th>
-                        <th class="backgroundColor">STATUS</th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tdLeft">Connectivity</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
+                  <div class="table-responsive">
+                    <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered">
+                      <thead style="background: #92adfc;">
+                        <tr>
+                          <th class="backgroundColor tdLeft">SERVICE</th>
+                          <th class="backgroundColor tdLeft">DURATION</th>
+                          <th class="backgroundColor tdLeft">CUSTOMER</th>
+                          <th class="backgroundColor tdLeft">PROVIDER</th>
+                          <th class="backgroundColor ">TYPE</th>
+                          <th class="backgroundColor">STATUS</th>
+                          <th class="backgroundColor">ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="tdLeft">Connectivity</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                            </div>
+                          </div></td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td>On-site</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="tdLeft"> Voice modulation</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
                             <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
                             <div class="ml-3">
                               <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
                             </div>
                           </div></td>
-                        <td>On-site</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"> Voice modulation</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                        <td>On-site</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-          
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">New network setup</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                        <td >On-site</td>
-                        <td >Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Internate speed</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                        <td>On-site</td>
-                        <td >Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Connectivity</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                        <td >On-site</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Poor wifi coverage</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                        <td >On-site</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Mobile hardware </td>
-                        <td class="tdLeft">6 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td>On-site</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+            
+                        </tr>
+                        <tr>
+                          <td class="tdLeft">New network setup</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
                             <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
                             <div class="ml-3">
                               <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
                             </div>
                           </div></td>
-                        <td>On-site</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                     
-                      <tr>
-                        <td class="tdLeft">Stove repair</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Prathamesh Deasi</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td >On-site</td>
+                          <td >Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="tdLeft">Internate speed</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
                             <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
                             <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Akashy Poundkar</a></p>
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
                             </div>
                           </div></td>
-                        <td >On-site</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      
-                      <tr>
-                        <td class="tdLeft">Voice modulation</td>
-                        <td class="tdLeft">2 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ashitosh Jadhav</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Pradip Sutar</a></p>
-                            </div>
-                          </div></td>
-                        <td>Remote</td>
-                        <td>Finish</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"> Poor wifi coverage</td>
-                        <td class="tdLeft">3 hour</td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
-                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Prakash Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft"><div class="d-flex align-items-center">
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td>On-site</td>
+                          <td >Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="tdLeft">Connectivity</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                             <div class="ml-3">
                               <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
                             </div>
                           </div></td>
-                        <td>Remote</td>
-                        <td>Completed</td>
-                        <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
-                      </tr>
-                    </tbody>
-                  </table>  
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td >On-site</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="tdLeft">Poor wifi coverage</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                            </div>
+                          </div></td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td >On-site</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="tdLeft">Mobile hardware </td>
+                          <td class="tdLeft">6 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                            </div>
+                          </div></td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td>On-site</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                      
+                        <tr>
+                          <td class="tdLeft">Stove repair</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Prathamesh Deasi</a></p>
+                            </div>
+                          </div></td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Akashy Poundkar</a></p>
+                              </div>
+                            </div></td>
+                          <td >On-site</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        
+                        <tr>
+                          <td class="tdLeft">Voice modulation</td>
+                          <td class="tdLeft">2 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ashitosh Jadhav</a></p>
+                            </div>
+                          </div></td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Pradip Sutar</a></p>
+                              </div>
+                            </div></td>
+                          <td>Remote</td>
+                          <td>Finish</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="tdLeft"> Poor wifi coverage</td>
+                          <td class="tdLeft">3 hour</td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                            <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
+                            <div class="ml-3">
+                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Prakash Patil</a></p>
+                            </div>
+                          </div></td>
+                          <td class="tdLeft"><div class="d-flex align-items-center">
+                              <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                              <div class="ml-3">
+                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Sushant Patil</a></p>
+                              </div>
+                            </div></td>
+                          <td>Remote</td>
+                          <td>Completed</td>
+                          <td><a [routerLink]="['/jobs/jobview']"><i class="fas fa-eye "></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table> 
+                  </div> 
                 <!-- </div>
               </div> -->
             </div>

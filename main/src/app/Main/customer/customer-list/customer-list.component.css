@@ -2,3 +2,11 @@
     background-color: #2962ff;
     color :white;
 }
+
+ /* media query for mobile  */
+  /* media query for width min 600px */
+  @media only screen and (max-width: 600px) {
+    .tableResponsive {
+        overflow-x:auto;
+    }
+  }

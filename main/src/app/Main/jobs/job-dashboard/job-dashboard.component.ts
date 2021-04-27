@@ -579,7 +579,7 @@ export class JobDashboardComponent implements OnInit {
         show: false,
       },
       labels: ['Rescheduel', 'No shows', 'Provider report', 'Return visit'],
-      colors: ['#40c4ff', '#2961ff', '#ff821c', '#7e74fb'],
+      colors: ['#40c4ff', '#2961ff', '#ff821c', '#e70da6'],
 
     };
 
