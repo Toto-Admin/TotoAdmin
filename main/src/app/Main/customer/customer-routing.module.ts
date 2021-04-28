@@ -4,6 +4,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerViewComponent } from './customer-view/customer-view.component';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 const routes: Routes = [
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'dashboard', component:DashboardComponent},
   {path:'customer-list',component:CustomerListComponent},
   {path:'view',component:CustomerViewComponent},
-  {path: 'add',component:CustomerAddComponent}
+  {path: 'add',component:CustomerAddComponent},
+  {path:'edit',component: CustomerEditComponent}
 
   
 

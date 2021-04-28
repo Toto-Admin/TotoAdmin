@@ -6,6 +6,7 @@ import { ChatsComponent } from './chats/chats.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DocumentComponent } from './document/document.component';
+import { EditComponent } from './edit/edit.component';
 import { PerformanceComponent } from './performance/performance.component';
 import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderViewComponent } from './provider-view/provider-view.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:'availability', component:AvailabilityComponent,data:{title : 'Provider-view'}},
   {path:'add',component:AddComponent},
   {path:'tickets',component:TicketsComponent},
-  {path:'chats',component:ChatsComponent}
+  {path:'chats',component:ChatsComponent},
+  {path:'edit',component:EditComponent}
 ];
 
 

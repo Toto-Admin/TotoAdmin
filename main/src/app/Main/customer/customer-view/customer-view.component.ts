@@ -94,6 +94,6 @@ export class CustomerViewComponent implements OnInit {
   }
 
   btnClick() {
-    this.router.navigate(['/customer/add']);
+    this.router.navigate(['/customer/edit']);
   }
 }

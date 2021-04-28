@@ -257,18 +257,18 @@
                           <label for="dob">Date of birth</label>
                           <input type="date" class="form-control" id="dob" formControlName="dob" required>
                       </div>
-                     <div class="form-group col-md-6">
-                          <label class>Gender</label>
+                      <div class="form-group col-md-6">
+                        <label class>Gender</label>
+<br>
+                        <div class="form-check form-check-inline" *ngFor="let radioOption of radioOptions">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" class="custom-control-input"
+                                    [value]="radioOption" formControlName="radioOption">
+                                <label class="custom-control-label" for="customRadio2">{{ radioOption }}</label>
+                            </div>
 
-                          <div class="" *ngFor="let radioOption of radioOptions">
-                              <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio2" class="custom-control-input"
-                                      [value]="radioOption" formControlName="radioOption">
-                                  <label class="custom-control-label" for="customRadio2">{{ radioOption }}</label>
-                              </div>
-
-                          </div>
-                      </div> 
+                        </div>
+                    </div> 
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">

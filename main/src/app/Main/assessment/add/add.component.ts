@@ -2,7 +2,7 @@ import { ElementRef } from '@angular/core';
 import { Component, OnInit, ViewChild ,Directive} from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { fromPromise } from 'rxjs/internal-compatibility';
+
 @Directive({selector: 'divMessages'})
 class ChildDirective {
 }

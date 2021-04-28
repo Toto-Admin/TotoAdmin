@@ -131,6 +131,6 @@ export class ProviderViewComponent implements OnInit {
   
   btnClick() 
   {
-    this.router.navigate(['/provider/add']);
+    this.router.navigate(['/provider/edit']);
   }
 }

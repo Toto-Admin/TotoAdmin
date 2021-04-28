@@ -1,1 +1,187 @@
-<p>edit works!</p>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+             <div class="card-header bg-info">
+                <h4 style="padding-bottom: 10px;" class="m-b-0 text-white">Edit Assessment Details</h4>
+            </div>
+            <form  *ngIf='regularForm' [formGroup]="regularForm" action="#">
+                
+                
+                <div class="form-body">
+                    <div class="card-body">
+                        <div class="row p-t-20">
+
+                        <div class="form-group col-md-6">
+                            <label for="name">Name<span class="reqNote">*</span></label>
+                            <input type="text" class="form-control" id="name" formControlName="name" required>
+                             <small class="form-text text-danger"
+                             *ngIf="!regularForm.get('name').valid && (regularForm.get('name').dirty || regularForm.get('name').touched)">
+                             Name is required and must be characters(a-zA-Z)
+                             </small>
+
+                       </div>
+                            <!--/span-->
+                         <div class="form-group col-md-6">
+                              <label for="passing_rank">Passing Rank<span class="reqNote">*</span></label>
+                              <input type="number" name="passing_rank" formControlName="passing_rank" class="form-control form-control-danger" placeholder="enter passing rank">
+                              <small class="form-text text-danger"
+                              *ngIf="!regularForm.get('passing_rank').valid && (regularForm.get('passing_rank').dirty || regularForm.get('passing_rank').touched)">
+                            Passing rank is required
+                              </small>  
+                         </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="duration">Duration<span class="reqNote">*</span></label>
+                                <input type="number" name="duration" formControlName="duration" class="form-control form-control-danger" placeholder="enter duration">
+                                <small class="form-text text-danger"
+                                *ngIf="!regularForm.get('duration').valid && (regularForm.get('duration').dirty || regularForm.get('duration').touched)">
+                                Duration is required
+                             </small>  
+                            </div>
+                            <!--/span-->
+                            <div class="form-group col-md-6">
+                                  <label for="duration_type">Duration Type<span class="reqNote">*</span></label>
+                                    <select class="form-control custom-select"name="duration_type" formControlName="duration_type">
+                                        <option >Hour</option>
+                                        <option >Minute</option>
+                                    </select>
+                                    <small class="form-text text-danger"
+                                    *ngIf="!regularForm.get('duration_type').valid && (regularForm.get('duration_type').dirty || regularForm.get('duration_type').touched)">
+                                    Duration type is required
+                                 </small>  
+                                   
+                            </div>
+                          
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="services">Services<span class="reqNote">*</span></label>
+                                    <select class="form-control custom-select"name="services" formControlName="services"tabindex="1">
+                                        <option value="Category 1">AC Service</option>
+                                        <option value="Category 2">Voice Modulation</option>
+                                        <option value="Category 3">Poor Wifi Coverage</option>
+                                        <option value="Category 4">New Network Setup</option>
+                                    </select>
+                                    <small class="form-text text-danger"
+                                    *ngIf="!regularForm.get('services').valid && (regularForm.get('services').dirty || regularForm.get('services').touched)">
+                                    Service name is required
+                                 </small>  
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <!--/row-->
+                     
+                        <h4 class="card-title m-t-30">Add Assessment for Service</h4>
+                        <button type="button"  class="btn btn-dark" (click)="addQue();" >Add Question</button>
+                    </div>
+                    <hr>
+                  
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="ques">Question<span class="reqNote">*</span></label>
+                                <input type="text" class="form-control" id="ques" formControlName="ques" required>
+                                 <small class="form-text text-danger"
+                                 *ngIf="!regularForm.get('ques').valid && (regularForm.get('ques').dirty || regularForm.get('ques').touched)">
+                                 Question field is required
+                                 </small>
+    
+                           </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label" >Answer<span class="reqNote">*</span></label>
+                                    <!-- Default inline 1--><br>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label" for="defaultInline1">A</label>
+                                </div>
+                                
+                                <!-- Default inline 2-->
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label" for="defaultInline2">B</label>
+                                </div>
+                                
+                                <!-- Default inline 3-->
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label" for="defaultInline3">C</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                                    <label class="custom-control-label" for="defaultInline3">D</label>
+                                </div>
+                             </div>
+                        </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="option_a">Option A</label>
+                                    <input type="text"name="option_a" class="form-control"  id="option_a" formControlName="option_a" required>
+                                    <small class="form-text text-danger"
+                                    *ngIf="!regularForm.get('option_a').valid && (regularForm.get('option_a').dirty || regularForm.get('option_a').touched)">
+                                    Option A is required
+                                    </small>
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="option_b">Option B</label>
+                                    <input type="text"name="option_b" class="form-control" id="option_b" formControlName="option_b" required>
+                                    <small class="form-text text-danger"
+                                    *ngIf="!regularForm.get('option_b').valid && (regularForm.get('option_b').dirty || regularForm.get('option_b').touched)">
+                                    Option B is required
+                                    </small>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="option_c">Option C</label>
+                                    <input type="text" name="option_c" class="form-control" id="option_c" formControlName="option_c" required>
+                                    <small class="form-text text-danger"
+                                    *ngIf="!regularForm.get('option_c').valid && (regularForm.get('option_c').dirty || regularForm.get('option_c').touched)">
+                                    Option C is required
+                                    </small>
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="option_d">Option D</label>
+                                    <input type="text" name="option_d" class="form-control" id="option_d" formControlName="option_d" required>
+                                    <small class="form-text text-danger"
+                                    *ngIf="!regularForm.get('option_d').valid && (regularForm.get('option_d').dirty || regularForm.get('option_d').touched)">
+                                    Option D is required
+                                    </small>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                    </div>
+                    <div [innerHTML]="divMessages"></div>
+                    <div class="form-actions">
+                        <div class="card-body">
+                            <button  type="button" class="btn btn-primary backgroundColor ml-auto" disabled="">Submit</button>&nbsp;
+                            <button type="button" class="btn btn-dark"  (click)="closeBtnClick();">Close</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

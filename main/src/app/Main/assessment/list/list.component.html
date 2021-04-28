@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12">
       <div class="card card-body">
-        <h4 class="card-title">Assessment<span style="float: right;"><button class="btn btn-primary backgroundColor ml-auto" (click)="btnClick()">Add New Exam</button></span></h4>
+        <h4 class="card-title">Assessment<span style="float: right;"><button class="btn btn-primary backgroundColor ml-auto" (click)="btnClick()">Add Assessment</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         
         <div class="">
@@ -19,6 +19,7 @@
                           <th scope="col" class="backgroundColor tdLeft">SERVICE</th>
                           <th scope="col" class="backgroundColor tdLeft">PASSING CUT OFF</th>
                           <th scope="col" class="backgroundColor tdLeft">DURATION</th>
+                          <th scope="col" class="backgroundColor tdCenter">ACTION</th>
                         </tr>
                       </thead>
                       <!-- <thead>
@@ -37,6 +38,14 @@
                           <td class="tdLeft">Tv repair</td>
                           <td class="tdLeft">50</td>
                           <td class="tdLeft">1 hour</td>
+                          <td>
+                              <a [routerLink]="['/assessment/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                          </td>
                           
                       </tr>
                       <tr>
@@ -45,6 +54,14 @@
                         <td class="tdLeft">Ac repair</td>
                         <td class="tdLeft">30</td>
                         <td class="tdLeft">45 minutes</td>
+                        <td>
+                          <a [routerLink]="['/assessment/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <i class="ti-marker-alt"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                            <i class="ti-trash"></i>
+                        </a>
+                      </td>
                         
                     </tr>
                     <tr>
@@ -53,7 +70,14 @@
                         <td class="tdLeft">Network</td>
                         <td class="tdLeft">35</td>
                         <td class="tdLeft">	15 minutes</td>
-                      
+                        <td>
+                          <a  [routerLink]="['/assessment/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <i class="ti-marker-alt"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                            <i class="ti-trash"></i>
+                        </a>
+                      </td>
                     </tr>
                     <tr>
                         <td class="tdLeft">4</td>
@@ -61,6 +85,14 @@
                         <td class="tdLeft">Poor wifi coverage</td>
                         <td class="tdLeft">40</td>
                         <td class="tdLeft">40 minutes</td>
+                        <td>
+                          <a [routerLink]="['/assessment/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <i class="ti-marker-alt"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                            <i class="ti-trash"></i>
+                        </a>
+                      </td>
                         
                     </tr>
                     <tr>
@@ -69,6 +101,14 @@
                       <td class="tdLeft">Tv service</td>
                       <td class="tdLeft">30</td>
                       <td class="tdLeft">40 minutes</td>
+                      <td>
+                        <a [routerLink]="['/assessment/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                          <i class="ti-marker-alt"></i>
+                      </a>
+                      <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                          <i class="ti-trash"></i>
+                      </a>
+                    </td>
                       
                   </tr>
                       </tbody>

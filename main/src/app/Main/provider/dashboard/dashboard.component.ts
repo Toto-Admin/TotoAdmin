@@ -96,7 +96,7 @@ export class DashboardComponent  {
 
  constructor(){
   this.EmailChartOptions = {
-    series: [12, 15, 14],
+    series: [12, 15, 14,41],
     chart: {
       fontFamily: 'Nunito Sans,sans-serif',
       type: 'donut',
@@ -139,8 +139,8 @@ export class DashboardComponent  {
     legends: {
       show: false,
     },
-    labels: ['Open', 'Pending', 'Closed'],
-    colors: ['#32A100', '#FA9E08', '#FA0825'],
+    labels: ['Open', 'Pending', 'Closed','Total Ticket'],
+    colors: ['#b3ffb3', '#ffad33', '#b3b3b3','#7e74fb'],
 
   };
 
