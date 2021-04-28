@@ -11,7 +11,7 @@ import { DetailsComponent } from './details/details.component';
 import { ReportComponent } from './report/report.component';
 import { DataTablesModule } from 'angular-datatables';
 import { InvoiceDetailsComponent } from './invoice-details/invoice-details.component';
-import { NgxPrintModule } from 'ngx-print';
+// import { NgxPrintModule } from 'ngx-print';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { NgxPrintModule } from 'ngx-print';
     NgApexchartsModule,
     NgbModule,
     DataTablesModule,
-    NgxPrintModule
+    // NgxPrintModule
   ]
 })
 export class PaymentModule { }
