@@ -490,6 +490,8 @@
 </div>
 
 
+
+
 <div class="row">
    
     <!-- column -->
@@ -761,3 +763,33 @@
     </div>
 </div> -->
 
+<!-- //most recent job booking -->
+<div class="row">
+    <div class="col-12">
+        <div class="card card-body" >
+
+            <!-- title -->
+            <div class="d-md-flex align-items-center">
+                <div>
+                    <h4 class="card-title">Most Recent Jobs Booking</h4>
+                </div>
+            </div>
+            <!-- title -->
+            <agm-map [latitude]="lat"  [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
+                <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+                    <agm-info-window><a [routerLink]="['/jobs/jobview']">101</a> </agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="latA" [longitude]="lngA"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+                    <agm-info-window><a [routerLink]="['/jobs/jobview']">102</a></agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="latB" [longitude]="lngB"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+                    <agm-info-window><a [routerLink]="['/jobs/jobview']">103</a> </agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="latC" [longitude]="lngC"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+                    <agm-info-window><a [routerLink]="['/jobs/jobview']">104</a> </agm-info-window>
+                </agm-marker>
+            </agm-map>
+        </div>
+    </div>
+
+<!-- //end map -->
