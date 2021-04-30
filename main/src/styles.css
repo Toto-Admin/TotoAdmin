@@ -14,7 +14,7 @@
   
   .dataTables_filter input {
     border: 1px solid #b4b4b4 !important;
-    border-radius: 15px !important;
+    border-radius: 1px !important;
   }
   .dataTables_wrapper .dataTables_length select{
     border: 1px solid #b4b4b4 !important;
@@ -171,5 +171,7 @@
     font-size: 85% !important;
   }
 
-
+  .paginate_button.current{
+    color :rgb(7, 7, 7) !important;
+  }
 

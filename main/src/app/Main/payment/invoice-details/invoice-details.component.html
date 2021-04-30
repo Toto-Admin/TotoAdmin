@@ -7,13 +7,33 @@
         <!-- <h4 class="card-title">Customer List<span style="float: right;"><button class="btn btn-primary ml-auto">Add Customer</button></span></h4> -->
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         <div class="text-left">
-          <label style="font-weight: 900;font-size: 15px;">Filter by :</label>
+          <!-- <label style="font-weight: 900;font-size: 15px;">Filter by :</label>
           <span class="filter-ul active">All |</span>
           <span class="filter-ul">Paid |</span>
           <span class="filter-ul">Refund |</span>
           <span class="filter-ul">Unpaid |</span>
           <span class="filter-ul">Credit Note |</span>
-          <span class="filter-ul">Cancelled </span>
+          <span class="filter-ul">Cancelled </span> -->
+          <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -13px;">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink>All</a>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink>Paid</a>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink="/provider-list">Refund</a>
+            </li>
+            <li [ngbNavItem]="4">
+                <a ngbNavLink="/provider-list">Unpaid</a>
+            </li>
+            <li [ngbNavItem]="5">
+                <a ngbNavLink="/provider-list">Credit Note</a>
+            </li>
+            <li [ngbNavItem]="6">
+              <a ngbNavLink="/provider-list">Cancelled</a>
+            </li>
+          </ul>
         </div>
 
         <div class="">
