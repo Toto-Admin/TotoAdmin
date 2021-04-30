@@ -143,7 +143,7 @@ table.dataTable {
     .paginate_button {
       border: 1px solid $border-color;
       background: $white;
-      color: $themecolor !important;
+      color: #343a40;
       &.disabled,
       &.disabled:hover,
       &.disabled:active {
@@ -154,7 +154,7 @@ table.dataTable {
       &.current:hover {
         background: $themecolor;
         border-color: $themecolor;
-        color: $white !important;
+        color: #343a40 !important;
       }
       &:active {
         box-shadow: none;
