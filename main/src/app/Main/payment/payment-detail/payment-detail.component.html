@@ -18,17 +18,17 @@
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
                   <div class="table-responsive">
-                    <table  datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered table-striped">
+                    <table  datatable [dtOptions]="dtOptions" class="row-border hover table">
                       <thead >
                         <tr>
                             <th class="backgroundColor tdLeft">ID</th>
                           <th class=" backgroundColor tdLeft">CUSTOMER </th>
                           <th class=" backgroundColor tdLeft">PROVIDER</th>
                           <th class=" backgroundColor tdLeft">SERVICE</th>
-                          <th class=" backgroundColor tdLeft">TYPE</th>
+                          <th class=" backgroundColor tdLeft">DATE</th>
+                          <th class=" backgroundColor ">TYPE</th>
                           <th  class=" backgroundColor tdLeft">DESCRIPTION</th>
                           <th class=" backgroundColor tdLeft">PAYMENT STATUS</th>
-                          <th class=" backgroundColor tdLeft">DATE</th>
                           <th class=" backgroundColor ">AMOUNT</th>
                           <th class=" backgroundColor">ACTION</th>
                         </tr>
@@ -49,10 +49,10 @@
                             </div>
                           </div></td>
                           <td class="tdLeft">Ac</td>
-                          <td class="tdLeft">Remote</td>
-                          <td class="tdLeft">Debit</td>
-                          <td class="tdLeft">Refund</td>
                           <td class="tdLeft">20/03/2021</td>
+                          <td><label class="label label-dark">Remote</label></td>
+                          <td class="tdLeft">Debit</td>
+                          <td><label class="label label-dark">Refund</label></td>
                           <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20</td>
                           <td class="tdCenter"><a [routerLink]="['/payment/details']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
                         </tr>
@@ -71,10 +71,10 @@
                           </div>
                         </div></td>
                         <td class="tdLeft">Mobile</td>
-                        <td class="tdLeft">Remote</td>
-                        <td class="tdLeft">Debit</td>
-                        <td class="tdLeft">Paid</td>
                         <td class="tdLeft">20/03/2021</td>
+                        <td><label class="label label-dark">Remote</label></td>
+                        <td class="tdLeft">Debit</td>
+                        <td><label class="label label-success">Paid</label></td>
                         <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>30</td>
                         <td class="tdCenter"><a [routerLink]="['/payment/details']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
 
@@ -94,10 +94,10 @@
                           </div>
                         </div></td>
                         <td class="tdLeft">Poor wifi coverage</td>
-                        <td class="tdLeft">On-site</td>
-                        <td class="tdLeft">Credit</td>
-                        <td class="tdLeft">Refund</td>
                         <td class="tdLeft">20/03/2021</td>
+                        <td><label class="label label-success">On-site</label></td>
+                        <td class="tdLeft">Credit</td>
+                        <td><label class="label label-warning">Pending</label></td>
                         <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>40</td>
                         <td class="tdCenter"><a [routerLink]="['/payment/details']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
                       </tr>
@@ -116,10 +116,10 @@
                           </div>
                         </div></td>
                         <td class="tdLeft">Isp </td>
-                        <td class="tdLeft">Remote</td>
+                         <td class="tdLeft">20/03/2021</td>
+                        <td><label class="label label-success">On-site</label></td>
                         <td class="tdLeft">Debit</td>
-                        <td class="tdLeft">Paid</td>
-                        <td class="tdLeft">20/03/2021</td>
+                        <td><label class="label label-success">Paid</label></td>
                         <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>10</td>
                         <td class="tdCenter"><a [routerLink]="['/payment/details']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
                       </tr>
@@ -138,10 +138,10 @@
                           </div>
                         </div></td>
                         <td class="tdLeft">Tv</td>
-                        <td class="tdLeft">On-site</td>
-                        <td class="tdLeft">Credit</td>
-                        <td class="tdLeft">Pending</td>
                         <td class="tdLeft">20/03/2021</td>
+                        <td><label class="label label-success">On-site</label></td>
+                        <td class="tdLeft">Credit</td>
+                        <td><label class="label label-success">Paid</label></td>
                         <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20</td>
                         <td class="tdCenter"><a [routerLink]="['/payment/details']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
                       </tr>

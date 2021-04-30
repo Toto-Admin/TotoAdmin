@@ -1,6 +1,6 @@
 .active {
-    background-color: #2962ff !important;
-    color :white !important;
+  text-decoration: underline #007bff 4px;
+  text-underline-position: under;
   }
   li{
   width:120px;

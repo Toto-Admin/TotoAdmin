@@ -11,7 +11,7 @@
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
                   <div class="table-responsive">
-                    <table datatable [dtOptions]="dtOptions" class="row-border hover table table-bordered table-striped">
+                    <table datatable [dtOptions]="dtOptions" class="row-border hover table">
                       <thead>
                         <tr>
                           <th class="backgroundColor tdLeft">ID</th>
@@ -64,7 +64,7 @@
                               <td class="tdLeft">Fortune creation</td>
                               <td class="tdLeft">Soft solution</td>
                               <td class="tdRight mdi mdi-currency-gbp">80</td>
-                              <td ><label class="label label-danger">Delivered</label></td>
+                              <td ><label class="label label-danger">Cancelled</label></td>
                               <td> 
                                   <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
 
@@ -82,7 +82,7 @@
                               <td class="tdLeft">Fortune creation</td>
                               <td class="tdLeft">Soft solution</td>
                               <td class="tdRight mdi mdi-currency-gbp">60</td>
-                              <td ><label class="label label-success">Shipped</label></td>
+                              <td ><label class="label label-success">Paid</label></td>
                               <td> 
                                   <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="fas fa-eye "></i></a>
 
