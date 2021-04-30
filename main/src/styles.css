@@ -2,18 +2,29 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800');
 .backgroundColor {
-    background-color: #2962ff !important;
-    color :white;
+    background-color: #e9e9e9 !important;
+    color :rgb(7, 7, 7) !important;
+  }
+
+  .label-dark{
+    background-color: #e9e9e9 !important;
+    color :rgb(7, 7, 7) !important;
   }
 
   
   .dataTables_filter input {
-    border: 1px solid #0d0d0d !important;
+    border: 1px solid #b4b4b4 !important;
     border-radius: 15px !important;
   }
   .dataTables_wrapper .dataTables_length select{
-    border: 1px solid #0d0d0d !important;
+    border: 1px solid #b4b4b4 !important;
   }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #e9e9e9 !important;
+    border-color: #e9e9e9 !important;
+    color: #323743;
+}
 
   .reqNote{
     color : red;

@@ -152,7 +152,7 @@ export class DashboardComponent  {
     this.chartOptions = {
       series: [
         {
-          name: 'Sales Performance',
+          name: 'Customer Visits',
           data: [30, 400, 100, 400, 150, 275, 135, 200, 218]
         },
         
