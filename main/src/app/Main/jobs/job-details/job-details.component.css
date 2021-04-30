@@ -10,3 +10,8 @@ li{
   font-size: 15px;
   font-weight: 600;
   }
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: black !important;
+}
