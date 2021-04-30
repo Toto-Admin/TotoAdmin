@@ -1,10 +1,12 @@
 .active {
-    /* background-color: #2962ff !important;
-    color :white !important; */
-    text-decoration: underline #007bff 4px;
-    text-underline-position: under;
+  /* background-color: #2962ff !important;
+  color :white !important; */
+  text-decoration: underline #007bff 4px;
+  text-underline-position: under;
+}
+li{
+  /* width:165px; */
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
   }
-  li{
-    width:120px;
-    text-align: center;
-    }

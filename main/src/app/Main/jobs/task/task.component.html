@@ -2,17 +2,34 @@
     <div class="col-12">
       <div class="card card-body">
         <h4 class="card-title">Task Management</h4>
-        <h5 class="card-subtitle">Here is the Jobs list you can filter All tasks, Pending, Scheduled, Completed and Cancelled the Jobs</h5>
+        <!-- <h5 class="card-subtitle">Here is the Jobs list you can filter All tasks, Pending, Scheduled, Completed and Cancelled the Jobs</h5> -->
         
         <div class="row">
             <div class="col-md-12">
-                <div class="button-group">
+                <!-- <div class="button-group">
                     <button type="button" class="btn btn-rounded btn-primary">All Tasks</button>
                     <button type="button" class="btn btn-rounded btn-secondary">Pending</button>
                     <button type="button" class="btn btn-rounded btn-warning">Scheduled</button>
                     <button type="button" class="btn btn-rounded btn-success">Completed</button>
                     <button type="button" class="btn btn-rounded btn-danger">Cancelled</button>
-                </div>
+                </div> -->
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -13px;">
+                  <li [ngbNavItem]="1">
+                      <a ngbNavLink>All</a>
+                  </li>
+                  <li [ngbNavItem]="2">
+                      <a ngbNavLink>Pending</a>
+                  </li>
+                  <li [ngbNavItem]="3">
+                      <a ngbNavLink="/provider-list">Scheduled</a>
+                  </li>
+                  <li [ngbNavItem]="4">
+                      <a ngbNavLink="/provider-list">Completed</a>
+                  </li>
+                  <li [ngbNavItem]="5">
+                      <a ngbNavLink="/provider-list">Cancelled</a>
+                  </li>
+                </ul>
             </div>
         </div>
         <div class="row"></div><br>

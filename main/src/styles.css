@@ -23,9 +23,14 @@
   .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
     background: #e9e9e9 !important;
     border-color: #e9e9e9 !important;
-    color: #323743;
+    color: #323743 !important;
 }
 
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+
+  color: #0c0c0c !important;
+}
   .reqNote{
     color : red;
     font-size:  14px;
