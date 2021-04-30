@@ -159,5 +159,12 @@
     
   .sidebar-nav ul .sidebar-item .sidebar-link i-feather {
     margin: 0px 8px -11px 5px !important;
-}
+  }
+
+  label {
+    font-weight: 800 !important;
+    font-size: 85% !important;
+  }
+
+
 

@@ -12,6 +12,12 @@
   li{
     /* width:165px; */
     text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    }
+
+    a {
+      color: #343a40;
     }
 
   /* media query for mobile  */

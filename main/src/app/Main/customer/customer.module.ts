@@ -13,10 +13,15 @@ import { RouterModule } from '@angular/router';
 // import 
 import { NgApexchartsModule } from "ng-apexcharts";
 import { PerfectScrollbarModule } from "ngx-perfect-scrollbar";
-import{ReactiveFormsModule} from '@angular/forms'
+import{ReactiveFormsModule} from '@angular/forms';
+import { JobHistoryComponent } from './job-history/job-history.component';
+import { TicketHistoryComponent } from './ticket-history/ticket-history.component';
+import { PaymentHistoryComponent } from './payment-history/payment-history.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { ActivityComponent } from './activity/activity.component'
 
 @NgModule({
-  declarations: [DashboardComponent, CustomerListComponent, CustomerAddComponent, CustomerEditComponent, CustomerViewComponent],
+  declarations: [DashboardComponent, CustomerListComponent, CustomerAddComponent, CustomerEditComponent, CustomerViewComponent, JobHistoryComponent, TicketHistoryComponent, PaymentHistoryComponent, ReviewsComponent, ActivityComponent],
   imports: [
     CommonModule,
     AgmCoreModule,

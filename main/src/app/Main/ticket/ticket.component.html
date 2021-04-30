@@ -69,10 +69,18 @@
       </div>
 
       <div class="row">
-        <div class="col-md-3">
-          <!-- <input type="search" class="form-control-lg" placeholder="Search here..." controls="DataTables_Table_0"> -->
+        <div class="col-md-6">
+          
+          <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item" style="text-decoration: underline #007bff 4px;
+            text-underline-position: under;">All</li>
+            <li class="list-group-item">Open</li>
+            <li class="list-group-item">Pending</li>
+            <li class="list-group-item">Close</li>
+
+          </ul>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-6">
           <button class="btn btn-lg btn-cyan text-white" style="float: right;" (click)="openModal(editTicketModal, null)"><i class="fa fa-plus-square mr-2"></i>Add Ticket</button>
         </div>
       </div>
