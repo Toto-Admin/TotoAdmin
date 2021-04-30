@@ -14,7 +14,7 @@
             <div class="col-md-12 table-responsive">
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+                  <table datatable [dtOptions]="dtOptions" class="row-border hover table ">
                     <thead>
                       <tr>
              
@@ -37,7 +37,7 @@
                       <tr>
                         <td class="tdLeft">Fraud provider </td>
                         <td>Customer</td>
-                        <td><div class="badge badge-pill badge-success font-14 infoData">Active</div></td>      
+                        <td><label class="label label-success">Active</label></td>
                         <td>
                             <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -50,9 +50,8 @@
                       <tr>
                         <td class="tdLeft">This customer doesn't treat the provider well</td>
                         <td>Provider</td>
-                        <td><div class="badge badge-pill badge-success font-14 infoData">Active</div></td>      
-                        <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <td><label class="label label-success">Active</label></td>
+                        <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -63,9 +62,8 @@
                       <tr>
                         <td class="tdLeft">This customer doesn't pay to provider</td>
                         <td>Provider</td>
-                        <td><div class="badge badge-pill badge-success font-14 infoData">Active</div></td>      
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <td><label class="label label-dark">Inactive</label></td> 
+                        <td><a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
@@ -76,7 +74,7 @@
                       <tr>
                         <td class="tdLeft">This provider not providing good service</td>
                         <td>Customer</td>
-                        <td><div class="badge badge-pill badge-warning font-14 infoData">Inactive</div></td>     
+                        <td><label class="label label-dark">Inactive</label></td>                                                   
                         <td>
                             <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
@@ -89,9 +87,8 @@
                       <tr>
                         <td class="tdLeft">Bad customer</td>
                         <td>Provider</td>
-                        <td><div class="badge badge-pill badge-warning font-14 infoData">Inactive</div></td>     
-                        <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                        <td><label class="label label-dark">Inactive</label></td>
+                        <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
