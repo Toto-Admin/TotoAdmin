@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-12">
+      <div class="card card-body">
+        <h4 class="card-title">Admin User<span style="float: right;">
+            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
+        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+        <div class="d-flex mb-3 mt-3">
+          <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
+          <!-- (click)="openModal(editUserModal, null)" -->
+          
+        </div>
+        <div class="">
+          <div class="row">
+            <div class="col-md-12 table-responsive">
+              <!-- <div class="card card-hover">
+                <div class="card-body"> -->
+                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+                    <thead>
+                      <tr>
+             
+                        <th class="backgroundColor tdLeft">NAME</th>
+                        <th class="backgroundColor tdLeft">ROLE</th>
+                        <th class="backgroundColor tdLeft">EMAIL</th>
+                        <th class="backgroundColor">STATUS</th>
+                        <th class="backgroundColor">ACTION</th>
+                      </tr>
+                    </thead>
+                    <!-- <thead>
+                      <tr>
+                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
+                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
+                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
+                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
+                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
+                      </tr>
+                    </thead> -->
+                    <tbody>
+                      <tr>
+                        <td class="tdLeft">Johan Smith</td>
+                        <td class="tdLeft">Admin</td>
+                        <td class="tdLeft">johan@gmail.com</td>
+                        <td><label class="label label-dark">Inactive</label></td>
+
+                        <td>
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </td>
+                      </tr>
+                     
+                     
+                   
+                    </tbody>
+                  </table>  
+                <!-- </div>
+              </div> -->
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <ng-template #editUserModal let-modal>
+  
+    <div class="modal-header backgroundColor">
+  
+      <h5 class="modal-title" id="editUserLabel">Add or Edit Cancel Reasons</h5>
+  
+      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  
+    </div>
+  
+    <div class="modal-body">
+  
+      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+  
+        <div class="form-group row">
+          <label for="reason" class="col-sm-4 col-form-label">Reason<span class="reqNote">*</span></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" formControlName="reason" id="reason" (blur)=logValidationErrors(editUser)>
+            <!-- <span class="help-block" *ngIf="formsErrors.Name">
+              {{formsErrors.Name}}
+            </span> -->
+            <small class="form-text text-danger"
+              *ngIf="!editUser.get('reason').valid && (editUser.get('reason').dirty || editUser.get('reason').touched)">
+              Reason is required 
+              </small> 
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
+              <div class="col-sm-8">
+                  <select class="form-control custom-select"name="type" formControlName="type"  tabindex="1">
+                  <option value="Category 1">user</option>
+                  <option value="Category 2">provider</option>
+                 </select>
+                 <small class="form-text text-danger"
+                 *ngIf="!editUser.get('type').valid && (editUser.get('type').dirty || editUser.get('type').touched)">
+                 Type is required 
+                 </small> 
+             </div>
+      </div>
+      <div class="form-group row">
+        <label for="position" class="col-sm-4 col-form-label">Status</label>
+            <div class="col-sm-8">
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+               </label>
+            </div> 
+       </div> 
+
+      
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
+  
+          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+        </div>
+  
+        
+      </form>
+    </div>
+  </ng-template>

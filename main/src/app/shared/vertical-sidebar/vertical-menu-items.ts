@@ -495,6 +495,16 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
+            {
+                path: '/setting/admin-user',
+                title: 'Admin User',
+                icon: 'mdi mdi-adjust',
+                class: '',
+                extralink: false,
+                label: '',
+                labelClass: '',
+                submenu: []
+            },
           
         
         ]

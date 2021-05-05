@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminUserComponent } from './admin-user/admin-user.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
 import { GeneralSettingComponent } from './general-setting/general-setting.component';
 import { NotificationTemplateComponent } from './notification-template/notification-template.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'referral',component:ReferralComponent},
   {path:'notification-template',component:NotificationTemplateComponent},
   {path:'general-setting',component:GeneralSettingComponent},
-  {path:'user-permission',component:UserPermissionComponent}
+  {path:'user-permission',component:UserPermissionComponent},
+  {path:'admin-user', component:AdminUserComponent},
   
 ];
 
