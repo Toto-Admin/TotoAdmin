@@ -2,7 +2,9 @@
     <div class="col-12">
       <div class="card card-body">
         <h4 class="card-title">Admin User<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
+        <!-- <h4 class="card-title">Admin User<span style="float: right;"> -->
+            <!-- <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4> -->
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         <div class="d-flex mb-3 mt-3">
           <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
@@ -36,9 +38,34 @@
                     </thead> -->
                     <tbody>
                       <tr>
-                        <td class="tdLeft">Johan Smith</td>
-                        <td class="tdLeft">Admin</td>
+                        <td class="tdLeft"><div class="d-flex">
+                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Amelia Mark</a></p>
+                          </div>
+                        </div></td>
+                        <td class="tdLeft">Super Admin</td>
                         <td class="tdLeft">johan@gmail.com</td>
+                        <td><label class="label label-success">Active</label></td>
+
+                        <td>
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="tdLeft"><div class="d-flex">
+                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Ronal Mark</a></p>
+                          </div>
+                        </div></td>
+                        <td class="tdLeft">Super Admin</td>
+                        <td class="tdLeft">ronaldm12@gmail.com</td>
                         <td><label class="label label-dark">Inactive</label></td>
 
                         <td>
@@ -50,6 +77,87 @@
                             </a>
                         </td>
                       </tr>
+                      <tr>
+                        <td class="tdLeft"><div class="d-flex">
+                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">James King</a></p>
+                          </div>
+                        </div></td>
+                        <td class="tdLeft">QA Role</td>
+                        <td class="tdLeft">pm1234@gmail.com</td>
+                        <td><label class="label label-success">Active</label></td>
+
+                        <td>
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="tdLeft"><div class="d-flex">
+                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Jack Mark</a></p>
+                          </div>
+                        </div></td>
+                        <td class="tdLeft">QA Role</td>
+                        <td class="tdLeft">Mark12h@gmail.com</td>
+                        <td><label class="label label-success">Active</label></td>
+
+                        <td>
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="tdLeft"><div class="d-flex">
+                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Ronald Smith</a></p>
+                          </div>
+                        </div></td>
+                        <td class="tdLeft">QA Role</td>
+                        <td class="tdLeft">king1267@gmail.com</td>
+                        <td><label class="label label-success">Active</label></td>
+
+                        <td>
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="tdLeft"><div class="d-flex">
+                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
+                          <div class="ml-3">
+                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Johan Das</a></p>
+                          </div>
+                        </div></td>
+                        <td class="tdLeft">Sub Admin</td>
+                        <td class="tdLeft">johandas@gmail.com</td>
+                        <td><label class="label label-success">Active</label></td>
+
+                        <td>
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <i class="ti-marker-alt"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </td>
+                      </tr>
+                    
                      
                      
                    
@@ -74,7 +182,7 @@
   
     <div class="modal-header backgroundColor">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Cancel Reasons</h5>
+      <h5 class="modal-title" id="editUserLabel">Add or Edit Admin User details</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -84,52 +192,115 @@
   
     <div class="modal-body">
   
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-  
-        <div class="form-group row">
-          <label for="reason" class="col-sm-4 col-form-label">Reason<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="reason" id="reason" (blur)=logValidationErrors(editUser)>
-            <!-- <span class="help-block" *ngIf="formsErrors.Name">
-              {{formsErrors.Name}}
-            </span> -->
-            <small class="form-text text-danger"
-              *ngIf="!editUser.get('reason').valid && (editUser.get('reason').dirty || editUser.get('reason').touched)">
-              Reason is required 
-              </small> 
+      <form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="onReactiveFormSubmit()" novalidate>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputFirstname">Firstname<span class="reqNote">*</span></label>
+                <input type="text" class="form-control" id="inputFirstname" formControlName="inputFirstname" required>
+                 <small class="form-text text-danger"
+                 *ngIf="!regularForm.get('inputFirstname').valid && (regularForm.get('inputFirstname').dirty || regularForm.get('inputFirstname').touched)">
+                 Firstname is required and must be characters(a-zA-Z)
+                 </small>
+
+           </div>
+
+            <div class="form-group col-md-6">
+              <label for="inputLastname">Lastname<span class="reqNote">*</span></label>
+              <input type="text" class="form-control" id="inputLastname" formControlName="inputLastname" required>
+              <small class="form-text text-danger"
+             *ngIf="!regularForm.get('inputLastname').valid && (regularForm.get('inputLastname').dirty || regularForm.get('inputLastname').touched)">
+                 Lastname is required and must be characters(a-zA-Z)</small>
           </div>
         </div>
-        <div class="form-group row">
-            <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
-              <div class="col-sm-8">
-                  <select class="form-control custom-select"name="type" formControlName="type"  tabindex="1">
-                  <option value="Category 1">user</option>
-                  <option value="Category 2">provider</option>
-                 </select>
-                 <small class="form-text text-danger"
-                 *ngIf="!editUser.get('type').valid && (editUser.get('type').dirty || editUser.get('type').touched)">
-                 Type is required 
-                 </small> 
-             </div>
-      </div>
-      <div class="form-group row">
-        <label for="position" class="col-sm-4 col-form-label">Status</label>
-            <div class="col-sm-8">
-              <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-               </label>
-            </div> 
-       </div> 
+        <div class="row">
+          <div class="form-group col-md-6">
+              <label for="inputEmail">Email<span class="reqNote">*</span></label>
+              <input type="email" class="form-control" id="inputEmail" formControlName="inputEmail" required>
+              <small class="form-text text-danger"
+           *ngIf="!regularForm.get('inputEmail').valid && (regularForm.get('inputEmail').dirty || regularForm.get('inputEmail').touched)">Please
+                  enter a valid email!</small>
+          </div>
+          <div class="form-group col-md-6">
+              <label for="password">Password<span class="reqNote">*</span></label>
 
-      
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
-  
-          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+              <input type="password" class="form-control" id="password" formControlName="password" required>
+              <small class="form-text text-danger"
+                  *ngIf="!regularForm.get('password').valid && (regularForm.get('password').dirty || regularForm.get('password').touched)">Password
+                  characters length must be between 4 and 24 !</small>
+          </div>
         </div>
-  
         
+        <div class="row">
+          <div class="form-group col-md-6">
+              <label for="mobile">Mobile<span class="reqNote">*</span></label>
+              <input type="tel" class="form-control" id="mobile" formControlName="mobile" required>
+              <small class="form-text text-danger"
+           *ngIf="!regularForm.get('mobile').valid && (regularForm.get('mobile').dirty || regularForm.get('mobile').touched)">
+                  Mobile number is required and must be 10 digit</small> 
+
+                  <!-- <div class="form-text text-danger" *ngIf="regularForm.mobileNumber.touched && regularForm.mobileNumber.invalid" >
+
+                    <div  *ngIf="regularForm.mobileNumber.errors.required">Mobile Number is required.</div>
+    
+                    <div *ngIf="regularForm.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+    
+                </div> -->
+
+          </div>
+          <div class="form-group col-md-6">
+            <label class>Gender</label>
+<br>
+            <div class="form-check form-check-inline" *ngFor="let radioOption of radioOptions">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" class="custom-control-input"
+                        [value]="radioOption" formControlName="radioOption">
+                    <label class="custom-control-label" for="customRadio2">{{ radioOption }}</label>
+                </div>
+
+            </div>
+        </div> 
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="role">User Role</label>
+            <select class="form-control" id="role" fomControllName="role" required>
+                <option>Admin</option>
+                <option>Super Admin</option>
+                <option>Sub-Admin</option>
+                <option>QA Role</option>
+            </select> 
+            </div>
+          <div class="form-group col-md-6">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" fomControllName="status" required>
+                <option>Inactive</option>
+                <option>Active</option>
+            </select>
+            </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-12">
+            <label for="dob">Date of birth</label>
+            <input type="date" class="form-control" id="dob" formControlName="dob" required>
+        </div>
+        </div>
+         
+        <div class="row">
+          <div class="form-group col-sm-12">
+              <label for="pimg">Profile image</label>
+              <input type="file" class="form-control" id="pimg" formControlName="pimg" required>
+   
+          </div>
+        </div>
+
+
+
+          
+          <div class="form-group">
+              <button type="button" class="btn btn-primary backgroundColor ml-auto"
+                  [disabled]="!regularForm.valid">Submit</button>&nbsp;
+              <button type="button" class="btn btn-dark btn-raised"  (click)="closeBtnClick()">Close</button>
+          </div>
       </form>
     </div>
   </ng-template>

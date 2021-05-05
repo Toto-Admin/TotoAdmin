@@ -19,8 +19,11 @@ import { QuillModule } from 'ngx-quill';
 import { DataTablesModule } from 'angular-datatables';
 import { ReactiveFormsModule} from '@angular/forms';
 import { AdminUserComponent } from './admin-user/admin-user.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ActivityComponent } from './activity/activity.component';
 @NgModule({
-  declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent, AdminUserComponent],
+  declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent, AdminUserComponent, UserViewComponent, UserProfileComponent, ActivityComponent],
   imports: [
     CommonModule,
     SettingRoutingModule,
