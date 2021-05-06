@@ -75,6 +75,8 @@ export class NotificationTemplateComponent implements OnInit {
     this.modalService.dismissAll();
     this.ngOnInit();
   }
- 
+ notification(){
+   
+ }
 
 }

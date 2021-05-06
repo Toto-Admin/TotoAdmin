@@ -6,7 +6,7 @@ import { AssessmentRoutingModule } from './assessment-routing.module';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import { ListComponent } from './list/list.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 
 
 @NgModule({
@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AssessmentRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     DataTablesModule
   ]
 })
