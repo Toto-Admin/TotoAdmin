@@ -22,16 +22,16 @@ export class TicketComponent implements OnInit {
   close : number = 0;
   ticketData : any;
   orignalTicketData : any;
-
+  ticket = [];
   constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService) { 
     //Get All Tickets 
-    this.support.AllTicket().subscribe(data=>{
-        this.totalTicket = data.length;
+    this.support.getTicketData().subscribe(data=>{
+        this.totalTicket = Object.keys(data).length;;
         this.ticketData = data;
         this.orignalTicketData = data;
         console.log(this.ticketData);
         this.ticketData.forEach((element: any) => {
-          if(element.status == 'R')
+          if(element.status == 'R')  
           {
             this.close += 1;
           }

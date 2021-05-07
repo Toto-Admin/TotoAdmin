@@ -20,6 +20,8 @@ export class KnowledgeListComponent implements OnInit {
       this.KnowID = params['id'];
     })
 
+    
+
     this.support.getKnowledgebaseList().subscribe(data=>{
       this.jsonData = data;
       var data1 = this.jsonData['response'];
@@ -33,6 +35,7 @@ export class KnowledgeListComponent implements OnInit {
         this.KnowShortDetailsArray.push(element.content.replace(/<[^>]*>/g, '').substring(0,150))
       });      
     })
+
    }
 
   ngOnInit(): void {

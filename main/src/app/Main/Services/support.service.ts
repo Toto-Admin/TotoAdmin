@@ -11,6 +11,9 @@ export class SupportService {
   url1 : any;
   apiKey : any;
 
+  localUrl : string = 'http://localhost';
+  ServerUrl : string = "https://sharecards.in";
+
   // Liveagent api call below
   constructor(private httpClient:HttpClient) {
      this.url = 'https://ajit.ladesk.com/api/v3';
@@ -28,9 +31,22 @@ export class SupportService {
     return result;
   }
 
-  getKnowledgebaseList(){
-    let result = this.httpClient.get(this.url1+'/knowledgebase/entries?apikey='+this.apiKey);
+  // getKnowledgebaseList(){
+  //   let result = this.httpClient.get(this.url1+'/knowledgebase/entries?apikey='+this.apiKey);
+  //   return result;
+  // }
+
+  getTicketData(){
+    let result = this.httpClient.get(this.ServerUrl+'/api/ticket.php');
+    console.log(result);
     return result;
   }
+
+  getKnowledgebaseList(){
+    let result = this.httpClient.get(this.ServerUrl+'/api/knowledgebase.php');
+    console.log(result);
+    return result;
+  }
+
 
 }

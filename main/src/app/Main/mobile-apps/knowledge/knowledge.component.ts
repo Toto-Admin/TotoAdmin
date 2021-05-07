@@ -38,6 +38,13 @@ export class KnowledgeComponent implements OnInit {
 
     })
 
+    this.support.getTicketData().subscribe(data=>{
+      debugger
+      console.log('/////////////////////////');
+      console.log(data);
+      console.log('=========================');
+    })
+
    }
 
 
