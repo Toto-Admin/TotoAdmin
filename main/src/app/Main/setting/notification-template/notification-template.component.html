@@ -4,7 +4,7 @@
       <div class="card card-body">
         <h4 class="card-title">Notification Templates<span style="float: right;">
             <button class="btn btn-primary backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button>&nbsp;
-            <button class="btn btn-primary backgroundColor ml-auto" >Send Notification</button>  </span></h4>
+            <button class="btn btn-primary backgroundColor ml-auto" (click)="sendnotification()">Send Notification</button>  </span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         <div class="d-flex mb-3 mt-3">
           <!-- <input type="text" class="form-control w-25" placeholder="Search by Name or Email"> -->
@@ -188,7 +188,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
   
-          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+          <button type="submit" class="btn btn-info" [disabled]="editUser.invalid">Save</button>
         </div>
   
         

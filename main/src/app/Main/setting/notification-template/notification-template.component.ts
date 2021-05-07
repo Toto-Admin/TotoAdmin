@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
@@ -23,7 +24,7 @@ export class NotificationTemplateComponent implements OnInit {
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal) {
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private router:Router) {
   
    }
   formsErrors = [];
@@ -75,8 +76,8 @@ export class NotificationTemplateComponent implements OnInit {
     this.modalService.dismissAll();
     this.ngOnInit();
   }
- notification(){
-   
- }
+  sendnotification(){
+    this.router.navigate(['/setting/notification']);
+  }
 
 }

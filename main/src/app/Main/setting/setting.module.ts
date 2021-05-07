@@ -22,13 +22,18 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { UserViewComponent } from './user-view/user-view.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ActivityComponent } from './activity/activity.component';
+import { SendNotificationComponent } from './send-notification/send-notification.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent, AdminUserComponent, UserViewComponent, UserProfileComponent, ActivityComponent],
+  declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent, AdminUserComponent, UserViewComponent, UserProfileComponent, ActivityComponent, SendNotificationComponent],
   imports: [
     CommonModule,
     SettingRoutingModule,
     NgbModule,
     ReactiveFormsModule,
+    FormsModule,
+    NgMultiSelectDropDownModule,
     QuillModule.forRoot(),
     DataTablesModule
   ]

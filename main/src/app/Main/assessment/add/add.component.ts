@@ -43,7 +43,8 @@ export class AddComponent implements OnInit {
     return this.formBuilder.group({
       // question: new FormControl('', Validators.required),
       //exam_id: new FormControl(''),
-    'ans':new FormControl(null,[Validators.required]),
+      
+      'ans':new FormControl(null,[Validators.required]),
       'option_a':new FormControl(null,[Validators.required]),
       'option_b':new FormControl(null,[Validators.required]),
       'option_c':new FormControl(null,[Validators.required]),

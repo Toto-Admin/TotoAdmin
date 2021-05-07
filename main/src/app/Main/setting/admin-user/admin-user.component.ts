@@ -52,7 +52,7 @@ export class AdminUserComponent implements OnInit {
     'inputLastname':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
     'inputEmail': new FormControl(null, [Validators.required, Validators.email]),
     'password': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]),
-    'mobile':new FormControl(null,[Validators.required,Validators.minLength(10), Validators.pattern("^[0-9]*$")]),
+    'mobile':new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(10), Validators.pattern("^[0-9]*$")]),
     'dob': new FormControl(null,[Validators.required]),
     'role':new FormControl(null,[Validators.required]),
     'status':new FormControl(null,[Validators.required]),

@@ -6,6 +6,7 @@ import { EmailTemplateComponent } from './email-template/email-template.componen
 import { GeneralSettingComponent } from './general-setting/general-setting.component';
 import { NotificationTemplateComponent } from './notification-template/notification-template.component';
 import { ReferralComponent } from './referral/referral.component';
+import { SendNotificationComponent } from './send-notification/send-notification.component';
 import { UserPermissionComponent } from './user-permission/user-permission.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserViewComponent } from './user-view/user-view.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:'admin-user', component:AdminUserComponent},
   {path:'user-view',component:UserViewComponent},
   {path:'profile',component:UserProfileComponent},
-  {path:'activity',component:ActivityComponent}
+  {path:'activity',component:ActivityComponent},
+  {path:'notification',component:SendNotificationComponent}
   
 ];
 

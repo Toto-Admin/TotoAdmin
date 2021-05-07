@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
-             <div class="card-header bg-info backgroundColor" style="background-color: #e9e9e9 !important;">
-                <h4 style="padding-bottom: 10px;" class="m-b-0 ">Edit Assessment Details</h4>
+             <div class="card-header bg-info" style="background-color: #e9e9e9 !important;">
+                <h4 style="padding-bottom: 10px;" class="m-b-0">Edit Assessment Details</h4>
             </div>
             <form  *ngIf='regularForm' [formGroup]="regularForm" action="#">
                 
@@ -13,7 +13,7 @@
 
                         <div class="form-group col-md-6">
                             <label for="name">Name<span class="reqNote">*</span></label>
-                            <input type="text" class="form-control" id="name" formControlName="name" required>
+                            <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
                              <small class="form-text text-danger"
                              *ngIf="!regularForm.get('name').valid && (regularForm.get('name').dirty || regularForm.get('name').touched)">
                              Name is required and must be characters(a-zA-Z)
@@ -76,17 +76,17 @@
                           
                         </div>
                         <!--/row-->
-                     
-                        <h4 class="card-title m-t-30">Add Assessment for Service</h4>
-                        <button type="button"  class="btn btn-dark" (click)="addQue();" >Add Question</button>
-                    </div>
+                </div>
+                   <button type="button"  class="btn btn-info"  (click)="addQue()" style="margin-left: 20px;">Add Question</button>
+                   
                     <hr>
                   
                     <div class="card-body">
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label for="ques">Question<span class="reqNote">*</span></label>
-                                <input type="text" class="form-control" id="ques" formControlName="ques" required>
+                    <div formArrayName="questions" *ngFor="let quest of questions.controls; let i=index">
+                        <div  class="row"  [formGroupName]="i">
+                            <div class="form-group col-md-6" >
+                                <label for="ques">Question {{i + 1}}<span class="reqNote">*</span></label>
+                                <input type="text" class="form-control" id="ques"  name="ques" formControlName="ques" required>
                                  <small class="form-text text-danger"
                                  *ngIf="!regularForm.get('ques').valid && (regularForm.get('ques').dirty || regularForm.get('ques').touched)">
                                  Question field is required
@@ -122,6 +122,7 @@
                         </div>
 
                         </div>
+                     
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -169,19 +170,30 @@
                                     </small>
                                 </div>
                             </div>
+                            <br>
                             <!--/span-->
                         </div>
-                    </div>
-                    <div [innerHTML]="divMessages"></div>
-                    <div class="form-actions">
-                        <div class="card-body">
-                            <button  type="button" class="btn btn-primary backgroundColor ml-auto" disabled="">Submit</button>&nbsp;
-                            <button type="button" class="btn btn-dark"  (click)="closeBtnClick();">Close</button>
+                        <button type="button" (click)="removeQue(i)" class="btn btn-danger" style="margin-left: 92%; width: 94px;">Remove</button>
+
                         </div>
+                        <!-- <button type="button" (click)="removeQue(i)" class="btn btn-danger" style="margin-left: 92%; width: 94px;">Remove</button> -->
                     </div>
-                </div>
+                    <!-- <div [innerHTML]="divMessages"></div> -->
                 
+                </div>
+                <!-- <div class="form-actions">
+                    <div class="card-body">
+                       <button  type="button" class="btn btn-primary backgroundColor ml-auto" disabled="">Submit</button>&nbsp;
+                        <button type="button" class="btn btn-dark"  (click)="closeBtnClick();">Close</button>
+                    </div>
+                </div> -->
+           
             </form>
+            <div class="card-body">
+                <button  type="button" class="btn btn-info">Submit</button>&nbsp;
+                 <button type="button" class="btn btn-secondary"  (click)="closeBtnClick();">Close</button>
+             </div>
+            </div>
+            </div>
         </div>
-    </div>
-</div>
+

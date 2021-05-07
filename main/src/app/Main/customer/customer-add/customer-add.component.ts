@@ -28,7 +28,7 @@ export class CustomerAddComponent implements OnInit {
       'password': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]),
       'latitude':new FormControl(null,[Validators.required]),
       'longitude':new FormControl(null,[Validators.required]),
-      'mobile':new FormControl(null,[Validators.required,Validators.minLength(10), Validators.pattern("^[0-9]*$")]),
+      'mobile':new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(10) , Validators.pattern("^[0-9]*$")]),
       'referral':new FormControl(null,[Validators.required]),
       'dob': new FormControl(null,[Validators.required]),
       'pimg':new FormControl(null),

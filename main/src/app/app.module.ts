@@ -38,8 +38,6 @@ import { HttpClient } from '@angular/common/http';
 
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
-// import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-// import { DashboardComponent } from './Main/jobs/dashboard/dashboard.component';
 
 
 
