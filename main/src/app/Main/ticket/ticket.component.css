@@ -6,16 +6,15 @@
     border-radius: 2px;
 }
   
-.list-group-item {
-    position: relative;
-    display: block;
-    padding: 0.75rem 1.25rem;
-    background-color: #fff;
-    border: 0px solid rgba(0, 0, 0, 0.125) !important;
+.active {
+  /* background-color: #2962ff !important;
+  color :white !important; */
+  text-decoration: underline #007bff 4px;
+  text-underline-position: under;
 }
-  li{
-    /* width:165px; */
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-    }
+li{
+  /* width:165px; */
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  }

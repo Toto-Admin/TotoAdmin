@@ -3,7 +3,30 @@
     <div class="card card-body">
       <h4 class="card-title">Provider List<span style="float: right;"><button class="btn backgroundColor ml-auto" (click)="btnClick()">Add Provider</button></span></h4>
       <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-      
+      <div class="row">
+        <div class="col-md-12">
+          <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -13px; color : black">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink>All</a>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink>Onboarding</a>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink="/provider-list">Schedule interview</a>
+            </li>
+            <li [ngbNavItem]="4">
+                <a ngbNavLink="/provider-list">Verify account</a>
+            </li>
+            <li [ngbNavItem]="5">
+                <a ngbNavLink="/provider-list">Post boarding</a>
+            </li>
+            <li [ngbNavItem]="6">
+              <a ngbNavLink="/provider-list">Complete</a>
+            </li>
+          </ul>
+        </div>
+      </div><br>
       <div class="">
         <div class="row">
           <div class="col-md-12">

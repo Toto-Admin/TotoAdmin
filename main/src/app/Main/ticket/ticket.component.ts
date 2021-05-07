@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SupportService } from '../Services/support.service';
+import { number } from 'ngx-custom-validators/src/app/number/validator';
+import { Subject } from 'rxjs';
+import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-ticket',
@@ -9,9 +13,58 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class TicketComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
-  editTicket: FormGroup | null = null;
+  dtTrigger: Subject<any> = new Subject<any>();
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
+  editTicket: FormGroup | null = null;
+  totalTicket : any;
+  pending :number = 0;
+  open : number = 0;
+  close : number = 0;
+  ticketData : any;
+  orignalTicketData : any;
+
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService) { 
+    //Get All Tickets 
+    this.support.AllTicket().subscribe(data=>{
+        this.totalTicket = data.length;
+        this.ticketData = data;
+        this.orignalTicketData = data;
+        console.log(this.ticketData);
+        this.ticketData.forEach((element: any) => {
+          if(element.status == 'R')
+          {
+            this.close += 1;
+          }
+
+          if(element.status == 'A')
+          {
+            this.open += 1;
+          }
+
+          if(element.status == 'T')
+          {
+            this.pending += 1;
+          }
+          
+        });
+        this.dtTrigger.next();
+
+    })
+  }
+
+  currentJustify = 'start';
+
+  active=1;
+
+  activeKeep=1;
+
+  activeSelected=1;
+  disabled = true;
+
+  
+  tabs = [1, 2, 3, 4, 5];
+  counter = this.tabs.length + 1;
+  activeDynamic=1;
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -35,6 +88,11 @@ export class TicketComponent implements OnInit {
     });
   }
 
+  ngOnDestroy(): void {
+    // Do not forget to unsubscribe the event
+    this.dtTrigger.unsubscribe();
+  }
+
   openModal(targetModal: NgbModal, user: null) {
     this.modalService.open(targetModal, {
         centered: true,
@@ -45,6 +103,39 @@ export class TicketComponent implements OnInit {
   closeBtnClick() {
     this.modalService.dismissAll();
     this.ngOnInit();
+  }
+
+
+  onNavChange(changeEvent: NgbNavChangeEvent) {
+    debugger
+    if (changeEvent.nextId === 3) {
+      changeEvent.preventDefault();
+    }
+  }
+
+  //Filter Data tab wise
+  filterData(ele :any)
+  {
+    debugger
+    if(ele == 'close')
+    {
+      this.ticketData = this.orignalTicketData;
+      this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'R');
+    }
+    else if(ele == 'open')
+    {
+      this.ticketData = this.orignalTicketData;
+      this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'A');
+    }
+    else if(ele == 'pending')
+    {
+      this.ticketData = this.orignalTicketData;
+      this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'T');
+    }
+    else
+    {
+      this.ticketData = this.orignalTicketData;
+    }
   }
 
 }

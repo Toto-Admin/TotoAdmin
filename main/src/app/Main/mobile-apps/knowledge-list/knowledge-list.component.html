@@ -10,7 +10,7 @@
                 <div class="card card-body search-wrapper">
                     <div class="search-form">
                         <div>
-                          <input type="text" class="textData form-control" placeholder="Start typing your search...">
+                          <input type="text" class="textData form-control" placeholder="Start typing your search..." (keyup)="searchData($event)">
                         </div>
                       </div>
                 </div>
@@ -21,64 +21,31 @@
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-sm-2">
+        <!-- <div class="col-sm-2">
             <img src="assets/images/bill/bill1.png">
-        </div>
-        <div class='col-sm-10'>
-            <h2>Billing and Payments</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        </div> -->
+        <div class='col-sm-12'>
+            <h2>{{MainKnowDetails[0].title}}</h2>
+            <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4> -->
         </div>
     </div>
     <hr style="color:black">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" *ngFor="let item of FilterAdminSubCategoryData;let i = index">
             <div class="card card-body card-hover cardview">
-                <h3><a [routerLink]="['/mobile-apps/knowledge-details']">Can I pay for my Toto account via PayPal?</a></h3><br>
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5><br>
+                <h3><a [routerLink]="['/mobile-apps/knowledge-details',item.kb_entry_id]">{{item.title}}</a></h3><br>
+                <h5>{{KnowShortDetailsArray[0]}}...</h5><br>
                 <div class="row">
                     <div class="col-md-1">
-                        <img src="assets/images/client/client02.png" width="70px">
+                        <img src="assets/images/logo-header.png" width="70px">
                     </div>
                     <div class="col-md-4">
-                        <h5>Ross Fox</h5>
-                        <h6>October 22,2020</h6>
+                        <!-- <h5>Ross Fox</h5> -->
+                        <h6>{{item.datecreated | date}}</h6>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card card-body card-hover cardview">
-                <h3><a [routerLink]="['/mobile-apps/knowledge-details']">How do I upgrade my Toto account to a better plan?</a></h3><br>
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5><br>
-                <div class="row">
-                    <div class="col-md-1">
-                        <img src="assets/images/client/client02.png" width="70px">
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Ross Fox</h5>
-                        <h6>October 22,2020</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card card-body card-hover cardview">
-                <h3><a [routerLink]="['/mobile-apps/knowledge-details']">What are the pricing plans available for Toto?</a></h3><br>
-                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac pellentesque diam felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5><br>
-                <div class="row">
-                    <div class="col-md-1">
-                        <img src="assets/images/client/client02.png" width="70px">
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Ross Fox</h5>
-                        <h6>October 22,2020</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>

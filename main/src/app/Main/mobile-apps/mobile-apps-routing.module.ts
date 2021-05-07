@@ -29,8 +29,8 @@ const routes: Routes = [
   {path:'dispute',component:DisputeReasonComponent},
   {path:'reject',component:RejectReasonComponent},
   {path:'block',component:BlockReasonComponent},
-  {path:'knowledge-list',component : KnowledgeListComponent},
-  {path:'knowledge-details',component:KnowledgDetailsComponent},
+  {path:'knowledge-list/:id',component : KnowledgeListComponent},
+  {path:'knowledge-details/:id',component:KnowledgDetailsComponent},
   {path:'feedback',component:FeedbackComponent},
   {path:'feedback-view',component:FeedbackViewComponent}
 

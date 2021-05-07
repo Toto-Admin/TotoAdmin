@@ -7,6 +7,7 @@ import { TicketComponent } from './ticket.component';
 import { DataTablesModule } from 'angular-datatables';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { QuillModule } from 'ngx-quill';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [TicketComponent, TicketDetailsComponent],
@@ -15,6 +16,7 @@ import { QuillModule } from 'ngx-quill';
     TicketRoutingModule,
     DataTablesModule,
     QuillModule.forRoot(),
+    NgbModule
   ],
   providers:[
     // TicketService,

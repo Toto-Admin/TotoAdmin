@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
+import { SupportService } from '../../Services/support.service';
 
 @Component({
   selector: 'app-knowledge',
@@ -15,18 +16,37 @@ export class KnowledgeComponent implements OnInit {
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
   config: any;
-  // editUser: FormGroup | null = null;
   userDetail: User | null = null;
-
   filterArray: User[] | null = null;
-
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal) {
-  
+  //Knowledgebase Details
+  FilterAdminSubCategoryData : any;
+  jsonData : any;
+
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private support : SupportService) {
+    
+    this.support.getKnowledgebaseList().subscribe(data=>{
+      this.jsonData = data;
+      var data1 = this.jsonData['response'];
+      this.FilterAdminSubCategoryData = data1['entries'];
+      console.log(this.FilterAdminSubCategoryData);
+      this.FilterAdminSubCategoryData = this.FilterAdminSubCategoryData.filter((d: { parent_entry_id: string; }) => d.parent_entry_id === '9');
+      console.log(this.FilterAdminSubCategoryData);
+
+    })
+
    }
+
+
+
+
+
+
+
+
   formsErrors = [];
   ngOnInit(): void {
     

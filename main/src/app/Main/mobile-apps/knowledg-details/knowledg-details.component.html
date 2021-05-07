@@ -1,44 +1,14 @@
 <div class="container-fluid1">
     <img src="assets/images/banner/page-header.jpg" alt="Snow" class="imgClass">
-    <div class="type1">Can I pay for my Toto account via PayPal?</div>
-    <div class="type2">October 22,2020 By Ross Fox </div>
+    <div class="type1">{{MainKnowDetails[0].title}}</div>
+    <div class="type2">{{MainKnowDetails[0].datecreated | date}} By Toto </div>
 </div>
 
 <div class="form-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card card-body search-wrapper">
-                    <h1>Toto is a powerful service help center</h1>
-                    <br>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit ultricies ullamcorper orci vulputate mauris in nibh nullam elementum. Nibh purus, pretium sed pellentesque amet. Eget gravida ut vel amet ut id nunc, neque. Viverra purus pretium elementum tincidunt mollis.</h5>
-                    <br>
-
-                    <h5>Ipsum, imperdiet nibh venenatis dictumst lectus neque, ante sit. Volutpat gravida commodo augue augue habitasse. Imperdiet ullamcorper bibendum ut sit lorem sit. Quam enim eu, velit ultricies nisl ultricies cras.</h5>
-                    <br>
-
-                    <img src="assets/images/cate/single1.png">
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-
-                    <br>
-
-                    <h1>Ease your Support team with Toto Help Center</h1>
-
-                    <br>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit ultricies ullamcorper orci vulputate mauris in nibh nullam elementum. Nibh purus, pretium sed pellentesque amet. Eget gravida ut vel amet ut id nunc, neque. Viverra purus pretium elementum tincidunt mollis.</h5><br>
-
-                    <h5>Ipsum, imperdiet nibh venenatis dictumst lectus neque, ante sit. Volutpat gravida commodo augue augue habitasse. Imperdiet ullamcorper bibendum ut sit lorem sit. Quam enim eu, velit ultricies nisl ultricies cras.</h5><br>
-
-                    <img src="assets/images/cate/single2.png"> <br>
-
-                    <h1>Toto Changelog helps you announce new features</h1>
-
-                    <br>
-                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit ultricies ullamcorper orci vulputate mauris in nibh nullam elementum. Nibh purus, pretium sed pellentesque amet. Eget gravida ut vel amet ut id nunc, neque. Viverra purus pretium elementum tincidunt mollis.</h5><br>
-
-                    <h5>Ipsum, imperdiet nibh venenatis dictumst lectus neque, ante sit. Volutpat gravida commodo augue augue habitasse. Imperdiet ullamcorper bibendum ut sit lorem sit. Quam enim eu, velit ultricies nisl ultricies cras.</h5><br>
-
-
+                <div class="card card-body search-wrapper"[innerHTML]="content">
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@
                         <!-- <span>Income</span> -->
                     </div>
                     <div class="ml-auto align-self-center" style="font-size: 37px;">
-                       12
+                       {{totalTicket}}
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <!-- <span>Income</span> -->
                     </div>
                     <div class="ml-auto align-self-center" style="font-size: 37px;">
-                       5
+                       {{pending}}
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <!-- <span>Income</span> -->
                     </div>
                     <div class="ml-auto align-self-center" style="font-size: 37px;">
-                       4
+                       {{open}}
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                         <!-- <span>Income</span> -->
                     </div>
                     <div class="ml-auto align-self-center" style="font-size: 37px;">
-                       3
+                       {{close}}
                     </div>
                 </div>
             </div>
@@ -71,42 +71,55 @@
       <div class="row">
         <div class="col-md-6">
           
-          <ul class="list-group list-group-horizontal-sm">
-            <li class="list-group-item" style="text-decoration: underline #007bff 4px;
-            text-underline-position: under;">All</li>
-            <li class="list-group-item">Open</li>
-            <li class="list-group-item">Pending</li>
-            <li class="list-group-item">Close</li>
-
-          </ul>
+          
+          <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -1%;">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink (click)="filterData('All')" >All</a>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink (click)="filterData('open')">Open</a>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink (click)="filterData('pending')">Pending</a>
+            </li>
+            <li [ngbNavItem]="4">
+                <a ngbNavLink (click)="filterData('close')">Close</a>
+            </li>  
+        </ul>
         </div>
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           <button class="btn btn-lg btn-cyan text-white" style="float: right;" (click)="openModal(editTicketModal, null)"><i class="fa fa-plus-square mr-2"></i>Add Ticket</button>
-        </div>
+        </div> -->
       </div>
 
       <hr>
       <div class="row">
         <div class="table-responsive">
-          <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+          <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
             <thead style="background: #92adfc;">
               <tr>
                 <th class="backgroundColor tdLeft">Ticket id</th>
                 <th class="backgroundColor tdCenter">status</th>
                 <th class="backgroundColor tdLeft">ticket details</th>
-                <th class="backgroundColor">Assign</th>
+                <!-- <th class="backgroundColor">Assign</th> -->
                 <th class="backgroundColor">Date</th>
                 <th class="backgroundColor">Action</th>
               </tr> 
             </thead>
             <tbody>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
-                <td><label class="label label-success">Open</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
+
+              <tr *ngFor="let item of ticketData">
+                <td><b><a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                <td>
+                  <label *ngIf="item.status == 'A'" class="label label-success">Open</label>
+                  <label *ngIf="item.status == 'R'" class="label label-danger">Close</label>
+                  <label *ngIf="item.status == 'T'" class="label label-warning">Pending</label>
+
+
+                </td>
+                <td class="tdLeft"><h5>{{item.subject}}</h5></td>
+                <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
+                <td>{{item.last_activity}}</td>
                 <td>
                   <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
                       <i class="ti-marker-alt"></i>
@@ -115,104 +128,7 @@
                       <i class="ti-trash"></i>
                   </a>
                 </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#96akfc</a></b></td>
-                <td><label class="label label-danger">Closed</label></td>
-                <td class="tdLeft"><h5>Consequuntur magni dolores eos qui ratione</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Steve</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#89adfc</a></b></td>
-                <td><label class="label label-success">Open</label></td>
-                <td class="tdLeft"><h5>Exercitationem ullam corporis</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
-                <td><label class="label label-success">Open</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
-                <td><label class="label label-warning">Pending</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#780df</a></b></td>
-                <td><label class="label label-danger ">Closed</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#790gc</a></b></td>
-                <td><label class="label label-warning">Pending</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-             
+              </tr>             
             </tbody>
           </table> 
         </div>

@@ -13,18 +13,18 @@
 </div>
 <div class="container">
   <div class="row" style="margin-top: -25px;">
-    <div class="col-md-4">
+    <div class="col-md-4" *ngFor="let item of FilterAdminSubCategoryData">
       <div class="card card-hover card-body">
        <div class="row">
          <div class="col-md-12 text-center">
             <img src="assets/images/knowledge/know2.png" style="width: 30%;">
-            <h3><a [routerLink]="['/mobile-apps/knowledge-list']">How to use Toto</a></h3>
-            <h5>Helpful information on how to use deskoto.</h5>
+            <h3><a [routerLink]="['/mobile-apps/knowledge-list',item.kb_entry_id]">{{item.title}}</a></h3>
+            <h5>{{item.keywords}}.</h5>
          </div>
        </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
       <div class="card card-hover card-body">
        <div class="row">
          <div class="col-md-12 text-center">
@@ -45,9 +45,9 @@
          </div>
        </div>
       </div>
-    </div>
+    </div> -->
   </div>
-  <div class="row" >
+  <!-- <div class="row" >
     <div class="col-md-4">
       <div class="card card-hover card-body">
         <div class="row">
@@ -81,5 +81,5 @@
         </div>
        </div>
     </div>
-  </div>
+  </div> -->
 </div>
