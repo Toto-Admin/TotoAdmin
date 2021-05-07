@@ -12,4 +12,6 @@ import { MyprofileComponent } from './myprofile.component';
     MyprofileRoutingModule
   ]
 })
-export class MyprofileModule { }
+export class MyprofileModule { 
+  
+}

@@ -6,3 +6,6 @@
 .loginform{
     margin-top: 45px;
 }
+#inputEmail,#password{
+    width: 319px;
+}
