@@ -21,18 +21,18 @@ const routes: Routes = [
  
   {path:'questions',component:QuestionsComponent},
   {path:'category',component:CategoryComponent},
-  {path:'knowledge',component:KnowledgeComponent},
-  {path:'mobile-content',component:MobileContentComponent},
-  {path:'transport',component:TransportComponent},
-  {path:'like',component:LikeReasonComponent},
-  {path:'cancel',component:CancelReasonComponent},
-  {path:'dispute',component:DisputeReasonComponent},
-  {path:'reject',component:RejectReasonComponent},
-  {path:'block',component:BlockReasonComponent},
-  {path:'knowledge-list/:id',component : KnowledgeListComponent},
-  {path:'knowledge-details/:id',component:KnowledgDetailsComponent},
-  {path:'feedback',component:FeedbackComponent},
-  {path:'feedback-view',component:FeedbackViewComponent}
+  {path:'knowledge',component:KnowledgeComponent,data: {title: 'Knowledgebase'}},
+  {path:'mobile-content',component:MobileContentComponent, data: {title: 'Mobile Content List'}},
+  {path:'transport',component:TransportComponent, data: {title: 'Transport List'}},
+  {path:'like',component:LikeReasonComponent,data: {title: 'Like Reason List'}},
+  {path:'cancel',component:CancelReasonComponent,data: {title: 'Cancel Reason List'}},
+  {path:'dispute',component:DisputeReasonComponent,data: {title: 'Dispute Reason List'}},
+  {path:'reject',component:RejectReasonComponent,data: {title: 'Reject Reason List'}},
+  {path:'block',component:BlockReasonComponent,data: {title: 'Block Reason List'}},
+  {path:'knowledge-list/:id',component : KnowledgeListComponent,data: {title: 'Knowledgebase List'}},
+  {path:'knowledge-details/:id',component:KnowledgDetailsComponent, data: {title: 'Knowledgebase Details'}},
+  {path:'feedback',component:FeedbackComponent,data: {title: 'Feedback List'}},
+  {path:'feedback-view',component:FeedbackViewComponent,data: {title: 'Feedback Details'}}
 
 ];
 

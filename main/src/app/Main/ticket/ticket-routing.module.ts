@@ -6,11 +6,13 @@ import { TicketComponent } from './ticket.component';
 const routes: Routes = [
   {
     path : '',
-    component: TicketComponent
+    component: TicketComponent,
+    data: {title: 'Tickets'}
   },
   {
     path : 'ticket-details',
-    component : TicketDetailsComponent
+    component : TicketDetailsComponent,
+    data: {title: 'Tickets'}
   }
 ];
 

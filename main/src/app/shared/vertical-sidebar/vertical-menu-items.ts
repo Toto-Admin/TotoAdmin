@@ -204,6 +204,17 @@ export const ROUTES: RouteInfo[] = [
 
     },
     {
+        path: '/mobile-apps/knowledge',
+        title: 'Knowledgebase',
+        icon: ' fas fa-ticket-alt',
+        class: '',
+        extralink: false,
+        label: '',
+        labelClass: '',
+        submenu: []
+
+    },
+    {
         path: '/mobile-apps',
         title: 'Mobile Apps',
         icon: ' fas fa-mobile-alt',
@@ -253,16 +264,16 @@ export const ROUTES: RouteInfo[] = [
                 labelClass: '',
                 submenu: []
             },
-            {
-                path: '/mobile-apps/knowledge',
-                title: 'Knowledges',
-                icon: 'mdi mdi-adjust',
-                class: '',
-                extralink: false,
-                label: '',
-                labelClass: '',
-                submenu: []
-            },
+            // {
+            //     path: '/mobile-apps/knowledge',
+            //     title: 'Knowledges',
+            //     icon: 'mdi mdi-adjust',
+            //     class: '',
+            //     extralink: false,
+            //     label: '',
+            //     labelClass: '',
+            //     submenu: []
+            // },
             {
                 path: '/mobile-apps/reasons',
                 title: 'Reasons',

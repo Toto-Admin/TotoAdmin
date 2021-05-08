@@ -1,14 +1,16 @@
 <div class="container-fluid1">
     <img src="assets/images/banner/page-header.jpg" alt="Snow" class="imgClass">
-    <div class="type1">{{MainKnowDetails[0].title}}</div>
-    <div class="type2">{{MainKnowDetails[0].datecreated | date}} By Toto </div>
+    <div class="type1"><h1>{{MainKnowDetails[0].title}}</h1></div>
+    <!-- <div class="type2">{{MainKnowDetails[0].datecreated | date}} By Toto </div> -->
 </div>
 
-<div class="form-section">
+<div class="form-section">  
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card card-body search-wrapper"[innerHTML]="content">
+                <div class="card card-body search-wrapper">
+                    <h5>{{MainKnowDetails[0].datecreated | date}} By Toto.. </h5><br>
+                    <div [innerHTML]="content"></div>
                 </div>
             </div>
         </div>

@@ -12,16 +12,16 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserViewComponent } from './user-view/user-view.component';
 
 const routes: Routes = [
-  {path:'email-template',component:EmailTemplateComponent},
-  {path:'referral',component:ReferralComponent},
-  {path:'notification-template',component:NotificationTemplateComponent},
-  {path:'general-setting',component:GeneralSettingComponent},
-  {path:'user-permission',component:UserPermissionComponent},
-  {path:'admin-user', component:AdminUserComponent},
-  {path:'user-view',component:UserViewComponent},
-  {path:'profile',component:UserProfileComponent},
-  {path:'activity',component:ActivityComponent},
-  {path:'notification',component:SendNotificationComponent}
+  {path:'email-template',component:EmailTemplateComponent,data: {title: 'Email Template'}},
+  {path:'referral',component:ReferralComponent,data: {title: 'Referral List'}},
+  {path:'notification-template',component:NotificationTemplateComponent, data: {title: 'Notification Template'}},
+  {path:'general-setting',component:GeneralSettingComponent,data: {title: 'General Setting'}},
+  {path:'user-permission',component:UserPermissionComponent,data: {title: 'User Permission'}},
+  {path:'admin-user', component:AdminUserComponent,data: {title: 'Admin User'}},
+  {path:'user-view',component:UserViewComponent,data: {title: 'User Details'}},
+  {path:'profile',component:UserProfileComponent,data: {title: 'User Profile'}},
+  {path:'activity',component:ActivityComponent,data: {title: 'User Activity'}},
+  {path:'notification',component:SendNotificationComponent,data: {title: 'Notification'}}
   
 ];
 

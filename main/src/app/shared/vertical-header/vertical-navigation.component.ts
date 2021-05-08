@@ -2,6 +2,11 @@ import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { TranslateService } from '@ngx-translate/core';
+import { Title } from '@angular/platform-browser';
+import { NavigationEnd, ActivatedRoute, Data } from '@angular/router';
+import { filter, map, mergeMap } from 'rxjs/operators';
+import { Router } from '@angular/router';
+
 
 declare var $: any;
 
@@ -15,8 +20,32 @@ export class VerticalNavigationComponent {
   public config: PerfectScrollbarConfigInterface = {};
 
   public showSearch = false;
+    pageInfo: Data = Object.create(null);
 
-  constructor(private modalService: NgbModal, private translate: TranslateService) {
+
+  constructor(private modalService: NgbModal, private translate: TranslateService,
+    public router: Router,
+    private activatedRoute: ActivatedRoute,
+    private titleService: Title) {
+
+      this.router.events
+      .pipe(filter((rs): rs is NavigationEnd => rs instanceof NavigationEnd))
+      .pipe(map(() => this.activatedRoute))
+      .pipe(
+        map(route => {
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+        })
+      )
+      .pipe(filter(route => route.outlet === 'primary'))
+      .pipe(mergeMap(route => route.data))
+      .subscribe(event => {
+        
+        this.titleService.setTitle(event['title']);
+        this.pageInfo = event;
+      });
 
     translate.setDefaultLang('en');
 

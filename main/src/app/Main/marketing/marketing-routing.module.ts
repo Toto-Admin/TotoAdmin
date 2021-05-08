@@ -6,10 +6,10 @@ import { ReportComponent } from './report/report.component';
 import { RewardsComponent } from './rewards/rewards.component';
 
 const routes: Routes = [
-  {path:'promocodes', component:PromocodesComponent},
-  {path:'rewards',component:RewardsComponent},
-  {path:'reports',component:ReportComponent},
-  {path:'coverage-area',component:CoverageAreaComponent}
+  {path:'promocodes', component:PromocodesComponent,data: {title: 'Promocodes List'}},
+  {path:'rewards',component:RewardsComponent,data: {title: 'Rewards List'}},
+  {path:'reports',component:ReportComponent,data: {title: 'Marketing Dashboard'}},
+  {path:'coverage-area',component:CoverageAreaComponent,data: {title: 'Coverage Area'}}
 ];
 
 @NgModule({

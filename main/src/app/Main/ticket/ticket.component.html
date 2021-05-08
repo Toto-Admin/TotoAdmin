@@ -76,14 +76,15 @@
             <li [ngbNavItem]="1">
                 <a ngbNavLink (click)="filterData('All')" >All</a>
             </li>
+            <li [ngbNavItem]="3">
+              <a ngbNavLink (click)="filterData('pending')">Pending</a>
+          </li>
             <li [ngbNavItem]="2">
                 <a ngbNavLink (click)="filterData('open')">Open</a>
             </li>
-            <li [ngbNavItem]="3">
-                <a ngbNavLink (click)="filterData('pending')">Pending</a>
-            </li>
+            
             <li [ngbNavItem]="4">
-                <a ngbNavLink (click)="filterData('close')">Close</a>
+                <a ngbNavLink (click)="filterData('close')">Closed</a>
             </li>  
         </ul>
         </div>
@@ -102,14 +103,14 @@
                 <th class="backgroundColor tdCenter">status</th>
                 <th class="backgroundColor tdLeft">ticket details</th>
                 <!-- <th class="backgroundColor">Assign</th> -->
-                <th class="backgroundColor">Date</th>
+                <th class="backgroundColor tdLeft">Date</th>
                 <th class="backgroundColor">Action</th>
               </tr> 
             </thead>
             <tbody>
 
               <tr *ngFor="let item of ticketData">
-                <td><b><a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                <td class="tdLeft"><b><a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
                 <td>
                   <label *ngIf="item.status == 'A'" class="label label-success">Open</label>
                   <label *ngIf="item.status == 'R'" class="label label-danger">Close</label>
@@ -119,14 +120,14 @@
                 </td>
                 <td class="tdLeft"><h5>{{item.subject}}</h5></td>
                 <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
-                <td>{{item.last_activity}}</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10" (click)="openModal(editTicketModal, null)"  data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
+                <td class="tdLeft">{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
+                <td >
+                  <a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
+                      <i class="ti-eye"></i>
                   </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                  <!-- <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
                       <i class="ti-trash"></i>
-                  </a>
+                  </a> -->
                 </td>
               </tr>             
             </tbody>

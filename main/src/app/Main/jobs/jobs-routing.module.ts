@@ -13,40 +13,20 @@ import { UnhappywithproviderComponent } from './unhappywithprovider/unhappywithp
 const routes: Routes = [
   {path:'', component:JobDashboardComponent},
   {
-    path:'dashboard', component:JobDashboardComponent,
-    // data: {
-    //   title: 'Dashboard',
-    //   urls: [
-    //     { title: 'Jobs', url: '/jobs/dashboard' },
-    //   ]
-    // }
+    path:'dashboard', component:JobDashboardComponent
+    ,data: {title: 'Job Dashboard'}
   },
   {
     path:'task', component:TaskComponent,
-    // data: {
-    //   title: 'Task Details',
-    //   urls: [
-    //     { title: 'Task', url: '/jobs/task' },
-    //   ]
-    // }
+    data: {title: 'Job List'}
   },
   {
     path:'jobview', component:JobDetailsComponent,
-    // data: {
-    //   title: 'Task Details',
-    //   urls: [
-    //     { title: 'Task', url: '/jobs/jobview' },
-    //   ]
-    // }
+    data: {title: 'Job Details'}
   },
   {
     path:'unhappycustomer', component:UnhappywithproviderComponent,
-    // data: {
-    //   title: 'Unhappy with Customer',
-    //   urls: [
-    //     { title: 'Task', url: '/jobs/unhappycustomer' },
-    //   ]
-    // }
+    data: {title: 'Unhappy with provider'}
   },
   {path:'reviews',component:ReviewsComponent},
   {path:'chat',component:ChatComponent},
