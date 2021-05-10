@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import {map, retry} from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { id } from 'date-fns/locale';
 @Injectable({
   providedIn: 'root'
 })
@@ -47,6 +48,13 @@ export class SupportService {
     console.log(result);
     return result;
   }
+  
+  getTicketByIdData(){
+    let result = this.httpClient.get(this.ServerUrl+'/api/byid.php');
+    console.log(result);
+    return result;
+  }
+  
 
 
 }

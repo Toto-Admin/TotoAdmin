@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Provider } from './provider';
+// import { Provider } from './provider';
 import { providers } from './provider-data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProviderService {
-  public providers: Provider[] = providers;
+  // public providers: Provider[] = providers;
 
 
-  public getProvider() {
-      return this.providers;
-  }
+  // public getProvider() {
+  //     return this.providers;
+  // }
 }

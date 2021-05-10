@@ -14,19 +14,31 @@
                             <th class="backgroundColor tdLeft">Ticket id</th>
                             <th class="backgroundColor tdLeft">status</th>
                             <th class="backgroundColor tdLeft">ticket details</th>
-                            <th class="backgroundColor">Assign</th>
+                            <!-- <th class="backgroundColor">Assign</th> -->
                             <th class="backgroundColor">Date</th>
                             <th class="backgroundColor">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
-                            <td><label class="label label-danger">Closed</label></td>
-                            <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                            </h6></td>
-                            <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                            <td>a year ago</td>
+                        <tr *ngFor="let item of custdata">
+                            <!-- <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td> -->
+                            <td><b><a href="https://ajit.ladesk.com/agent/#Conversation;owner_contactid={{item.owner_contactid}}" target="_blank">{{item.owner_contactid}}</a></b></td>
+
+                           
+                            <!-- <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
+                            </h6></td> -->
+                            <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
+                            <!-- <td>a year ago</td> -->
+                            <td>
+                                <label *ngIf="item.status == 'A'" class="label label-success">Open</label>
+                                <label *ngIf="item.status == 'R'" class="label label-danger">Closed</label>
+                                <label *ngIf="item.status == 'T'" class="label label-warning">Pending</label>
+              
+              
+                              </td>
+                            <td class="tdLeft"><h5>{{item.subject}}</h5></td>
+                            <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
+                            <td>{{item.last_activity}}</td>
                             <td>
                               <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
                                   <i class="ti-marker-alt"></i>
@@ -36,7 +48,7 @@
                               </a>
                             </td>
                           </tr>
-                          <tr>
+                          <!-- <tr>
                             <td><b><a [routerLink]="['/ticket/ticket-details']">#96akfc</a></b></td>
                             <td><label class="label label-warning">Pending</label></td>
                             <td class="tdLeft"><h5>Consequuntur magni dolores eos qui ratione</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
@@ -83,7 +95,7 @@
                                   <i class="ti-trash"></i>
                               </a>
                             </td>
-                          </tr>
+                          </tr> -->
                     </tbody>
                 </table>
             </div>
