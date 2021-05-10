@@ -32,26 +32,25 @@ export class SupportService {
     return result;
   }
 
-  // getKnowledgebaseList(){
-  //   let result = this.httpClient.get(this.url1+'/knowledgebase/entries?apikey='+this.apiKey);
-  //   return result;
-  // }
 
   getTicketData(){
     let result = this.httpClient.get(this.ServerUrl+'/api/ticket.php');
-    console.log(result);
     return result;
   }
 
   getKnowledgebaseList(){
     let result = this.httpClient.get(this.ServerUrl+'/api/knowledgebase.php');
-    console.log(result);
     return result;
   }
   
   getTicketByIdData(){
     let result = this.httpClient.get(this.ServerUrl+'/api/byid.php');
-    console.log(result);
+    return result;
+  }
+
+  //get chat details
+  getChatDetailsbyTicketId(id:string){
+    let result = this.httpClient.get(this.localUrl+'/api/chatDetails.php?id='+id);
     return result;
   }
   

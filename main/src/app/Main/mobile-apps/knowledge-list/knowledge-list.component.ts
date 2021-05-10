@@ -28,9 +28,11 @@ export class KnowledgeListComponent implements OnInit {
       this.FilterAdminSubCategoryData = data1['entries'];
 
         this.MainKnowDetails = this.FilterAdminSubCategoryData.filter((d: { kb_entry_id: string; }) => d.kb_entry_id === this.KnowID);
+        
         this.FilterAdminSubCategoryData = this.FilterAdminSubCategoryData.filter((d: { parent_entry_id: string; }) => d.parent_entry_id === this.KnowID);
+
         this.OriginalData = this.FilterAdminSubCategoryData;
-        console.log(this.FilterAdminSubCategoryData);
+
         this.FilterAdminSubCategoryData.forEach((element: any) => {
         this.KnowShortDetailsArray.push(element.content.replace(/<[^>]*>/g, '').substring(0,150))
       });      

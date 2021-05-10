@@ -5,6 +5,8 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { Chat } from '../../jobs/chat';
 import { ChatMessages } from '../../jobs/chat-messages';
 import { ContactList } from '../../jobs/contact-list';
+import { NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { SupportService} from '../../Services/support.service';
 
 @Component({
   selector: 'app-chats',
@@ -31,9 +33,65 @@ export class ChatsComponent implements OnInit {
 
   savedMessages: Chat[] | null = null;
 
+  currentJustify = 'start';
 
-  constructor() {
+  active=1;
 
+  activeKeep=1;
+
+  activeSelected=1;
+  disabled = true;
+
+  
+  tabs = [0,1,3,4];
+  counter = this.tabs.length + 1;
+  activeDynamic=1;
+  custdata : any;
+  ProviderTicketsID = Array();
+  chatData : any;
+  status : boolean = false;
+  chatFinalData : any;
+  chatMessageData : any;
+  userID : any;
+  onNavChange(changeEvent: NgbNavChangeEvent) {
+    if (changeEvent.nextId === 3) {
+      changeEvent.preventDefault();
+    }
+  }
+
+  constructor(private support : SupportService) {
+
+      //getTicketDetails 
+      this.support.getTicketData().subscribe(data=>{
+        this.custdata=data;
+        this.custdata.forEach((element:any)=>{
+            // .owner_contactid =='6b6litzr'
+          if(element)
+          {
+            // debugger
+            var data : any = element;
+            this.ProviderTicketsID.push(data);
+
+            if(this.ProviderTicketsID[0] !='')
+            {
+                if(this.status == false){
+                    this.support.getChatDetailsbyTicketId(this.ProviderTicketsID[0].id).subscribe(data=>{
+                        this.chatData = data;
+                        var data1 = this.chatData['response'];
+                        this.chatFinalData = data1['groups'];
+                        this.status = true;
+                        this.chatFinalData.forEach((element : any) => {
+                            if(element.rtype == 'C'){
+                                this.chatFinalData = element.messages;
+                                this.userID = element.userid;
+                            }
+                        });
+                    })
+                }
+            }
+          }
+        });
+      })
 
       const chatMessage: ChatMessages = new ChatMessages();
       this.contactList = [
@@ -134,6 +192,21 @@ export class ChatsComponent implements OnInit {
 
   mobileSidebar() {
       this.showSidebar = !this.showSidebar;
+  }
+
+  getChatDetails(ele:string){
+    this.support.getChatDetailsbyTicketId(ele).subscribe(data=>{
+        this.chatData = data;
+        var data1 = this.chatData['response'];
+        this.chatFinalData = data1['groups'];
+        this.status = true;
+        this.chatFinalData.forEach((element : any) => {
+            if(element.rtype == 'C'){
+                this.chatFinalData = element.messages;
+                this.userID = element.userid;
+            }
+        });
+    })
   }
 
 }

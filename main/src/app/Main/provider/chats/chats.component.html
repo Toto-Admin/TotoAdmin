@@ -4,44 +4,43 @@ href="javascript:void(0)" (click)="mobileSidebar()"></a>
 <div class="main-part">
     <div class="right-part">
         <div class="card mb-0">
-            <!-- <div class="p-l-15 p-r-25 py-3 d-flex align-items-center border-bottom bg-info">
-                <div class="mr-3">
-                    <img [src]="[activeChatUserImg]" alt="user" class="rounded-circle" width="50" />
-                </div>
-                <div>
-                    <h5 class="text-white mb-0">{{ activeChatUser }}</h5>
-                    <p class="mb-0 text-white">{{ activeChatUserStatus }}</p>
-                </div>
-            </div> -->
+            <ul ngbNav #nav="ngbNav" [(activeId)]="active">
+                <li [ngbNavItem]="i+1" *ngFor="let item of ProviderTicketsID; let i =index">
+                    <a ngbNavLink (click)="getChatDetails(item.id)">{{item.code}}</a>
+                </li>
+            </ul>
+
             <div class="card-body py-0 pr-0">
                 <div class="chat-box p-r-15" #scrollMe [scrollTop]="scrollMe.scrollHeight"
                     style="height:calc(100vh - 350px); overflow-y: auto;">
                     <!--chat Row -->
                     <ul class="chat-list">
-                        <li class="chat-item" [ngClass]="[chat.chatClass]" *ngFor="let chat of savedMessages">
+                        <div *ngFor="let data of chatFinalData">
+                        <li class="chat-item" *ngIf="data.userid != userID">
                             <div class="chat-img">
-                                <img [src]="[chat.imagePath]" alt="avatar" />
+                                <img  src="assets/images/logo-header.png" alt="avatar" style="border-radius: 10% !important;"/>
                             </div>
 
-                            <div class="chat-content" *ngFor="let message of chat.messages">
-                                <div class="box bg-light-info">
-                                    {{ message }}
+                            <div class="chat-content" >
+                                <div class="box bg-light-info" style="background: #dadbdc;">
+                                    {{ data.message }}
                                 </div>
                             </div>
 
-                            <div class="chat-time text-lowercase" *ngIf="chat.time !='' ">{{chat.time}}</div>
+                            <div class="chat-time text-lowercase" >{{data.datecreated | date: 'hh.mm a'}}</div>
                         </li>
-                        <li class="chat-item odd type-msg" *ngIf="messages.length > 0">
+                        <li class="chat-item odd type-msg" *ngIf="data.userid == userID">
                             <div class="chat-img" data-toggle="tooltip" data-placement="right" title="" data-original-title="">
                                 <img src="assets/images/users/8.jpg" alt="user-images" />
                             </div>
                             <div class="chat-messages">
-                                <div class="chat-content" *ngFor="let message of messages">
-                                    <div class="box bg-light-info">{{ message }}</div>
+                                <div class="chat-content">
+                                    <div class="box bg-light-info">{{ data.message}}</div>
                                 </div>
                             </div>
-                            <div class="chat-time">{{ now | date: 'hh.mm a' }}</div>
+                            <div class="chat-time">{{ data.datecreated | date: 'hh.mm a' }}</div>
                         </li>
+                    </div>
                     </ul>
                 </div>
             </div>

@@ -25,59 +25,19 @@ export class TicketsComponent  {
   owner_contactid: any;
   custdata:any;
   cust: any;
+  ProviderTickets = Array();
   constructor(private modalService: NgbModal,private support :SupportService) {
-    //Get All Tickets
-    // this.support.getTicketData().subscribe(data=>{
-     
-    //     // this.totalTicket = Object.keys(data).length;
-    //     // this.ticketData = data;
-    //     // this.orignalTicketData = data;
-    //     // console.log(this.ticketData);
-      
-    //     this.ticketData.forEach((element: any) => {
-    //       // if(element.status == 'R')
-    //       // {
-    //       //   this.close += 1;
-    //       // }
 
-    //       // if(element.status == 'A')
-    //       // {
-    //       //   this.open += 1;
-    //       // }
-
-    //       // if(element.status == 'T')
-    //       // {
-    //       //   this.pending += 1;
-    //       // }
-   
-          
-        
-    //      });
-         
-        // this.dtTrigger.next();
-
-    // })
     this.support.getTicketData().subscribe(data =>{
-      //  this.totalTicket=Object.keys(data).length;
-       
-      //  this.orignalTicketData = data;
       
-       this.custdata=data;
-          console.log(this.custdata);
-      
+      this.custdata=data;
       this.custdata.forEach((element:any)=>{
-        if( element.owner_contactid =='272y38qq')
-          {
-          
-            console.log('in the loop');
-           
-          console.log(element.owner_contactid);
-        
-              
-          }
-      
+        if(element.owner_contactid =='6b6litzr')
+        {
+          var data : any = element;
+          this.ProviderTickets.push(data)
+        }
       });
-      // this.ticketData=this.owner_contactid;
         this.dtTrigger.next();
     })
 
@@ -88,30 +48,4 @@ export class TicketsComponent  {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
   }
-   //Filter Data tab wise
-   filterData(ele :any ,)
-   {
-    debugger
-    //  if(ele == 'close')
-    //  {
-    //    this.ticketData = this.orignalTicketData;
-    //    this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'R');
-    //  }
-    //  else if(ele == 'open')
-    //  {
-    //    this.ticketData = this.orignalTicketData;
-    //    this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'A');
-    //  }
-    //  else if(ele == 'pending')
-    //  {
-    //    this.ticketData = this.orignalTicketData;
-    //    this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'T');
-    //  }
-    
-    //  else
-    //  {
-    //    this.ticketData = this.orignalTicketData;
-    //  }
-   
-   }
 }
