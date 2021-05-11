@@ -1,7 +1,7 @@
 /* .timeline > .timeline-item > .timeline-panel:after {
     border-right: 0 solid #6c6c6c !important;
 } */
-
+/* 
 * {
     box-sizing: border-box;
 }
@@ -233,4 +233,12 @@ h2 {
     100% {
         left: 100%;
    }
+} */
+.timeline-title{
+    color: blue;
+    font-weight: bold;
+}
+.step{
+    font-weight: bold;
+
 }

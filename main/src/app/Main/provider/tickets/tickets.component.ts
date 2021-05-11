@@ -29,6 +29,11 @@ export class TicketsComponent  {
   constructor(private modalService: NgbModal,private support :SupportService) {
 
     this.support.getTicketData().subscribe(data =>{
+      //  this.totalTicket=Object.keys(data).length;
+       //  this.orignalTicketData = data;
+       this.cust=data;
+       this.custdata=this.cust;
+          console.log(this.custdata);
       
       this.custdata=data;
       this.custdata.forEach((element:any)=>{
@@ -37,6 +42,16 @@ export class TicketsComponent  {
           var data : any = element;
           this.ProviderTickets.push(data)
         }
+        
+        if( element.owner_contactid =='272y38qq')
+          {
+            console.log('in the loop');
+           
+          console.log(element.owner_contactid);
+        
+              
+          }
+      
       });
         this.dtTrigger.next();
     })
@@ -48,4 +63,30 @@ export class TicketsComponent  {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
   }
+   //Filter Data tab wise
+   filterData(ele :any ,)
+   {
+     debugger
+    //  if(ele == 'close')
+    //  {
+    //    this.ticketData = this.orignalTicketData;
+    //    this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'R');
+    //  }
+    //  else if(ele == 'open')
+    //  {
+    //    this.ticketData = this.orignalTicketData;
+    //    this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'A');
+    //  }
+    //  else if(ele == 'pending')
+    //  {
+    //    this.ticketData = this.orignalTicketData;
+    //    this.ticketData = this.ticketData.filter((d: { status: string; }) => d.status === 'T');
+    //  }
+    
+    //  else
+    //  {
+    //    this.ticketData = this.orignalTicketData;
+    //  }
+   
+   }
 }
