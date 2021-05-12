@@ -27,11 +27,12 @@ import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { TicketsComponent } from './tickets/tickets.component';
-import { ChatsComponent } from './chats/chats.component'
+import { ChatsComponent } from './chats/chats.component';
+import { AssessmentClickComponent } from './assessment-click/assessment-click.component'
 
 @NgModule({
   declarations: [DashboardComponent,  ProviderListComponent, ProviderViewComponent, DocumentComponent, PerformanceComponent, 
-    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent, AddComponent, EditComponent, TicketsComponent, ChatsComponent],
+    AvailabilityComponent, TaskHistoryComponent, ReviewRatingComponent, AssessmentComponent, TimelineComponent, AddComponent, EditComponent, TicketsComponent, ChatsComponent, AssessmentClickComponent],
   imports: [
     CommonModule,
     AgmCoreModule,

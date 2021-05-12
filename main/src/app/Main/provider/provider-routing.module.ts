@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddComponent } from './add/add.component';
+import { AssessmentClickComponent } from './assessment-click/assessment-click.component';
 import { AvailabilityComponent } from './availability/availability.component';
 import { ChatsComponent } from './chats/chats.component';
 
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'add',component:AddComponent},
   {path:'tickets',component:TicketsComponent},
   {path:'chats',component:ChatsComponent},
-  {path:'edit',component:EditComponent}
+  {path:'edit',component:EditComponent},
+  {path:'assessment-click',component:AssessmentClickComponent}
 ];
 
 

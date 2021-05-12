@@ -1,0 +1,15 @@
+
+
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Assessment Overview By Category</h4>
+            <ngx-charts-bar-vertical-2d class="chart-container" [scheme]="colorScheme" [schemeType]="schemeType" [results]="multi" [gradient]="gradient"
+                [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+                [tooltipDisabled]="tooltipDisabled" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" (legendLabelClick)="onLegendLabelClick($event)"
+                [showGridLines]="showGridLines" [barPadding]="barPadding" [groupPadding]="20" [roundDomains]="roundDomains"
+                (select)="select($event)">
+            </ngx-charts-bar-vertical-2d>
+        </div>
+    </div>
+</div>

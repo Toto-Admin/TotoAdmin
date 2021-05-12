@@ -1,0 +1,13 @@
+.chart-container {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+  
+  }
+  .w100 {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: block;
+  }
+  
