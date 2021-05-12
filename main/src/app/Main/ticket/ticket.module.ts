@@ -20,7 +20,13 @@ import { NotifierModule, NotifierOptions, NotifierService } from 'angular-notifi
     ClipboardModule,
     QuillModule.forRoot(),
     NgbModule,
-    NotifierModule
+    NotifierModule.withConfig({
+      position :{
+        horizontal :{
+          position : 'right'
+        }
+      }
+    }),
   ],
   providers:[
     // TicketService,

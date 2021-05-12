@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 
 import {
   CommonModule
@@ -85,8 +84,7 @@ const icons = {
     BrowserAnimationsModule,
     FormsModule,
     FeatherModule.pick(icons),
-    ToastrModule.forRoot({    positionClass: 'toast-bottom-right',
-  }), // ToastrModule added
+
 
     ReactiveFormsModule,
     HttpClientModule,

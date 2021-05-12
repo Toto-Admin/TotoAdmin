@@ -72,19 +72,19 @@
         <div class="col-md-6">
           
           
-          <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -1%;">
+          <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -1%;color:black !important">
             <li [ngbNavItem]="1">
-                <a ngbNavLink (click)="filterData('All')" >ALL</a>
+                <a ngbNavLink (click)="filterData('All')" style="color: black;">ALL</a>
             </li>
             <li [ngbNavItem]="3">
-              <a ngbNavLink (click)="filterData('pending')">CHAT</a>
+              <a ngbNavLink (click)="filterData('pending')" style="color: black;">CHAT</a>
           </li>
             <li [ngbNavItem]="2">
-                <a ngbNavLink (click)="filterData('open')">ANSWERED</a>
+                <a ngbNavLink (click)="filterData('open')" style="color: black;">ANSWERED</a>
             </li>
             
             <li [ngbNavItem]="4">
-                <a ngbNavLink (click)="filterData('close')">RESOLVED</a>
+                <a ngbNavLink (click)="filterData('close')" style="color: black;">RESOLVED</a>
             </li>  
         </ul>
         </div>
@@ -231,3 +231,4 @@
     </form>
   </div>
 </ng-template>
+<notifier-container></notifier-container>

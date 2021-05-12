@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
 import { NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 import { ClipboardService } from 'ngx-clipboard';
 import { NotifierService } from 'angular-notifier';
-import { ToastrService } from 'ngx-toastr';
+// import { ToastrService } from 'ngx-toastr';
 import { Target } from 'angular-feather/icons';
 
 
@@ -31,7 +31,7 @@ export class TicketComponent implements OnInit {
 
   private readonly notifier: NotifierService;
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,private _clipboardService: ClipboardService,notifier: NotifierService,private toastr: ToastrService) { 
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,private _clipboardService: ClipboardService,notifier: NotifierService) { 
     this.notifier = notifier;
 
     //Get All Tickets 
@@ -160,9 +160,9 @@ export class TicketComponent implements OnInit {
     customer  : `+customer+`
     job id    : #job123`  ;
     this._clipboardService.copy(text);
-    this.toastr.success('Copy successfully', code);
+    // this.toastr.success('Copy successfully', code);
 
-    this.notifier.notify('success', 'You are awesome! I mean it!');
+    this.notifier.notify('success', code +' copy');
 
 
   }
