@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path:'task', component:TaskComponent,
-    data: {title: 'Job List'}
+    data: {title: 'Task Management'}
   },
   {
     path:'jobview', component:JobDetailsComponent,
@@ -31,7 +31,7 @@ const routes: Routes = [
   {path:'reviews',component:ReviewsComponent},
   {path:'chat',component:ChatComponent},
   {path:'invoice',component:InvoicesComponent},
-  {path:'invoice-view',component:InvoiceViewComponent },
+  {path:'invoice-view',component:InvoiceViewComponent,data: {title: 'Invoice Details'} },
   {path:'chatting',component:ChattingComponent},
   {path:'support',component:SupportComponent}
 

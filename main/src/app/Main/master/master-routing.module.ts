@@ -5,8 +5,8 @@ import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
 
-  {path:'services',component:ServicesComponent,data: {title: 'Services List'}},
-  {path:'categories',component:CategoriesComponent,data: {title: 'Categories List'}}
+  {path:'services',component:ServicesComponent,data: {title: 'Services'}},
+  {path:'categories',component:CategoriesComponent,data: {title: 'Category'}}
 
 ];
 

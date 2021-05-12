@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 import {
   CommonModule
 } from '@angular/common';
@@ -12,7 +14,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { ToastrModule } from 'ngx-toastr';
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FeatherModule } from 'angular-feather';
@@ -83,8 +84,10 @@ const icons = {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    ToastrModule.forRoot(),
     FeatherModule.pick(icons),
+    ToastrModule.forRoot({    positionClass: 'toast-bottom-right',
+  }), // ToastrModule added
+
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,

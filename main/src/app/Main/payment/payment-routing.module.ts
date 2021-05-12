@@ -11,7 +11,7 @@ import { TotalPaymentComponent } from './total-payment/total-payment.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,data: {title: 'Payment Dashboard'}},
-  {path:'payment-detail', component:PaymentDetailComponent,data: {title: 'Payment List'}},
+  {path:'payment-detail', component:PaymentDetailComponent,data: {title: 'Payment Details'}},
   {path:'task-detail',component:TaskDetailComponent},
   {path:'total-payment',component:TotalPaymentComponent},
   {path:'details', component:DetailsComponent,data: {title: 'Payment Details'}},

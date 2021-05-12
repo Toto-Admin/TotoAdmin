@@ -4,7 +4,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SupportService } from '../Services/support.service';
 import { number } from 'ngx-custom-validators/src/app/number/validator';
 import { Subject } from 'rxjs';
-import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { ClipboardService } from 'ngx-clipboard';
+import { NotifierService } from 'angular-notifier';
+import { ToastrService } from 'ngx-toastr';
+import { Target } from 'angular-feather/icons';
+
 
 @Component({
   selector: 'app-ticket',
@@ -23,7 +28,12 @@ export class TicketComponent implements OnInit {
   ticketData : any;
   orignalTicketData : any;
   ticket = [];
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService) { 
+
+  private readonly notifier: NotifierService;
+
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,private _clipboardService: ClipboardService,notifier: NotifierService,private toastr: ToastrService) { 
+    this.notifier = notifier;
+
     //Get All Tickets 
     this.support.getTicketData().subscribe(data=>{
         this.totalTicket = Object.keys(data).length;;
@@ -137,5 +147,30 @@ export class TicketComponent implements OnInit {
       this.ticketData = this.orignalTicketData;
     }
   }
+
+  copyInputMessage(id : any,subject :any,code : any,date : any,customer:any)
+  {
+    debugger
+
+    var text = `Ticket Data below
+    ticket id : `+id+`
+    subject   : `+subject+`
+    code      : `+ code+`
+    date      : `+date+`
+    customer  : `+customer+`
+    job id    : #job123`  ;
+    this._clipboardService.copy(text);
+    this.toastr.success('Copy successfully', code);
+
+    this.notifier.notify('success', 'You are awesome! I mean it!');
+
+
+  }
+
+  // trclick(id :any)
+  // {
+  //   window.open('https://ajit.ladesk.com/agent/#Conversation;id='+id,"_blank")
+  // }
+
 
 }

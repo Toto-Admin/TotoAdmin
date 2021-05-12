@@ -3,6 +3,12 @@
   text-underline-position: under;
   }
   li{
-    width:170px;
-   text-align: center; 
+    /* width:165px; */
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    }
+
+    a {
+      color: #343a40;
     }

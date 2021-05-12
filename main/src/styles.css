@@ -174,7 +174,18 @@
   .paginate_button.current{
     color :rgb(7, 7, 7) !important;
   }
+  .router-link-active { border-left: 6px solid #007bff !important; }
+  .sidebar-link.active{
+    border-left: 6px solid #007bff !important;
+  }
+  /* .sidebar-item.active{
+    border-left: 6px solid #007bff !important;
+  } */
 
+<<<<<<< Updated upstream
 
 
   
+=======
+/*  */
+>>>>>>> Stashed changes

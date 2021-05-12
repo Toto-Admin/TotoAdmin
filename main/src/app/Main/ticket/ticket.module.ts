@@ -8,6 +8,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { QuillModule } from 'ngx-quill';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ClipboardModule } from 'ngx-clipboard';
+import { NotifierModule, NotifierOptions, NotifierService } from 'angular-notifier';
 
 @NgModule({
   declarations: [TicketComponent, TicketDetailsComponent],
@@ -15,12 +17,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     TicketRoutingModule,
     DataTablesModule,
+    ClipboardModule,
     QuillModule.forRoot(),
-    NgbModule
+    NgbModule,
+    NotifierModule
   ],
   providers:[
     // TicketService,
-    DatePipe
+    DatePipe,
+    NotifierService
   ]
 })
 export class TicketModule { }

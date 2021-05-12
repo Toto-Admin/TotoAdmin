@@ -13,10 +13,10 @@ import { UserViewComponent } from './user-view/user-view.component';
 
 const routes: Routes = [
   {path:'email-template',component:EmailTemplateComponent,data: {title: 'Email Template'}},
-  {path:'referral',component:ReferralComponent,data: {title: 'Referral List'}},
+  {path:'referral',component:ReferralComponent,data: {title: 'Referral Management'}},
   {path:'notification-template',component:NotificationTemplateComponent, data: {title: 'Notification Template'}},
   {path:'general-setting',component:GeneralSettingComponent,data: {title: 'General Setting'}},
-  {path:'user-permission',component:UserPermissionComponent,data: {title: 'User Permission'}},
+  {path:'user-permission',component:UserPermissionComponent,data: {title: 'User And Permission'}},
   {path:'admin-user', component:AdminUserComponent,data: {title: 'Admin User'}},
   {path:'user-view',component:UserViewComponent,data: {title: 'User Details'}},
   {path:'profile',component:UserProfileComponent,data: {title: 'User Profile'}},

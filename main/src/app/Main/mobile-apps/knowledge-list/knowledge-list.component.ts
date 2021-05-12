@@ -23,9 +23,12 @@ export class KnowledgeListComponent implements OnInit {
     
 
     this.support.getKnowledgebaseList().subscribe(data=>{
-      this.jsonData = data;
-      var data1 = this.jsonData['response'];
-      this.FilterAdminSubCategoryData = data1['entries'];
+        this.jsonData = data;
+        var data1 = this.jsonData['response'];
+        console.log(data1);
+        this.FilterAdminSubCategoryData = data1['entries'];
+
+        console.log(this.FilterAdminSubCategoryData);
 
         this.MainKnowDetails = this.FilterAdminSubCategoryData.filter((d: { kb_entry_id: string; }) => d.kb_entry_id === this.KnowID);
         

@@ -22,38 +22,34 @@ export class SupportService {
      this.apiKey = '8774gxnfw4bk9lqpc6du9v0laz6xe5t9';
    }
 
-  AllTicket():Observable<any>{
-    let httpHeaders = new HttpHeaders({
-      'Content-Type' : 'application/json',
-      'apikey'       : 'rrk9g42k0lc03io20h8512iswqn22c7j',
-    })
+    AllTicket():Observable<any>{
+      let httpHeaders = new HttpHeaders({
+        'Content-Type' : 'application/json',
+        'apikey'       : 'rrk9g42k0lc03io20h8512iswqn22c7j',
+      })
+      
+      let result = this.httpClient.get(this.url+'/tickets',{headers:httpHeaders});
+      return result;
+    }
+
+    getTicketData(){
+      let result = this.httpClient.get(this.ServerUrl+'/api/ticket.php');
+      return result;
+    }
+
+    getKnowledgebaseList(){
+      let result = this.httpClient.get(this.ServerUrl+'/api/knowledgebase.php');
+      return result;
+    }
     
-    let result = this.httpClient.get(this.url+'/tickets',{headers:httpHeaders});
-    return result;
-  }
+    getTicketByIdData(){
+      let result = this.httpClient.get(this.ServerUrl+'/api/byid.php');
+      return result;
+    }
 
-
-  getTicketData(){
-    let result = this.httpClient.get(this.ServerUrl+'/api/ticket.php');
-    return result;
-  }
-
-  getKnowledgebaseList(){
-    let result = this.httpClient.get(this.ServerUrl+'/api/knowledgebase.php');
-    return result;
-  }
-  
-  getTicketByIdData(){
-    let result = this.httpClient.get(this.ServerUrl+'/api/byid.php');
-    return result;
-  }
-
-  //get chat details
-  getChatDetailsbyTicketId(id:string){
-    let result = this.httpClient.get(this.localUrl+'/api/chatDetails.php?id='+id);
-    return result;
-  }
-  
-
-
+    //get chat details
+    getChatDetailsbyTicketId(id:string){
+      let result = this.httpClient.get(this.ServerUrl+'/api/chatDetails.php?id='+id);
+      return result;
+    }
 }
