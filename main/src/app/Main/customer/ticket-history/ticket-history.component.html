@@ -1,80 +1,39 @@
-<div class="table-responsive">
-    <table class="table ">
-        <thead>
-            <tr class="bg-light">
-                <th class="backgroundColor tdLeft">Ticket id</th>
-                <th class="backgroundColor tdLeft">status</th>
-                <th class="backgroundColor tdLeft">ticket details</th>
-                <th class="backgroundColor">Assign</th>
-                <th class="backgroundColor">Date</th>
-                <th class="backgroundColor">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
-                <td><label class="label label-success">Open</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr> 
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#96akfc</a></b></td>
-                <td><label class="label label-warning">Pending</label></td>
-                <td class="tdLeft"><h5>Consequuntur magni dolores eos qui ratione</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Steve</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#89adfc</a></b></td>
-                <td><label class="label label-success">Open</label></td>
-                <td class="tdLeft"><h5>Exercitationem ullam corporis</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td><b><a [routerLink]="['/ticket/ticket-details']">#92adfc</a></b></td>
-                <td><label class="label label-danger">Close</label></td>
-                <td class="tdLeft"><h5>Sed ut perspiciatis unde omnis iste</h5><h6>ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..
-                </h6></td>
-                <td><h6>Assign to:</h6><h5>Liam</h5></td>
-                <td>a year ago</td>
-                <td>
-                  <a href="javascript:void(0)"  class="text-inverse p-r-10"   data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a>
-                </td>
-              </tr>
-        </tbody>
-    </table>
+<!-- Ticket Details -->
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+         
+          <div class="table-responsive">
+              <table class="table ">
+                  <thead>
+                      <tr class="bg-light">
+                          <th class="backgroundColor tdLeft">Ticket id</th>
+                          <th class="backgroundColor tdLeft">status</th>
+                          <th class="backgroundColor tdLeft">ticket details</th>
+                          <th class="backgroundColor">Date</th>
+                          <th class="backgroundColor">Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of ProviderTickets">
+                          <td><b><a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                          <td>
+                              <label *ngIf="item.status == 'A'" class="label label-success">Open</label>
+                              <label *ngIf="item.status == 'R'" class="label label-danger">Closed</label>
+                              <label *ngIf="item.status == 'T'" class="label label-warning">Pending</label>              
+                            </td>
+                          <td class="tdLeft"><h5>{{item.subject}}</h5></td>
+                          <td>{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
+                          <td>
+                              <a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
+                                  <i class="ti-eye"></i>
+                              </a>
+                          </td>
+                        </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
 </div>
+<!-- End Ticket Details -->
