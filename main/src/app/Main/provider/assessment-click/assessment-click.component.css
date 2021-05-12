@@ -10,4 +10,41 @@
     overflow: hidden;
     display: block;
   }
+ #card1{
+  border: 2px solid blue;
+  padding: 10px;
+  border-top-left-radius: 25px;
+ 
+ }
+ #card2{
+  border: 2px solid blue;
+  padding: 10px;
+  border-top-right-radius: 25px;
+
+ }
+ #card3{
+border: 2px solid blue;
+
+ }
+ .card-title{
+   text-align: left !important;
+   font-weight: 14px;
+   margin-left: 20px;
+ }
+ .card-title1{
+   text-align: center !important;
+ }
+ .tf-tree{
+   text-align: center !important;
+   font-weight: 20px;
+ }
+ .tf-nc{
   
+   font-weight: bold;
+ }
+ .tf1{
+   color: crimson;
+ }
+ .tf2{
+   color: rgb(167, 36, 116);
+ }
