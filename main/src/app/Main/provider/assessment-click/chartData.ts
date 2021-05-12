@@ -89,7 +89,7 @@
   
   export const bubble = [
     {
-      name: 'Isp',
+      name: 'Strength',
       series: [
         {
           name: new Date(Math.floor(1473700105009 + Math.random() * 1000000000)),
