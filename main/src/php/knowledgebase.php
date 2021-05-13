@@ -1,6 +1,6 @@
 <?php
 $ch = curl_init();
-curl_setopt($ch,CURLOPT_URL,"https://ajit.ladesk.com/api/knowledgebase/entries?&apikey=8774gxnfw4bk9lqpc6du9v0laz6xe5t9");
+curl_setopt($ch,CURLOPT_URL,"https://totoapp.ladesk.com/api/knowledgebase/entries?&apikey=8774gxnfw4bk9lqpc6du9v0laz6xe5t9");
 
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 $curl_response=curl_exec($ch);

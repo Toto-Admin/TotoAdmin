@@ -169,7 +169,7 @@ export class TicketComponent implements OnInit {
 
   // trclick(id :any)
   // {
-  //   window.open('https://ajit.ladesk.com/agent/#Conversation;id='+id,"_blank")
+  //   window.open('https://totoapp.ladesk.com/agent/#Conversation;id='+id,"_blank")
   // }
 
 

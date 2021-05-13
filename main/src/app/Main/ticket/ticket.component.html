@@ -112,7 +112,7 @@
             <tbody>
               <!-- (click)="trclick(item.id)" -->
               <tr *ngFor="let item of ticketData; let i =index" >
-                <td class="tdLeft"><b><a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                <td class="tdLeft"><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
                 <td>
                   <label *ngIf="item.status == 'A'" class="label label-success">ANSWERED</label>
                   <label *ngIf="item.status == 'R'" class="label label-danger">RESOLVED</label>
@@ -120,13 +120,13 @@
 
                 </td>
                 <td class="tdLeft"><h5>{{item.owner_contactid}}</h5></td>
-                <td class="tdLeft"><h5>#job123</h5></td>
+                <td class="tdLeft"><h5><a [routerLink]="['/jobs/jobview']">#job123</a></h5></td>
 
                 <td class="tdLeft"><h5>{{item.subject}}</h5></td>
                 <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
                 <td class="tdLeft">{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
                 <td >
-                  <a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
+                  <a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
                       <i class="ti-eye"></i>
                   </a>
                   <a href="javascript:void(0)" (click)="copyInputMessage(item.id,item.subject,item.code,item.last_activity,item.owner_contactid)" class="text-inverse" title="Copy" data-toggle="tooltip">

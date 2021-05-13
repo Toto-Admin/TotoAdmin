@@ -17,8 +17,8 @@ export class SupportService {
 
   // Liveagent api call below
   constructor(private httpClient:HttpClient) {
-     this.url = 'https://ajit.ladesk.com/api/v3';
-     this.url1 = 'https://ajit.ladesk.com/api';
+     this.url = 'https://totoapp.ladesk.com/api/v3';
+     this.url1 = 'https://totoapp.ladesk.com/api';
      this.apiKey = '8774gxnfw4bk9lqpc6du9v0laz6xe5t9';
    }
 

@@ -36,7 +36,7 @@ export class TicketHistoryComponent implements OnInit {
       
       this.custdata=data;
       this.custdata.forEach((element:any)=>{
-        if(element.owner_contactid =='6b6litzr')
+        if(element.owner_contactid =='pd1h6y03')
         {
           var data : any = element;
           this.ProviderTickets.push(data)

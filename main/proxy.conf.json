@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://ajit.ladesk.com/api/v3",
+    "target": "https://totoapp.ladesk.com/api/v3",
     "secure": true,
     "changeOrigin": true,
     "pathRewrite": {

@@ -16,7 +16,7 @@
                   </thead>
                   <tbody>
                       <tr *ngFor="let item of ProviderTickets">
-                          <td><b><a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                          <td><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
                           <td>
                               <label *ngIf="item.status == 'A'" class="label label-success">Open</label>
                               <label *ngIf="item.status == 'R'" class="label label-danger">Closed</label>
@@ -25,7 +25,7 @@
                           <td class="tdLeft"><h5>{{item.subject}}</h5></td>
                           <td>{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
                           <td>
-                              <a href="https://ajit.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
+                              <a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
                                   <i class="ti-eye"></i>
                               </a>
                           </td>

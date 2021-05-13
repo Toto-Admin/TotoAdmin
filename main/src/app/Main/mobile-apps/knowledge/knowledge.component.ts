@@ -33,16 +33,16 @@ export class KnowledgeComponent implements OnInit {
       var data1 = this.jsonData['response'];
       this.FilterAdminSubCategoryData = data1['entries'];
       console.log(this.FilterAdminSubCategoryData);
-      this.FilterAdminSubCategoryData = this.FilterAdminSubCategoryData.filter((d: { parent_entry_id: string; }) => d.parent_entry_id === '9');
+      this.FilterAdminSubCategoryData = this.FilterAdminSubCategoryData.filter((d: { parent_entry_id: string; }) => d.parent_entry_id === '2');
       console.log(this.FilterAdminSubCategoryData);
 
     })
 
     this.support.getTicketData().subscribe(data=>{
-      debugger
-      console.log('/////////////////////////');
-      console.log(data);
-      console.log('=========================');
+      // debugger
+      // console.log('/////////////////////////');
+      // console.log(data);
+      // console.log('=========================');
     })
 
    }
