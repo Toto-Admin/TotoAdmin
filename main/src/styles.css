@@ -9,8 +9,20 @@
   .label-dark{
     background-color: #e9e9e9 !important;
     color :rgb(7, 7, 7) !important;
+    font-weight: 800 !important;
   }
 
+  .label-success {
+    font-weight: 800 !important;
+  }
+
+  .label-warning{
+    font-weight: 800 !important;
+  }
+
+  .label-danger{
+    font-weight: 800 !important;
+  }
   
   .dataTables_filter input {
     border: 1px solid #b4b4b4 !important;
