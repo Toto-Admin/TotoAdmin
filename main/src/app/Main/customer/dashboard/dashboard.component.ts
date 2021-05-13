@@ -438,7 +438,7 @@ export class DashboardComponent  {
       legends: {
         show: false,
       },
-      labels: ['Open', 'Pending', 'Closed'],
+      labels: ['Answered', 'Chat', 'Resolved'],
       colors: ['#36bea6', '#ffbc34', '#f62d51'],
 
     };
