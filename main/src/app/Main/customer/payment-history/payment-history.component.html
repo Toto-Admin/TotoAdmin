@@ -4,7 +4,7 @@
         <thead>
             <tr class="bg-light">
                 <th class="border-top-0 backgroundColor tdLeft">JOBID</th>
-                <th class="border-top-0 backgroundColor tdLeft">JOB</th>
+                <th class="border-top-0 backgroundColor tdLeft">SERVICE</th>
                 <th class="border-top-0 backgroundColor tdLeft">PAYMENT ID</th>
                 <th class="border-top-0 backgroundColor tdCenter">PAYMENT TYPE</th>
                 <th class="border-top-0 backgroundColor tdRight">AMOUNT</th>
@@ -14,65 +14,58 @@
         </thead>
         <tbody>
             <tr>
-                <td class="tdLeft">1</td>
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">101</a></td>
                 <td class="tdLeft">Tv</td>
-                <td class="tdLeft">Se3#42qwe!WER</td>
+                <td class="tdLeft"><a [routerLink]="['/payment/details']">101Se3#42qwe!WER</a></td>
                 <td class="tdCenter"><label class="label label-success">Online</label></td>
-                <td class="tdRight">
+                <!-- <td class="tdRight">
                     £40
-                </td>
+                </td> -->
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>29</td>
                 <td class="tdCenter"><label class="label label-success">Paid</label></td>
                 <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                     <i class="fas fa-eye "></i></a>
                  </td>
             </tr>
             <tr>
-                <td class="tdLeft">2</td>
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">102</a></td>
                 <td class="tdLeft">Voice modulation</td>
-                <td class="tdLeft">Se3#42qwe!WER</td>
+                <td class="tdLeft"><a [routerLink]="['/payment/details']">101Serr42qwe!WER</a></td>
                 <td class="tdCenter"><label class="label label-success">Online</label></td>
-                <td class="tdRight">
-                    £200
-                </td>
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20</td>
                 <td class="tdCenter"><label class="label label-success">Paid</label></td>
                 <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                     <i class="fas fa-eye "></i></a>
                  </td>
             </tr>
             <tr>
-                <td class="tdLeft">3</td>
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">103</a></td>
                 <td class="tdLeft">Connectivity</td>
-                <td class="tdLeft">Se3#42qwe!WER</td>
+                <td class="tdLeft"><a [routerLink]="['/payment/details']">Se3#42qweWER</a></td>
                 <td class="tdCenter"><label class="label label-success">Online</label></td>
-                <td class="tdRight">
-                    £340
-                </td>
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>49</td>
                 <td class="tdCenter"><label class="label label-warning">Pending</label></td>
                 <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                     <i class="fas fa-eye "></i></a>
                  </td>
             </tr>
             <tr>
-                <td class="tdLeft">4</td>
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">104</a></td>
                 <td class="tdLeft">Poor network</td>
-                <td class="tdLeft">Se3#42qwe!WER</td>
+                <td class="tdLeft"><a [routerLink]="['/payment/details']">1Se3#42qweWER</a></td>
                 <td class="tdCenter"><label class="label label-success">Online</label></td>
-                <td class="tdRight">
-                    £230
-                </td>
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20</td>
                 <td class="tdCenter"><label class="label label-warning">Pending</label></td>
                 <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                     <i class="fas fa-eye "></i></a>
                  </td>
             </tr>
             <tr>
-                <td class="tdLeft">5</td>
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">105</a></td>
                 <td class="tdLeft">Tv</td>
-                <td class="tdLeft">Se3#42qwe!WER</td>
+                <td class="tdLeft"><a [routerLink]="['/payment/details']">#QW42qweWER</a></td>
                 <td class="tdCenter"><label class="label label-warning">Debit</label></td>
-                <td class="tdRight">
-                    £20
-                </td>
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>25</td>
                 <td class="tdCenter"><label class="label label-dark" >Refund</label></td>
                 <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                     <i class="fas fa-eye "></i></a>

@@ -23,7 +23,7 @@
                             <!--/span-->
                          <div class="form-group col-md-6">
                               <label for="passing_rank">Passing Rank<span class="reqNote">*</span></label>
-                              <input type="number" name="passing_rank" formControlName="passing_rank" class="form-control form-control-danger" placeholder="enter passing rank">
+                              <input type="number" name="passing_rank" formControlName="passing_rank" class="form-control form-control-danger">
                               <small class="form-text text-danger"
                               *ngIf="!regularForm.get('passing_rank').valid && (regularForm.get('passing_rank').dirty || regularForm.get('passing_rank').touched)">
                             Passing rank is required
@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="duration">Duration<span class="reqNote">*</span></label>
-                                <input type="number" name="duration" formControlName="duration" class="form-control form-control-danger" placeholder="enter duration">
+                                <input type="number" name="duration" formControlName="duration" class="form-control form-control-danger">
                                 <small class="form-text text-danger"
                                 *ngIf="!regularForm.get('duration').valid && (regularForm.get('duration').dirty || regularForm.get('duration').touched)">
                                 Duration is required

@@ -12,7 +12,7 @@
                           <th class="backgroundColor tdLeft">status</th>
                           <th class="backgroundColor tdLeft">ticket details</th>
                           <th class="backgroundColor">Date</th>
-                          <th class="backgroundColor">Action</th>
+                          <th class="backgroundColor tdCenter">Action</th>
                       </tr>
                   </thead>
                   <tbody>
@@ -25,9 +25,9 @@
                             </td>
                           <td class="tdLeft"><h5>{{item.subject}}</h5></td>
                           <td>{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
-                          <td>
+                          <td class="tdCenter">
                               <a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
-                                  <i class="ti-eye"></i>
+                                  <i class="fas fa-eye"></i>
                               </a>
                           </td>
                         </tr>
