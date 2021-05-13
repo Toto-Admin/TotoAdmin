@@ -8,12 +8,12 @@ import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 const routes: Routes = [
 
-  {path:'', component:DashboardComponent,data: {title: 'Customer Dashboard'}},
-  {path:'dashboard', component:DashboardComponent,data: {title: 'Customer Dashboard'}},
-  {path:'customer-list',component:CustomerListComponent,data: {title: 'Customer List'}},
-  {path:'view',component:CustomerViewComponent,data: {title: 'Customer Details'}},
-  {path: 'add',component:CustomerAddComponent,data: {title: 'Customer Add'}},
-  {path:'edit',component: CustomerEditComponent,data: {title: 'Customer Edit'}}
+  {path:'', component:DashboardComponent,data: {title: 'Customer'}},
+  {path:'dashboard', component:DashboardComponent,data: {title: 'Customer'}},
+  {path:'customer-list',component:CustomerListComponent,data: {title: 'Customer'}},
+  {path:'view',component:CustomerViewComponent,data: {title: 'Customer'}},
+  {path: 'add',component:CustomerAddComponent,data: {title: 'Customer'}},
+  {path:'edit',component: CustomerEditComponent,data: {title: 'Customer'}}
 
   
 

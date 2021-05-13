@@ -12,16 +12,16 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserViewComponent } from './user-view/user-view.component';
 
 const routes: Routes = [
-  {path:'email-template',component:EmailTemplateComponent,data: {title: 'Email Template'}},
-  {path:'referral',component:ReferralComponent,data: {title: 'Referral Management'}},
-  {path:'notification-template',component:NotificationTemplateComponent, data: {title: 'Notification Template'}},
-  {path:'general-setting',component:GeneralSettingComponent,data: {title: 'General Setting'}},
-  {path:'user-permission',component:UserPermissionComponent,data: {title: 'User And Permission'}},
-  {path:'admin-user', component:AdminUserComponent,data: {title: 'Admin User'}},
-  {path:'user-view',component:UserViewComponent,data: {title: 'User Details'}},
-  {path:'profile',component:UserProfileComponent,data: {title: 'User Profile'}},
-  {path:'activity',component:ActivityComponent,data: {title: 'User Activity'}},
-  {path:'notification',component:SendNotificationComponent,data: {title: 'Notification'}}
+  {path:'email-template',component:EmailTemplateComponent,data: {title: 'Settings'}},
+  {path:'referral',component:ReferralComponent,data: {title: 'Settings'}},
+  {path:'notification-template',component:NotificationTemplateComponent, data: {title: 'Settings'}},
+  {path:'general-setting',component:GeneralSettingComponent,data: {title: 'Settings'}},
+  {path:'user-permission',component:UserPermissionComponent,data: {title: 'Settings'}},
+  {path:'admin-user', component:AdminUserComponent,data: {title: 'Settings'}},
+  {path:'user-view',component:UserViewComponent,data: {title: 'Settings'}},
+  {path:'profile',component:UserProfileComponent,data: {title: 'Settings'}},
+  {path:'activity',component:ActivityComponent,data: {title: 'Settings'}},
+  {path:'notification',component:SendNotificationComponent,data: {title: 'Settings'}}
   
 ];
 

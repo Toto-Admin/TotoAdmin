@@ -74,17 +74,17 @@
           
           <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -1%;color:black !important">
             <li [ngbNavItem]="1">
-                <a ngbNavLink (click)="filterData('All')" style="color: black;">ALL</a>
+                <a ngbNavLink (click)="filterData('All')" style="color: black;">All</a>
             </li>
             <li [ngbNavItem]="3">
-              <a ngbNavLink (click)="filterData('pending')" style="color: black;">CHAT</a>
+              <a ngbNavLink (click)="filterData('pending')" style="color: black;">Chat</a>
           </li>
             <li [ngbNavItem]="2">
-                <a ngbNavLink (click)="filterData('open')" style="color: black;">ANSWERED</a>
+                <a ngbNavLink (click)="filterData('open')" style="color: black;">Answered</a>
             </li>
             
             <li [ngbNavItem]="4">
-                <a ngbNavLink (click)="filterData('close')" style="color: black;">RESOLVED</a>
+                <a ngbNavLink (click)="filterData('close')" style="color: black;">Resolved</a>
             </li>  
         </ul>
         </div>
@@ -112,7 +112,7 @@
             <tbody>
               <!-- (click)="trclick(item.id)" -->
               <tr *ngFor="let item of ticketData; let i =index" >
-                <td class="tdLeft"><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                <td class="tdLeft" ><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
                 <td>
                   <label *ngIf="item.status == 'A'" class="label label-success">ANSWERED</label>
                   <label *ngIf="item.status == 'R'" class="label label-danger">RESOLVED</label>

@@ -1,4 +1,5 @@
 <!-- Ticket Details -->
+<br>
 <div class="row">
   <div class="col-md-12">
       <div class="card">
@@ -18,9 +19,9 @@
                       <tr *ngFor="let item of ProviderTickets">
                           <td><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
                           <td>
-                              <label *ngIf="item.status == 'A'" class="label label-success">Open</label>
-                              <label *ngIf="item.status == 'R'" class="label label-danger">Closed</label>
-                              <label *ngIf="item.status == 'T'" class="label label-warning">Pending</label>              
+                              <label *ngIf="item.status == 'A'" class="label label-success">Answered</label>
+                              <label *ngIf="item.status == 'R'" class="label label-danger">Resolved</label>
+                              <label *ngIf="item.status == 'T'" class="label label-warning">Chat</label>              
                             </td>
                           <td class="tdLeft"><h5>{{item.subject}}</h5></td>
                           <td>{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>

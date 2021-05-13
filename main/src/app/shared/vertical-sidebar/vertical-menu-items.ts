@@ -449,7 +449,7 @@ export const ROUTES: RouteInfo[] = [
     },
     {
         path: 'setting',
-        title: 'Setting',
+        title: 'Settings',
         icon: 'fas fa-cog',
         class: 'has-arrow',
         extralink: false,

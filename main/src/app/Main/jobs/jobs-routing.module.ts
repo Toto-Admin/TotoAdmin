@@ -14,24 +14,24 @@ const routes: Routes = [
   {path:'', component:JobDashboardComponent},
   {
     path:'dashboard', component:JobDashboardComponent
-    ,data: {title: 'Job Dashboard'}
+    ,data: {title: 'Jobs'}
   },
   {
     path:'task', component:TaskComponent,
-    data: {title: 'Task Management'}
+    data: {title: 'Jobs'}
   },
   {
     path:'jobview', component:JobDetailsComponent,
-    data: {title: 'Job Details'}
+    data: {title: 'Jobs'}
   },
   {
     path:'unhappycustomer', component:UnhappywithproviderComponent,
-    data: {title: 'Unhappy with provider'}
+    data: {title: 'Jobs'}
   },
   {path:'reviews',component:ReviewsComponent},
   {path:'chat',component:ChatComponent},
   {path:'invoice',component:InvoicesComponent},
-  {path:'invoice-view',component:InvoiceViewComponent,data: {title: 'Invoice Details'} },
+  {path:'invoice-view',component:InvoiceViewComponent,data: {title: 'Payment'} },
   {path:'chatting',component:ChattingComponent},
   {path:'support',component:SupportComponent}
 

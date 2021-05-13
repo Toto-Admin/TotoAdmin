@@ -10,13 +10,13 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TotalPaymentComponent } from './total-payment/total-payment.component';
 
 const routes: Routes = [
-  {path:'dashboard',component:DashboardComponent,data: {title: 'Payment Dashboard'}},
-  {path:'payment-detail', component:PaymentDetailComponent,data: {title: 'Payment Details'}},
+  {path:'dashboard',component:DashboardComponent,data: {title: 'Payment'}},
+  {path:'payment-detail', component:PaymentDetailComponent,data: {title: 'Payment'}},
   {path:'task-detail',component:TaskDetailComponent},
   {path:'total-payment',component:TotalPaymentComponent},
-  {path:'details', component:DetailsComponent,data: {title: 'Payment Details'}},
+  {path:'details', component:DetailsComponent,data: {title: 'Payment'}},
   {path:'report',component:ReportComponent},
-  {path:'invoice-details',component:InvoiceDetailsComponent,data: {title: 'Invoice Details'}}
+  {path:'invoice-details',component:InvoiceDetailsComponent,data: {title: 'Payment'}}
 
 ];
 

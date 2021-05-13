@@ -22,17 +22,17 @@ const routes: Routes = [
   {path:'questions',component:QuestionsComponent},
   {path:'category',component:CategoryComponent},
   {path:'knowledge',component:KnowledgeComponent,data: {title: 'Knowledgebase'}},
-  {path:'mobile-content',component:MobileContentComponent, data: {title: 'Mobile Content'}},
-  {path:'transport',component:TransportComponent, data: {title: 'Transport'}},
-  {path:'like',component:LikeReasonComponent,data: {title: 'Like Reasons'}},
-  {path:'cancel',component:CancelReasonComponent,data: {title: 'Cancel Reasons'}},
-  {path:'dispute',component:DisputeReasonComponent,data: {title: 'Dispute Reasons'}},
-  {path:'reject',component:RejectReasonComponent,data: {title: 'Reject Reasons'}},
-  {path:'block',component:BlockReasonComponent,data: {title: 'Block Reasons'}},
+  {path:'mobile-content',component:MobileContentComponent, data: {title: 'Mobile App'}},
+  {path:'transport',component:TransportComponent, data: {title: 'Mobile App'}},
+  {path:'like',component:LikeReasonComponent,data: {title: 'Mobile App'}},
+  {path:'cancel',component:CancelReasonComponent,data: {title: 'Mobile App'}},
+  {path:'dispute',component:DisputeReasonComponent,data: {title: 'Mobile App'}},
+  {path:'reject',component:RejectReasonComponent,data: {title: 'Mobile App'}},
+  {path:'block',component:BlockReasonComponent,data: {title: 'Mobile App'}},
   {path:'knowledge-list/:id',component : KnowledgeListComponent,data: {title: 'Knowledgebase List'}},
   {path:'knowledge-details/:id',component:KnowledgDetailsComponent, data: {title: 'Knowledgebase Details'}},
-  {path:'feedback',component:FeedbackComponent,data: {title: 'Feedback'}},
-  {path:'feedback-view',component:FeedbackViewComponent,data: {title: 'Feedback Details'}}
+  {path:'feedback',component:FeedbackComponent,data: {title: 'Mobile App'}},
+  {path:'feedback-view',component:FeedbackViewComponent,data: {title: 'Mobile App'}}
 
 ];
 

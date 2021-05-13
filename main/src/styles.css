@@ -166,10 +166,7 @@
     margin: 0px 8px -11px 5px !important;
   }
 
-  label {
-    font-weight: 800 !important;
-    font-size: 85% !important;
-  }
+
 
   .paginate_button.current{
     color :rgb(7, 7, 7) !important;
@@ -178,11 +175,14 @@
   .sidebar-link.active{
     border-left: 6px solid #007bff !important;
   }
-  /* .sidebar-item.active{
-    border-left: 6px solid #007bff !important;
-  } */
 
+  table.dataTable.no-footer {
+    border-bottom: 1px solid #ddd !important;
+  }
 
+  .card-header{
+    background-color: white !important;
+  }
 
 
 /*  */
