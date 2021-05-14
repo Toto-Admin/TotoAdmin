@@ -217,7 +217,7 @@ export const ROUTES: RouteInfo[] = [
     },
     {
         path: '/mobile-apps',
-        title: 'Mobile Apps',
+        title: 'Mobile App',
         icon: ' icon-screen-smartphone',
         class: 'has-arrow',
         extralink: false,
