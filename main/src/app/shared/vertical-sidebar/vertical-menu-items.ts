@@ -14,7 +14,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'dashboard',
         title: 'Dashboard',
-        icon: ' fas fa-th',
+        icon: ' icon-grid',
         class: '',
         extralink: false,
         label: '',
@@ -25,7 +25,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'customer',
         title: 'Customer',
-        icon: 'fas fa-users',
+        icon: 'icon-people',
         class: 'has-arrow',
         extralink: false,
         label: '',
@@ -60,7 +60,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'provider',
         title: 'Provider',
-        icon: 'fas fa-users',
+        icon: 'icon-people',
         class: 'has-arrow',
         extralink: false,
         label: '',
@@ -195,7 +195,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'ticket',
         title: 'Tickets',
-        icon: ' fas fa-ticket-alt',
+        icon: ' ti-ticket',
         class: '',
         extralink: false,
         label: '',
@@ -206,7 +206,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: '/mobile-apps/knowledge',
         title: 'Knowledgebase',
-        icon: ' fas fa-ticket-alt',
+        icon: ' ti-ticket',
         class: '',
         extralink: false,
         label: '',
@@ -217,7 +217,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: '/mobile-apps',
         title: 'Mobile Apps',
-        icon: ' fas fa-mobile-alt',
+        icon: ' icon-screen-smartphone',
         class: 'has-arrow',
         extralink: false,
         label: '',
@@ -361,7 +361,7 @@ export const ROUTES: RouteInfo[] = [
     },{
         path: 'master',
         title: 'Master',
-        icon: 'fas fa-th',
+        icon: 'icon-grid',
         class: 'has-arrow',
         extralink: false,
         label: '',
@@ -395,7 +395,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'marketing',
         title: 'Marketing',
-        icon: 'fas fa-chart-line',
+        icon: 'icon-chart',
         class: 'has-arrow',
         extralink: false,
         label: '',
@@ -450,7 +450,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: 'setting',
         title: 'Settings',
-        icon: 'fas fa-cog',
+        icon: ' icon-settings',
         class: 'has-arrow',
         extralink: false,
         label: '',
