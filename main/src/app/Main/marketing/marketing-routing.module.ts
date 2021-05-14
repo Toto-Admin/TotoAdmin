@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'promocodes', component:PromocodesComponent,data: {title: 'Marketing'}},
   {path:'rewards',component:RewardsComponent,data: {title: 'Marketing'}},
   {path:'reports',component:ReportComponent,data: {title: 'Marketing'}},
-  {path:'coverage-area',component:CoverageAreaComponent,data: {title: 'Coverage Area'}}
+  {path:'coverage-area',component:CoverageAreaComponent,data: {title: 'Marketing'}}
 ];
 
 @NgModule({
