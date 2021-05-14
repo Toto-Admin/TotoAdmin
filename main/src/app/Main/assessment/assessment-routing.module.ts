@@ -6,9 +6,9 @@ import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {path:'',component:ListComponent},
-  {path:'add',component:AddComponent,data: {title: 'Add Assessment'}},
-  {path:'edit',component:EditComponent,data: {title: 'Edit Assessment'}},
-  {path:'list',component:ListComponent,data: {title: 'Assessment'}}
+  {path:'add',component:AddComponent,data: {title: 'Provider'}},
+  {path:'edit',component:EditComponent,data: {title: 'Provider'}},
+  {path:'list',component:ListComponent,data: {title: 'Provider'}}
 ];
 
 @NgModule({

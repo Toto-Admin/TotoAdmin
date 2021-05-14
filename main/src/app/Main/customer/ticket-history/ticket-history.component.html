@@ -9,22 +9,25 @@
                   <thead>
                       <tr class="bg-light">
                           <th class="backgroundColor tdLeft">Ticket id</th>
-                          <th class="backgroundColor tdLeft">status</th>
+                          <th class="backgroundColor tdLeft">Job id</th>
                           <th class="backgroundColor tdLeft">ticket details</th>
                           <th class="backgroundColor">Date</th>
+                          <th class="backgroundColor tdLeft">status</th>
                           <th class="backgroundColor tdCenter">Action</th>
                       </tr>
                   </thead>
                   <tbody>
-                      <tr *ngFor="let item of ProviderTickets">
+                      <tr *ngFor="let item of ProviderTickets;let i=index">
                           <td><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
-                          <td>
-                              <label *ngIf="item.status == 'A'" class="label label-success">Answered</label>
-                              <label *ngIf="item.status == 'R'" class="label label-danger">Resolved</label>
-                              <label *ngIf="item.status == 'T'" class="label label-warning">Chat</label>              
-                            </td>
+                          <td><a [routerLink]="['/jobs/jobview']">10{{i}}</a></td>
+                          
                           <td class="tdLeft"><h5>{{item.subject}}</h5></td>
                           <td>{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
+                          <td>
+                            <label *ngIf="item.status == 'A'" class="label label-success">Answered</label>
+                            <label *ngIf="item.status == 'R'" class="label label-danger">Resolved</label>
+                            <label *ngIf="item.status == 'T'" class="label label-warning">Chat</label>              
+                        </td>
                           <td class="tdCenter">
                               <a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
                                   <i class="ti-eye"></i>
