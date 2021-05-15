@@ -4,6 +4,7 @@ import { User } from '../user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataTableDirective } from 'angular-datatables';
 import { Router } from '@angular/router';
+import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-customer-list',
@@ -22,6 +23,20 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
+
+  currentJustify = 'start';
+
+  active=1;
+
+  activeKeep=1;
+
+  activeSelected=1;
+  disabled = true;
+
+  
+  tabs = [1, 2, 3, 4, 5,6];
+  counter = this.tabs.length + 1;
+  activeDynamic=1;
 
   constructor(private fb: FormBuilder,private modalService: NgbModal ,private router: Router) { }
   formsErrors = [];
@@ -78,5 +93,12 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
 
   btnClick() {
     this.router.navigate(['/customer/add']);
+  }
+
+  
+  onNavChange(changeEvent: NgbNavChangeEvent) {
+    if (changeEvent.nextId === 3) {
+      changeEvent.preventDefault();
+    }
   }
 }

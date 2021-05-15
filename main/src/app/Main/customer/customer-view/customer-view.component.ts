@@ -2,7 +2,8 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 import { User } from '../user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customer-view',
@@ -57,16 +58,42 @@ export class CustomerViewComponent implements OnInit {
 
 
   currentJustify = 'start';
-  active=1;
+  active = 1;
 
-  activeKeep=1;
-  activeSelected=1;
+  activeKeep = 1;
+  activeSelected = 1;
   disabled = true;
 
   
   tabs = [1, 2, 3, 4, 5];
   counter = this.tabs.length + 1;
-  activeDynamic=1;
+  activeDynamic = 1;
+
+ 
+
+  config: any;
+  // editUser: FormGroup | null = null;
+  userDetail: User | null = null;
+
+  filterArray: User[] | null = null;
+
+  joiningDate: string | null = null;
+  editUser: FormGroup | null = null;
+  formsErrors = [];
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private router: Router,private activatedRoute: ActivatedRoute,) { 
+    this.activatedRoute.params.subscribe(params => {
+      debugger
+      this.active = Number(params['id']);
+      this.activeKeep = Number(params['id']);
+      this.activeSelected = Number(params['id']);
+      this.disabled = true;
+
+  
+      this.tabs = [1, 2, 3, 4, 5];
+      this.counter = this.tabs.length + 1;
+      this.activeDynamic = Number(params['id']);
+    })
+  }
 
   onNavChange(changeEvent: NgbNavChangeEvent) {
     if (changeEvent.nextId === 3) {
@@ -93,17 +120,6 @@ export class CustomerViewComponent implements OnInit {
     event.preventDefault();
   }
 
-
-  config: any;
-  // editUser: FormGroup | null = null;
-  userDetail: User | null = null;
-
-  filterArray: User[] | null = null;
-
-  joiningDate: string | null = null;
-  editUser: FormGroup | null = null;
-  formsErrors = [];
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private router: Router) { }
 
   ngOnInit(): void {
     this.editUser = this.fb.group({

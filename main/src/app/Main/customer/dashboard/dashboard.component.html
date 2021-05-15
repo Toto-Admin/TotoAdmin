@@ -195,16 +195,16 @@
             <!-- title -->
             <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
                 <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                    <agm-info-window><a [routerLink]="['/customer/view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/customer/view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
                 <agm-marker [latitude]="latA" [longitude]="lngA"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                    <agm-info-window><a [routerLink]="['/customer/view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/customer/view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
                 <agm-marker [latitude]="latB" [longitude]="lngB"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                    <agm-info-window><a [routerLink]="['/customer/view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/customer/view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
                 <agm-marker [latitude]="latC" [longitude]="lngC"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                    <agm-info-window><a [routerLink]="['/customer/view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/customer/view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
             </agm-map>
         </div>
@@ -231,7 +231,7 @@
                             <small>
                                 <i class="fa fa-circle " style="color: #36bea6;"></i>
                             </small>
-                        </h4>Answered
+                        </h4><a [routerLink]="['/ticket']">Answered</a>
                     </div>
                     <!-- column -->
                     <div class="col-3 birder-right text-center">
@@ -239,7 +239,7 @@
                             <small>
                                 <i class="fa fa-circle" style="color:#ffbc34;"></i>
                             </small>
-                        </h4>Chat
+                        </h4><a [routerLink]="['/ticket']">Chat</a>
                     </div>
                     <!-- column -->
                     <div class="col-3 birder-right text-right">
@@ -247,14 +247,14 @@
                             <small>
                                 <i class="fa fa-circle" style="color:#f62d51"></i>
                             </small>
-                        </h4>Resolved
+                        </h4><a [routerLink]="['/ticket']">Resolved</a>
                     </div>
                     <div class="col-3 birder-right text-right">
                         <h4 class="m-b-0">41
                             <small>
                                 <i class="fa fa-circle" style="color: #2962ff;"></i>
                             </small>
-                        </h4>Total Ticket
+                        </h4><a [routerLink]="['/ticket']">Total Ticket</a>
                     </div>
                 </div>
             </div>
@@ -314,7 +314,7 @@
                             <td class="tdLeft"><div class="d-flex">
                                 <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                 <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Daniel Kristeen</a></p>
+                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Daniel Kristeen</a></p>
                                 </div>
                               </div></td>
                               <td class="tdLeft"><div class="d-flex">
@@ -323,17 +323,17 @@
                                   <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Daniel King</a></p>
                                 </div>
                               </div></td>
-                              <td><span class="fa fa-star checked"></span>
+                              <td><a class="starA" [routerLink]="['/customer/view/4']"><span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
+                                <span class="fa fa-star"></span></a></td>
                             <td class="tdCenter"><label class="label label-success">On-site</label></td>
                             <td class="tdCenter"><label class="label label-success">Done</label></td>
                         
                         
                             
-                         <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                         <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                             <i class="ti-eye "></i></a>
                          </td>
                             
@@ -349,7 +349,7 @@
                             <td class="tdLeft"><div class="d-flex">
                                 <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                 <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Mark Wood</a></p>
+                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Mark Wood</a></p>
                                 </div>
                               </div></td>
                               <td class="tdLeft"><div class="d-flex">
@@ -359,16 +359,16 @@
                                 </div>
                               </div></td>
                                   
-                            <td><span class="fa fa-star checked"></span>
+                            <td><a class="starA" [routerLink]="['/customer/view/4']"><span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
+                                <span class="fa fa-star"></span></a></td>
                             <td class="tdCenter"><label class="label label-dark">Remote</label></td>   
                              <td class="tdCenter" ><label class="label label-warning">Draft</label></td>
 
                        
-                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="ti-eye "></i></a>
                                  </td>
                         </tr>
@@ -384,7 +384,7 @@
                             <td class="tdLeft"><div class="d-flex">
                                 <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                 <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Jack King</a></p>
+                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Jack King</a></p>
                                 </div>
                               </div></td>
                               <td class="tdLeft"><div class="d-flex">
@@ -393,17 +393,17 @@
                                   <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Mark Wood</a></p>
                                 </div>
                               </div></td>
-                              <td><span class="fa fa-star checked"></span>
+                              <td><a class="starA" [routerLink]="['/customer/view/4']"><span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star "></span>
                                 <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
+                                <span class="fa fa-star"></span></a></td>
                             <td class="tdCenter"><label class="label label-success">On-site</label></td>
                        
                             <td class="tdCenter"><label class="label label-success">Done</label></td>
                            
                          
-                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="ti-eye "></i></a>
                                  </td>
                             
@@ -420,7 +420,7 @@
                             <td class="tdLeft"><div class="d-flex">
                                 <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                 <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Johan Thomas</a></p>
+                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Johan Thomas</a></p>
                                 </div>
                               </div></td>
                               <td class="tdLeft"><div class="d-flex">
@@ -430,15 +430,15 @@
                                 </div>
                               </div></td>
                                  
-                            <td><span class="fa fa-star checked"></span>
+                            <td><a class="starA" [routerLink]="['/customer/view/4']"><span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star "></span>
                                 <span class="fa fa-star "></span>
-                                <span class="fa fa-star"></span></td>
+                                <span class="fa fa-star"></span></a></td>
                             <td class="tdCenter"><label class="label label-dark">Remote</label></td>
                             <td class="tdCenter"><label class="label label-success">Done</label></td>
                         
-                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="ti-eye "></i></a>
                                  </td>
                             
@@ -455,7 +455,7 @@
                             <td class="tdLeft"><div class="d-flex">
                                 <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                 <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">James King</a></p>
+                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">James King</a></p>
                                 </div>
                               </div></td>
                               <td class="tdLeft"><div class="d-flex">
@@ -465,14 +465,14 @@
                                 </div>
                               </div></td>
                               
-                            <td><span class="fa fa-star checked"></span>
+                            <td><a class="starA" [routerLink]="['/customer/view/4']"><span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
+                                <span class="fa fa-star"></span></a></td>
                             <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
                           
-                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                     <i class="ti-eye "></i></a>
                                  </td>
                             
@@ -489,7 +489,7 @@
                             <td class="tdLeft"><div class="d-flex">
                                 <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                 <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Harry King</a></p>
+                                  <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Harry King</a></p>
                                 </div>
                               </div></td>
                               <td class="tdLeft"><div class="d-flex">
@@ -499,18 +499,16 @@
                                 </div>
                               </div></td>
                                 
-                            <td><span class="fa fa-star checked"></span>
+                            <td><a class="starA" [routerLink]="['/customer/view/4']"><span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
+                                <span class="fa fa-star"></span></a></td>
                             <td class="tdCenter"><label class="label label-dark">Remote</label></td>
                             <td class="tdCenter"><label class="label label-success">Done</label></td>
-                          
-                                <td class="tdCenter"><a [routerLink]="['/customer/view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye "></i></a>
-                                 </td>
-                            
+                            <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                <i class="ti-eye "></i></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

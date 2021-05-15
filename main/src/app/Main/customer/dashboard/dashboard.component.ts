@@ -321,7 +321,7 @@ export class DashboardComponent  {
               },
               total: {
                 show: true,
-                label: 'Ratio',
+                label: 'Services',
                 color: '#99abb4',
               }
             }
@@ -370,7 +370,7 @@ export class DashboardComponent  {
               },
               total: {
                 show: true,
-                label: 'Ratio',
+                label: 'Reasons',
                 color: '#99abb4',
               }
             }
@@ -444,7 +444,5 @@ export class DashboardComponent  {
     };
   }
 
-  
-  
 
 }

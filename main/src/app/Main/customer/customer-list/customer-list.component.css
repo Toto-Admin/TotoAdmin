@@ -10,3 +10,21 @@
         overflow-x:auto;
     }
   }
+
+  .active {
+    /* background-color: #2962ff !important;
+    color :white !important; */
+    text-decoration: underline #007bff 4px;
+    text-underline-position: under;
+  }
+  li{
+    /* width:165px; */
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    }
+    .nav-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: black !important;
+  }

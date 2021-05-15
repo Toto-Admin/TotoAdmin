@@ -62,7 +62,7 @@ export class ReportComponent {
               },
               total: {
                 show: true,
-                label: 'Ratio',
+                label: 'Payment Overview',
                 color: '#99abb4',
               }
             }
