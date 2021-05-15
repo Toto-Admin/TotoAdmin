@@ -348,417 +348,459 @@
 </div> -->
 <!-- top Rated providerT -->
 
+
 <div class="row">
     <div class="col-md-12">
-        <div class="card">
+        <div class="card " >
             <div class="card-body">
-                <!-- title -->
-                <div class="d-md-flex align-items-center">
-                    <div>
-                        <h4 class="card-title">Top Rated Provider</h4>
-                        <!-- <h5 class="card-subtitle">Overview of Top rated Provider</h5> -->
-                    </div>
-                    <div class="ml-auto">
-                        <div class="dl">
-                            <select class="custom-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
+                <!-- <h4 class="card-title">All Details of Provider</h4> -->
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink >Top Rated Provider</a>
+                        <ng-template ngbNavContent>
+                            <!-- <app-document></app-document> -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-md-flex align-items-center">
+                                                <div class="ml-auto" style="margin-top: -35px;">
+                                                    <div class="dl">
+                                                        <select class="custom-select">
+                                                            <option value="0" selected>Monthly</option>
+                                                            <option value="1">Daily</option>
+                                                            <option value="2">Weekly</option>
+                                                            <option value="3">Yearly</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table v-middle">
+                                                <thead>
+                                                    <tr class="bg-light">
+                                                        <th class="border-top-0 backgroundColor">JOBID</th>
+                                                        <th class="border-top-0 backgroundColor">SERVICE</th>
+                                                        <th class="border-top-0 backgroundColor">PROVIDER</th>
+                                                        <th class="border-top-0 backgroundColor">RATING</th>
+                                                        <th class="border-top-0 backgroundColor tdCenter">TYPE</th>
+                                                        <th class="border-top-0 backgroundColor tdCenter">STATUS</th>
+                                                        <th class="border-top-0 backgroundColor tdCenter">ACTION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">101</a></td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="">
+                                                                    <h4 class="m-b-0 font-16">New network setup</h4>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tdLeft"><div class="d-flex">
+                                                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                            <div class="ml-3">
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Smith</a></p>
+                                                            </div>
+                                                          </div></td> 
+                                                          <td><span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span></td>
+                                                        <td class="tdCenter"><label class="label label-dark">Remote</label></td>
+                                                        <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                       
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <i class="ti-eye"></i></a>
+                                                         </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">102</a></td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="">
+                                                                    <h4 class="m-b-0 font-16">Ac</h4>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tdLeft"><div class="d-flex">
+                                                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                            <div class="ml-3">
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jack Smith</a></p>
+                                                            </div>
+                                                          </div></td>  
+                                                          <td><span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span></td>
+                                                        <td class="tdCenter"><label class="label label-dark">Remote</label></td>
+                                                        <td class="tdCenter"><label class="label label-warning">Draft</label></td>
+                                                       
+                                                      
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                                <i class="ti-eye"></i></a>
+                                                             </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">103</a></td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="">
+                                                                    <h4 class="m-b-0 font-16">Connectivity</h4>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tdLeft"><div class="d-flex">
+                                                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                            <div class="ml-3">
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald Smith</a></p>
+                                                            </div>
+                                                          </div></td>  
+                                                          
+                                                        <td><span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span></td>
+                                                        <td class="tdCenter"><label class="label label-dark">Remote</label></td>
+                                                        <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                      
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                                <i class="ti-eye"></i></a>
+                                                             </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">104</a></td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="">
+                                                                    <h4 class="m-b-0 font-16">New network setup</h4>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tdLeft"><div class="d-flex">
+                                                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                            <div class="ml-3">
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Thomas</a></p>
+                                                            </div>
+                                                          </div></td>  
+                                                          <td><span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span></td>
+                                                        <td class="tdCenter"><label class="label label-success">On-site</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                       
+                                                      
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                                <i class="ti-eye"></i></a>
+                                                             </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">105</a></td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="">
+                                                                    <h4 class="m-b-0 font-16">New network conncection</h4>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tdLeft"><div class="d-flex">
+                                                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                            <div class="ml-3">
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jenny Mark</a></p>
+                                                            </div>
+                                                          </div></td>  
+                                                        <td><span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span></td>
+                                                        <td class="tdCenter"><label class="label label-success">On-site</label></td>
+                                                        <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
+                                                       
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                                <i class="ti-eye"></i></a>
+                                                             </td>
+                                
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">106</a></td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="">
+                                                                    <h4 class="m-b-0 font-16">New network setup</h4>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="tdLeft"><div class="d-flex">
+                                                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                            <div class="ml-3">
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald King</a></p>
+                                                            </div>
+                                                          </div></td>  
+                                                        <td><span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span></td>
+                                                        <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                      
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                                <i class="ti-eye"></i></a>
+                                                             </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </ng-template>
+                    </li>
+                  
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Top Negative Rated Provider</a>
+                        <ng-template ngbNavContent>
+                          <!-- <app-performance></app-performance> -->
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- title -->
+                                        <div class="d-md-flex align-items-center">
+                                            <!-- <div>
+                                                <h4 class="card-title">Top Negative Rated Provider</h4>
+                                                <h5 class="card-subtitle">Overview of Top  Provider</h5>
+                                            </div> -->
+                                            <div class="ml-auto"style="margin-top: -35px;">
+                                                <div class="dl">
+                                                    <select class="custom-select">
+                                                        <option value="0" selected>Monthly</option>
+                                                        <option value="1">Daily</option>
+                                                        <option value="2">Weekly</option>
+                                                        <option value="3">Yearly</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- title -->
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table v-middle">
+                                            <thead>
+                                                <tr class="bg-light">
+                                                    <th class="border-top-0 backgroundColor">JOBID</th>
+                                                    <th class="border-top-0 backgroundColor">SERVICE</th>
+                                                    <th class="border-top-0 backgroundColor">PROVIDER</th>
+                                                    <th class="border-top-0 backgroundColor">RATING</th>
+                                                    <th class="border-top-0 backgroundColor tdCenter">TYPE</th>
+                                                    <th class="border-top-0 backgroundColor tdCenter">STATUS</th>
+                                            
+                                                    <th class="border-top-0 backgroundColor tdCenter">ACTION</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">101</a></td>
+
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="">
+                                                                <h4 class="m-b-0 font-16">New network setup</h4>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tdLeft"><div class="d-flex">
+                                                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                        <div class="ml-3">
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Smith</a></p>
+                                                        </div>
+                                                      </div></td> 
+                                                      <td><span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star"></span></td>
+                                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>
+                                                    <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                   
+                                                    <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <i class="ti-eye"></i></a>
+                                                     </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">102</a></td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="">
+                                                                <h4 class="m-b-0 font-16">Ac</h4>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tdLeft"><div class="d-flex">
+                                                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                        <div class="ml-3">
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jack Smith</a></p>
+                                                        </div>
+                                                      </div></td>  
+                                                      <td><span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span></td>
+                                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>
+                                                    <td class="tdCenter"><label class="label label-warning">Draft</label></td>
+                                                   
+                                                  
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <i class="ti-eye"></i></a>
+                                                         </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">103</a></td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="">
+                                                                <h4 class="m-b-0 font-16">Connectivity</h4>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tdLeft"><div class="d-flex">
+                                                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                        <div class="ml-3">
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald Smith</a></p>
+                                                        </div>
+                                                      </div></td>  
+                                                      
+                                                    <td><span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span></td>
+                                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>
+                                                    <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                  
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <i class="ti-eye"></i></a>
+                                                         </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">104</a></td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="">
+                                                                <h4 class="m-b-0 font-16">New network setup</h4>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tdLeft"><div class="d-flex">
+                                                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                        <div class="ml-3">
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Thomas</a></p>
+                                                        </div>
+                                                      </div></td>  
+                                                      <td><span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span></td>
+                                                    <td class="tdCenter"><label class="label label-success">On-site</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                   
+                                                  
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <i class="ti-eye"></i></a>
+                                                         </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">105</a></td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="">
+                                                                <h4 class="m-b-0 font-16">New network conncection</h4>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tdLeft"><div class="d-flex">
+                                                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                        <div class="ml-3">
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jenny Mark</a></p>
+                                                        </div>
+                                                      </div></td>  
+                                                    <td><span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star "></span>
+                                                        <span class="fa fa-star"></span></td>
+                                                    <td class="tdCenter"><label class="label label-success">On-site</label></td>
+                                                    <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
+                                                   
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <i class="ti-eye"></i></a>
+                                                         </td>
+                            
+                                                </tr>
+                                                <tr>
+                                                    <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">106</a></td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="">
+                                                                <h4 class="m-b-0 font-16">New network setup</h4>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="tdLeft"><div class="d-flex">
+                                                        <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                                                        <div class="ml-3">
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald King</a></p>
+                                                        </div>
+                                                      </div></td>  
+                                                    <td><span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span></td>
+                                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
+                                                  
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <i class="ti-eye"></i></a>
+                                                         </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <!-- title -->
-            </div>
-            <div class="table-responsive">
-                <table class="table v-middle">
-                    <thead>
-                        <tr class="bg-light">
-                            <th class="border-top-0 backgroundColor">SERVICE</th>
-                            <th class="border-top-0 backgroundColor">PROVIDER</th>
-                            <th class="border-top-0 backgroundColor">RATING</th>
-                            <th class="border-top-0 backgroundColor tdCenter">TYPE</th>
-                            <th class="border-top-0 backgroundColor tdCenter">STATUS</th>
-                            <th class="border-top-0 backgroundColor tdCenter">ACTION</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Smith</a></p>
-                                </div>
-                              </div></td> 
-                              <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                           
-                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                <i class="ti-eye"></i></a>
-                             </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">Ac</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jack Smith</a></p>
-                                </div>
-                              </div></td>  
-                              <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                            <td class="tdCenter"><label class="label label-warning">Draft</label></td>
-                           
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">Connectivity</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald Smith</a></p>
-                                </div>
-                              </div></td>  
-                              
-                            <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Thomas</a></p>
-                                </div>
-                              </div></td>  
-                              <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-success">On-site</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                           
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network conncection</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jenny Mark</a></p>
-                                </div>
-                              </div></td>  
-                            <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-success">On-site</label></td>
-                            <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
-                           
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-    
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald King</a></p>
-                                </div>
-                              </div></td>  
-                            <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                        </tr>
-                    </tbody>
-                </table>
+                        </ng-template>
+                   </li>
+                </ul>
+
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
             </div>
         </div>
     </div>
 </div>
 
 
-<!-- Top/Negative Rated Provider -->
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-body">
-                <!-- title -->
-                <div class="d-md-flex align-items-center">
-                    <div>
-                        <h4 class="card-title">Top Negative Rated Provider</h4>
-                        <!-- <h5 class="card-subtitle">Overview of Top  Provider</h5> -->
-                    </div>
-                    <div class="ml-auto">
-                        <div class="dl">
-                            <select class="custom-select">
-                                <option value="0" selected>Monthly</option>
-                                <option value="1">Daily</option>
-                                <option value="2">Weekly</option>
-                                <option value="3">Yearly</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <!-- title -->
-            </div>
-            <div class="table-responsive">
-                <table class="table v-middle">
-                    <thead>
-                        <tr class="bg-light">
-                            <th class="border-top-0 backgroundColor">SERVICE</th>
-                            <th class="border-top-0 backgroundColor">PROVIDER</th>
-                            <th class="border-top-0 backgroundColor">RATING</th>
-                            <th class="border-top-0 backgroundColor tdCenter">TYPE</th>
-                            <th class="border-top-0 backgroundColor tdCenter">STATUS</th>
-                    
-                            <th class="border-top-0 backgroundColor tdCenter">ACTION</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Smith</a></p>
-                                </div>
-                              </div></td> 
-                              <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star "></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star "></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                           
-                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                <i class="ti-eye"></i></a>
-                             </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">Ac</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jack Smith</a></p>
-                                </div>
-                              </div></td>  
-                              <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                            <td class="tdCenter"><label class="label label-warning">Draft</label></td>
-                           
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">Connectivity</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald Smith</a></p>
-                                </div>
-                              </div></td>  
-                              
-                            <td><span class="fa fa-star"></span>
-                                <span class="fa fa-star "></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Thomas</a></p>
-                                </div>
-                              </div></td>  
-                              <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star "></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-success">On-site</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                           
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                            
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network conncection</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jenny Mark</a></p>
-                                </div>
-                              </div></td>  
-                            <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star "></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-success">On-site</label></td>
-                            <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
-                           
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-    
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <h4 class="m-b-0 font-16">New network setup</h4>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="tdLeft"><div class="d-flex">
-                                <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                                <div class="ml-3">
-                                  <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald King</a></p>
-                                </div>
-                              </div></td>  
-                            <td><span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span></td>
-                            <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
-                          
-                                <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                                    <i class="ti-eye"></i></a>
-                                 </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="row">
     <div class="col-md-4 col-sm-12">
@@ -784,7 +826,7 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
-                            <div class="card-body" style="margin-bottom: 25%;">
+                            <div class="card-body" style="margin-bottom: 25%; height: 315px;">
                                 <h4 class="card-title">Reviews</h4>
                                 <!-- <h5 class="card-subtitle">Overview of review</h5> -->
                                 <h2 class="font-medium m-t-40 m-b-0">2542</h2>

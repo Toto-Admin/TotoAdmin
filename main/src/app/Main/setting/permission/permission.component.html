@@ -1,0 +1,137 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+          <div class="card">
+            <div class="card-header bg-info" style="background-color: #fff !important;">
+            <div class="card-header">
+               <h4 style="padding-bottom: 10px;" class="m-b-0">Add User And Permission Details</h4>
+           </div>
+            <div class="card-body">
+             <form >
+
+            <div class="form-group">
+            <label for="role" >Role<span class="reqNote">*</span></label>
+            <div >
+                
+                <input type="text" class="form-control" formControlName="role" id="role" >
+            
+                <!-- <small class="form-text text-danger"
+                *ngIf="!editUser.get('role').valid && (editUser.get('role').dirty || editUser.get('role').touched)">
+                Role Field is required 
+                </small>  -->
+            </div>
+            </div>
+            <div class="form-group row">
+                <label for="permission" class="col-sm-12 col-form-label">Permission</label> <br>
+                <div class="col-3" >
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked> Dashboard
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked>Services
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Email Template
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Provider
+                            </label>
+                        </fieldset>
+                    
+                    </div>  
+                    <div class="col-3" >
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked> Jobs
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked>Knoweledge
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>General Settings
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Admin users
+                            </label>
+                        </fieldset>
+                        
+                        
+                    </div>  
+                    <div class="col-3" >
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked> Referral
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked>Customer
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Rewards
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Payments
+                            </label>
+                        </fieldset>
+                        
+                        
+                    </div>  
+                    <div class="col-3" >
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked> Ratings
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox">
+                            <label>
+                                <input type="checkbox" value="" checked>Transport
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Promo Code
+                            </label>
+                        </fieldset>
+                        <fieldset class="checkbox ">
+                            <label>
+                                <input type="checkbox" value="" checked>Notification Template
+                            </label>
+                        </fieldset>
+                        
+                        
+                    </div>  
+        
+        
+            </div>
+    
+
+
+    <div class="modal-footer">
+      
+      <button type="submit" class="btn btn-info" >Save</button>
+      <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+
+    </div>
+
+    
+  </form>
+  </div>
+  </div></div></div></div></div>

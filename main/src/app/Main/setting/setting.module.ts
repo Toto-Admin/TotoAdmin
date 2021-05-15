@@ -25,8 +25,9 @@ import { ActivityComponent } from './activity/activity.component';
 import { SendNotificationComponent } from './send-notification/send-notification.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { FormsModule } from '@angular/forms';
+import { PermissionComponent } from './permission/permission.component';
 @NgModule({
-  declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent, AdminUserComponent, UserViewComponent, UserProfileComponent, ActivityComponent, SendNotificationComponent],
+  declarations: [EmailTemplateComponent, ReferralComponent, NotificationTemplateComponent, UserPermissionComponent, GeneralSettingComponent, GeneralComponent, ChargesComponent, EmailComponent, MenuComponent, ReferralTabComponent, InfoComponent, ConfigComponent, AdminUserComponent, UserViewComponent, UserProfileComponent, ActivityComponent, SendNotificationComponent, PermissionComponent],
   imports: [
     CommonModule,
     SettingRoutingModule,

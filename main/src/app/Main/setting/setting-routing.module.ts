@@ -5,6 +5,7 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
 import { GeneralSettingComponent } from './general-setting/general-setting.component';
 import { NotificationTemplateComponent } from './notification-template/notification-template.component';
+import { PermissionComponent } from './permission/permission.component';
 import { ReferralComponent } from './referral/referral.component';
 import { SendNotificationComponent } from './send-notification/send-notification.component';
 import { UserPermissionComponent } from './user-permission/user-permission.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'user-view',component:UserViewComponent,data: {title: 'Settings'}},
   {path:'profile',component:UserProfileComponent,data: {title: 'Settings'}},
   {path:'activity',component:ActivityComponent,data: {title: 'Settings'}},
-  {path:'notification',component:SendNotificationComponent,data: {title: 'Settings'}}
+  {path:'notification',component:SendNotificationComponent,data: {title: 'Settings'}},
+  {path:'permission',component:PermissionComponent,data: {title: 'Settings'}}
   
 ];
 

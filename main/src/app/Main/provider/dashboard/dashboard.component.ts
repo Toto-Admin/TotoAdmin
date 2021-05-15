@@ -1,4 +1,5 @@
 import { AfterViewInit, Component,  ViewChild } from '@angular/core';
+import { NgbNavChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 import {
   ApexChart,
@@ -221,7 +222,27 @@ public pieChartData: number[] = [100, 200, 100,50,300,50];
 public pieChartType = 'pie';
 // ngAfterViewInit() {}
 
+currentJustify = 'start';
 
+active=1;
+
+activeKeep=1;
+
+activeSelected=1;
+disabled = true;
+
+
+tabs = [1, 2, 3, 4, 5];
+counter = this.tabs.length + 1;
+activeDynamic=1;
+ngOnInit(): void {
+}
+
+onNavChange(changeEvent: NgbNavChangeEvent) {
+  if (changeEvent.nextId === 3) {
+    changeEvent.preventDefault();
+  }
+}
 
 
 }
