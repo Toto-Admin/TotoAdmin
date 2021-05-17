@@ -222,7 +222,7 @@ export class DashboardComponent implements OnInit {
           "Apr",
           "May",
           "Jun",
-          "jul",
+          "Jul",
           "Aug",
           "Sep",
           "Oct",

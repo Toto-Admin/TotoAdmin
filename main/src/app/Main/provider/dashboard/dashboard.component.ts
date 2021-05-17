@@ -170,7 +170,7 @@ export class DashboardComponent  {
             },
             total: {
               show: true,
-              label: 'Visits',
+              label: 'Task Type',
               color: '#99abb4',
             }
           }
@@ -211,7 +211,7 @@ public doughnutChartType = 'doughnut';
 public pieChartLabels: string[] = [
   'Ac Service',
   'Tv Service',
-  'Internate Speed',
+  'Internet Speed',
   'Poor Wifi Coverage',
   'Connectivity',
   'Voice Modulation'

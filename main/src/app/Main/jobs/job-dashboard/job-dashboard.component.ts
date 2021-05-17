@@ -580,7 +580,7 @@ export class JobDashboardComponent implements OnInit {
       legends: {
         show: false,
       },
-      labels: ['Rescheduel', 'No shows', 'Provider report', 'Return visit'],
+      labels: ['Reschedule', 'No shows', 'Provider report', 'Return visit'],
       colors: ['#40c4ff', '#2961ff', '#ff821c', '#e70da6'],
 
     };
