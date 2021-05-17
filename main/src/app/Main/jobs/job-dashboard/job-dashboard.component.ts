@@ -561,7 +561,7 @@ export class JobDashboardComponent implements OnInit {
               },
               total: {
                 show: true,
-                label: 'Visits',
+                label: 'Tasks',
                 color: '#99abb4',
               }
             }

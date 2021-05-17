@@ -35,122 +35,27 @@
     <div class="col-12">
 <div class="card card-body">
    <div class="table-responsive">
-          <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+          <table class="row-border hover table ">
             <thead>
               <tr>
-                <th scope="col" class=" backgroundColor tdLeft" >JOBID</th>
-                <th scope="col" class="backgroundColor tdLeft">SERVICE</th>
-                <th scope="col" class="backgroundColor tdLeft">CUSTOMER </th>
-                <th scope="col" class="backgroundColor tdLeft">PROVIDER</th>
-                <th scope="col" class="backgroundColor tdLeft">CREATED DATE</th>
-                <th scope="col" class="backgroundColor tdLeft">EXPIRED DATE</th>
-               
-                <th scope="col" class="backgroundColor tdCenter">STATUS</th>
-             
+                <th scope="col" class=" backgroundColor tdLeft" >Date</th>
+                <th scope="col" class="backgroundColor tdLeft">Start Time</th>
+                <th scope="col" class="backgroundColor tdLeft">comment </th>
+                <th scope="col" class="backgroundColor tdLeft">Time Slot</th>
+                <th scope="col" class="backgroundColor tdLeft">End Time</th>
+                <th scope="col" class="backgroundColor tdLeft">Created At</th>             
               </tr>
             </thead>
             <tbody>
-              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-  
-                <td class="text-center">
-                  {{user.id}}
-                </td>
-  
-                <td class="tdLeft">
-                  <div class="d-flex align-items-center">
-                    <img class="rounded-circle" [src]='user.imagePath' height=" 30px" width="30px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0">{{ user.Name }}</p>
-                      <small>{{user.Position}}</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="tdLeft">{{ user.Email }}</td>
-  
-                <td class="tdLeft">{{ user.Mobile }}</td>
-                <td class="tdLeft">{{ user.DateOfJoining |date :'fullDate' }}</td>
-  
-                <td class="tdLeft">{{ user.Salary }}</td>
-                <td class="tdLeft">{{ user.Projects }}</td>
-                <td class="tdLeft">
-                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
-                    placement="top" ngbTooltip="Edit">
-                    <i-feather name="edit-2" class="feather-sm"></i-feather>
-                  </a>
-                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
-                    ngbTooltip="Delete">
-                    <i-feather name="trash-2" class="feather-sm"></i-feather>
-                  </a>
-                </td>
-              </tr> -->
               <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">101</a></td>
-                <td class="tdLeft">Tv</td>
-                  <td class="tdLeft"><div class="d-flex align-items-center">
-                    <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Ronald Anderson</a></p>
-                    </div>
-                  </div></td>
-                  <td class="tdLeft"><div class="d-flex align-items-center">
-                      <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                      <div class="ml-3">
-                        <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Amelia Mark</a></p>
-                      </div>
-                    </div></td>
+                <td class="tdLeft">03/23/2021</td>
+                <td class="tdLeft">12:00:00</td>
+                  <td class="tdLeft">Task start with in time</td>
+                  <td class="tdLeft">Afternoon</td>
                   
                   <td class="tdLeft">13/05/2021, 7:40 AM</td>
                   <td class="tdLeft">13/05/2021, 5:40 PM</td>
-                  <td class="tdCenter"><label class="label label-success">Completed</label></td>
-                 
-                 
               </tr>
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">102</a></td>
-                <td class="tdLeft">Mobile</td>
-                  <td class="tdLeft"><div class="d-flex align-items-center">
-                    <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Johan Smith</a></p>
-                    </div>
-                  </div></td>
-                  <td class="tdLeft"><div class="d-flex align-items-center">
-                      <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                      <div class="ml-3">
-                        <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Amelia Mark</a></p>
-                      </div>
-                    </div></td>
-                  
-                  <td class="tdLeft">13/05/2021, 7:40 AM</td>
-                  <td class="tdLeft">13/05/2021, 5:40 PM</td>
-                  <td class="tdCenter"><label class="label label-warning">Scheduled</label></td>
-                 
-                 
-              </tr>
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">103</a></td>
-                <td class="tdLeft">Ac</td>
-                  <td class="tdLeft"><div class="d-flex align-items-center">
-                    <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view']">Jack King</a></p>
-                    </div>
-                  </div></td>
-                  <td class="tdLeft"><div class="d-flex align-items-center">
-                      <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                      <div class="ml-3">
-                        <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Amelia Mark</a></p>
-                      </div>
-                    </div></td>
-                  
-                  <td class="tdLeft">13/05/2021, 3:40 PM</td>
-                  <td class="tdLeft">14/05/2021, 7:40 PM</td>
-                  <td class="tdCenter"><label class="label label-success">Completed</label></td>
-                 
-                 
-              </tr>
-         
-             
             </tbody>
           </table>
         </div>

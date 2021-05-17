@@ -214,16 +214,16 @@
             <!-- title -->
             <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
                 <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
-                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/provider/provider-view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
                 <agm-marker [latitude]="latA" [longitude]="lngA"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
-                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/provider/provider-view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
                 <agm-marker [latitude]="latB" [longitude]="lngB"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
-                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/provider/provider-view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
                 <agm-marker [latitude]="latC" [longitude]="lngC"  [iconUrl]="{ url: 'img1', scaledSize: [10,10], origin: [0,0], anchoriconAnchor: [7,7] }">
-                    <agm-info-window><a [routerLink]="['/provider/provider-view']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
+                    <agm-info-window><a [routerLink]="['/provider/provider-view/1']"><img src="assets/images/users/5.jpg" width="20" class="rounded-circle" alt="user" />Simth Wood</a> </agm-info-window>
                 </agm-marker>
             </agm-map>
         </div>
@@ -250,7 +250,7 @@
                             <small>
                                 <i class="fa fa-circle " style="color: #36bea6;"></i>
                             </small>
-                        </h4>Answered
+                        </h4><a [routerLink]="['/ticket']">Answered</a>
                     </div>
                     <!-- column -->
                     <div class="col-3 birder-right text-center">
@@ -258,7 +258,7 @@
                             <small>
                                 <i class="fa fa-circle" style="color:#ffbc34;"></i>
                             </small>
-                        </h4>Chat
+                        </h4><a [routerLink]="['/ticket']">Chat</a>
                     </div>
                     <!-- column -->
                     <div class="col-3 birder-right text-right">
@@ -266,14 +266,14 @@
                             <small>
                                 <i class="fa fa-circle" style="color:#f62d51"></i>
                             </small>
-                        </h4>Resolved
+                        </h4><a [routerLink]="['/ticket']">Resolved</a>
                     </div>
                     <div class="col-3 birder-right text-right">
                         <h4 class="m-b-0">41
                             <small>
                                 <i class="fa fa-circle" style="color: #2962ff;"></i>
                             </small>
-                        </h4>Total Ticket
+                        </h4><a [routerLink]="['/ticket']">Total Ticket</a>
                     </div>
                 </div>
             </div>
@@ -403,7 +403,7 @@
                                                         <td class="tdLeft"><div class="d-flex">
                                                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                             <div class="ml-3">
-                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Smith</a></p>
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Smith</a></p>
                                                             </div>
                                                           </div></td> 
                                                           <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -414,7 +414,7 @@
                                                         <td class="tdCenter"><label class="label label-dark">Remote</label></td>
                                                         <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                        
-                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                             <i class="ti-eye"></i></a>
                                                          </td>
                                                     </tr>
@@ -431,7 +431,7 @@
                                                         <td class="tdLeft"><div class="d-flex">
                                                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                             <div class="ml-3">
-                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jack Smith</a></p>
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Jack Smith</a></p>
                                                             </div>
                                                           </div></td>  
                                                           <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -443,7 +443,7 @@
                                                         <td class="tdCenter"><label class="label label-warning">Draft</label></td>
                                                        
                                                       
-                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                                 <i class="ti-eye"></i></a>
                                                              </td>
                                                         
@@ -461,7 +461,7 @@
                                                         <td class="tdLeft"><div class="d-flex">
                                                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                             <div class="ml-3">
-                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald Smith</a></p>
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Ronald Smith</a></p>
                                                             </div>
                                                           </div></td>  
                                                           
@@ -473,7 +473,7 @@
                                                         <td class="tdCenter"><label class="label label-dark">Remote</label></td>
                                                         <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                       
-                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                                 <i class="ti-eye"></i></a>
                                                              </td>
                                                         
@@ -491,7 +491,7 @@
                                                         <td class="tdLeft"><div class="d-flex">
                                                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                             <div class="ml-3">
-                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Thomas</a></p>
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Thomas</a></p>
                                                             </div>
                                                           </div></td>  
                                                           <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -502,7 +502,7 @@
                                                         <td class="tdCenter"><label class="label label-success">On-site</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                        
                                                       
-                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                                 <i class="ti-eye"></i></a>
                                                              </td>
                                                         
@@ -520,7 +520,7 @@
                                                         <td class="tdLeft"><div class="d-flex">
                                                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                             <div class="ml-3">
-                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jenny Mark</a></p>
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Jenny Mark</a></p>
                                                             </div>
                                                           </div></td>  
                                                         <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -531,7 +531,7 @@
                                                         <td class="tdCenter"><label class="label label-success">On-site</label></td>
                                                         <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
                                                        
-                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                                 <i class="ti-eye"></i></a>
                                                              </td>
                                 
@@ -549,7 +549,7 @@
                                                         <td class="tdLeft"><div class="d-flex">
                                                             <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                             <div class="ml-3">
-                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald King</a></p>
+                                                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Ronald King</a></p>
                                                             </div>
                                                           </div></td>  
                                                         <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -559,7 +559,7 @@
                                                             <span class="fa fa-star"></span></a></td>
                                                         <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                       
-                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                            <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                                 <i class="ti-eye"></i></a>
                                                              </td>
                                                     </tr>
@@ -628,7 +628,7 @@
                                                     <td class="tdLeft"><div class="d-flex">
                                                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                         <div class="ml-3">
-                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Smith</a></p>
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Smith</a></p>
                                                         </div>
                                                       </div></td> 
                                                       <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -639,7 +639,7 @@
                                                     <td class="tdCenter"><label class="label label-dark">Remote</label></td>
                                                     <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                    
-                                                    <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                    <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                         <i class="ti-eye"></i></a>
                                                      </td>
                                                 </tr>
@@ -655,7 +655,7 @@
                                                     <td class="tdLeft"><div class="d-flex">
                                                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                         <div class="ml-3">
-                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jack Smith</a></p>
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Jack Smith</a></p>
                                                         </div>
                                                       </div></td>  
                                                       <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -667,7 +667,7 @@
                                                     <td class="tdCenter"><label class="label label-warning">Draft</label></td>
                                                    
                                                   
-                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                             <i class="ti-eye"></i></a>
                                                          </td>
                                                     
@@ -684,7 +684,7 @@
                                                     <td class="tdLeft"><div class="d-flex">
                                                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                         <div class="ml-3">
-                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald Smith</a></p>
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Ronald Smith</a></p>
                                                         </div>
                                                       </div></td>  
                                                       
@@ -696,7 +696,7 @@
                                                     <td class="tdCenter"><label class="label label-dark">Remote</label></td>
                                                     <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                   
-                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                             <i class="ti-eye"></i></a>
                                                          </td>
                                                     
@@ -713,7 +713,7 @@
                                                     <td class="tdLeft"><div class="d-flex">
                                                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                         <div class="ml-3">
-                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Johan Thomas</a></p>
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Thomas</a></p>
                                                         </div>
                                                       </div></td>  
                                                       <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -724,7 +724,7 @@
                                                     <td class="tdCenter"><label class="label label-success">On-site</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                    
                                                   
-                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                             <i class="ti-eye"></i></a>
                                                          </td>
                                                     
@@ -741,7 +741,7 @@
                                                     <td class="tdLeft"><div class="d-flex">
                                                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                         <div class="ml-3">
-                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Jenny Mark</a></p>
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Jenny Mark</a></p>
                                                         </div>
                                                       </div></td>  
                                                     <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -752,7 +752,7 @@
                                                     <td class="tdCenter"><label class="label label-success">On-site</label></td>
                                                     <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
                                                    
-                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                             <i class="ti-eye"></i></a>
                                                          </td>
                             
@@ -769,7 +769,7 @@
                                                     <td class="tdLeft"><div class="d-flex">
                                                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                                                         <div class="ml-3">
-                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view']">Ronald King</a></p>
+                                                          <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Ronald King</a></p>
                                                         </div>
                                                       </div></td>  
                                                     <td><a class="starA" [routerLink]="['/provider/provider-view/5']"><span class="fa fa-star checked"></span>
@@ -779,7 +779,7 @@
                                                         <span class="fa fa-star"></span></a></td>
                                                     <td class="tdCenter"><label class="label label-dark">Remote</label></td>                            <td class="tdCenter"><label class="label label-success">Done</label></td>
                                                   
-                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
+                                                        <td class="tdCenter"><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                                                             <i class="ti-eye"></i></a>
                                                          </td>
                                                 </tr>
@@ -826,7 +826,7 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
-                            <div class="card-body" style="margin-bottom: 25%; height: 315px;">
+                            <div class="card-body" style="margin-bottom: 24%; height: 315px;">
                                 <h4 class="card-title">Reviews</h4>
                                 <!-- <h5 class="card-subtitle">Overview of review</h5> -->
                                 <h2 class="font-medium m-t-40 m-b-0">2542</h2>
@@ -893,7 +893,7 @@
 
     <div class="col-md-4">
         <div class="card" style="margin-bottom: 2%;">
-            <div class="card-body" style="margin-bottom: 2%;">
+            <div class="card-body" style="margin-bottom: 3%;">
                 <h4 class="card-title">No. Of Provider By Task Type</h4>
                 <div class="d-flex flex-column m-auto">
                     <apx-chart [series]="EmailChartOptions1.series" [chart]="EmailChartOptions1.chart"

@@ -20,7 +20,6 @@ const routes: Routes = [
   {path:'', component:DashboardComponent},
   {path:'dashboard', component:DashboardComponent ,data:{title : 'Provider'}},
   {path:'provider-list',component:ProviderListComponent,data:{title : 'Provider'}},
-  {path:'provider-view',component:ProviderViewComponent,data:{title : 'Provider'}},
   {path:'provider-view/:id',component:ProviderViewComponent,data:{title : 'Provider'}},
   {path:'document', component:DocumentComponent,data:{title : 'Provider'}},
   {path:'availability',component:AvailabilityComponent },

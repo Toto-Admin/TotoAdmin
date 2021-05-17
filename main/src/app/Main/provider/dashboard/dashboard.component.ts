@@ -121,7 +121,7 @@ export class DashboardComponent  {
             },
             total: {
               show: true,
-              label: 'Visits',
+              label: 'Tickets',
               color: '#99abb4',
             }
           }
