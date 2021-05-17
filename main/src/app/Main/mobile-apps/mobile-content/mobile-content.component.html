@@ -177,9 +177,9 @@
   
   <ng-template #editUserModal let-modal>
   
-    <div class="modal-header backgroundColor">
+    <div class="modal-header">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Mobile Content</h5>
+      <h5 class="modal-title " id="editUserLabel"  >Add or Edit Mobile Content</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -229,7 +229,7 @@
           </div>
         
            <div class="form-group row">
-              <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
+              <!-- <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
                 <div class="col-sm-8">
 
                 <select class="form-control custom-select"name="usertype" formControlName="usertype"  tabindex="1">
@@ -242,7 +242,16 @@
                 Access user type is required  
                 </small> 
        
-          </div>
+          </div> -->
+          
+            <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
+            <div class="col-sm-8">
+            <select class="form-control" id="usertype" fomControllName="usertype" required>
+                <option>Customer</option>
+                <option>Provider</option>
+                <option>Both</option>
+            </select> 
+            </div>
         </div>
         <div class="form-group row">
           <label for="platform" class="col-sm-4 col-form-label">Platform</label>

@@ -112,7 +112,7 @@
   
   <ng-template #editUserModal let-modal>
   
-    <div class="modal-header backgroundColor">
+    <div class="modal-header ">
   
       <h5 class="modal-title" id="editUserLabel">Add or Edit Dispute Reasons</h5>
   
@@ -140,18 +140,15 @@
           </div>
         </div>
         <div class="form-group row">
-            <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
-              <div class="col-sm-8">
-                  <select class="form-control custom-select"name="type" formControlName="type"  tabindex="1">
-                  <option value="Category 1">user</option>
-                  <option value="Category 2">provider</option>
-                 </select>
-                 <small class="form-text text-danger"
-                 *ngIf="!editUser.get('type').valid && (editUser.get('type').dirty || editUser.get('type').touched)">
-                 Type is required 
-                 </small> 
-             </div>
-      </div>
+          <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
+          <div class="col-sm-8">
+          <select class="form-control" id="type" fomControllName="type" required>
+              <option>Customer</option>
+              <option>Provider</option>
+          </select> 
+          </div>
+ 
+    </div>
       <div class="form-group row">
         <label for="position" class="col-sm-4 col-form-label">Status</label>
             <div class="col-sm-8">

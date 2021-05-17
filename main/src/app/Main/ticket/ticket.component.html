@@ -99,32 +99,39 @@
           <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
             <thead style="background: #92adfc;">
               <tr>
-                <th class="backgroundColor tdLeft">Ticket id</th>
-                <th class="backgroundColor tdCenter">status</th>
-                <th class="backgroundColor tdLeft">Customer id</th>
                 <th class="backgroundColor tdLeft">Job id</th>
+                <th class="backgroundColor tdLeft">Ticket id</th>
+                <th class="backgroundColor tdLeft">Customer id</th>
                 <th class="backgroundColor tdLeft">ticket details</th>
+
                 <!-- <th class="backgroundColor">Assign</th> -->
                 <th class="backgroundColor tdLeft">Date</th>
+                
+                <th class="backgroundColor tdCenter">status</th>
                 <th class="backgroundColor">Action</th>
               </tr> 
             </thead>
             <tbody>
               <!-- (click)="trclick(item.id)" -->
               <tr *ngFor="let item of ticketData; let i =index" >
+                <td class="tdLeft"><h5><a [routerLink]="['/jobs/jobview']">#job123</a></h5></td>
+               
                 <td class="tdLeft" ><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
+                <td class="tdLeft"><h5>{{item.owner_contactid}}</h5></td>
+                <td class="tdLeft"><h5>{{item.subject}}</h5></td>
+                <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
+                
+              
+                <td class="tdLeft">{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
                 <td>
                   <label *ngIf="item.status == 'A'" class="label label-success">ANSWERED</label>
                   <label *ngIf="item.status == 'R'" class="label label-danger">RESOLVED</label>
                   <label *ngIf="item.status == 'T'" class="label label-warning">CHAT</label>
 
                 </td>
-                <td class="tdLeft"><h5>{{item.owner_contactid}}</h5></td>
-                <td class="tdLeft"><h5><a [routerLink]="['/jobs/jobview']">#job123</a></h5></td>
+                
 
-                <td class="tdLeft"><h5>{{item.subject}}</h5></td>
-                <!-- <td><h6>Assign to:</h6><h5>Liam</h5></td> -->
-                <td class="tdLeft">{{item.last_activity | date : 'dd/MM/yyyy, h:mm a'}}</td>
+              
                 <td >
                   <a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank"  class="text-inverse p-r-10">
                       <i class="ti-eye"></i>

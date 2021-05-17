@@ -122,7 +122,7 @@
   
   <ng-template #editUserModal let-modal>
   
-    <div class="modal-header backgroundColor">
+    <div class="modal-header ">
   
       <h5 class="modal-title" id="editUserLabel">Add or Edit Like Reasons</h5>
   
@@ -149,8 +149,8 @@
               </small> 
           </div>
         </div>
-        <div class="form-group row">
-            <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
+        
+            <!-- <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
               <div class="col-sm-8">
                   <select class="form-control custom-select"name="type" formControlName="type"  tabindex="1">
                   <option value="Category 1">user</option>
@@ -160,10 +160,18 @@
                  *ngIf="!editUser.get('type').valid && (editUser.get('type').dirty || editUser.get('type').touched)">
                  Type is required 
                  </small> 
+             </div> -->
+         <div class="form-group row">
+             <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
+             <div class="col-sm-8">
+             <select class="form-control" id="type" fomControllName="type" required>
+                 <option>Customer</option>
+                 <option>Provider</option>
+             </select> 
              </div>
       </div>
       <div class="form-group row">
-        <label for="review" class="col-sm-4 col-form-label">Reason for review<span class="reqNote">*</span></label>
+        <!-- <label for="review" class="col-sm-4 col-form-label">Reason for review<span class="reqNote">*</span></label>
           <div class="col-sm-8">
               <select class="form-control custom-select"name="review" formControlName="review"  tabindex="1">
               <option value="Category 1">1</option>
@@ -177,6 +185,16 @@
               *ngIf="!editUser.get('review').valid && (editUser.get('review').dirty || editUser.get('review').touched)">
               Reason for review is required 
               </small> 
+         </div> -->
+         <label for="review" class="col-sm-4 col-form-label">Reason for Review<span class="reqNote">*</span></label>
+         <div class="col-sm-8">
+         <select class="form-control" id="review" fomControllName="review" required>
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+             <option>5</option>
+         </select> 
          </div>
       </div>
       <div class="form-group row">

@@ -39,7 +39,7 @@
                              </small>  
                             </div>
                             <!--/span-->
-                            <div class="form-group col-md-6">
+                            <!-- <div>
                                   <label for="duration_type">Duration Type<span class="reqNote">*</span></label>
                                     <select class="form-control custom-select"name="duration_type" formControlName="duration_type">
                                         <option >Hour</option>
@@ -50,12 +50,18 @@
                                     Duration type is required
                                  </small>  
                                    
-                            </div>
-                          
-                        </div>
+                            </div> -->
+                            <div class="form-group col-md-6">
+                                <label for="duration_type">Duration Type<span class="reqNote">*</span></label>
+                                <select class="form-control" id="duration_type" fomControllName="duration_type" required>
+                                    <option>Hour</option>
+                                    <option>Minute</option>
+                                </select> 
+                          </div>
+                       </div>
                         <!--/row-->
                         <div class="row">
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="services">Services<span class="reqNote">*</span></label>
                                     <select class="form-control custom-select"name="services" formControlName="services"tabindex="1">
@@ -69,8 +75,18 @@
                                     Service name is required
                                  </small>  
                                 </div>
-                            </div>
-                          
+                            </div> -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                <label for="services">Service<span class="reqNote">*</span></label>
+                                <select class="form-control" id="services" fomControllName="services" required>
+                                    <option>Ac</option>
+                                    <option>Tv</option>
+                                    <option>Mobile</option>
+                                    <option>Voice Modulation</option>
+                                </select> 
+                                </div>
+                          </div>
                         </div>
                         <!--/row-->
                 </div>
