@@ -7,7 +7,7 @@
                 <form *ngIf='regularForm' [formGroup]="regularForm" class="m-t-30">
                     <div class="form-group">
                         <label for="disc">Referral Discount in Percentage<span class="reqNote">*</span></label>
-                        <input type="number" class="form-control" id="disc" formControlName="disc">
+                        <input type="number" class="form-control" id="disc" placeholder="Enter referral discount in percentage" formControlName="disc">
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('disc').valid && (regularForm.get('disc').dirty || regularForm.get('disc').touched)">
                         Please enter referral discount!
@@ -16,7 +16,7 @@
                    
                     <div class="form-group">
                         <label for="ref_detail">Referral Detail</label>
-                        <textarea class="form-control" rows="3"  id="ref_detail" formControlName="disc" ></textarea>
+                        <textarea class="form-control" rows="3"  id="ref_detail"placeholder="Enter your referral details" formControlName="disc" ></textarea>
                     </div>
                    
                     <button type="submit" class="btn btn-info">Save</button>

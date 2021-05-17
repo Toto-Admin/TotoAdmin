@@ -6,7 +6,7 @@
                 <form *ngIf='regularForm' [formGroup]="regularForm"class="m-t-30">
                     <div class="form-group">
                         <label for="mobile">Mobile<span class="reqNote">*</span></label>
-                        <input type="tel" class="form-control"  formControlName="mobile" id="mobile">
+                        <input type="tel" class="form-control"  formControlName="mobile" placeholder="Enter your mobile" id="mobile">
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('mobile').valid && (regularForm.get('mobile').dirty || regularForm.get('mobile').touched)">
                         Mobile number is required and must be in 10 digit
@@ -14,7 +14,7 @@
                     </div>
                     <div class="form-group">
                         <label for="twino">Twillio From Number<span class="reqNote">*</span></label>
-                        <input type="tel" class="form-control" id="twino"  formControlName="twino" >
+                        <input type="tel" class="form-control" id="twino" placeholder="Enter twillio from number"  formControlName="twino" >
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('twino').valid && (regularForm.get('twino').dirty || regularForm.get('twino').touched)">
                         This field is required
@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group">
                         <label for="book_task">Maximum Day of Booking Task<span class="reqNote">*</span></label>
-                        <input type="number" class="form-control" min="1" id="book_task" formControlName="book_task">
+                        <input type="number" class="form-control" min="1" id="book_task" placeholder="Enter maximum day of booking task"  formControlName="book_task">
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('book_task').valid && (regularForm.get('book_task').dirty || regularForm.get('book_task').touched)">
                         This field is required
@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-group">
                         <label>Address</label>
-                        <textarea class="form-control" rows="3" ></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Enter your address here" ></textarea>
                     </div>
                     <div class="form-group">
                         <label>Facebook Link</label>

@@ -10,7 +10,7 @@
 
                         <div class="form-group col-md-6">
                             <label for="name">Name<span class="reqNote">*</span></label>
-                            <input type="text" class="form-control" id="name" name="name" formControlName="name" required>
+                            <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Enter name" required>
                              <small class="form-text text-danger"
                              *ngIf="!regularForm.get('name').valid && (regularForm.get('name').dirty || regularForm.get('name').touched)">
                              Name is required and must be characters(a-zA-Z)
@@ -20,7 +20,7 @@
                             <!--/span-->
                          <div class="form-group col-md-6">
                               <label for="passing_rank">Passing Rank<span class="reqNote">*</span></label>
-                              <input type="number" name="passing_rank" formControlName="passing_rank" class="form-control form-control-danger">
+                              <input type="number" name="passing_rank" formControlName="passing_rank" placeholder="Enter passing rank" class="form-control form-control-danger">
                               <small class="form-text text-danger"
                               *ngIf="!regularForm.get('passing_rank').valid && (regularForm.get('passing_rank').dirty || regularForm.get('passing_rank').touched)">
                             Passing rank is required
@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="duration">Duration<span class="reqNote">*</span></label>
-                                <input type="number" name="duration" formControlName="duration" class="form-control form-control-danger">
+                                <input type="number" name="duration" formControlName="duration" placeholder="Enter duration" class="form-control form-control-danger">
                                 <small class="form-text text-danger"
                                 *ngIf="!regularForm.get('duration').valid && (regularForm.get('duration').dirty || regularForm.get('duration').touched)">
                                 Duration is required
@@ -53,7 +53,7 @@
                             </div> -->
                             <div class="form-group col-md-6">
                                 <label for="duration_type">Duration Type<span class="reqNote">*</span></label>
-                                <select class="form-control" id="duration_type" fomControllName="duration_type" required>
+                                <select class="form-control" id="duration_type" fomControllName="duration_type" placeholder="Enter duration type" required>
                                     <option>Hour</option>
                                     <option>Minute</option>
                                 </select> 
@@ -99,7 +99,7 @@
                         <div  class="row"  [formGroupName]="i">
                             <div class="form-group col-md-6" >
                                 <label for="ques">Question {{i + 1}}<span class="reqNote">*</span></label>
-                                <input type="text" class="form-control" id="ques"  name="ques" formControlName="ques" required>
+                                <input type="text" class="form-control" id="ques"  name="ques" formControlName="ques" placeholder="Enter question" required>
                                  <small class="form-text text-danger"
                                  *ngIf="!regularForm.get('ques').valid && (regularForm.get('ques').dirty || regularForm.get('ques').touched)">
                                  Question field is required
@@ -140,7 +140,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="option_a">Option A</label>
-                                    <input type="text"name="option_a" class="form-control"  id="option_a" formControlName="option_a" required>
+                                    <input type="text"name="option_a" class="form-control"  id="option_a" formControlName="option_a"  placeholder=" Enter option a" required>
                                     <small class="form-text text-danger"
                                     *ngIf="!regularForm.get('option_a').valid && (regularForm.get('option_a').dirty || regularForm.get('option_a').touched)">
                                     Option A is required
@@ -151,7 +151,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="option_b">Option B</label>
-                                    <input type="text"name="option_b" class="form-control" id="option_b" formControlName="option_b" required>
+                                    <input type="text"name="option_b" class="form-control" id="option_b" formControlName="option_b" placeholder=" Enter option b" required>
                                     <small class="form-text text-danger"
                                     *ngIf="!regularForm.get('option_b').valid && (regularForm.get('option_b').dirty || regularForm.get('option_b').touched)">
                                     Option B is required
@@ -165,7 +165,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="option_c">Option C</label>
-                                    <input type="text" name="option_c" class="form-control" id="option_c" formControlName="option_c" required>
+                                    <input type="text" name="option_c" class="form-control" id="option_c" formControlName="option_c" placeholder=" Enter option c" required>
                                     <small class="form-text text-danger"
                                     *ngIf="!regularForm.get('option_c').valid && (regularForm.get('option_c').dirty || regularForm.get('option_c').touched)">
                                     Option C is required
@@ -176,7 +176,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="option_d">Option D</label>
-                                    <input type="text" name="option_d" class="form-control" id="option_d" formControlName="option_d" required>
+                                    <input type="text" name="option_d" class="form-control" id="option_d" formControlName="option_d" placeholder=" Enter option d" required>
                                     <small class="form-text text-danger"
                                     *ngIf="!regularForm.get('option_d').valid && (regularForm.get('option_d').dirty || regularForm.get('option_d').touched)">
                                     Option D is required

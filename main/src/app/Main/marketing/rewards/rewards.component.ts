@@ -39,7 +39,7 @@ export class RewardsComponent implements OnInit {
     };
     this.editUser = this.fb.group({
       name: ['', Validators.required],
-      amt:['', Validators.required],
+      amt:['', [Validators.required, Validators.pattern("^[0-9]*$")]],
       addimg:['',Validators.required],
   });
   }

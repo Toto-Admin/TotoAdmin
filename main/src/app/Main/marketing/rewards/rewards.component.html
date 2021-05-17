@@ -147,7 +147,7 @@
         <div class="form-group row">
           <label for="name" class="col-sm-4 col-form-label">Offer<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="name" id="name" (blur)=logValidationErrors(editUser)>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter offer here" id="name" (blur)=logValidationErrors(editUser)>
             <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
@@ -160,7 +160,7 @@
         <div class="form-group row">
           <label for="amt" class="col-sm-4 col-form-label">Amount<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="amt" id="amt" (blur)=logValidationErrors(editUser)>
+            <input type="text" class="form-control" formControlName="amt" id="amt" placeholder="Enter amount here" (blur)=logValidationErrors(editUser)>
             <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->

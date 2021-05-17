@@ -135,7 +135,7 @@
         <div class="form-group row">
           <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="name" id="name" (blur)=logValidationErrors(editUser)>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter name here" id="name" (blur)=logValidationErrors(editUser)>
             <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
@@ -148,7 +148,7 @@
           <div class="form-group row">
             <label for="subject" class="col-sm-4 col-form-label">Subject<span class="reqNote">*</span></label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="subject" id="subject" (blur)=logValidationErrors(editUser)>
+              <input type="text" class="form-control" formControlName="subject" placeholder="Enter subject here" id="subject" (blur)=logValidationErrors(editUser)>
               <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
@@ -161,7 +161,7 @@
           <div class="form-group row">
             <label for="key" class="col-sm-4 col-form-label">Key<span class="reqNote">*</span></label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="key" id="key" (blur)=logValidationErrors(editUser)>
+              <input type="text" class="form-control" formControlName="key" placeholder="Enter key here" id="key" (blur)=logValidationErrors(editUser)>
               <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
@@ -177,7 +177,7 @@
           <div class="form-group row">
             <label for="content" class="col-sm-4 col-form-label">Content</label>
             <div class="col-sm-8">
-            <textarea class="form-control" rows="3" ></textarea>
+            <textarea class="form-control" rows="3" placeholder="Enter content here" ></textarea>
         </div>
         </div>
   

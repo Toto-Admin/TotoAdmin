@@ -24,7 +24,7 @@ export class AddComponent implements OnInit {
     this.regularForm = this.formBuilder.group({
       'name':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
       'passing_rank':new FormControl(null,[Validators.required,Validators.pattern("^[0-9]*$")]),
-      'duration':new FormControl(null,[Validators.required,Validators.pattern("^[0-9]*$")]),
+      'duration':new FormControl(null,[Validators.required, Validators.pattern("^[0-9]*$")]),
       'duration_type':new FormControl(null,[Validators.required]),
       'services':new FormControl(null,[Validators.required]),
       'ques':this.formBuilder.array([this.createQue()]),
