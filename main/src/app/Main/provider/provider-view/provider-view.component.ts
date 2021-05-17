@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 import { User } from '../user';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-provider-view',
@@ -102,7 +102,22 @@ export class ProviderViewComponent implements OnInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   formsErrors = [];
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private router:Router) { }
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private router:Router,private activatedRoute: ActivatedRoute) { 
+
+    this.activatedRoute.params.subscribe(params => {
+      debugger
+      this.active = Number(params['id']);
+      this.activeKeep = Number(params['id']);
+      this.activeSelected = Number(params['id']);
+      this.disabled = true;
+
+  
+      this.tabs = [1, 2, 3, 4, 5,6,8,9];
+      this.counter = this.tabs.length + 1;
+      this.activeDynamic = Number(params['id']);
+    })
+
+  }
 
   ngOnInit(): void {
     this.editUser = this.fb.group({

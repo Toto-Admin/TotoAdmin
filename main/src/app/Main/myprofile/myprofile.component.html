@@ -4,16 +4,16 @@
         <!-- <div class="card card-body"> -->
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card" style="height: 370px;">
-                        <div class="card-header bg-info">
-                            <h4 class="card-title mb-0 text-white">General Information</h4>
+                    <div class="card" style="height: 420px;">
+                        <div class="card-header ">
+                            <h4 class="card-title mb-0">General Information</h4>
                         </div>
                         <div class="card-body text-center">
                             <div class="profile-pic m-b-20 m-t-20">
                                 <img src="assets/images/users/5.jpg" width="150" class="rounded-circle" alt="user" />
                                 <h4 class="m-t-20 m-b-0">Daniel Kristeen</h4>
                                 <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a>
-                            </div>
+                            </div><br>
                             <div class="badge badge-pill badge-info font-14 infoData" >Gender : Male</div>
                             <div class="badge badge-pill badge-warning font-14 infoData" >Date of Birth : 12/04/1992</div>                            
                             <div class="badge badge-pill badge-success font-16 infoData">Active</div>
@@ -34,46 +34,59 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="card" style="height: 370px;">
-                        <div class="card-header bg-info">
-                            <h4 class="card-title mb-0 text-white">Change Password</h4>
+                    <div class="card" style="height: 420px;">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0 ">Change Password</h4>
                         </div>
                         <div class="card-body">
-                            <form class="form">
+                            <form class="form" *ngIf='regularForm' [formGroup]="regularForm">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="floatEmail">Old password<span class="reqNote">*</span></label>
-                                            <input type="email" class="form-control" id="floatEmail" name="floatEmail" placeholder="Enter your old password">
+                                            <label for="old_pass">Old password<span class="reqNote">*</span></label>
+                                            <input type="password" class="form-control" id="old_pass" name="old_pass" formControlName="old_pass" placeholder="Enter your old password">
+                                            <!-- <small class="form-text text-danger"
+                                            *ngIf="!regularForm.get('old_pass').valid && (regularForm.get('old_pass').dirty || regularForm.get('old_pass').touched)">
+                                           Password field is required!
+                                            </small> -->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="floatPassword" >New password<span class="reqNote">*</span></label>
-                                            <input type="password" class="form-control" id="floatPassword" name="floatPassword"
-                                            placeholder="Enter your new password"         required minlength="4" maxlength="24">
+                                            <label for="new_pass" >New password<span class="reqNote">*</span></label>
+                                            <input type="password" class="form-control" id="new_pass" name="new_pass"
+                                            placeholder="Enter your new password"  formControlName="new_pass"       required minlength="4" maxlength="24">
+                                            <!-- <small class="form-text text-danger"
+                                            *ngIf="!regularForm.get('new_pass').valid && (regularForm.get('new_pass').dirty || regularForm.get('new_pass').touched)">
+                                           Password characters length must be between 4 and 24 !
+                                            </small> -->
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="floatPassword">Confirm password<span class="reqNote">*</span></label>
-                                            <input type="password" class="form-control" id="floatPassword" name="floatPassword"
-                                            placeholder="Enter your confirm password"   required minlength="4" maxlength="24">
+                                            <label for="confirm_pass">Confirm password<span class="reqNote">*</span></label>
+                                            <input type="password" class="form-control" id="confirm_pass" name="confirm_pass"
+                                            placeholder="Enter your confirm password" formControlName="confirm_pass"  required minlength="4" maxlength="24">
+                                            <!-- <small class="form-text text-danger"
+                                            *ngIf="!regularForm.get('confirm_pass').valid && (regularForm.get('confirm_pass').dirty || regularForm.get('confirm_pass').touched)">
+                                            Password does not matched !
+                                            </small> -->
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="form-group row" style="margin-top: 5px;">
+                                <div class="form-group row" style="margin-top: 25px; ">
                                     <div class="col-md-12">
-                                        <button type="button" class="btn btn-info btn-raised mr-1"
+                                        <button type="button" class="btn btn-info"
                                             >Save</button>&nbsp;
-                                        <button type="button" class="btn btn-secondary btn-raised">Cancel</button>
+                                        <button type="button" class="btn btn-secondary ">Cancel</button>
                                     </div>
-                                </div>
+                                </div> 
+                             
                             </form>
                         </div>
                     </div>
