@@ -9,18 +9,18 @@
             <div class="card-body">
              <form >
 
-            <div class="form-group">
-            <label for="role" >Role<span class="reqNote">*</span></label>
-            <div >
-                
-                <input type="text" class="form-control" formControlName="role" id="role" >
-            
-                <!-- <small class="form-text text-danger"
-                *ngIf="!editUser.get('role').valid && (editUser.get('role').dirty || editUser.get('role').touched)">
-                Role Field is required 
-                </small>  -->
-            </div>
-            </div>
+          
+                <div class="form-group row">
+                    <label for="role" class="col-sm-4 col-form-label">Role<span class="reqNote">*</span></label><br>
+                    <div class="col-12">
+                    <select class="form-control" id="role" fomControllName="role" required>
+                        <option>Super Admin</option>
+                        <option>QA Role</option>
+                        <option>Sub-Admin</option>
+                    </select> 
+                    </div>
+             </div>
+           
             <div class="form-group row">
                 <label for="permission" class="col-sm-12 col-form-label">Permission</label> <br>
                 <div class="col-3" >
