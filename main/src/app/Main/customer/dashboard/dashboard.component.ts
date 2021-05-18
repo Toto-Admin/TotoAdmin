@@ -389,7 +389,7 @@ export class DashboardComponent  {
       legends: {
         show: false,
       },
-      labels: ['Not Good Service', ' unsatisfied '],
+      labels: ['Not Good Service', ' Unsatisfied '],
       colors: ['#40c4ff', '#2961ff'],
 
     };

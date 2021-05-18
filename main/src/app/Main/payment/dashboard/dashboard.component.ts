@@ -107,11 +107,11 @@ export class DashboardComponent implements OnInit {
     this.salesChartOptions = {
       series: [
         {
-          name: 'WIFI Connection',
+          name: 'Mobile',
           data: [0, 300, 100, 200, 1200, 100, 500, 100]
         },
         {
-          name: 'ISP',
+          name: 'Connectivity',
           data: [0, 500, 600, 800, 2800, 900, 800, 2200]
         }
       ],

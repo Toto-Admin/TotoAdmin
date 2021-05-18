@@ -76,10 +76,10 @@
             <li [ngbNavItem]="1">
                 <a ngbNavLink (click)="filterData('All')" style="color: black;">All</a>
             </li>
-            <li [ngbNavItem]="3">
+            <li [ngbNavItem]="2">
               <a ngbNavLink (click)="filterData('pending')" style="color: black;">Chat</a>
           </li>
-            <li [ngbNavItem]="2">
+            <li [ngbNavItem]="3">
                 <a ngbNavLink (click)="filterData('open')" style="color: black;">Answered</a>
             </li>
             
@@ -114,7 +114,8 @@
             <tbody>
               <!-- (click)="trclick(item.id)" -->
               <tr *ngFor="let item of ticketData; let i =index" >
-                <td class="tdLeft"><h5><a [routerLink]="['/jobs/jobview']">#job123</a></h5></td>
+                <!-- <td class="tdLeft"><h5><a [routerLink]="['/jobs/jobview']">#job123</a></h5></td> -->
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">10{{i+1}}</a></td>
                
                 <td class="tdLeft" ><b><a href="https://totoapp.ladesk.com/agent/#Conversation;id={{item.id}}" target="_blank">{{item.code}}</a></b></td>
                 <td class="tdLeft"><h5>{{item.owner_contactid}}</h5></td>

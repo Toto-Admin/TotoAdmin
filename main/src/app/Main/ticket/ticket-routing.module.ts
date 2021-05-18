@@ -10,6 +10,11 @@ const routes: Routes = [
     data: {title: 'Tickets'}
   },
   {
+    path : 'ticket/:id',
+    component: TicketComponent,
+    data: {title: 'Tickets'}
+  },
+  {
     path : 'ticket-details',
     component : TicketDetailsComponent,
     data: {title: 'Tickets'}

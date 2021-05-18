@@ -580,7 +580,7 @@ export class JobDashboardComponent implements OnInit {
       legends: {
         show: false,
       },
-      labels: ['Reschedule', 'No shows', 'Provider report', 'Return visit'],
+      labels: ['Reschedule', 'No Shows', 'Provider Report', 'Return Visit'],
       colors: ['#40c4ff', '#2961ff', '#ff821c', '#e70da6'],
 
     };
@@ -645,7 +645,7 @@ export class JobDashboardComponent implements OnInit {
     'AC Service',
     'TV Service',
     'ISP',
-    'Poor wifi Coverage',
+    'Poor Wifi Coverage',
     'Connectivity',
     'Voice Modulation'
   
@@ -658,7 +658,7 @@ export class JobDashboardComponent implements OnInit {
     'AC Service',
     'TV Service',
     'ISP',
-    'Poor wifi Coverage',
+    'Poor Wifi Coverage',
     'Connectivity',
     'Voice Modulation'
   

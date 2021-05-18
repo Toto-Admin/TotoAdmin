@@ -9,6 +9,7 @@ import { ClipboardService } from 'ngx-clipboard';
 import { NotifierService } from 'angular-notifier';
 // import { ToastrService } from 'ngx-toastr';
 import { Target } from 'angular-feather/icons';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -31,8 +32,22 @@ export class TicketComponent implements OnInit {
 
   private readonly notifier: NotifierService;
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,private _clipboardService: ClipboardService,notifier: NotifierService) { 
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,
+    private _clipboardService: ClipboardService,notifier: NotifierService,private activatedRoute: ActivatedRoute) { 
     this.notifier = notifier;
+    //tabs
+       this.activatedRoute.params.subscribe(params => {
+      debugger
+      this.active = Number(params['id']);
+      this.activeKeep = Number(params['id']);
+      this.activeSelected = Number(params['id']);
+      this.disabled = true;
+
+  
+      this.tabs = [1, 2, 3, 4];
+      this.counter = this.tabs.length + 1;
+      this.activeDynamic = Number(params['id']);
+    })
 
     //Get All Tickets 
     this.support.getTicketData().subscribe(data=>{
