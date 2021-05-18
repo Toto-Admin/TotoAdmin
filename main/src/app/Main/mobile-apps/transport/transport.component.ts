@@ -26,7 +26,7 @@ export class TransportComponent implements OnInit {
   constructor(private fb: FormBuilder,private modalService: NgbModal) { }
   formsErrors = [];
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',

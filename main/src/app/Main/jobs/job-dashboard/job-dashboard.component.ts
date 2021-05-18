@@ -637,7 +637,7 @@ export class JobDashboardComponent implements OnInit {
   
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
   }
 

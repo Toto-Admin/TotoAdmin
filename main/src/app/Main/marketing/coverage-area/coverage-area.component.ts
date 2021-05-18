@@ -54,7 +54,7 @@ export class CoverageAreaComponent  {
   constructor() { }
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
   }
   onMapReady(map: any){
     this.initDrawingManager(map);

@@ -25,7 +25,7 @@ export class InvoiceDetailsComponent implements OnInit {
   counter = this.tabs.length + 1;
   activeDynamic=1;
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',

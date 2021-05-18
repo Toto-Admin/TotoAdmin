@@ -10,7 +10,7 @@ export class UserProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
   }
 

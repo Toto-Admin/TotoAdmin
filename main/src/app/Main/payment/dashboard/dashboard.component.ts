@@ -97,7 +97,7 @@ export class DashboardComponent implements OnInit {
   public Pageview2ChartOptions: Partial<Pageview2ChartOptions>;
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
   }
 

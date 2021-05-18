@@ -26,7 +26,7 @@ export class TaskComponent implements OnInit {
 
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',

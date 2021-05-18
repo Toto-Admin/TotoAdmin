@@ -54,23 +54,19 @@ export class TicketComponent implements OnInit {
         this.totalTicket = Object.keys(data).length;;
         this.ticketData = data;
         this.orignalTicketData = data;
-        console.log(this.ticketData);
         this.ticketData.forEach((element: any) => {
           if(element.status == 'R')  
           {
             this.close += 1;
           }
-
           if(element.status == 'A')
           {
             this.open += 1;
           }
-
           if(element.status == 'T')
           {
             this.pending += 1;
           }
-          
         });
         this.dtTrigger.next();
 
@@ -92,7 +88,7 @@ export class TicketComponent implements OnInit {
   activeDynamic=1;
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',

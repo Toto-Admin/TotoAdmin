@@ -316,6 +316,6 @@ export class ReportComponent  {
     // console.log(e);
   }
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
   }
 }

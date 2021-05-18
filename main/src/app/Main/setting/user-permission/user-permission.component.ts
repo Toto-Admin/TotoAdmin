@@ -29,7 +29,7 @@ export class UserPermissionComponent implements OnInit {
    }
   formsErrors = [];
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',

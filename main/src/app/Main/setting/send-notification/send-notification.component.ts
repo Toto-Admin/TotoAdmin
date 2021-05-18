@@ -21,7 +21,7 @@ export class SendNotificationComponent implements OnInit {
   singledropdownSettings = {};
   closeDropdownSelection = false;
   ngOnInit() {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.cust = ['Johan Smith', 'Ronald King', 'John Wilson', 'Donald White', 'James Harry'];
     this.selectedCust = ['Donald White', 'James Harry'];

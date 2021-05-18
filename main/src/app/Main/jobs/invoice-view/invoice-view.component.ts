@@ -19,8 +19,6 @@ export class InvoiceViewComponent implements OnInit {
   // }
 
   ngOnInit() {
-
+    $('#backButton').show();
   }
-
-
 }

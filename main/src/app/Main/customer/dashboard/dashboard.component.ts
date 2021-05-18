@@ -444,7 +444,7 @@ export class DashboardComponent  {
     };
   }
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
   }
 
 }

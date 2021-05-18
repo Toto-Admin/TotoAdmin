@@ -11,7 +11,7 @@ export class ListComponent implements OnInit {
 
   constructor(private router : Router) { }
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,

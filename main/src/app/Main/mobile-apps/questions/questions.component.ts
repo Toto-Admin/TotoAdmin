@@ -34,7 +34,7 @@ export class QuestionsComponent implements OnInit,AfterViewInit {
    }
   formsErrors = [];
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',
