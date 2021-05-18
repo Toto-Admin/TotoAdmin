@@ -194,7 +194,7 @@ export const ROUTES: RouteInfo[] = [
     },
     {
         // asdfklasdfj
-        path: 'ticket',
+        path: 'ticket/ticket/1',
         title: 'Tickets',
         icon: ' ti-ticket',
         class: '',

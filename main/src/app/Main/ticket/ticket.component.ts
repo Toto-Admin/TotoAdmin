@@ -30,48 +30,6 @@ export class TicketComponent implements OnInit {
   orignalTicketData : any;
   ticket = [];
 
-  private readonly notifier: NotifierService;
-
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,
-    private _clipboardService: ClipboardService,notifier: NotifierService,private activatedRoute: ActivatedRoute) { 
-    this.notifier = notifier;
-    //tabs
-       this.activatedRoute.params.subscribe(params => {
-      debugger
-      this.active = Number(params['id']);
-      this.activeKeep = Number(params['id']);
-      this.activeSelected = Number(params['id']);
-      this.disabled = true;
-
-  
-      this.tabs = [1, 2, 3, 4];
-      this.counter = this.tabs.length + 1;
-      this.activeDynamic = Number(params['id']);
-    })
-
-    //Get All Tickets 
-    this.support.getTicketData().subscribe(data=>{
-        this.totalTicket = Object.keys(data).length;;
-        this.ticketData = data;
-        this.orignalTicketData = data;
-        this.ticketData.forEach((element: any) => {
-          if(element.status == 'R')  
-          {
-            this.close += 1;
-          }
-          if(element.status == 'A')
-          {
-            this.open += 1;
-          }
-          if(element.status == 'T')
-          {
-            this.pending += 1;
-          }
-        });
-        this.dtTrigger.next();
-
-    })
-  }
 
   currentJustify = 'start';
 
@@ -86,6 +44,64 @@ export class TicketComponent implements OnInit {
   tabs = [1, 2, 3, 4, 5];
   counter = this.tabs.length + 1;
   activeDynamic=1;
+  private readonly notifier: NotifierService;
+
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private support :SupportService,
+    private _clipboardService: ClipboardService,notifier: NotifierService,private activatedRoute: ActivatedRoute) { 
+    this.notifier = notifier;
+        //Get All Tickets 
+        this.support.getTicketData().subscribe(data=>{
+          this.totalTicket = Object.keys(data).length;;
+          this.ticketData = data;
+          this.orignalTicketData = data;
+          this.ticketData.forEach((element: any) => {
+            if(element.status == 'R')  
+            {
+              this.close += 1;
+            }
+            if(element.status == 'A')
+            {
+              this.open += 1;
+            }
+            if(element.status == 'T')
+            {
+              this.pending += 1;
+            }
+          });
+              //tabs
+          this.activatedRoute.params.subscribe(params => {
+            this.active         = Number(params['id']);
+            this.activeKeep     = Number(params['id']);
+            this.activeSelected = Number(params['id']);
+            this.disabled       = true;
+
+            if(this.active == NaN)
+            {
+                this.active         = 1;
+                this.activeKeep     = 1;
+                this.activeSelected = 1;
+                this.activeDynamic  = 1;
+            }
+            this.tabs = [1, 2, 3, 4];
+            this.counter = this.tabs.length + 1;
+            if(params['id'] == 2)
+            {
+                this.filterData('pending');
+            }
+            else if(params['id'] == 3)
+            {
+                this.filterData('open');
+            }
+            else if(params['id'] == 4)
+            {
+                this.filterData('close');
+            }
+          })
+          this.dtTrigger.next();
+      })
+  }
+
+  
 
   ngOnInit(): void {
     $('#backButton').hide();
@@ -163,8 +179,6 @@ export class TicketComponent implements OnInit {
 
   copyInputMessage(id : any,subject :any,code : any,date : any,customer:any)
   {
-    debugger
-
     var text = `Ticket Data below
     ticket id : `+id+`
     subject   : `+subject+`
@@ -173,17 +187,6 @@ export class TicketComponent implements OnInit {
     customer  : `+customer+`
     job id    : #job123`  ;
     this._clipboardService.copy(text);
-    // this.toastr.success('Copy successfully', code);
-
     this.notifier.notify('success', code +' copy');
-
-
   }
-
-  // trclick(id :any)
-  // {
-  //   window.open('https://totoapp.ladesk.com/agent/#Conversation;id='+id,"_blank")
-  // }
-
-
 }
