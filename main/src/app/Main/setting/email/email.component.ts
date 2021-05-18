@@ -12,6 +12,8 @@ export class EmailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('#backButton').show();
+
     this.regularForm = new FormGroup({
       
       'toEmail': new FormControl(null, [Validators.required, Validators.email]),

@@ -20,7 +20,7 @@ export class AddComponent implements OnInit {
   constructor(private router : Router,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-
+    $('#backButton').show();
     this.regularForm = this.formBuilder.group({
       'name':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
       'passing_rank':new FormControl(null,[Validators.required,Validators.pattern("^[0-9]*$")]),

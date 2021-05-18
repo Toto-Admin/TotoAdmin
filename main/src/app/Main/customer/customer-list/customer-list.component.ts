@@ -41,7 +41,8 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
   constructor(private fb: FormBuilder,private modalService: NgbModal ,private router: Router) { }
   formsErrors = [];
   ngOnInit(): void {
-    
+    $('#backButton').show();
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,

@@ -103,6 +103,10 @@ a{
     color: #445b6f;
 }
 
+#backButton{
+  display: none;
+}
+
   /* media query for mobile  */
   /* media query for width min 600px */
   @media only screen and (max-width: 600px) {
@@ -146,5 +150,6 @@ a{
       border-radius: 25px 25px 25px 25px;
       border-bottom: 1px solid #ccc8e1;
       width: 290px;
+    }
   }
-  }
+

@@ -11,6 +11,8 @@ export class GeneralSettingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('#backButton').show();
+
   }
 
   currentJustify = 'start';

@@ -12,6 +12,8 @@ export class UnhappywithproviderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('#backButton').show();
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,

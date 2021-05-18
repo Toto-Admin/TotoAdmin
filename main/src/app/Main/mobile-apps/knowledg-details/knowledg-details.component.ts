@@ -35,6 +35,7 @@ export class KnowledgDetailsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    $('#backButton').hide();
   }
 
 }

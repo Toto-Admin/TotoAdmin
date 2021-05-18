@@ -236,6 +236,8 @@ tabs = [1, 2, 3, 4, 5];
 counter = this.tabs.length + 1;
 activeDynamic=1;
 ngOnInit(): void {
+  $('#backButton').show();
+
 }
 
 onNavChange(changeEvent: NgbNavChangeEvent) {

@@ -44,6 +44,8 @@ export class KnowledgeListComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    $('#backButton').hide();
+
   }
   search(data: string | any[],search: string) {
     console.log(data);

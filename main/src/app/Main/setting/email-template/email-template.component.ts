@@ -28,7 +28,8 @@ export class EmailTemplateComponent  {
    }
   formsErrors = [];
   ngOnInit(): void {
-    
+    $('#backButton').show();
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,

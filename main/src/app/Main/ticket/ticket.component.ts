@@ -77,6 +77,8 @@ export class TicketComponent implements OnInit {
   activeDynamic=1;
 
   ngOnInit(): void {
+    $('#backButton').show();
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,

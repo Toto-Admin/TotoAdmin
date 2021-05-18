@@ -11,6 +11,8 @@ export class TicketDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('#backButton').show();
+
   }
 
 }

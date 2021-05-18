@@ -27,7 +27,8 @@ export class CategoriesComponent implements OnInit {
   constructor(private fb: FormBuilder,private modalService: NgbModal) { }
   formsErrors = [];
   ngOnInit(): void {
-    
+    $('#backButton').show();
+
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:10,

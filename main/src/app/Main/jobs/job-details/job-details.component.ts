@@ -23,6 +23,8 @@ export class JobDetailsComponent implements OnInit {
   counter = this.tabs.length + 1;
   activeDynamic=1;
   ngOnInit(): void {
+    $('#backButton').show();
+
   }
 
   onNavChange(changeEvent: NgbNavChangeEvent) {

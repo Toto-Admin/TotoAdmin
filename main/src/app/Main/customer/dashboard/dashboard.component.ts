@@ -443,6 +443,8 @@ export class DashboardComponent  {
 
     };
   }
-
+  ngOnInit(): void {
+    $('#backButton').show();
+  }
 
 }

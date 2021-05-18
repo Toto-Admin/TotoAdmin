@@ -21,6 +21,7 @@ export class EditComponent implements OnInit {
   constructor(private router : Router,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    $('#backButton').show();
 
     this.regularForm = this.formBuilder.group({
       'name':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),

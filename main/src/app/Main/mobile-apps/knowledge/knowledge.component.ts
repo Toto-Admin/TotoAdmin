@@ -56,7 +56,7 @@ export class KnowledgeComponent implements OnInit {
 
   formsErrors = [];
   ngOnInit(): void {
-    
+    $('#backButton').hide();
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength:8,

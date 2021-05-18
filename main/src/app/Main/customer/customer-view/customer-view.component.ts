@@ -122,6 +122,8 @@ export class CustomerViewComponent implements OnInit {
 
 
   ngOnInit(): void {
+    $('#backButton').show();
+
     this.editUser = this.fb.group({
       id: [''],
       Name: ['', Validators.required],

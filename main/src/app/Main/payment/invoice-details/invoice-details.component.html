@@ -37,9 +37,10 @@
                       <table datatable [dtOptions]="dtOptions" class="row-border hover table">
                         <thead>
                           <tr>
-                            <th class="backgroundColor tdLeft">invoice ID</th>
-                            <th class="backgroundColor tdLeft">BILL FROM</th>
-                            <th class="backgroundColor tdLeft">BILL TO</th>
+                            <th class="backgroundColor tdLeft">invoice Details</th>
+                            <!-- <th class="backgroundColor tdLeft">BILL FROM</th>
+                            <th class="backgroundColor tdLeft">BILL TO</th> -->
+                            <th class="backgroundColor tdLeft">Date</th>
                             <th class="backgroundColor "><span style="margin-left: 50%;">AMOUNT</span></th>
                             <th class="backgroundColor">STATUS</th>
                             <th class="backgroundColor">ACTION</th>
@@ -48,11 +49,12 @@
                        
                         <tbody>
                             <tr>
-                                <td class="tdLeft">1</td>
-                                <td class="tdLeft">Fortune creation</td>
-                                <td class="tdLeft">Soft solution</td>
+                                <td class="tdLeft"><b>INV-03994 ᛫ Francesca Ferrini </b><br>Toto. <i class="fa fa-credit-card"></i>  . 18/05/2021 ↦ 18/06/2021</td>
+                                <!-- <td class="tdLeft">Fortune creation</td>
+                                <td class="tdLeft">Soft solution</td> -->
+                                <td class="tdLeft">10/05/2021</td>
                                 <td class="tdRight mdi mdi-currency-gbp">10</td>
-                                <td ><label class="label label-warning">Pending</label></td>
+                                <td ><label class="label label-dark">Sent</label><label class="label label-success">Paid</label></td>
                                 <td> 
                                     <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
     
@@ -66,11 +68,12 @@
                             </tr>
                             
                             <tr>
-                                <td class="tdLeft">2</td>
-                                <td class="tdLeft">Fortune creation</td>
-                                <td class="tdLeft">Soft solution</td>
+                                <td class="tdLeft"><b>INV-03991 ᛫ Desynit Limited </b><br>Toto. <i class="fa fa-building" aria-hidden="true"></i></td>
+                                <!-- <td class="tdLeft">Fortune creation</td>
+                                <td class="tdLeft">Soft solution</td> -->
+                                <td class="tdLeft">10/05/2021</td>
                                 <td class="tdRight mdi mdi-currency-gbp">55</td>
-                                <td ><label class="label label-danger">Cancelled</label></td>
+                                <td ><label class="label label-dark">Not Sent</label><label class="label label-danger">Cancelled</label></td>
                                 <td> 
                                     <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
     
@@ -84,11 +87,12 @@
                                 
                             </tr>
                             <tr>
-                                <td class="tdLeft">3</td>
-                                <td class="tdLeft">Fortune creation</td>
-                                <td class="tdLeft">Soft solution</td>
+                                <td class="tdLeft"><b>INV-03992 ᛫ Abraham Hailie </b><br>Toto. <i class="fa fa-building" aria-hidden="true"></i></td>
+                                <!-- <td class="tdLeft">Fortune creation</td>
+                                <td class="tdLeft">Soft solution</td> -->
+                                <td class="tdLeft">10/05/2021</td>
                                 <td class="tdRight mdi mdi-currency-gbp">80</td>
-                                <td ><label class="label label-danger">Cancelled</label></td>
+                                <td ><label class="label label-dark">Not Sent</label><label class="label label-danger">Unpaid</label></td>
                                 <td> 
                                     <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
     
@@ -102,11 +106,12 @@
                                 
                             </tr>
                             <tr>
-                                <td class="tdLeft">4</td>
-                                <td class="tdLeft">Fortune creation</td>
-                                <td class="tdLeft">Soft solution</td>
+                                <td class="tdLeft"><b>INV-03994 ᛫ Francesca Ferrini </b><br>Toto. <i class="fa fa-building" aria-hidden="true"></i></td>
+                                <!-- <td class="tdLeft">Fortune creation</td>
+                                <td class="tdLeft">Soft solution</td> -->
+                                <td class="tdLeft">10/05/2021</td>
                                 <td class="tdRight mdi mdi-currency-gbp">60</td>
-                                <td ><label class="label label-success">Paid</label></td>
+                                <td ><label class="label label-dark">Not Sent</label><label class="label label-info">Refund</label></td>
                                 <td> 
                                     <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
     
@@ -120,11 +125,12 @@
                                 
                             </tr>
                             <tr>
-                                <td class="tdLeft">5</td>
-                                <td class="tdLeft">Fortune creation</td>
-                                <td class="tdLeft">Soft solution</td>
+                                <td class="tdLeft"><b> INV-03993 ᛫ Kate Hughes </b><br>Toto. <i class="fa fa-building" aria-hidden="true"></i></td>
+                                <!-- <td class="tdLeft">Fortune creation</td>
+                                <td class="tdLeft">Soft solution</td> -->
+                                <td class="tdLeft">10/05/2021</td>
                                 <td class="tdRight mdi mdi-currency-gbp">60</td>
-                                <td ><label class="label label-warning">Pending</label></td>
+                                <td ><label class="label label-dark">Not Sent</label><label class="label label-info">Credit Note</label></td>
                                 <td> 
                                     <a [routerLink]="['/jobs/invoice-view']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
     

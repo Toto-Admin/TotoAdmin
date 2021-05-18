@@ -10,6 +10,9 @@ export class ActivityComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('#backButton').show();
+
   }
+
 
 }

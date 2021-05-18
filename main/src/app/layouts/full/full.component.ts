@@ -4,6 +4,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, ActivatedRoute, Data } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-full-layout',
@@ -17,6 +18,7 @@ export class FullComponent implements OnInit {
 
   
   constructor(
+    private location: Location,
     public router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title) 
@@ -81,6 +83,10 @@ export class FullComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: string) {
     this.handleSidebar();
+  }
+
+  backToPrevious(): void{
+    this.location.back()
   }
 
   handleSidebar() {

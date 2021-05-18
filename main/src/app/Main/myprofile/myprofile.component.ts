@@ -11,7 +11,8 @@ export class MyprofileComponent  implements OnInit {
 
   regularForm: FormGroup=Object.create(null);
   ngOnInit(): void {
-    
+    $('#backButton').show();
+
 
     this.regularForm = new FormGroup({
  
