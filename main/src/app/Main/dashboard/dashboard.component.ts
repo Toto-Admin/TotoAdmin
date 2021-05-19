@@ -584,7 +584,7 @@ export class DashboardComponent implements OnInit {
       legends: {
         show: false,
       },
-      labels: ['Ios', 'Android'],
+      labels: ['iOS', 'Android'],
       colors: ['#40c4ff', '#2961ff'],
 
     };
