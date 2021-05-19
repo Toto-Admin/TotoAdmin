@@ -189,7 +189,7 @@ export class DashboardComponent  {
     legends: {
       show: false,
     },
-    labels: ['On-Site','Remote'],
+    labels: ['On-site','Remote'],
     colors: ['#99abb4','#7e74fb'],
 
   };
