@@ -172,7 +172,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/payment/payment-detail',
-                title: 'Payment Details',
+                title: 'Payment List',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,
@@ -182,7 +182,7 @@ export const ROUTES: RouteInfo[] = [
             },
             {
                 path: '/payment/invoice-details',
-                title: 'Invoice Details',
+                title: 'Invoice List',
                 icon: 'mdi mdi-adjust',
                 class: '',
                 extralink: false,

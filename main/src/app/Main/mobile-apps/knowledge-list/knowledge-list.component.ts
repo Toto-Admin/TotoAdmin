@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SupportService } from '../../Services/support.service';
+import { Location } from '@angular/common'
+
 @Component({
   selector: 'app-knowledge-list',
   templateUrl: './knowledge-list.component.html',
@@ -14,7 +16,7 @@ export class KnowledgeListComponent implements OnInit {
   KnowID : any;
   KnowShortDetailsArray = Array();
   jsonData : any;
-  constructor(private activatedRoute: ActivatedRoute,private support : SupportService) {
+  constructor(private location: Location,private activatedRoute: ActivatedRoute,private support : SupportService) {
 
     this.activatedRoute.params.subscribe(params => {
       this.KnowID = params['id'];
@@ -76,5 +78,10 @@ export class KnowledgeListComponent implements OnInit {
       this.FilterAdminSubCategoryData = [];
       this.FilterAdminSubCategoryData = this.search(this.OriginalData,ele.target.value);
     }
+  }
+
+  // back button
+  backToPrevious(): void{
+    this.location.back()
   }
 }

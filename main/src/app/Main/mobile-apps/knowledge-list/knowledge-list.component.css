@@ -60,4 +60,16 @@
       margin-left: -7%;
       height: 135px;
     }
+    .backbutton1{
+      display: none;
+    }
   }
+
+  /* back button */
+  .backbutton1 {
+    margin-left: 1%;
+    margin-top: 0%;
+    position: fixed;
+    overflow: auto;
+    z-index: 9999;
+}

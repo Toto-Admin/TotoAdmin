@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Payment History In Details</h4>
+                <h4 class="card-title">Payment Details</h4>
                 <!-- <h6 class="card-subtitle">This is basic Default pagination</h6> -->
 
                 <ul ngbNav #nav="ngbNav" [(activeId)]="active">
@@ -16,7 +16,7 @@
                     </li>
                   
                     <li [ngbNavItem]="2">
-                        <a ngbNavLink>Payment details</a>
+                        <a ngbNavLink>Transactions</a>
                         <ng-template ngbNavContent>
                           <app-total-payment></app-total-payment>
                         </ng-template>

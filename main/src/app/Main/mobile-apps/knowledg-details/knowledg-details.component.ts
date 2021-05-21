@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SupportService } from '../../Services/support.service';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-knowledg-details',
@@ -16,7 +17,7 @@ export class KnowledgDetailsComponent implements OnInit {
   content : any;
   jsonData : any;
 
-  constructor(private activatedRoute: ActivatedRoute,private support : SupportService) {
+  constructor(private location: Location,private activatedRoute: ActivatedRoute,private support : SupportService) {
 
     this.activatedRoute.params.subscribe(params => {
       this.KnowID = params['id'];
@@ -38,4 +39,8 @@ export class KnowledgDetailsComponent implements OnInit {
     $('#backButton').hide();
   }
 
+  // back button
+  backToPrevious(): void{
+    this.location.back()
+  }
 }

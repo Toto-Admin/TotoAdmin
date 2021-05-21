@@ -81,7 +81,7 @@ export class ReportComponent {
       legends: {
         show: false,
       },
-      labels: ['How much get payment from customer', 'How much payment paid to provider', 'How much amount get to toto'],
+      labels: ['Payment from Customer', 'Paid to Provider', 'Receive TOTO'],
       colors: ['#40c4ff', '#2961ff', '#ff821c'],
 
     };
