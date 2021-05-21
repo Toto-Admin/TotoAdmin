@@ -6,7 +6,7 @@
                 <form *ngIf='regularForm' [formGroup]="regularForm"class="m-t-30">
                     <div class="form-group">
                         <label for="mobile">Mobile<span class="reqNote">*</span></label>
-                        <input type="tel" class="form-control"  formControlName="mobile" placeholder="Enter your mobile" id="mobile">
+                        <input type="tel" class="form-control"  formControlName="mobile" placeholder="Enter your mobile number" id="mobile">
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('mobile').valid && (regularForm.get('mobile').dirty || regularForm.get('mobile').touched)">
                         Mobile number is required and must be in 10 digit
@@ -38,7 +38,7 @@
                     </div>
 
                    
-                    <button type="submit" class="btn btn-info">Save</button>
+                    <button type="button"  class="btn btn-info" >Save</button>
                 </form>
             </div>
         </div>
