@@ -12,6 +12,8 @@ export class AddComponent implements OnInit {
   constructor( private router: Router) { }
 
   ngOnInit(): void {
+    $('#backButton').show();
+
     this.regularForm = new FormGroup({
       'inputFirstname':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
       'inputLastname':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),

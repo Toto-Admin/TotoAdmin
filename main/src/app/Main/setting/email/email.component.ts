@@ -12,7 +12,7 @@ export class EmailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $('#backButton').show();
+    $('#backButton').hide();
 
     this.regularForm = new FormGroup({
       

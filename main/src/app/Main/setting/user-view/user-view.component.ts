@@ -12,7 +12,6 @@ export class UserViewComponent implements OnInit {
 
   ngOnInit(): void {
     $('#backButton').show();
-
   }
 
   currentJustify = 'start';

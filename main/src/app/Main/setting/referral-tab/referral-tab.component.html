@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
               
-                <form *ngIf='regularForm' [formGroup]="regularForm" class="m-t-30">
+                <form *ngIf='regularForm' [formGroup]="regularForm">
                     <div class="form-group">
                         <label for="disc">Referral Discount in Percentage<span class="reqNote">*</span></label>
                         <input type="number" class="form-control" id="disc" placeholder="Enter referral discount in percentage" formControlName="disc">
@@ -16,7 +16,7 @@
                    
                     <div class="form-group">
                         <label for="ref_detail">Referral Details</label>
-                        <textarea class="form-control" rows="3"  id="ref_detail"placeholder="Enter your referral details" formControlName="disc" ></textarea>
+                        <textarea class="form-control" rows="3"  id="ref_detail"placeholder="Enter referral details" formControlName="disc" ></textarea>
                     </div>
                    
                     <button type="button" class="btn btn-info">Save</button>

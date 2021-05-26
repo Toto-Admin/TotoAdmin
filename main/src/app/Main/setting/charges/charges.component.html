@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-body">
               
-                <form *ngIf='regularForm' [formGroup]="regularForm" class="m-t-30">
+                <form *ngIf='regularForm' [formGroup]="regularForm">
                     <div class="form-group">
                         <label for="cust_charg">Customer Charges<span class="reqNote">*</span></label>
                         <input type="number"  class="form-control" placeholder="Enter customer charges"   formControlName="cust_charg" id="cust_charg" >

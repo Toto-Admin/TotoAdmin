@@ -4,17 +4,17 @@
         <div class="card">
             <div class="card-body">
               
-                <form  *ngIf='regularForm' [formGroup]="regularForm" class="m-t-30">
+                <form  *ngIf='regularForm' [formGroup]="regularForm">
                     <div class="form-group">
                         <label for="toEmail">To Email<span class="reqNote">*</span></label>
-                        <input type="email" class="form-control" id="toEmail" placeholder="Enter your email" formControlName="toEmail">
+                        <input type="email" class="form-control" id="toEmail" placeholder="Enter email" formControlName="toEmail">
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('toEmail').valid && (regularForm.get('toEmail').dirty || regularForm.get('toEmail').touched)">Please
                                Enter a valid email!</small>
                     </div>
                     <div class="form-group">
                         <label for="fromEmail">From Email<span class="reqNote">*</span></label>
-                        <input type="email" class="form-control" id="fromEmail"placeholder="Enter your email" formControlName="fromEmail">
+                        <input type="email" class="form-control" id="fromEmail"placeholder="Enter email" formControlName="fromEmail">
                         <small class="form-text text-danger"
                         *ngIf="!regularForm.get('fromEmail').valid && (regularForm.get('fromEmail').dirty || regularForm.get('fromEmail').touched)">Please
                                Enter a valid email!</small>

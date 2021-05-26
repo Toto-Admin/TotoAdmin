@@ -27,10 +27,10 @@ const routes: Routes = [
   {path:'task',component:TaskHistoryComponent,data:{title : 'Provider'}},
   {path:'review',component:ReviewRatingComponent,data:{title : 'Provider'}},
   {path:'availability', component:AvailabilityComponent,data:{title : 'Provider'}},
-  {path:'add',component:AddComponent},
+  {path:'add',component:AddComponent,data:{title : 'Provider'}},
   {path:'tickets',component:TicketsComponent},
   {path:'chats',component:ChatsComponent},
-  {path:'edit',component:EditComponent},
+  {path:'edit',component:EditComponent,data:{title : 'Provider'}},
   {path:'assessment-click',component:AssessmentClickComponent}
 ];
 

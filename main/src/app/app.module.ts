@@ -38,6 +38,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
+import { GraphQLModule } from './graphql.module';
 
 
 
@@ -84,8 +85,7 @@ const icons = {
     BrowserAnimationsModule,
     FormsModule,
     FeatherModule.pick(icons),
-
-
+    GraphQLModule,
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,

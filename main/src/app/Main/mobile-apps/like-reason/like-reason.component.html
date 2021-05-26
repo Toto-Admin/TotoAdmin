@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="card card-body">
         <h4 class="card-title">Like Reasons<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
+            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         
         <div class="">
@@ -11,7 +11,7 @@
             <div class="col-md-12 table-responsive">
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+                  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
                     <thead>
                       <tr>
              
@@ -32,95 +32,30 @@
                       </tr>
                     </thead> -->
                     <tbody>
-                      <tr>
-                        <td class="tdLeft">Nice customer</td>
-                        <td>Provider</td>
-                        <td class="tdLeft"><span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span></td>
-                        <td><label class="label label-success">Active</label></td>
+                      <tr *ngFor="let item of likeReason">
+                        <td class="tdLeft">{{item.reason}}</td>
+                        <td>{{item.type == 'seeker' ? 'Customer' : 'Provider'}}</td>
+                        <td class="tdLeft">
+                            <span class="fa fa-star" [ngClass]="1 <= item.review_star ? 'checked' : ''"></span>
+                            <span class="fa fa-star" [ngClass]="2 <= item.review_star ? 'checked' : ''"></span>
+                            <span class="fa fa-star" [ngClass]="3 <= item.review_star ? 'checked' : ''"></span>
+                            <span class="fa fa-star" [ngClass]="4 <= item.review_star ? 'checked' : ''"></span>
+                            <span class="fa fa-star" [ngClass]="5 <= item.review_star ? 'checked' : ''"></span>
+                        </td>
                         <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
+                          <label class="label label-success" *ngIf="item.status == 'active'">Active</label>
+                          <label class="label label-dark" *ngIf="item.status == 'inactive'">Inactive</label>
                         </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Thank you for giving me good service</td>
-                        <td>Customer</td>
-                        <td class="tdLeft"><span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span></td>
-                        <td><label class="label label-success">Active</label></td>
                         <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                            <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip" (click)="deleteLikeReason(item.id)">
                                 <i class="ti-trash"></i>
                             </a>
                         </td>
                       </tr>
-                      <tr>
-                        <td class="tdLeft">Provide awesome service </td>
-                        <td>Customer</td>
-                        <td class="tdLeft"><span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span></td>
-                        <td><label class="label label-success">Active</label></td>   
-                        <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Understandable customer, thank you</td>
-                        <td>Provider</td>
-                        <td class="tdLeft"><span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span></td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Good customer, thank you for tip</td>
-                        <td>Provider</td>
-                        <td class="tdLeft"><span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span>
-                          <span class="fa fa-star"></span></td>
-                        <td><label class="label label-dark">Inactive</label></td>                   
-                        <td><a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
+                      
                      
                    
                     </tbody>
@@ -144,7 +79,7 @@
   
     <div class="modal-header ">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Like Reasons</h5>
+      <h5 class="modal-title" id="editUserLabel">{{title}} Like Reasons</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -159,7 +94,8 @@
         <div class="form-group row">
           <label for="reason" class="col-sm-4 col-form-label">Reason<span class="reqNote">*</span></label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="reason" id="reason" placeholder="Enter your reason" (blur)=logValidationErrors(editUser)>
+            <input type="hidden" formControlName="id">
+            <input type="text" class="form-control" formControlName="reason" id="reason" placeholder="Enter reason" (blur)=logValidationErrors(editUser)>
             <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
@@ -169,59 +105,33 @@
               </small> 
           </div>
         </div>
-        
-            <!-- <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
-              <div class="col-sm-8">
-                  <select class="form-control custom-select"name="type" formControlName="type"  tabindex="1">
-                  <option value="Category 1">user</option>
-                  <option value="Category 2">provider</option>
-                 </select>
-                 <small class="form-text text-danger"
-                 *ngIf="!editUser.get('type').valid && (editUser.get('type').dirty || editUser.get('type').touched)">
-                 Type is required 
-                 </small> 
-             </div> -->
          <div class="form-group row">
              <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
              <div class="col-sm-8">
-             <select class="form-control" id="type" fomControllName="type" placeholder="Enter type" required>
-                 <option>Customer</option>
-                 <option>Provider</option>
+             <select class="form-control" id="type" formControlName="type" required>
+                 <option value="seeker">Customer</option>
+                 <option value="provider">Provider</option>
              </select> 
              </div>
       </div>
       <div class="form-group row">
-        <!-- <label for="review" class="col-sm-4 col-form-label">Reason for review<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-              <select class="form-control custom-select"name="review" formControlName="review"  tabindex="1">
-              <option value="Category 1">1</option>
-              <option value="Category 2">2</option>
-              <option value="Category 2">3</option>
-              <option value="Category 2">4</option>
-              <option value="Category 2">5</option>
-              
-             </select>
-             <small class="form-text text-danger"
-              *ngIf="!editUser.get('review').valid && (editUser.get('review').dirty || editUser.get('review').touched)">
-              Reason for review is required 
-              </small> 
-         </div> -->
          <label for="review" class="col-sm-4 col-form-label">Reason for Review<span class="reqNote">*</span></label>
          <div class="col-sm-8">
-         <select class="form-control" id="review" formControlName="review"  required>
-             <option>1</option>
-             <option>2</option>
-             <option>3</option>
-             <option>4</option>
-             <option>5</option>
+         <select class="form-control" id="review" formControlName="review_star"  required>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
          </select> 
          </div>
       </div>
+
       <div class="form-group row">
         <label for="position" class="col-sm-4 col-form-label">Status</label>
             <div class="col-sm-8">
               <label class="switch">
-                <input type="checkbox" checked>
+                <input type="checkbox" formControlName="status" id="check">
                 <span class="slider round"></span>
                </label>
             </div> 

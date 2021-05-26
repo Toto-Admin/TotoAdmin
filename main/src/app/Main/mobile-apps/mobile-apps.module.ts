@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MobileAppsRoutingModule } from './mobile-apps-routing.module';
 import { CategoryComponent } from './category/category.component';
-import{QuestionsComponent } from './questions/questions.component';
+import { QuestionsComponent } from './questions/questions.component';
 import { MobileContentComponent } from './mobile-content/mobile-content.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 
@@ -17,7 +17,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { QuillModule } from 'ngx-quill';
 import { KnowledgeListComponent } from './knowledge-list/knowledge-list.component';
 import { KnowledgDetailsComponent } from './knowledg-details/knowledg-details.component';
-import{ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FeedbackViewComponent } from './feedback-view/feedback-view.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
