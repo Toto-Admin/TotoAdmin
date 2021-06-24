@@ -57,5 +57,9 @@ export class VerticalSidebarComponent {
     this.notify.emit(!this.showClass);
   }
 
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
 
 }

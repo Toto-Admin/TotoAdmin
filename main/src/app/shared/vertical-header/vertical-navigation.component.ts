@@ -150,4 +150,8 @@ export class VerticalNavigationComponent {
     this.translate.use(lang.code)
     this.selectedLanguage = lang;
   }
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
 }

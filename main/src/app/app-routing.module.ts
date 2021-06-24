@@ -4,23 +4,27 @@ import { Routes } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './Main/Services/auth/auth.guard';
+import { SetPasswordComponent } from './set-password/set-password.component';
 
 
 export const Approutes: Routes = [
-   
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
-  { path: '', loadChildren: () => import('./layout/layout/layout.module').then(m => m.LayoutModule)},
+
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'set-password/:token', component: SetPasswordComponent },
+    { path: '', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
+    { path: '', loadChildren: () => import('./layout/layout/layout.module').then(m => m.LayoutModule) },
+    //   , canActivate: [AuthGuard]
     // {
     //     path: 'dashboard',
     //     component: FullComponent,
     //     children: [
-            
+
     //         {
     //             path: 'customer',
     //             loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule)
     //         },
-            
+
     //         {
     //             path: 'dashboard',
     //             loadChildren: () => import('./dashboards/dashboard.module').then(m => m.DashboardModule)
@@ -77,5 +81,5 @@ export const Approutes: Routes = [
         path: '**',
         redirectTo: '/authentication/404'
     },
-   
+
 ];

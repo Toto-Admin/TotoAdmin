@@ -4,14 +4,14 @@ import { User } from '../user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataTableDirective } from 'angular-datatables';
 import { Router } from '@angular/router';
-import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { NgbNavChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-customer-list',
   templateUrl: './customer-list.component.html',
   styleUrls: ['./customer-list.component.css']
 })
-export class CustomerListComponent implements OnInit,AfterViewInit {
+export class CustomerListComponent implements OnInit, AfterViewInit {
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
   config: any;
@@ -22,35 +22,38 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
 
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
-  dtOptions: DataTables.Settings = {};
+  // dtOptions: DataTables.Settings = {};
+  dtOptions : any = {};
+  buttons?: any[];
 
   currentJustify = 'start';
 
-  active=1;
+  active = 1;
 
-  activeKeep=1;
+  activeKeep = 1;
 
-  activeSelected=1;
+  activeSelected = 1;
   disabled = true;
 
-  
-  tabs = [1, 2, 3, 4, 5,6];
-  counter = this.tabs.length + 1;
-  activeDynamic=1;
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal ,private router: Router) { }
+  tabs = [1, 2, 3, 4, 5, 6];
+  counter = this.tabs.length + 1;
+  activeDynamic = 1;
+
+  constructor(private fb: FormBuilder, private modalService: NgbModal, private router: Router) { }
   formsErrors = [];
   ngOnInit(): void {
     $('#backButton').hide();
 
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength:10,
-      ordering : true,
-      lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
+      pageLength: 10,
+      ordering: true,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, 'All']],
       columnDefs: [
         { orderable: false, targets: -1 }
-     ]
+      ],
+      
     };
     this.editUser = this.fb.group({
       id: [''],
@@ -61,7 +64,7 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
       DateOfJoining: ['', Validators.required],
       Salary: ['', Validators.required],
       Projects: ['', Validators.required],
-  });
+    });
   }
   ngAfterViewInit(): void {
     this.datatableElement.dtInstance.then((dtInstance: DataTables.Api) => {
@@ -69,7 +72,7 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
         const that = this;
         $('input', this.header()).on('keyup change', function () {
           debugger
-          var data :any;
+          var data: any;
           data = $(this).val();
           if (that.search() !== data) {
             that
@@ -83,8 +86,8 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
 
   openModal(targetModal: NgbModal, user: User | null) {
     this.modalService.open(targetModal, {
-        centered: true,
-        backdrop: 'static'
+      centered: true,
+      backdrop: 'static'
     });
   }
   closeBtnClick() {
@@ -96,10 +99,17 @@ export class CustomerListComponent implements OnInit,AfterViewInit {
     this.router.navigate(['/customer/add']);
   }
 
-  
+
   onNavChange(changeEvent: NgbNavChangeEvent) {
     if (changeEvent.nextId === 3) {
       changeEvent.preventDefault();
     }
+  }
+
+  excel()
+  {
+    debugger
+    $('.buttons-excel').addClass('waves-effect waves-light btn');
+    $(".buttons-excel").trigger("click");
   }
 }

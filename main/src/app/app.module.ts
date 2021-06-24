@@ -39,8 +39,13 @@ import { HttpClient } from '@angular/common/http';
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { GraphQLModule } from './graphql.module';
+import { AuthModule} from './shared/services/auth/auth/auth.module'
+import { JwtModule } from "@auth0/angular-jwt";
+import { SetPasswordComponent } from './set-password/set-password.component';
 
-
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -69,15 +74,9 @@ const icons = {
     VerticalSidebarComponent,
     HorizontalNavigationComponent,
     HorizontalSidebarComponent,
-    
     CustomerComponent,
-    
     LoginComponent,
-    
-   
-    
-    
-    
+    SetPasswordComponent,
   ],
   imports: [
     CommonModule,
@@ -95,7 +94,16 @@ const icons = {
     PerfectScrollbarModule,
     NgMultiSelectDropDownModule.forRoot(),
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyDoliAneRffQDyA7Ul9cDk3tLe7vaU4yP8' }),
-
+    AuthModule,
+    JwtModule.forRoot({
+      config:{
+        tokenGetter:() => {
+          return localStorage.getItem('token');
+        },
+        allowedDomains: ['localhost:3300'],
+        disallowedRoutes:[]
+      }
+    }),
 
     TranslateModule.forRoot({
       loader: {
