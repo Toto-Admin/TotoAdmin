@@ -5,7 +5,6 @@ import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
 import { LikeReasonService } from '../../Services/mobile-apps/like-reason.service';
 import { Subject } from 'rxjs';
-
 import Swal from 'sweetalert2';
 
 
@@ -14,17 +13,17 @@ import Swal from 'sweetalert2';
   templateUrl: './like-reason.component.html',
   styleUrls: ['./like-reason.component.css']
 })
-export class LikeReasonComponent implements OnInit,OnDestroy {
+export class LikeReasonComponent implements OnInit, OnDestroy {
 
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
 
   config: any;
-  title : any = 'Add';
+  title: any = 'Add';
 
   //Like Reason Data
-  likeReason : any;
-  checkedStatus : boolean = true;
+  likeReason: any;
+  checkedStatus: boolean = true;
   // editUser: FormGroup | null = null;
   userDetail: User | null = null;
 
@@ -38,11 +37,11 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
   dtTrigger: Subject<any> = new Subject();
 
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private likeService : LikeReasonService) { 
-      this.likeService.getLikeReasons({page: 0, limit: 20}).then(data=>{
-          this.likeReason = data.data;
-          this.dtTrigger.next();
-      })
+  constructor(private fb: FormBuilder, private modalService: NgbModal, private likeService: LikeReasonService) {
+    this.likeService.getLikeReasons({ page: 0, limit: 100 }).then(data => {
+      this.likeReason = data.data;
+      this.dtTrigger.next();
+    })
   }
   formsErrors = [];
   ngOnInit(): void {
@@ -50,30 +49,30 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
 
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength:10,
-      ordering : true,
-      lengthMenu :[[10,25,50,100,-1],[10,25,50,100,'All']],
+      pageLength: 10,
+      ordering: true,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, 'All']],
       columnDefs: [
         { orderable: false, targets: -1 }
       ]
     };
     this.editUser = this.fb.group({
-      id          : [''],
-      reason      : ['',[ Validators.required,Validators.pattern('[a-zA-Z ]*')]],
-      type        : ['', [Validators.required]],
-      review_star : ['', [Validators.required]],
-      status      : ['']
+      id: [''],
+      reason: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      type: ['', [Validators.required]],
+      review_star: ['', [Validators.required]],
+      status: ['']
     });
   }
 
   ngAfterViewInit(): void {
-    
+
     this.datatableElement.dtInstance.then((dtInstance: DataTables.Api) => {
       dtInstance.columns().every(function () {
         const that = this;
         $('input', this.header()).on('keyup change', function () {
           debugger
-          var data :any;
+          var data: any;
           data = $(this).val();
           if (that.search() !== data) {
             that
@@ -86,33 +85,30 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
 
   }
 
-  openModal(targetModal: NgbModal, reason : any,title : any) {
+  openModal(targetModal: NgbModal, reason: any, title: any) {
     this.title = title;
     this.modalService.open(targetModal, {
-        centered: true,
-        backdrop: 'static'
+      centered: true,
+      backdrop: 'static'
     });
-    if(title == 'Edit')
-    {
+    if (title == 'Edit') {
       this.editUser?.setValue({
-        reason      : reason.reason,
-        type        : reason.type,
-        status      : reason.status,
-        review_star : reason.review_star,
-        id          : reason.id
+        reason: reason.reason,
+        type: reason.type,
+        status: reason.status,
+        review_star: reason.review_star,
+        id: reason.id
       })
-      if(reason.status == 'active')
-      {
+      if (reason.status == 'active') {
         $("#check").prop("checked", true);
       }
-      else
-      {
+      else {
         this.checkedStatus = false;
         $("#check").prop("checked", false);
 
       }
     }
-  } 
+  }
   closeBtnClick() {
     this.modalService.dismissAll();
     this.ngOnInit();
@@ -121,11 +117,10 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
-  } 
+  }
 
   //delete Like reason
-  deleteLikeReason(ele:any)
-  {
+  deleteLikeReason(ele: any) {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -136,14 +131,14 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.likeService.deleteLikeReason(ele).then(data1=>{
-          this.likeService.getLikeReasons({page: 0, limit: 20}).then(data=>{
+        this.likeService.deleteLikeReason(ele).then(data1 => {
+          this.likeService.getLikeReasons({ page: 0, limit: 20 }).then(data => {
             this.likeReason = data.data;
             this.rerender();
             Swal.fire(
               'Deleted!',
               'Your reason has been deleted.',
-              'success' 
+              'success'
             )
           })
         })
@@ -152,20 +147,17 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
   }
 
   //Add New Like Reason
-  onSubmit()
-  {
-   
-    let reason : any = new Object();
+  onSubmit() {
+
+    let reason: any = new Object();
 
     let status = this.editUser?.controls['status'].value;
     let statusData = '';
 
-    if(status == true)
-    {
+    if (status == true) {
       statusData = 'active';
     }
-    else
-    {
+    else {
       statusData = 'inactive';
     }
 
@@ -173,8 +165,7 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
     reason['type'] = this.editUser?.controls['type'].value;
     reason['status'] = statusData;
     reason['review_star'] = this.editUser?.controls['review_star'].value;
-    if(this.editUser?.controls['id'].value !='')
-    {
+    if (this.editUser?.controls['id'].value != '') {
       reason['id'] = this.editUser?.controls['id'].value;
     }
 
@@ -182,16 +173,14 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
     this.modalService.dismissAll();
     this.ngOnInit();
 
-    this.likeService.addLikeReason(reason).then(data=>{
+    this.likeService.addLikeReason(reason).then(data => {
       var msg = '';
       debugger
       let id = this.editUser?.controls['id'].value;
-      if(reason.id != '' && reason.id != undefined)
-      {
+      if (reason.id != '' && reason.id != undefined) {
         msg = 'updated';
       }
-      else
-      {
+      else {
         msg = 'added';
       }
       Swal.fire({
@@ -199,7 +188,7 @@ export class LikeReasonComponent implements OnInit,OnDestroy {
         title: 'Save',
         text: `Like Reason ${msg}!`,
       })
-      this.likeService.getLikeReasons({page: 0, limit: 20}).then(data=>{
+      this.likeService.getLikeReasons({ page: 0, limit: 20 }).then(data => {
 
         this.likeReason = data.data;
         this.rerender();

@@ -17,7 +17,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { QuillModule } from 'ngx-quill';
 import { KnowledgeListComponent } from './knowledge-list/knowledge-list.component';
 import { KnowledgDetailsComponent } from './knowledg-details/knowledg-details.component';
-import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FeedbackViewComponent } from './feedback-view/feedback-view.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -29,6 +29,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     QuillModule.forRoot(),
     MobileAppsRoutingModule,
     DataTablesModule,
