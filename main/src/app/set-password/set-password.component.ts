@@ -68,4 +68,20 @@ export class SetPasswordComponent implements OnInit {
     }
   }
 
+  showPass() {
+    if (this.showPassword == false) {
+      this.showPassword = true;
+    } else {
+      this.showPassword = false;
+    }
+  }
+
+  showConPass() {
+    if (this.showConPassword == false) {
+      this.showConPassword = true;
+    } else {
+      this.showConPassword = false;
+    }
+  }
+
 }
