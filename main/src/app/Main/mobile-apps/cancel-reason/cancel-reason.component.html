@@ -2,7 +2,9 @@
   <div class="col-12">
     <div class="card card-body">
       <h4 class="card-title">Cancel Reasons<span style="float: right;">
-          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null, 'Add')">Add</button></span></h4>
+          <button class="btn backgroundColor ml-auto"
+            (click)="openModal(editUserModal, null, 'Add')">Add</button></span>
+      </h4>
       <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
 
       <div class="">
@@ -21,7 +23,7 @@
                 </tr>
               </thead>
               <!-- <thead>
-                      <tr>
+                      <tr> 
                         <th><input type="text" placeholder="Search ID" name="search-id"/></th>
                         <th><input type="text" placeholder="Search name" name="search-name"/></th>
                         <th><input type="text" placeholder="Search name" name="search-email"/></th>
@@ -39,11 +41,12 @@
                   </td>
 
                   <td>
-                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10"
-                      data-toggle="tooltip" title="Edit">
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')"
+                      class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                       <i class="ti-marker-alt"></i>
                     </a>
-                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip" (click)="deleteLikeReason(item.id)">
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"
+                      (click)="deleteLikeReason(item.id)">
                       <i class="ti-trash"></i>
                     </a>
                   </td>
@@ -69,7 +72,7 @@
 
   <div class="modal-header ">
 
-    <h5 class="modal-title" id="editUserLabel">Add or Edit Cancel Reasons</h5>
+    <h5 class="modal-title" id="editUserLabel">{{popupTitle}} Cancel Reasons</h5>
 
     <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -102,36 +105,27 @@
           <select class="form-control" id="type" formControlName="type" required>
             <option value="seeker">Customer</option>
             <option value="provider">Provider</option>
-        </select> 
+          </select>
         </div>
       </div>
       <div class="form-group row">
         <label for="position" class="col-sm-4 col-form-label">Status</label>
         <div class="col-sm-8">
-          <!-- <label class="switch">
-            <input type="checkbox" formControlName="status">
-            <span class="slider round"></span>
-          </label> -->
           <div class="row">
             <label class="switch">
-            <input type="checkbox" [checked]="isChecked" (change)="changeStatus($event)">
-            <span class="slider round"></span>
+              <input type="checkbox" [checked]="isChecked" (change)="changeStatus($event)">
+              <span class="slider round"></span>
             </label>
             <label class="statusData">{{statusData}}</label>
-    </div>
+          </div>
         </div>
       </div>
-
-
-      <div class="modal-footer">
-
-        <button type="submit" class="btn btn-info">Save</button>
+      <div class="modal-footer mb-f">
+        <button type="submit" class="btn btn-info">{{btnTitle}}</button>
         <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
-
       </div>
-
 
     </form>
   </div>
-  
+
 </ng-template>

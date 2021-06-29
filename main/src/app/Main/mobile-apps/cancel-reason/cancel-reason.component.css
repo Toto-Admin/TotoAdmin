@@ -2,7 +2,7 @@
     text-align: center;
 }
 .round {
-    /* line-height: 48px;
+    line-height: 48px;
     color: #fff;
     width: 60px !important;
     height: 33px !important;
@@ -11,7 +11,7 @@
     text-align: center;
     border-radius: 100%;
     background: #2962ff;
-    line-height: 52px; */
+    line-height: 52px;
     width: 60px !important;
     height: 32px !important;
 }
@@ -42,11 +42,11 @@
     position: absolute;
     content: "";
     height: 26px;
-    width: 26px;
+    width: 28px;
     left: 5px;
      right: 0px;
     bottom: 3px;
-    background-color: #2196F3;
+    background-color: #fefefe;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -67,6 +67,9 @@
   }
 
   .statusData{
-      margin-top: 4%;
-      margin-left: 5%;
+      margin-top: 15px;
+      margin-left: 15px;
+  }
+  .mb-f{
+    margin-bottom: -15px;
   }

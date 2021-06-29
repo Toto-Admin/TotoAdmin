@@ -1,173 +1,108 @@
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Dispute Reasons<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        
-        <div class="">
-          <div class="row">
-            <div class="col-md-12 table-responsive">
-              <!-- <div class="card card-hover">
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Dispute Reasons<span style="float: right;">
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span>
+      </h4>
+      <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+
+      <div class="">
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
-                    <thead>
-                      <tr>
-             
-                        <th class="backgroundColor tdLeft">REASON</th>
-                        <th class="backgroundColor">TYPE</th>
-                        <th class="backgroundColor">STATUS</th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
-                    <tbody>
-                      <tr>
-                        <td class="tdLeft">Provider doesn't provide good service</td>
-                        <td>Customer</td>
-                        <td><label class="label label-dark">Inactive</label></td>                                                   <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Unsatisfied customer</td>
-                        <td>Provider</td>
-                        <td><label class="label label-dark">Inactive</label></td>                                                   <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">Provide unhappy service</td>
-                        <td>Customer</td>
-                        <td><label class="label label-dark">Inactive</label></td>                                                   <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">The customer doesn't treat the provider well</td>
-                        <td>Provider</td>
-                        <td><label class="label label-success">Active</label></td>                                                   <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">The provider is not working on time</td>
-                        <td>Customer</td>
-                        <td><label class="label label-success">Active</label></td> 
-                        <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                     
-                   
-                    </tbody>
-                  </table>  
-                <!-- </div>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+              <thead>
+                <tr>
+
+                  <th class="backgroundColor tdLeft">REASON</th>
+                  <th class="backgroundColor">STATUS</th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let item of disputeReason'>
+                  <td class="tdLeft">{{item.reason}}</td>
+                  <td>
+                    <label class="label label-success" *ngIf="item.status == 'active'">Active</label>
+                    <label class="label label-dark" *ngIf="item.status == 'inactive'">Inactive</label>
+                  </td>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal,item,'Edit')"
+                      class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" (click)='deleteRejectReason(item.id)' class="text-inverse"
+                      title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
-          
-          
         </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header ">
-  
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Dispute Reasons</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-  
-        <div class="form-group row">
-          <label for="reason" class="col-sm-4 col-form-label">Reason<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="reason" id="reason"placeholder="Enter reason" (blur)=logValidationErrors(editUser)>
-            <!-- <span class="help-block" *ngIf="formsErrors.Name">
+</div>
+
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header ">
+
+    <h5 class="modal-title" id="editUserLabel">{{popupTitle}} Dispute Reasons</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <label for="reason" class="col-sm-4 col-form-label">Reason<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="reason" id="reason" placeholder="Enter reason"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
-            <small class="form-text text-danger"
-              *ngIf="!editUser.get('reason').valid && (editUser.get('reason').dirty || editUser.get('reason').touched)">
-              Reason is required 
-              </small> 
-          </div>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('reason').valid && (editUser.get('reason').dirty || editUser.get('reason').touched)">
+            Reason is required
+          </small>
         </div>
-        <div class="form-group row">
-          <label for="type" class="col-sm-4 col-form-label">Type<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-          <select class="form-control" id="type" fomControllName="type" required>
-              <option>Customer</option>
-              <option>Provider</option>
-          </select> 
-          </div>
- 
-    </div>
+      </div>
       <div class="form-group row">
         <label for="position" class="col-sm-4 col-form-label">Status</label>
-            <div class="col-sm-8">
-              <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-               </label>
-            </div> 
-       </div> 
-     
-        
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-info" >Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
-  
-        
+        <div class="col-sm-8">
+          <div class="row">
+            <label class="switch">
+              <input type="checkbox" [checked]="isChecked" (change)="changeStatus($event)">
+              <span class="slider round"></span>
+            </label>
+            <label class="statusData">{{statusData}}</label>
+          </div>
         </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
+      </div>
+      <div class="modal-footer mb-f">
+        <button type="submit" class="btn btn-info">{{btnTitle}}</button>
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+      </div>
+
+
+    </form>
+  </div>
+</ng-template>

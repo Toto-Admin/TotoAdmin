@@ -18,23 +18,17 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
 
-  config: any;
-  title: any = 'Add';
-
   //Like Reason Data
   likeReason: any;
-  checkedStatus: boolean = true;
-  // editUser: FormGroup | null = null;
-  userDetail: User | null = null;
-
-  filterArray: User[] | null = null;
-
-  joiningDate: string | null = null;
+  isChecked: boolean = true;
   editUser: FormGroup | null = null;
   dtElement!: DataTableDirective;
   dtOptions: any = {};
   dtInstance!: DataTables.Api;
-  dtTrigger: Subject<any> = new Subject();
+  dtTrigger: Subject<any> = new Subject();  
+  statusData: string = 'Inactive';
+  popupTitle = 'Add';
+  btnTitle = 'Save';
 
 
   constructor(private fb: FormBuilder, private modalService: NgbModal, private likeService: LikeReasonService) {
@@ -86,12 +80,13 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
   }
 
   openModal(targetModal: NgbModal, reason: any, title: any) {
-    this.title = title;
+    this.popupTitle = title;
     this.modalService.open(targetModal, {
       centered: true,
       backdrop: 'static'
     });
     if (title == 'Edit') {
+      this.btnTitle = 'Update';
       this.editUser?.setValue({
         reason: reason.reason,
         type: reason.type,
@@ -103,7 +98,7 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
         $("#check").prop("checked", true);
       }
       else {
-        this.checkedStatus = false;
+        this.isChecked = false;
         $("#check").prop("checked", false);
 
       }
@@ -178,10 +173,10 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
       debugger
       let id = this.editUser?.controls['id'].value;
       if (reason.id != '' && reason.id != undefined) {
-        msg = 'updated';
+        msg = 'Updated';
       }
       else {
-        msg = 'added';
+        msg = 'Added';
       }
       Swal.fire({
         icon: 'success',
@@ -202,5 +197,16 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
       dtInstance.destroy();
       this.dtTrigger.next();
     });
+  }
+
+   //Status checkbox check or uncheck call this funcation
+   changeStatus(ele: any) {
+    this.isChecked = ele.target.checked;
+    if (this.isChecked == true) {
+      this.statusData = 'active';
+    }
+    else {
+      this.statusData = 'inactive';
+    }
   }
 }

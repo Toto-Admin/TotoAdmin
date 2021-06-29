@@ -79,7 +79,7 @@
   
     <div class="modal-header ">
   
-      <h5 class="modal-title" id="editUserLabel">{{title}} Like Reasons</h5>
+      <h5 class="modal-title" id="editUserLabel">{{popupTitle}} Like Reasons</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -131,16 +131,17 @@
         <label for="position" class="col-sm-4 col-form-label">Status</label>
             <div class="col-sm-8">
               <label class="switch">
-                <input type="checkbox" formControlName="status" id="check">
+                <input type="checkbox" [checked]="isChecked" (change)="changeStatus($event)">
                 <span class="slider round"></span>
                </label>
+               <label class="statusData">{{statusData}}</label>
             </div> 
        </div>  
 
         
-        <div class="modal-footer">
+        <div class="modal-footer mb-f">
           <!-- <button type="submit" class="btn btn-info" [disabled]="editUser.invalid">Save</button> -->
-          <button type="submit" class="btn btn-info">Save</button>
+          <button type="submit" class="btn btn-info">{{btnTitle}}</button>
           <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button> 
         </div>
   

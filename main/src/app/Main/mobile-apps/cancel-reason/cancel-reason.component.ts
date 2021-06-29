@@ -3,7 +3,6 @@ import { ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
-import { User } from '../user';
 import { CancelReasonService } from '../../Services/mobile-apps/cancel-reason.service';
 import { Subject } from 'rxjs';
 import Swal from 'sweetalert2';
@@ -18,19 +17,15 @@ export class CancelReasonComponent implements OnInit {
 
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
-  config: any;
-  // editUser: FormGroup | null = null;
-  userDetail: User | null = null;
-
-  filterArray: User[] | null = null;
-
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
   cancelReason: any;
   dtTrigger: Subject<any> = new Subject();
-  statusData : string = 'Inactive';
-  isChecked : boolean = false;
+  statusData: string = 'Inactive';
+  isChecked: boolean = false;
+  popupTitle = 'Add';
+  btnTitle = 'Save';
 
 
   constructor(private fb: FormBuilder, private modalService: NgbModal, private cancelServices: CancelReasonService) {
@@ -87,7 +82,10 @@ export class CancelReasonComponent implements OnInit {
       centered: true,
       backdrop: 'static'
     });
+
+    this.popupTitle = title;
     if (title == 'Edit') {
+      this.btnTitle = 'Update';
       this.editUser?.setValue({
         reason: reason.reason,
         type: reason.type,
@@ -108,16 +106,23 @@ export class CancelReasonComponent implements OnInit {
       }
     }
   }
+
   closeBtnClick() {
     this.modalService.dismissAll();
     this.ngOnInit();
   }
 
   //Status checkbox check or uncheck call this funcation
-  changeStatus(ele : any)
-  {
+  changeStatus(ele: any) {
     this.isChecked = ele.target.checked;
+    if (this.isChecked == true) {
+      this.statusData = 'active';
+    }
+    else {
+      this.statusData = 'inactive';
+    }
   }
+
   //Add New Like Reason
   onSubmit() {
     debugger
@@ -150,10 +155,10 @@ export class CancelReasonComponent implements OnInit {
       var msg = '';
       debugger
       if (id != '' && id != undefined) {
-        msg = 'updated';
+        msg = 'Updated';
       }
       else {
-        msg = 'added';
+        msg = 'Added';
       }
       Swal.fire({
         icon: 'success',

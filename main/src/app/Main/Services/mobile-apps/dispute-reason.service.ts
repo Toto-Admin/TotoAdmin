@@ -4,39 +4,39 @@ import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
 export const Fragments = {
-  ReasonData: gql`
-        fragment ReasonData on Reason {
-            id
-            reason
-            type
-            status
-            created_at
-            updated_at
-        }
-    `,
+  DisputeReasonData: gql`
+  fragment DisputeReasonData on DisputeReason {
+      id
+      reason
+      status
+      created_at
+      updated_at
+  }
+  `,
 }
 @Injectable({
-  providedIn: 'root' 
+  providedIn: 'root'
 })
-export class CancelReasonService {
+export class DisputeReasonService {
 
   constructor(private apollo: Apollo) { }
 
-  getReasons(request?: any) {
+
+  getDisputeReasons(request?: any) {
     return this.apollo.query({
       fetchPolicy: 'no-cache',
       query: gql`
-                query getReasons($request: ReasonsDataTableInput){
-                    data : getReasons( input : $request){
+                query getDisputeReasons($request: DisputeReasonsDataTableInput){
+                    data : getDisputeReasons( input : $request){
                         meta {
                             total
                         }
                         data {
-                        ...ReasonData
+                        ...DisputeReasonData
                         }
                     }
                 }
-                ${Fragments.ReasonData}
+                ${Fragments.DisputeReasonData}
             `,
       variables: {
         request
@@ -58,22 +58,21 @@ export class CancelReasonService {
         throw error;
       })
   }
-
-
-  addReason(request: any) {
+  
+  addDisputeReason(request: any) {
     return this.apollo.mutate({
       mutation: gql`
-            mutation saveReason($request: ReasonInput!){
-                data : saveReason( input: $request){
-                    message
-                    status
-                    data{
-                        ...ReasonData
-                    }
-                }
-            }
-            ${Fragments.ReasonData}
-        `,
+          mutation saveDisputeReason($request: DisputeReasonInput!){
+              data : saveDisputeReason( input: $request){
+                  message
+                  status
+                  data{
+                      ...DisputeReasonData
+                  }
+              }
+          }
+          ${Fragments.DisputeReasonData}
+      `,
       variables: {
         request
       }
@@ -95,11 +94,11 @@ export class CancelReasonService {
       })
   }
 
-  deleteReason(id: number) {
+  deleteDisputeReason(id: number) {
     return this.apollo.mutate({
       mutation: gql`
-          mutation deleteReason($id:Int!){
-              data : deleteReason(id : $id){
+          mutation deleteDisputeReason($id:Int!){
+              data : deleteDisputeReason(id : $id){
                   message
                   status
               }
