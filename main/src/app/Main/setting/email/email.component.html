@@ -4,25 +4,22 @@
         <div class="card">
             <div class="card-body">
               
-                <form  *ngIf='regularForm' [formGroup]="regularForm">
+                <form  *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="addUpdateSettings()">
                     <div class="form-group">
-                        <label for="toEmail">To Email<span class="reqNote">*</span></label>
-                        <input type="email" class="form-control" id="toEmail" placeholder="Enter email" formControlName="toEmail">
+                        <label for="to_email">To Email<span class="reqNote">*</span></label>
+                        <input type="email" class="form-control" id="to_email" placeholder="Enter email" formControlName="to_email">
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('toEmail').valid && (regularForm.get('toEmail').dirty || regularForm.get('toEmail').touched)">Please
+                        *ngIf="!regularForm.get('to_email').valid && (regularForm.get('to_email').dirty || regularForm.get('to_email').touched)">Please
                                Enter a valid email!</small>
                     </div>
                     <div class="form-group">
-                        <label for="fromEmail">From Email<span class="reqNote">*</span></label>
-                        <input type="email" class="form-control" id="fromEmail"placeholder="Enter email" formControlName="fromEmail">
+                        <label for="from_email">From Email<span class="reqNote">*</span></label>
+                        <input type="email" class="form-control" id="from_email"placeholder="Enter email" formControlName="from_email">
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('fromEmail').valid && (regularForm.get('fromEmail').dirty || regularForm.get('fromEmail').touched)">Please
+                        *ngIf="!regularForm.get('from_email').valid && (regularForm.get('from_email').dirty || regularForm.get('from_email').touched)">Please
                                Enter a valid email!</small>
                     </div>
-                   
-
-                   
-                    <button type="button" class="btn btn-info">Save</button>
+                    <button type="submit" class="btn btn-info">Save</button>
                 </form>
             </div>
         </div>

@@ -4,44 +4,40 @@
         <div class="card">
             <div class="card-body">
               
-                <form *ngIf='regularForm' [formGroup]="regularForm">
+                <form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="addUpdateSettings()">
                     <div class="form-group">
-                        <label for="cust_charg">Customer Charges<span class="reqNote">*</span></label>
-                        <input type="number"  class="form-control" placeholder="Enter customer charges"   formControlName="cust_charg" id="cust_charg" >
+                        <label for="seeker_charges">Customer Charges<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" placeholder="Enter customer charges"   formControlName="seeker_charges" id="seeker_charges" >
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('cust_charg').valid && (regularForm.get('cust_charg').dirty || regularForm.get('cust_charg').touched)">
+                        *ngIf="!regularForm.get('seeker_charges').valid && (regularForm.get('seeker_charges').dirty || regularForm.get('seeker_charges').touched)">
                         This field is required
                         </small>
                     </div>
                     <div class="form-group">
-                        <label for="pro_charg">Provider Charges<span class="reqNote">*</span></label>
-                        <input type="number"  class="form-control" id="pro_charg" placeholder="Enter provider charges" formControlName="pro_charg" >
+                        <label for="provider_charges">Provider Charges<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" id="provider_charges" placeholder="Enter provider charges" formControlName="provider_charges" >
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('pro_charg').valid && (regularForm.get('pro_charg').dirty || regularForm.get('pro_charg').touched)">
+                        *ngIf="!regularForm.get('provider_charges').valid && (regularForm.get('provider_charges').dirty || regularForm.get('provider_charges').touched)">
                         This field is required
                         </small>
                     </div>
                     <div class="form-group">
-                        <label for="vat_charg">Vat Charges<span class="reqNote">*</span></label>
-                        <input type="number"  class="form-control" id="vat_charg" placeholder="Enter vat charges" formControlName="vat_charg">
+                        <label for="vat_charges">Vat Charges<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" id="vat_charges" placeholder="Enter vat charges" formControlName="vat_charges">
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('vat_charg').valid && (regularForm.get('vat_charg').dirty || regularForm.get('vat_charg').touched)">
+                        *ngIf="!regularForm.get('vat_charges').valid && (regularForm.get('vat_charges').dirty || regularForm.get('vat_charges').touched)">
                         This field is required
                         </small>
                     </div>
                     <div class="form-group">
-                        <label for="poor">Poor Performance<span class="reqNote">*</span></label>
-                        <input type="number"  class="form-control" id="poor" placeholder="Enter poor performance"  formControlName="poor">
+                        <label for="poor_performance">Poor Performance<span class="reqNote">*</span></label>
+                        <input type="number"  class="form-control" id="poor_performance" placeholder="Enter poor performance"  formControlName="poor_performance">
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('poor').valid && (regularForm.get('poor').dirty || regularForm.get('poor').touched)">
+                        *ngIf="!regularForm.get('poor_performance').valid && (regularForm.get('poor_performance').dirty || regularForm.get('poor_performance').touched)">
                         This field is required
                         </small>
                     </div>
-                   
-                   
-
-                   
-                    <button type="button" class="btn btn-info">Save</button>
+                    <button type="submit" class="btn btn-info">Save</button>
                 </form>
             </div>
         </div>
