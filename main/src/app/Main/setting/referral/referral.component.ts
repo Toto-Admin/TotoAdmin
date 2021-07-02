@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
+import { Subject } from 'rxjs';
+import { EmailTemplateService } from '../../Services/settings/email-template.service';
 
 @Component({
   selector: 'app-referral',
@@ -14,6 +16,7 @@ export class ReferralComponent implements OnInit {
  
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
+  dtTrigger: Subject<any> = new Subject();
   config: any;
   // editUser: FormGroup | null = null;
   userDetail: User | null = null;
@@ -23,9 +26,15 @@ export class ReferralComponent implements OnInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
+  refferalList : any;
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal) {
-  
+  constructor(private fb: FormBuilder,private modalService: NgbModal,private Services : EmailTemplateService) {
+      this.Services.getReferrals({page : 0,limit:200}).then(data=>{
+        this.refferalList = data.data;
+        console.log(this.refferalList);
+
+        this.dtTrigger.next()
+      })
    }
   formsErrors = [];
   ngOnInit(): void {

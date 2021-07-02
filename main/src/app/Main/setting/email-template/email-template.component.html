@@ -4,7 +4,7 @@
     <div class="col-12">
       <div class="card card-body">
         <h4 class="card-title">Email Templates<span style="float: right;">
-            <button class="btn  backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
+            <button class="btn  backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         
         <div class="">
@@ -12,7 +12,7 @@
             <div class="col-md-12 table-responsive">
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+                  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
                     <thead style="background: #92adfc;">
                       <tr>
                         <th class="backgroundColor tdLeft">NAME</th>
@@ -31,74 +31,19 @@
                       </tr>
                     </thead> -->
                     <tbody>
-                        <tr>  
-                        <td class="tdLeft"> James Smith</td>
-                        <td class="tdLeft">Task</td>
-                        <td class="tdLeft">AWRE234q</td>
+                        <tr *ngFor="let item of emailTemplateList">  
+                        <td class="tdLeft"> {{item.name}}</td>
+                        <td class="tdLeft">{{item.subject}}</td>
+                        <td class="tdLeft">{{item.slug}}</td>
                         <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                     <i class="ti-marker-alt"></i>
                                 </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip" (click)="deleteCategory(item._id)">
                                     <i class="ti-trash"></i>
                                 </a>
                         </td>
                     </tr> 
-                    <tr>  
-                        <td class="tdLeft">John Wilson </td>
-                        <td class="tdLeft">Dispute</td>
-                        <td class="tdLeft">kE234Qe</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Charles Brown </td>
-                        <td class="tdLeft">Rewards</td>
-                        <td class="tdLeft">rw12qwe</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Mark King </td>
-                        <td class="tdLeft">Resolve</td>
-                        <td class="tdLeft">REWRe32ew</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Donald White </td>
-                        <td class="tdLeft">Task completed</td>
-                        <td class="tdLeft">Compl2367Yw</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
- 
-                   
-
                     </tbody>
                   </table>  
                 <!-- </div>
@@ -120,7 +65,7 @@
   
     <div class="modal-header ">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Email</h5>
+      <h5 class="modal-title" id="editUserLabel">{{ModaleTitle}} Email</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -135,6 +80,7 @@
         <div class="form-group row">
           <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
           <div class="col-sm-8">
+            <input type="hidden" formControlName="_id">
             <input type="text" class="form-control" formControlName="name" placeholder="Enter name here" id="name" (blur)=logValidationErrors(editUser)>
             <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
@@ -161,12 +107,12 @@
           <div class="form-group row">
             <label for="key" class="col-sm-4 col-form-label">Key<span class="reqNote">*</span></label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="key" placeholder="Enter key here" id="key" (blur)=logValidationErrors(editUser)>
+              <input type="text" class="form-control" formControlName="slug" placeholder="Enter key here" id="key" (blur)=logValidationErrors(editUser)>
               <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
               <small class="form-text text-danger"
-              *ngIf="!editUser.get('key').valid && (editUser.get('key').dirty || editUser.get('key').touched)">
+              *ngIf="!editUser.get('slug').valid && (editUser.get('slug').dirty || editUser.get('slug').touched)">
               Key is required 
               </small> 
 
@@ -177,7 +123,7 @@
           <div class="form-group row">
             <label for="content" class="col-sm-4 col-form-label">Content</label>
             <div class="col-sm-8">
-            <textarea class="form-control" rows="3" placeholder="Enter content here" ></textarea>
+            <textarea class="form-control" formControlName="body" rows="3" placeholder="Enter content here" ></textarea>
         </div>
         </div>
   
