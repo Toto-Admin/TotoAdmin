@@ -2,7 +2,7 @@
     <div class="col-12">
       <div class="card card-body">
         <h4 class="card-title">Transport<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
+            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
         <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
         
         <div class="">
@@ -10,7 +10,7 @@
             <div class="col-md-12 col-sm-12">
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+                  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
                     <thead>
                       <tr>
                        
@@ -30,45 +30,20 @@
                     </thead> -->
                     <tbody>
                        
-                        <tr>
-                            <td class="tdLeft">Bike</td>
-                            <td><img height="30" width="30" src="assets/bike.jpg" 
+                        <tr *ngFor="let item of transportList">
+                            <td class="tdLeft">{{item.name}}</td>
+                            <td><img height="30" width="30" src="{{item.image}}" 
                                 class="ng-tns-c40-50 ng-star-inserted"></td>
                             <td class="tdCenter">
-                                    <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
+                                    <a href="javascript:void(0)"  (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                         <i class="ti-marker-alt"></i>
                                     </a>
-                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip" (click)="deleteLikeReason(item.id)">
                                         <i class="ti-trash"></i>
                                     </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="tdLeft">Car</td>
-                            <td><img height="30" width="30" src="assets/car.jpg" 
-                                class="ng-tns-c40-50 ng-star-inserted"></td>
-                            <td class="tdCenter">
-                                    <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                        <i class="ti-marker-alt"></i>
-                                    </a>
-                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                        <i class="ti-trash"></i>
-                                    </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tdLeft">Auto</td>
-                            <td><img height="30" width="30" src="assets/auto.jpg" 
-                                class="ng-tns-c40-50 ng-star-inserted"></td>
-                            <td class="tdCenter">
-                                    <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                        <i class="ti-marker-alt"></i>
-                                    </a>
-                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                        <i class="ti-trash"></i>
-                                    </a>
-                            </td>
-                        </tr>
+                        
                        
                     </tbody>
                   </table>  
@@ -91,7 +66,7 @@
   
     <div class="modal-header ">
   
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Transport Detail</h5>
+      <h5 class="modal-title" id="editUserLabel">{{TitleName}} Transport Detail</h5>
   
       <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -106,6 +81,8 @@
         <div class="form-group row">
           <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
           <div class="col-sm-8">
+            <input type="hidden" formControlName="id">
+
             <input type="text" class="form-control" formControlName="name" id="name"placeholder="Enter name" (blur)=logValidationErrors(editUser)>
             <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
@@ -120,9 +97,9 @@
         <div class="form-group row">
           <label for="projects" class="col-sm-4 col-form-label">Image</label>
           <div class="col-sm-8">
-            <input type="file" formControlName="Projects" id="projects"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Projects">
+            <input type="file" formControlName="images" id="images"
+              (blur)=logValidationErrors(editUser) (change)="setImage($event)">
+            <span class="help-block" *ngIf="formsErrors.images">
               {{formsErrors.Projects}}
             </span>
           </div>

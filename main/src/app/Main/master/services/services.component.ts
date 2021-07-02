@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataTableDirective } from 'angular-datatables';
+import { ServiceCategoryService } from '../../Services/servicemaster/service-category.service';
 import { User } from '../user';
+
 
 @Component({
   selector: 'app-services',
@@ -23,8 +25,13 @@ export class ServicesComponent implements OnInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
+  ServicesList : any;
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal) { }
+  constructor(private fb: FormBuilder,private modalService: NgbModal, private Services : ServiceCategoryService) { 
+    this.Services.getCategories({page : 0,limit : 100}).then(data=>{
+      this.ServicesList = data.data;
+    })
+  }
   formsErrors = [];
   ngOnInit(): void {
     $('#backButton').hide();

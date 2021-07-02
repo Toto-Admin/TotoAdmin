@@ -1,27 +1,27 @@
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Mobile Contents<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        
-        <div class="">
-          <div class="row">
-            <div class="col-md-12 table-responsive">
-              <!-- <div class="card card-hover">
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Mobile Contents<span style="float: right;">
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
+      <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+
+      <div class="">
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
-                    <thead style="background: #92adfc;">
-                      <tr>
-                        <th class="backgroundColor tdLeft">CUSTOMER</th>
-                        <th class="backgroundColor tdLeft">PROVIDER</th>
-                        <th class="backgroundColor">SLUG</th>
-                        <th class="backgroundColor tdLeft">ACCESS USER TYPE</th>
-                        <th class="backgroundColor tdLeft">PLATFORM</th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+              <thead style="background: #92adfc;">
+                <tr>
+                  <th class="backgroundColor tdLeft">NAME</th>
+                  <th class="backgroundColor tdLeft">TITLE</th>
+                  <th class="backgroundColor">SLUG</th>
+                  <th class="backgroundColor tdLeft">ACCESS USER TYPE</th>
+                  <th class="backgroundColor tdLeft">PLATFORM</th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+              <!-- <thead>
                       <tr>
                         <th><input type="text" placeholder="Search ID" name="search-id"/></th>
                         <th><input type="text" placeholder="Search name" name="search-name"/></th>
@@ -30,206 +30,105 @@
                         <th><input type="text" placeholder="Search status" name="search-status"/></th>
                       </tr>
                     </thead> -->
-                    <tbody>
-                        <tr>
-                            <td class="tdLeft"><div class="d-flex">
-                              <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Ronald Smith</a></p>
-                              </div>
-                            </div></td>
-                            <td class="tdLeft"><div class="d-flex">
-                              <img class="rounded-circle" src='assets/images/users/6.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Daniel King</a></p>
-                              </div>
-                            </div></td>
-                            <td><a href="https://www.google.com">www.google.com</a></td>
-                            <td class="tdLeft">Both</td>
-                            <td class="tdLeft">Web</td>
-                            <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Ronald Smith</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Daniel King</a></p>
-                            </div>
-                          </div></td>
-                            <td><a href="https://www.google.com">www.google.com</a></td>
-                            <td class="tdLeft">Both</td>
-                            <td class="tdLeft">Web</td>
-                            <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/7.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Ronald Smith</a></p>
-                            </div>
-                          </div></td>
-                          <!-- <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/8.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johannet</a></p>
-                            </div>
-                          </div></td> -->
-                          <td class="tdLeft">-</td>
-                            <td><a href="https://www.google.com">www.google.com</a></td>
-                            <td class="tdLeft">Customer</td>
-                            <td class="tdLeft">Application</td>
-                            <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Den</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Adam</a></p>
-                            </div>
-                          </div></td>
-                            <td><a href="https://www.google.com">www.google.com</a></td>
-                            <td class="tdLeft">Both</td>
-                            <td class="tdLeft">Web</td>
-                            <td>
-                                <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)"class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                          <!-- <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Anne</a></p>
-                            </div>
-                          </div></td> -->
-                          <td class="tdLeft">-</td>
-                          <td class="tdLeft"><div class="d-flex">
-                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Daniel King</a></p>
-                            </div>
-                          </div></td>
-                            <td><a href="https://www.google.com">www.google.com</a></td>
-                            <td class="tdLeft">Provider</td>
-                            <td class="tdLeft">Web</td>
-                            <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                  </table>  
-                <!-- </div>
+              <tbody>
+                <tr *ngFor="let item of MobileContentList">
+                  <td class="tdLeft">
+                    {{item.name}}
+                  </td>
+                  <td class="tdLeft">
+                    {{item.meta_title}}
+                  </td>
+                  <td class="tdLeft"><a href="https://www.google.com">{{item.slug}}</a></td>
+                  <td class="tdLeft">{{item.typeOfUser}}</td>
+                  <td class="tdLeft">{{item.platform}}</td>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10"
+                      data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"
+                      (click)="deleteLikeReason(item.id)">
+                      <i class="ti-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
-          
-          
         </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header">
-  
-      <h5 class="modal-title " id="editUserLabel"  >Add or Edit Mobile Content</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-        <div class="form-group row">
-            <label for="customer" class="col-sm-4 col-form-label">Customer<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="customer" id="customer" placeholder="Enter customer here" (blur)=logValidationErrors(editUser)>
-              <!-- <span class="help-block" *ngIf="formsErrors.Name">
+</div>
+
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header">
+
+    <h5 class="modal-title " id="editUserLabel">{{Modal_title}} Mobile Content</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="hidden" formControlName="id" id="id">
+
+          <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter name here"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
-              <small class="form-text text-danger"
-              *ngIf="!editUser.get('customer').valid && (editUser.get('customer').dirty || editUser.get('customer').touched)">
-              Customer name is required and must be characters(a-zA-Z)  
-              </small> 
-              
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="provider" class="col-sm-4 col-form-label">Provider<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="provider" id="provider" placeholder="Enter provider here" (blur)=logValidationErrors(editUser)>
-              <!-- <span class="help-block" *ngIf="formsErrors.Name">
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
+            Name is required and must be characters(a-zA-Z)
+          </small>
+
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="title" class="col-sm-4 col-form-label">Title<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="title" id="title" placeholder="Enter Title here"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
-              <small class="form-text text-danger"
-              *ngIf="!editUser.get('provider').valid && (editUser.get('provider').dirty || editUser.get('provider').touched)">
-              Provider name  is required and must be characters(a-zA-Z)  
-              </small> 
-            </div>
-          </div>
-      
-          <div class="form-group row">
-            <label for="name" class="col-sm-4 col-form-label">Slug</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="Name" id="name" placeholder="Enter slug here" (blur)=logValidationErrors(editUser)>
-              <!-- <span class="help-block" *ngIf="formsErrors.Name">
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('title').valid && (editUser.get('title').dirty || editUser.get('title').touched)">
+            Title is required and must be characters(a-zA-Z)
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="slug" class="col-sm-4 col-form-label">Slug</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="slug" id="slug" placeholder="Enter slug here"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
-            </div>
-          </div>
-        
-           <div class="form-group row">
-              <!-- <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <!-- <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
                 <div class="col-sm-8">
 
                 <select class="form-control custom-select"name="usertype" formControlName="usertype"  tabindex="1">
@@ -243,45 +142,83 @@
                 </small> 
        
           </div> -->
-          
-            <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-            <select class="form-control" id="usertype" fomControllName="usertype" required>
-                <option selected disabled>Select in one</option>
-                <option>Customer</option>
-                <option>Provider</option>
-                <option>Both</option>
-            </select> 
-            </div>
+
+        <label for="usertype" class="col-sm-4 col-form-label">Access User Type<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <select class="form-control" id="usertype" formControlName="typeOfUser" required>
+            <option select disabled>Select in one</option>
+            <option value="user">Customer</option>
+            <option value="contractor">Provider</option>
+            <option value="both">Both</option>
+          </select>
         </div>
-        <div class="form-group row">
-          <label for="platform" class="col-sm-4 col-form-label">Platform</label>
-          <div class="col-sm-8" style="margin-top: 9px;">
-            <div class="form-check form-check-inline">
-              <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="platform" name="radio-stacked">
-                  <label class="custom-control-label" for="platform">Application</label>
-              </div>
+      </div>
+      <div class="form-group row">
+        <label for="platform" class="col-sm-4 col-form-label">Platform</label>
+        <div class="col-sm-8" style="margin-top: 9px;">
+          <div class="form-check form-check-inline">
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="platform" name="platform"
+                formControlName="platform" value="application" >
+              <label class="custom-control-label" for="platform">Application</label>
+            </div>
           </div>
           <div class="form-check form-check-inline">
-              <div class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" id="platform" name="radio-stacked">
-                  <label class="custom-control-label" for="platform">Web</label>
-              </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="platform" name="platform"
+                formControlName="platform" value="web">
+              <label class="custom-control-label" for="platform">Web</label>
+            </div>
           </div>
-          </div>
-        </div> 
+        </div>
+      </div>
+      <!-- <div class="form-group row">
+        <label for="platform" class="col-sm-4 col-form-label">PlatForm<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <select class="form-control" id="platform" formControlName="platform" required>
+            <option selected disabled>Select in one</option>
+            <option value="application">Application</option>
+            <option value="web">Web</option>
+          </select>
+        </div>
+      </div> -->
+      <div class="form-group row">
+        <label for="slug" class="col-sm-4 col-form-label">Content</label>
+        <div class="col-sm-8">
+          <textarea formControlName="content" class="form-control" id="content"></textarea>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
+            {{formsErrors.Name}}
+          </span> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="slug" class="col-sm-4 col-form-label">Meta-Title</label>
+        <div class="col-sm-8">
+          <input type="text" formControlName="meta_title" class="form-control" id="meta_title">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="meta_description" class="col-sm-4 col-form-label">Meta-Description</label>
+        <div class="col-sm-8">
+          <textarea formControlName="meta_description" class="form-control" id="meta_description"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="meta_keyword" class="col-sm-4 col-form-label">Content</label>
+        <div class="col-sm-8">
+          <textarea formControlName="meta_keyword" class="form-control" id="meta_keyword"></textarea>
+        </div>
+      </div>
 
-       
-  
-  
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-info" >Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
-    </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
-  
+
+
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-info">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+      </div>
+
+
+    </form>
+  </div>
+</ng-template>
