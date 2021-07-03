@@ -1,257 +1,264 @@
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Onsite Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+<form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="addUpdateSettings()">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Onsite Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="onsite_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
-        </div>
 
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Remote Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Remote Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="remote_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
-        </div>
 
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Basic Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Basic Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="basic_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <label class="card-title">Task Completed<span class="reqNote">*</span></label>
-            <textarea class="form-control" rows="3" placeholder="Enter task completed details here" ></textarea>
-          </div>
+                    <textarea class="form-control" formControlName="completed_text" rows="3"
+                        placeholder="Enter task completed details here"></textarea>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-12">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <label class="card-title">Task Details<span class="reqNote">*</span></label>
-            <textarea class="form-control" rows="3" placeholder="Enter task details here" ></textarea>
+                    <textarea class="form-control" formControlName="detail_text" rows="3"
+                        placeholder="Enter task details here"></textarea>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
                     <label class="card-title">Task Reschedule<span class="reqNote">*</span></label>
-            <textarea class="form-control" rows="3"  placeholder="Enter task reschedule details here"></textarea>
+                    <textarea class="form-control" rows="3" formControlName="reschedule_text"
+                        placeholder="Enter task reschedule details here"></textarea>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Coverage Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Coverage Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="coverage_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Availability Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Availability Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="availability_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Category Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Category Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="category_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Feedback Ratio Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Feedback Ratio Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="feedback_ratio_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Referral Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Referral Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="referral_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Customer Liked Information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Customer Liked Information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="customer_liked_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">No of Attempt information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">No of Attempt information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="no_of_attempt_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Test Date information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Test Date information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="test_date_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Test Duration information<span class="reqNote">*</span></label>                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Test Duration information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="test_duration_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Rating information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Rating information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="rating_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Test Keeping information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Test Keeping information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="time_keeping_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Complaints information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Complaints information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="complaints_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Response information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Response information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="response_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
-        </div> 
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Acceptance information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Acceptance information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="acceptance_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title">Reliability information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title">Reliability information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="reliability_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <label class="card-title"> Correction Rate information<span class="reqNote">*</span></label>
-                <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <label class="card-title"> Correction Rate information<span class="reqNote">*</span></label>
+                    <!-- <h6 class="card-subtitle">quill editor with angular and TypeScript. ngx-quill is the new angular 2 and beyond 
                     implementation of ngQuill.
                     <a href="https://github.com/KillerCodeMonkey/ngx-quill"  target="_blank">Official website</a>
                 </h6> -->
-                <quill-editor [style]="{height: '200px'}"></quill-editor>
+                    <quill-editor formControlName="correction_rate_info" [style]="{height: '200px'}"></quill-editor>
+                </div>
             </div>
         </div>
+
+        <button type="submit" class="btn btn-info" style="margin-left: 30px;">Save</button>
+
     </div>
-    
-    <button type="button" class="btn btn-info" style="margin-left: 30px;">Save</button>
-</div>
+</form>

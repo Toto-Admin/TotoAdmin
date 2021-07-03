@@ -4,22 +4,21 @@
         <div class="card">
             <div class="card-body">
               
-                <form *ngIf='regularForm' [formGroup]="regularForm">
+                <form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="addUpdateSettings()">
                     <div class="form-group">
-                        <label for="disc">Referral Discount in Percentage<span class="reqNote">*</span></label>
-                        <input type="number" class="form-control" id="disc" placeholder="Enter referral discount in percentage" formControlName="disc">
+                        <label for="referral_discount">Referral Discount in Percentage<span class="reqNote">*</span></label>
+                        <input type="number" class="form-control" id="referral_discount" placeholder="Enter referral discount in percentage" formControlName="referral_discount">
                         <small class="form-text text-danger"
-                        *ngIf="!regularForm.get('disc').valid && (regularForm.get('disc').dirty || regularForm.get('disc').touched)">
+                        *ngIf="!regularForm.get('referral_discount').valid && (regularForm.get('referral_discount').dirty || regularForm.get('referral_discount').touched)">
                         Please enter referral discount!
                         </small>
                     </div>
                    
                     <div class="form-group">
-                        <label for="ref_detail">Referral Details</label>
-                        <textarea class="form-control" rows="3"  id="ref_detail"placeholder="Enter referral details" formControlName="disc" ></textarea>
+                        <label for="referral_detail">Referral Details</label>
+                        <textarea class="form-control" rows="3"  id="referral_detail"placeholder="Enter referral details" formControlName="referral_detail" ></textarea>
                     </div>
-                   
-                    <button type="button" class="btn btn-info">Save</button>
+                    <button type="submit" class="btn btn-info">Save</button>
                 </form>
             </div>
         </div>
