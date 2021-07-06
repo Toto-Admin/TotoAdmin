@@ -42,6 +42,8 @@ export const Fragments = {
           price
           price_type
           statistics
+          tool
+          typical_scope
           created_at
           updated_at
           deleted_at

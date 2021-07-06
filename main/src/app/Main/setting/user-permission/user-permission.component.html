@@ -1,239 +1,100 @@
-
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">User And Permission<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="addfun()">Add</button></span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">User And Permission<span style="float: right;">
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
+      <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
 
-        <div class="">
-          <div class="row">
-            <div class="col-md-12">
-              <!-- <div class="card card-hover">
+      <div class="">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
-                    <thead>
-                      <tr>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+              <thead>
+                <tr>
 
-                        <th class="backgroundColor tdLeft">NAME</th>
-                        <!-- <th class="backgroundColor">SLUG</th> -->
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
-                    <tbody>
-                        <tr>
-                                <td class="tdLeft">Customer</td>
-                                <!-- <td>Slug</td> -->
-                                <td>
-                                        <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                            <i class="ti-marker-alt"></i>
-                                        </a>
-                                        <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                            <i class="ti-trash"></i>
-                                        </a>
-                                </td>
-                         </tr>
-                         <tr>
-                            <td class="tdLeft">Provider</td>
-                            <!-- <td>Slug</td> -->
-                            <td>
-                                    <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                        <i class="ti-marker-alt"></i>
-                                    </a>
-                                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                        <i class="ti-trash"></i>
-                                    </a>
-                            </td>
-                     </tr>
-                     <tr>
-                        <td class="tdLeft">Admin User</td>
-                        <!-- <td>Slug</td> -->
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                 </tr>
-                 <tr>
-                    <td class="tdLeft">Sub Admin</td>
-                    <!-- <td>Slug</td> -->
-                    <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                    </td>
-             </tr>
-             <tr>
-                <td class="tdLeft">Admin</td>
-                <!-- <td>Slug</td> -->
-                <td>
-                        <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                            <i class="ti-marker-alt"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                            <i class="ti-trash"></i>
-                        </a>
-                </td>
-         </tr>
-
-
-                    </tbody>
-                  </table>
-                <!-- </div>
+                  <th class="backgroundColor tdLeft">NAME</th>
+                  <th class="backgroundColor">SLUG</th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let item of roles'>
+                  <td class="tdLeft">{{item.name}}</td>
+                  <td>{{item.slug}}</td>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item.id,'Edit')" class="text-inverse p-r-10"
+                      data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
+                      <i class="ti-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
+        </div>
 
 
-        </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
+</div>
 
 
-  <ng-template #editUserModal let-modal>
+<ng-template #editUserModal let-modal>
 
-    <div class="modal-header ">
+  <div class="modal-header ">
 
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Permission Details</h5>
+    <h5 class="modal-title" id="editUserLabel">{{popupTitle}} Permission Details</h5>
 
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
 
-    </div>
+  </div>
 
-    <div class="modal-body">
+  <div class="modal-body">
 
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-
-        <!-- <div class="form-group row">
-          <label for="role" class="col-sm-4 col-form-label">Role<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="role" id="role" (blur)=logValidationErrors(editUser)>
-
-            <small class="form-text text-danger"
-              *ngIf="!editUser.get('role').valid && (editUser.get('role').dirty || editUser.get('role').touched)">
-              Role Field is required
-              </small>
-          </div>
-        </div> -->
-        
-        <div class="form-group row">
-          <label for="role" class="col-sm-4 col-form-label">Role<span class="reqNote">*</span></label><br>
-          <div class="col-12">
-          <select class="form-control" id="role" fomControllName="role" required>
-              <option>Super Admin</option>
-              <option>QA Role</option>
-              <option>Sub-Admin</option>
-          </select> 
-          </div>
-   </div>
-          <div class="form-group row">
-            <label for="permission" class="col-sm-12 col-form-label">Permission<span class="reqNote">*</span></label> <br>
-            <div class="col-sm-4" >
-                    <fieldset class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked> Dashboard
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked>Services
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox ">
-                        <label>
-                            <input type="checkbox" value="" checked>Email Template
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox ">
-                        <label>
-                            <input type="checkbox" value="" checked>Provider
-                        </label>
-                    </fieldset>
-
-                </div>
-                <div class="col-sm-4" >
-                    <fieldset class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked> Jobs
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked>Knoweledge
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox ">
-                        <label>
-                            <input type="checkbox" value="" checked>General Settings
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox ">
-                        <label>
-                            <input type="checkbox" value="" checked>Admin users
-                        </label>
-                    </fieldset>
-
-
-                </div>
-                <div class="col-sm-4" >
-                    <fieldset class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked> Referral
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked>Customer
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox ">
-                        <label>
-                            <input type="checkbox" value="" checked>Rewards
-                        </label>
-                    </fieldset>
-                    <fieldset class="checkbox ">
-                        <label>
-                            <input type="checkbox" value="" checked>Payments
-                        </label>
-                    </fieldset>
-
-
-                </div>
-
-
-          </div>
-
-
-
-        <div class="modal-footer">
-
-          <button type="submit" class="btn btn-info" >Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
-
+     <form name="form" (ngSubmit)=" addRole()" #f="ngForm">
+      <div class="form-group row">
+        <label for="role" class="col-sm-4 col-form-label">Role<span class="reqNote">*</span></label><br>
+        <div class="col-12">
+          <input class="form-control"  name="name" [(ngModel)]="user_role.name" #name="ngModel" required>
+          <!-- <select> -->
+          <!-- <option>Super Admin</option>
+            <option>QA Role</option> -->
+          <!-- <option>Sub-Admin</option> -->
+          <!-- </select> -->
         </div>
+      </div>
+      <div class="form-group row">
+        <label for="permission" class="col-sm-12 col-form-label">Permission<span class="reqNote">*</span></label> <br>
+        <div class="col-sm-4" *ngFor="let permission_val of all_permission_data; let i = index">
+          <fieldset class="checkbox">
+            <label>
+              <input type="checkbox" [disabled]="user_role.id != null && user_role.id == 4 ? true : false" type="checkbox" class="" name="permissions[{{permission_val.id}}]"
+              value="{{permission_val.id}}"    
+              (change)="groupBychecked($event,permission_val.id)">
+              {{permission_val.name}}
+              </label>
+          </fieldset>
+          <!-- [checked]="permission_val.checked ? 'true' : false" -->
+        </div>
+      </div>
 
-
-      </form>
+      <div class="modal-footer mb-f">
+        <button type="submit" class="btn btn-info">{{btnTitle}} </button>
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+      </div>
+    </form>
     </div>
-  </ng-template>
+</ng-template> 
