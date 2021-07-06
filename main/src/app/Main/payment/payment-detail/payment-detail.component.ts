@@ -105,7 +105,7 @@ export class PaymentDetailComponent implements OnInit {
           data: 'id',
           render: function (data) {
             // return '<a [routerLink]="["/payment/details"]" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>';
-            return '<a href="/payment/details"><i class="ti-eye"></i></a>'
+            return '<a href="/payment/details/'+data+'"><i class="ti-eye"></i></a>'
           }
         }
       ]

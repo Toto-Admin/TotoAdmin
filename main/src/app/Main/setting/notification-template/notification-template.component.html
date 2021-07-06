@@ -1,195 +1,136 @@
-
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Notification Templates<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button>&nbsp;
-            <button class="btn backgroundColor ml-auto" (click)="sendnotification()">Send Notification</button>  </span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        
-        <div class="">
-          <div class="row">
-            <div class="col-md-12 table-responsive">
-              <!-- <div class="card card-hover">
-                <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table" >
-                    <thead style="background: #92adfc;">
-                      <tr>
-                        
-                        <th class="backgroundColor tdLeft">NAME</th>
-                        <th class="backgroundColor tdLeft">Title</th>
-                        <th class="backgroundColor tdLeft">KEY</th> 
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
-                    <tbody>
-                        <tr>  
-                        <td class="tdLeft">New discount offer</td>
-                        <td class="tdLeft">Diwali</td>
-                        <td class="tdLeft">AW1233444</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Free service</td>
-                        <td class="tdLeft">Summer</td>
-                        <td class="tdLeft">SumMER20</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">New offer available</td>
-                        <td class="tdLeft">Ganesh festival</td>
-                        <td class="tdLeft">Gan20to25</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Diwoffer</td>
-                        <td class="tdLeft">Diwali</td>
-                        <td class="tdLeft">Diw23to30</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                    <tr>  
-                        <td class="tdLeft">Do register in toto</td>
-                        <td class="tdLeft">Open to all</td>
-                        <td class="tdLeft">All2021</td>
-                        <td>
-                                <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                    <i class="ti-marker-alt"></i>
-                                </a>
-                                <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                    <i class="ti-trash"></i>
-                                </a>
-                        </td>
-                    </tr> 
-                  
-                   
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Notification Templates<span style="float: right;">
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null, 'Add')">Add</button>&nbsp;
+          <button class="btn backgroundColor ml-auto" (click)="sendnotification()">Send Notification</button> </span>
+      </h4>
+      <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
 
-                    </tbody>
-                  </table>  
-                <!-- </div>
+      <div class="">
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <!-- <div class="card card-hover">
+                <div class="card-body"> -->
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+              <thead style="background: #92adfc;">
+                <tr>
+
+                  <th class="backgroundColor tdLeft">NAME</th>
+                  <th class="backgroundColor tdLeft">Title</th>
+                  <th class="backgroundColor tdLeft">KEY</th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                <tr *ngFor="let item of notificationList">
+                  <td class="tdLeft">{{item.name}}</td>
+                  <td class="tdLeft">{{item.title}}</td>
+                  <td class="tdLeft">{{item.slug}}</td>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10"
+                      data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip" (click)="deleteNotification(item.id)">
+                      <i class="ti-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
-          
-          
         </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header ">
-  
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Notification</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-        
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="name" placeholder="Enter name here" id="name" (blur)=logValidationErrors(editUser)>
-            <!-- <span class="help-block" *ngIf="formsErrors.Name">
+</div>
+
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header ">
+
+    <h5 class="modal-title" id="editUserLabel">{{ModaleTitle}} Notification</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="hidden" class="form-control" formControlName="id">
+          <input type="text" class="form-control" formControlName="name" placeholder="Enter name here" id="name"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
-            <small class="form-text text-danger"
-              *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
-              Name is required 
-              </small> 
-          </div>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
+            Name is required
+          </small>
         </div>
-          <div class="form-group row">
-            <label for="title" class="col-sm-4 col-form-label">Title<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="title"placeholder="Enter title here"  id="title" (blur)=logValidationErrors(editUser)>
-             
-              <small class="form-text text-danger"
-              *ngIf="!editUser.get('title').valid && (editUser.get('title').dirty || editUser.get('title').touched)">
-              Title is required 
-              </small> 
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="key" class="col-sm-4 col-form-label">Key<span class="reqNote">*</span></label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" formControlName="key"placeholder="Enter key here"  id="key" (blur)=logValidationErrors(editUser)>
-              <!-- <span class="help-block" *ngIf="formsErrors.Name">
+      </div>
+      <div class="form-group row">
+        <label for="title" class="col-sm-4 col-form-label">Title<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="title" placeholder="Enter title here" id="title"
+            (blur)=logValidationErrors(editUser)>
+
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('title').valid && (editUser.get('title').dirty || editUser.get('title').touched)">
+            Title is required
+          </small>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="key" class="col-sm-4 col-form-label">Key<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="slug" placeholder="Enter key here" id="key"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
                 {{formsErrors.Name}}
               </span> -->
-              <small class="form-text text-danger"
-              *ngIf="!editUser.get('key').valid && (editUser.get('key').dirty || editUser.get('key').touched)">
-              Key is required 
-              </small> 
-
-            </div>
-          </div>
-        
-       
-          <div class="form-group row">
-            <label for="content" class="col-sm-4 col-form-label">Content</label>
-            <div class="col-sm-8">
-            <textarea class="form-control" rows="3" placeholder="Enter content" ></textarea>
-        </div>
-        </div>
-  
-  
-        <div class="modal-footer">
-            
-          <button type="submit" class="btn btn-info">Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('slug').valid && (editUser.get('slug').dirty || editUser.get('slug').touched)">
+            Key is required
+          </small>
 
         </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
-  
+      </div>
+
+
+      <div class="form-group row">
+        <label for="content" class="col-sm-4 col-form-label">Content</label>
+        <div class="col-sm-8">
+          <textarea class="form-control" rows="3"  formControlName="body" placeholder="Enter content"></textarea>
+        </div>
+      </div>
+
+
+      <div class="modal-footer">
+
+        <button type="submit" class="btn btn-info">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+
+      </div>
+
+
+    </form>
+  </div>
+</ng-template>

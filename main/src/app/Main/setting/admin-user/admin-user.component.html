@@ -1,298 +1,190 @@
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Admin User<span style="float: right;">
-          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
-       
-        <div class="">
-          <div class="row">
-            <div class="col-md-12 table-responsive">
-              <!-- <div class="card card-hover">
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Admin User<span style="float: right;">
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
+
+      <div class="">
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
-                    <thead>
-                      <tr>
-             
-                        <th class="backgroundColor tdLeft">NAME</th>
-                        <th class="backgroundColor tdLeft">ROLE</th>
-                        <th class="backgroundColor tdLeft">EMAIL</th>
-                        <th class="backgroundColor">STATUS</th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
-                    <tbody>
-                      <tr>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Amelia Mark</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">Super Admin</td>
-                        <td class="tdLeft">johan@gmail.com</td>
-                        <td><label class="label label-success">Active</label></td>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+              <thead>
+                <tr>
 
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Ronal Mark</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">Super Admin</td>
-                        <td class="tdLeft">ronaldm12@gmail.com</td>
-                        <td><label class="label label-dark">Inactive</label></td>
+                  <th class="backgroundColor tdLeft">NAME</th>
+                  <th class="backgroundColor tdLeft">ROLE</th>
+                  <th class="backgroundColor tdLeft">EMAIL</th>
+                  <th class="backgroundColor">STATUS</th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of AdminUserList">
+                  <td class="tdLeft">
+                    <div class="d-flex">
+                      <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
+                      <div class="ml-3">
+                        <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">{{item.first_name}} {{item.last_name}}</a></p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="tdLeft">{{ (item.role == null) ? '-' : item.role.name }}</td>
+                  <td class="tdLeft">{{item.email}}</td>
+                  <td><label class="label label-{{(item.status == 'active')? 'success':'dark'}}">{{(item.status == 'active')? 'Active':'Inactive'}}</label></td>
 
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">James King</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">QA Role</td>
-                        <td class="tdLeft">pm1234@gmail.com</td>
-                        <td><label class="label label-success">Active</label></td>
-
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Jack Mark</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">QA Role</td>
-                        <td class="tdLeft">Mark12h@gmail.com</td>
-                        <td><label class="label label-success">Active</label></td>
-
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Ronald Smith</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">QA Role</td>
-                        <td class="tdLeft">king1267@gmail.com</td>
-                        <td><label class="label label-success">Active</label></td>
-
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/setting/user-view']">Johan Das</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">Sub Admin</td>
-                        <td class="tdLeft">johandas@gmail.com</td>
-                        <td><label class="label label-success">Active</label></td>
-
-                        <td>
-                            <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                        </td>
-                      </tr>
-                    
-                     
-                     
-                   
-                    </tbody>
-                  </table>  
-                <!-- </div>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10"
+                      data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse p-r-10" title="Delete" data-toggle="tooltip" (click)="deleteUser(item.id)">
+                      <i class="ti-trash"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse"
+                      title="{{ (item.status=='active') ? 'Inactive' : 'active' }}" data-toggle="tooltip"
+                      (click)=" (item.status=='active') ? blockUser(item.id) : activeUser(item.id)">
+                      <i class="{{ (item.status=='active') ? 'ti-na' : 'ti-check' }}"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
-          
-          
         </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header ">
-  
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Admin User Details</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="onReactiveFormSubmit()" novalidate>
-        <div class="row">
-            <div class="form-group col-md-6">
-                <label for="inputFirstname">Firstname<span class="reqNote">*</span></label>
-                <input type="text" class="form-control" id="inputFirstname"placeholder="Enter firstname" formControlName="inputFirstname" required>
-                 <small class="form-text text-danger"
-                 *ngIf="!regularForm.get('inputFirstname').valid && (regularForm.get('inputFirstname').dirty || regularForm.get('inputFirstname').touched)">
-                 Firstname is required and must be characters(a-zA-Z)
-                 </small>
+</div>
 
-           </div>
 
-            <div class="form-group col-md-6">
-              <label for="inputLastname">Lastname<span class="reqNote">*</span></label>
-              <input type="text" class="form-control" id="inputLastname" formControlName="inputLastname" placeholder="Enter lastname" required>
-              <small class="form-text text-danger"
-             *ngIf="!regularForm.get('inputLastname').valid && (regularForm.get('inputLastname').dirty || regularForm.get('inputLastname').touched)">
-                 Lastname is required and must be characters(a-zA-Z)</small>
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header ">
+
+    <h5 class="modal-title" id="editUserLabel">Add or Edit Admin User Details</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form *ngIf='regularForm' [formGroup]="regularForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="first_name">Firstname<span class="reqNote">*</span></label>
+          <input type="hidden" formControlName="id">
+          <input type="text" class="form-control" id="first_name" placeholder="Enter firstname"
+            formControlName="first_name" required>
+          <small class="form-text text-danger"
+            *ngIf="!regularForm.get('first_name').valid && (regularForm.get('first_name').dirty || regularForm.get('first_name').touched)">
+            Firstname is required and must be characters(a-zA-Z)
+          </small>
+
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="last_name">Lastname<span class="reqNote">*</span></label>
+          <input type="text" class="form-control" id="last_name" formControlName="last_name"
+            placeholder="Enter lastname" required>
+          <small class="form-text text-danger"
+            *ngIf="!regularForm.get('last_name').valid && (regularForm.get('last_name').dirty || regularForm.get('last_name').touched)">
+            Lastname is required and must be characters(a-zA-Z)</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="email">Email<span class="reqNote">*</span></label>
+          <input type="email" class="form-control" id="email" formControlName="email"
+            placeholder="Enter email" required>
+          <small class="form-text text-danger"
+            *ngIf="!regularForm.get('email').valid && (regularForm.get('email').dirty || regularForm.get('email').touched)">Please
+            enter a valid email!</small>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password">Password<span class="reqNote">*</span></label>
+
+          <input type="password" class="form-control" id="password" formControlName="password"
+            placeholder="Enter password" required>
+          <small class="form-text text-danger"
+            *ngIf="!regularForm.get('password').valid && (regularForm.get('password').dirty || regularForm.get('password').touched)">Password
+            characters length must be between 4 and 24 !</small>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="phone">Phone<span class="reqNote">*</span></label>
+          <input type="tel" class="form-control" id="phone" formControlName="phone" placeholder="Enter phone"
+            required>
+          <small class="form-text text-danger"
+            *ngIf="!regularForm.get('phone').valid && (regularForm.get('phone').dirty || regularForm.get('phone').touched)">
+            Phone number is required and must be 10 digit</small>
+        </div>
+        <div class="form-group col-md-6">
+          <label class>Gender</label>
+          <br>
+          <div class="form-check form-check-inline" *ngFor="let radioOption of radioOptions">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="gender" class="custom-control-input" [value]="radioOption"
+                formControlName="gender">
+              <label class="custom-control-label" for="gender">{{ radioOption }}</label>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="form-group col-md-6">
-              <label for="inputEmail">Email<span class="reqNote">*</span></label>
-              <input type="email" class="form-control" id="inputEmail" formControlName="inputEmail"placeholder="Enter email"  required>
-              <small class="form-text text-danger"
-           *ngIf="!regularForm.get('inputEmail').valid && (regularForm.get('inputEmail').dirty || regularForm.get('inputEmail').touched)">Please
-                  enter a valid email!</small>
-          </div>
-          <div class="form-group col-md-6">
-              <label for="password">Password<span class="reqNote">*</span></label>
-
-              <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter password" required>
-              <small class="form-text text-danger"
-                  *ngIf="!regularForm.get('password').valid && (regularForm.get('password').dirty || regularForm.get('password').touched)">Password
-                  characters length must be between 4 and 24 !</small>
-          </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="role">User Role</label>
+          <select class="form-control" id="role" formControlName="role_id" required>
+            <option value="1">Admin</option>
+            <option value="2">Super Admin</option>
+            <option value="3">Sub-Admin</option>
+            <option value="4">QA Role</option>
+          </select>
         </div>
-        
-        <div class="row">
-          <div class="form-group col-md-6">
-              <label for="mobile">Mobile<span class="reqNote">*</span></label>
-              <input type="tel" class="form-control" id="mobile" formControlName="mobile"placeholder="Enter mobile" required>
-              <small class="form-text text-danger"
-           *ngIf="!regularForm.get('mobile').valid && (regularForm.get('mobile').dirty || regularForm.get('mobile').touched)">
-                  Mobile number is required and must be 10 digit</small> 
-
-                  <!-- <div class="form-text text-danger" *ngIf="regularForm.mobileNumber.touched && regularForm.mobileNumber.invalid" >
-
-                    <div  *ngIf="regularForm.mobileNumber.errors.required">Mobile Number is required.</div>
-    
-                    <div *ngIf="regularForm.mobileNumber.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
-    
-                </div> -->
-
-          </div>
-          <div class="form-group col-md-6">
-            <label class>Gender</label>
-<br>
-            <div class="form-check form-check-inline" *ngFor="let radioOption of radioOptions">
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio2" class="custom-control-input"
-                        [value]="radioOption" formControlName="radioOption">
-                    <label class="custom-control-label" for="customRadio2">{{ radioOption }}</label>
-                </div>
-
-            </div>
-        </div> 
+        <div class="form-group col-md-6">
+          <label for="status">Status</label>
+          <select class="form-control" id="status" formControlName="status" required>
+            <option value="inactive">Inactive</option>
+            <option value="active">Active</option>
+            <option value="block">Block</option>  
+          </select>
         </div>
-        <div class="row">
-          <div class="form-group col-md-6">
-            <label for="role">User Role</label>
-            <select class="form-control" id="role" fomControllName="role" required>
-                <option>Admin</option>
-                <option>Super Admin</option>
-                <option>Sub-Admin</option>
-                <option>QA Role</option>
-            </select> 
-            </div>
-          <div class="form-group col-md-6">
-            <label for="status">Status</label>
-            <select class="form-control" id="status" fomControllName="status" required>
-                <option>Inactive</option>
-                <option>Active</option>
-            </select>
-            </div>
       </div>
       <div class="row">
         <div class="form-group col-sm-12">
-            <label for="dob">Date Of Birth</label>
-            <input type="date" class="form-control" id="dob" formControlName="dob" required>
+          <label for="dob">Date Of Birth</label>
+          <input type="date" class="form-control" id="dob" formControlName="dob" required>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-12">
+          <label for="pimg">Profile Image</label>
+          <input type="file" class="form-control" id="pimg" (change)="setProfilePic($event)" required>
+
         </div>
-         
-        <div class="row">
-          <div class="form-group col-sm-12">
-              <label for="pimg">Profile Image</label>
-              <input type="file" class="form-control" id="pimg" formControlName="pimg" required>
-   
-          </div>
-        </div>
+      </div>
 
 
 
-          
-          <div class="form-group">
-              <button type="submit" class="btn btn-info ">Save</button>&nbsp;
-              <button type="button" class="btn btn-secondary"  (click)="closeBtnClick()">Cancel</button>
-          </div>
-      </form>
-    </div>
-  </ng-template>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-info ">Save</button>&nbsp;
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'payment-detail', component:PaymentDetailComponent,data: {title: 'Payment'}},
   {path:'task-detail',component:TaskDetailComponent},
   {path:'total-payment',component:TotalPaymentComponent},
-  {path:'details', component:DetailsComponent,data: {title: 'Payment'}},
+  {path:'details/:id', component:DetailsComponent,data: {title: 'Payment'}},
   {path:'report',component:ReportComponent},
   {path:'invoice-details',component:InvoiceDetailsComponent,data: {title: 'Payment'}}
 
