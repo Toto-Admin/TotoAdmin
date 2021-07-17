@@ -170,7 +170,13 @@ export class CancelReasonComponent implements OnInit {
         this.cancelReason = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   rerender(): void {
@@ -206,7 +212,13 @@ export class CancelReasonComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
 }

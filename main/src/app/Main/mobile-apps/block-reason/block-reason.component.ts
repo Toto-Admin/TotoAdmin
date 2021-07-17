@@ -145,7 +145,13 @@ export class BlockReasonComponent implements OnInit {
         this.blockReason = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   rerender(): void {
@@ -196,7 +202,13 @@ export class BlockReasonComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
 }

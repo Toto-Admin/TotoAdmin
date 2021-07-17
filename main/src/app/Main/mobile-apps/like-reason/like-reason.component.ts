@@ -138,7 +138,13 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   //Add New Like Reason
@@ -187,8 +193,20 @@ export class LikeReasonComponent implements OnInit, OnDestroy {
 
         this.likeReason = data.data;
         this.rerender();
-      })
-    })
+      }).catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: `${error}`,
+        }) 
+      });
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   rerender(): void {

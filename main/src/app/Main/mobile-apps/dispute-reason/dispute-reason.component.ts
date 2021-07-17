@@ -146,7 +146,13 @@ export class DisputeReasonComponent implements OnInit {
         this.disputeReason = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   rerender(): void {
@@ -195,6 +201,12 @@ export class DisputeReasonComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 }

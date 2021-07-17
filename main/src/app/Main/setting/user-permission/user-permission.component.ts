@@ -161,8 +161,13 @@ export class UserPermissionComponent implements OnInit {
               text: `Block Reason ${data.message}!`,
             })
             this.router.navigate(['roles']);
+        }).catch((error) => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: `${error}`,
+          }) 
         });
-        // .catch((err) => {});
     }
    
     if(this.selected_permissions.length > 0) {
@@ -173,8 +178,13 @@ export class UserPermissionComponent implements OnInit {
             text: `Block Reason ${data.message}!`,
           });
           this.router.navigate(['roles']);
-        })
-        // .catch((err) => {});
+        }).catch((error) => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: `${error}`,
+          }) 
+        });
     }
 }
 
