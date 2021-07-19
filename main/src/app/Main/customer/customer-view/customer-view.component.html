@@ -14,26 +14,25 @@
                     <!-- column -->
                     <div class="col-lg-4" style="text-align: center;">
                         <div class="profile-pic m-b-20 m-t-20">
-                            <img src="assets/images/users/5.jpg" width="120" class="rounded-circle" alt="user" />
-                            <h4 class="m-t-20 m-b-0">Daniel Kristeen</h4>
-                            <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a><br>
-                            <label>Royal Mail
-                                Flat 9, Wheatstone House</label><br>
+                            <img src="{{user.profile_pic}}" width="120" class="rounded-circle" alt="user" />
+                            <h4 class="m-t-20 m-b-0">{{user.first_name}} {{user.last_name}}</h4>
+                            <a href="mailto:{{user.email}}">{{user.email}}</a><br>
+                            <label>{{user.address}}</label><br>
                             <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
-                                <div class="badge badge-pill badge-success font-14 infoData" style="margin-left: 2%;">Active</div>
+                                <div class="badge badge-pill badge-success font-14 infoData" style="margin-left: 2%;">{{user.status}}</div>
 
                         </div>
                         
-                        <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
-                        <div class="badge badge-pill badge-light font-14 infoData">Male</div>
-                        <div class="badge badge-pill badge-light font-14 infoData">30/12/1993</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">{{user.phone}}</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">{{user.gender}}</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">{{user.dob}}</div>
                         <hr>
-                        <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div>
-                        <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
+                        <div class="badge badge-pill badge-info font-14 infoData" >Referral : {{user.referral_code}}</div>
+                        <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : {{user.register_date | date:'short'}}</div>
                         <hr>
                         <div class="row text-center ">
                             <div class="col-4">
@@ -81,7 +80,7 @@
                             </div>
                             <div>
                                 <span>Sales Amount</span>
-                                <h3 class="font-medium m-b-0">£3,567</h3>
+                                <h3 class="font-medium m-b-0">£{{userSaleAmount}}</h3>
                             </div>
                         </div>
                     </div>
@@ -111,7 +110,7 @@
                             </div>
                             <div>
                                 <span>Booked Session</span>
-                                <h3 class="font-medium m-b-0">45</h3>
+                                <h3 class="font-medium m-b-0">{{userBookedSession}}</h3>
                             </div>
                         </div>
                     </div>

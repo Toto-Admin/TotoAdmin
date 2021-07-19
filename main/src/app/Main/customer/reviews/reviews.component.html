@@ -4,102 +4,24 @@
            
             <div class="comment-widgets">
                 <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row m-t-0">
+                <div class="d-flex flex-row comment-row m-t-0" *ngFor="let item of reviewList">
                     <div class="p-2">
-                        <img src="assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle">
+                        <img src="{{baseUrl}}{{item.profile_pic}}" alt="user" width="50" class="rounded-circle">
                     </div>
-                    <div class="comment-text w-100">
-                        <h6 class="font-medium">James Anderson</h6>
-                        <span class="m-b-15 d-block">jamesaderson@gmail.com</span>
+                    <div class="comment-text w-100" >
+                        <h6 class="font-medium">{{item.first_name}} {{item.last_name}}</h6>
+                        <!-- <span class="m-b-15 d-block">jamesaderson@gmail.com</span> -->
                         <div class="comment-footer">
-                            <span class="text-muted float-right">13/05/2021, 5:08 AM</span>
-                            <span class="label label-rounded label-primary"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span></span>
-                           
+                            <span class="text-muted float-right">{{item.created_at | date : 'short'}}</span>
+                            <span class="label label-rounded label-primary">
+                            <span class="fa fa-star {{1 <= item.rate? 'checked' : ''}}"></span>
+                            <span class="fa fa-star {{2 <= item.rate? 'checked' : ''}}"></span>
+                            <span class="fa fa-star {{3 <= item.rate? 'checked' : ''}}"></span>
+                            <span class="fa fa-star {{4 <= item.rate? 'checked' : ''}}"></span>
+                            <span class="fa fa-star {{5 <= item.rate? 'checked' : ''}}"></span></span>
                         </div>
                     </div>
                 </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="p-2">
-                        <img src="assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle">
-                    </div>
-                    <div class="comment-text active w-100">
-                        <h6 class="font-medium">Michael Jorden</h6>
-                        <span class="m-b-15 d-block">michaeljorden@gmail.com</span>
-                        <div class="comment-footer ">
-                            <span class="text-muted float-right">13/05/2021, 5:08 AM</span>
-                            <span class="label label-success label-rounded"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span></span>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="p-2">
-                        <img src="assets/images/users/5.jpg" alt="user" width="50" class="rounded-circle">
-                    </div>
-                    <div class="comment-text w-100">
-                        <h6 class="font-medium">Johnathan Doeting</h6>
-                        <span class="m-b-15 d-block">johnathandoeting@gmail.com</span>
-                        <div class="comment-footer">
-                            <span class="text-muted float-right">13/05/2021, 5:08 AM</span>
-                            <span class="label label-rounded label-danger"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span></span>
-                           
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="p-2">
-                        <img src="assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle">
-                    </div>
-                    <div class="comment-text w-100">
-                        <h6 class="font-medium">James Anderson</h6>
-                        <span class="m-b-15 d-block">jamesaderson@gmail.com </span>
-                        <div class="comment-footer">
-                            <span class="text-muted float-right">13/05/2021, 5:08 AM</span>
-                            <span class="label label-rounded label-primary"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span></span>
-                           
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
-                <!-- Comment Row -->
-                <div class="d-flex flex-row comment-row">
-                    <div class="p-2">
-                        <img src="assets/images/users/4.jpg" alt="user" width="50" class="rounded-circle">
-                    </div>
-                    <div class="comment-text active w-100">
-                        <h6 class="font-medium">Michael Jorden</h6>
-                        <span class="m-b-15 d-block">michaeljorden@gmail.com</span>
-                        <div class="comment-footer ">
-                            <span class="text-muted float-right">13/05/2021, 5:08 AM</span>
-                            <span class="label label-success label-rounded"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span></span>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Comment Row -->
             </div>
         </div>
     </div>

@@ -36,7 +36,8 @@ export class PaymentDetailComponent implements OnInit {
       processing: true,
       lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, 'All']],
       ajax: (dataTablesParameters: any, callback) => {
-        this.payementService.getAllPayments({ page: dataTablesParameters.draw, limit: dataTablesParameters.length }).then(data => {
+        let page = dataTablesParameters.start / dataTablesParameters.length;
+        this.payementService.getAllPayments({ page: page, limit: dataTablesParameters.length }).then(data => {
           console.log(dataTablesParameters);
           callback({
             recordsTotal: data.meta.total,

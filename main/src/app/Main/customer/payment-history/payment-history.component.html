@@ -1,6 +1,6 @@
 <br>
 <div class="table-responsive">
-    <table class="table">
+    <table class="table" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
         <thead>
             <tr class="bg-light">
                 <th class="border-top-0 backgroundColor tdLeft">JOB ID</th>
@@ -15,12 +15,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">101</a></td>
-                <td class="tdLeft"><a [routerLink]="['/payment/details']">101Se3#42qwe!WER</a></td>
-                <td class="tdLeft">Tv</td>
-                <td class="tdLeft">Debit</td>
-                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>29</td>
+            <tr *ngFor="let item of paymentList">
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">{{item.job.id}}</a></td>
+                <td class="tdLeft"><a [routerLink]="['/payment/details']">{{item.payment_gateway_id}}</a></td>
+                <td class="tdLeft">{{item.job.service.name}}</td>
+                <td class="tdLeft">{{item.description}}</td>
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>{{item.amount}}</td>
                
                 <!-- <td class="tdRight">
                     £40
@@ -31,54 +31,7 @@
                     <i class="ti-eye"></i></a>
                  </td>
             </tr>
-            <tr>
-                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">102</a></td>
-                <td class="tdLeft"><a [routerLink]="['/payment/details']">101Serr42qwe!WER</a></td>
-                <td class="tdLeft">Voice modulation</td>
-                <td class="tdLeft">Credit</td>
-                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20</td>
-             
-                <td class="tdCenter"><label class="label label-success">Paid</label></td>
-                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-            </tr>
-            <tr>
-                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">103</a></td>
-                <td class="tdLeft"><a [routerLink]="['/payment/details']">Se3#42qweWER</a></td>
-                <td class="tdLeft">Connectivity</td>
-                
-                <td class="tdLeft">Debit</td>
-                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>49</td>
-                <td class="tdCenter"><label class="label label-warning">Pending</label></td>
-                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-            </tr>
-            <tr>
-                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">104</a></td>
-                <td class="tdLeft"><a [routerLink]="['/payment/details']">1Se3#42qweWER</a></td>
-                <td class="tdLeft">Poor network</td>
-                <td class="tdLeft">Debit</td>
-                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20</td>
-               <td class="tdCenter"><label class="label label-warning">Pending</label></td>
-                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-            </tr>
-            <tr>
-                <td class="tdLeft"><a [routerLink]="['/jobs/jobview']">105</a></td>
-                <td class="tdLeft"><a [routerLink]="['/payment/details']">#QW42qweWER</a></td>
-                <td class="tdLeft">Tv</td>
-                <td class="tdLeft">Debit</td>
-                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>25</td>
-              
-             
-                <td class="tdCenter"><label class="label label-dark" >Refund</label></td>
-                <td class="tdCenter"><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-            </tr>
+            
            
         </tbody>
     </table>

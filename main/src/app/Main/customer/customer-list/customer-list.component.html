@@ -12,11 +12,14 @@
                     <a ngbNavLink>All</a>
                 </li>
                 <li [ngbNavItem]="2">
-                    <!-- <a ngbNavLink>Active</a> -->
-                    <button class="btn btn-info" (click)="excel()">Excel</button>
+                    <a ngbNavLink>Active</a>
+                    <!-- <button class="btn btn-info" (click)="excel()">Excel</button> -->
                 </li>
                 <li [ngbNavItem]="3">
                     <a ngbNavLink>Inactive</a>
+                </li>
+                <li [ngbNavItem]="4">
+                  <a ngbNavLink>On-boarding</a>
                 </li>
               </ul>
             </div>
@@ -29,7 +32,7 @@
                   <table datatable [dtOptions]="dtOptions" class="row-border hover table ">
                     <thead style="background: #92adfc;">
                       <tr>
-                        <th class="backgroundColor tdLeft">ID</th>
+                        <!-- <th class="backgroundColor tdLeft">ID</th> -->
                         <th class="backgroundColor tdLeft">NAME</th>
                         <th class="backgroundColor tdLeft">EMAIL</th>
                         <th class="backgroundColor tdLeft">MOBILE</th>
@@ -39,22 +42,12 @@
                         <th class="backgroundColor">ACTION</th>
                       </tr>
                     </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
                     <tbody>
                       <tr>
-                        <td class="tdLeft">1</td>
                         <td class="tdLeft"><div class="d-flex">
                           <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                           <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
+                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/516']">Sushant Patil</a></p>
                           </div>
                         </div></td>
                         <td class="tdLeft">sushantpatil@gmail.com</td>
@@ -65,243 +58,6 @@
                         <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
                           
                             <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">2</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Ashish Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">ashishpatil@gmail.com</td>
-                        <td class="tdLeft">8934234354</td>
-                        <td class="tdLeft">14/12/2020</td>
-                        <td class="tdLeft">	13/05/2021, 9:40 AM</td>
-                        <td><label class="label label-success">Active</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                          <i class="ti-eye"></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-          
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">3</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Pradhip Pawar</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">22/12/2020</td>
-                        <td class="tdLeft">	13/06/2021, 5:10 AM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">4</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sudhir Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">sudhirpawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/10/2020</td>
-                        <td class="tdLeft">	20/05/2021, 7:40 AM</td>
-                        <td><label class="label label-success">Active</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"> <i class="ti-eye"></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">5</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	13/07/2021, 7:40 AM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">6</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	13/05/2021, 4:40 PM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i>
-                        </a><a  [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">7</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	10/05/2021, 7:30 PM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye">
-
-                        </i></a><a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">8</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	01/05/2021, 12:40 AM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye">
-
-                        </i></a><a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">9</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	13/05/2021, 5:40 AM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">10</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	13/05/2021, 7:40 AM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">11</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	21/05/2021, 7:40 AM</td>
-                        <td><label class="label label-dark">Inactive</label></td>
-                        <td><a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a></td>
-                      </tr>
-                      <tr>
-                        <td class="tdLeft">12</td>
-                        <td class="tdLeft"><div class="d-flex">
-                          <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                          <div class="ml-3">
-                            <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                          </div>
-                        </div></td>
-                        <td class="tdLeft">pradhippawar@gmail.com</td>
-                        <td class="tdLeft">8459495933</td>
-                        <td class="tdLeft">12/12/2020</td>
-                        <td class="tdLeft">	13/05/2021, 7:40 AM</td>
-                        <td><label class="label label-dark">Inactive</label>
-                        </td>
-                        <td>
-                          <a [routerLink]="['/customer/view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
-                          <a [routerLink]="['/customer/edit']" href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
                                 <i class="ti-marker-alt"></i>
                             </a>
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">

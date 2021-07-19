@@ -1,9 +1,11 @@
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../user';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgbModal, NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
+import { CustomerService } from '../../Services/customer/customer.service';
+import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-customer-view',
@@ -12,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CustomerViewComponent implements OnInit {
 
-  @ViewChild('map4', { static: true }) map4:any = Object.create(null);
+  @ViewChild('map4', { static: true }) map4: any = Object.create(null);
 
   lat = -34.397;
   lng = 150.644;
@@ -21,7 +23,7 @@ export class CustomerViewComponent implements OnInit {
   zoom = 8;
   icon = {
     url: 'assets/images/users/5.jpg',
-    scaledSize: { width: 45, height: 45,  anchor : {x:19, y:19} }, labelOrigin:{x:12,y:27}
+    scaledSize: { width: 45, height: 45, anchor: { x: 19, y: 19 } }, labelOrigin: { x: 12, y: 27 }
   }
   img1 = "assets/images/users/5.jpg";
   styles: any = [
@@ -58,18 +60,19 @@ export class CustomerViewComponent implements OnInit {
 
 
   currentJustify = 'start';
-  active = 1;
+  active=1;
 
-  activeKeep = 1;
-  activeSelected = 1;
+  activeKeep=1;
+
+  activeSelected=1;
   disabled = true;
 
   
   tabs = [1, 2, 3, 4, 5];
   counter = this.tabs.length + 1;
-  activeDynamic = 1;
+  activeDynamic=1;
 
- 
+
 
   config: any;
   // editUser: FormGroup | null = null;
@@ -80,18 +83,52 @@ export class CustomerViewComponent implements OnInit {
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
   formsErrors = [];
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private router: Router,private activatedRoute: ActivatedRoute,) { 
+  user : any;
+  profile_file_exist: boolean | undefined;
+  ratingReview: any;
+  userSaleAmount: any;
+  userBookedSession: any;
+  constructor(private fb: FormBuilder, private modalService: NgbModal, private router: Router, private activatedRoute: ActivatedRoute, private userService : CustomerService) {
     this.activatedRoute.params.subscribe(params => {
-      debugger
-      this.active = Number(params['id']);
-      this.activeKeep = Number(params['id']);
-      this.activeSelected = Number(params['id']);
-      this.disabled = true;
 
-  
-      this.tabs = [1, 2, 3, 4, 5];
-      this.counter = this.tabs.length + 1;
-      this.activeDynamic = Number(params['id']);
+      this.userService.viewUser(parseInt(params.id)).then(user => {
+        this.user = user;
+        this.lat =  Number(this.user.lat);
+        this.lng =  Number(this.user.long);
+        this.latA =  Number(this.user.lat);
+        this.lngA =  Number(this.user.lngA);
+
+        console.log(this.user)
+        
+        // let data = _.map(user.preference, function (element) {
+        //   let event = {};
+        //   event['title'] = element.timeSlots.name;
+        //   event['date'] = element.date;
+        //   return event;
+        // });
+        // this.calendarEvents = this.calendarEvents.concat(data);
+      }).catch((error) => {
+        this.router.navigate(['/customers']);
+        // this.helper.errorMessage({ message: error.message });
+      });
+
+      this.userService.getUserBookedSession(parseInt(params.id)).then(count => {
+        this.userBookedSession = count;
+      }).catch((error) => {
+          // this.helper.errorMessage({ message: error.message });
+      });
+
+      this.userService.getUserSaleAmount(parseInt(params.id)).then(count => {
+          this.userSaleAmount = count;
+      }).catch((error) => {
+          // this.helper.errorMessage({ message: error.message });
+      });
+
+      this.userService.getReviewRating(parseInt(params.id)).then(data => {
+          this.ratingReview = data;
+      }).catch((error) => {
+          //this.helper.errorMessage({ message: error.message });
+      });
     })
   }
 
@@ -100,6 +137,7 @@ export class CustomerViewComponent implements OnInit {
       changeEvent.preventDefault();
     }
   }
+  
 
   toggleDisabled() {
     this.disabled = !this.disabled;
@@ -133,14 +171,14 @@ export class CustomerViewComponent implements OnInit {
       DateOfJoining: ['', Validators.required],
       Salary: ['', Validators.required],
       Projects: ['', Validators.required],
-  });
+    });
   }
 
 
   openModal(targetModal: NgbModal, user: User | null) {
     this.modalService.open(targetModal, {
-        centered: true,
-        backdrop: 'static'
+      centered: true,
+      backdrop: 'static'
     });
   }
   closeBtnClick() {

@@ -8,7 +8,7 @@ export const environment = {
   hmr       : false,
   apiUrl: '/api',
   deployUrl: '',
-  baseUrl: '',
+  baseUrl: 'http://localhost:3300/',
   graphQlUrl: 'http://localhost:3300/graphql',
   api_key: 'AIzaSyCyxMPQ3x9nvT7GGpgzYsbvPlP6esvbA-8'
 };

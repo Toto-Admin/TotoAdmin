@@ -1,6 +1,6 @@
 <br>
 <div class="table-responsive">
-    <table class="table">
+    <table class="table" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
         <thead>
             <tr class="bg-light">
                 <th class="border-top-0 backgroundColor tdLeft">JOB ID</th>
@@ -13,139 +13,24 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">101</a></td>
+            <tr *ngFor="let item of jobList">
+                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">{{item.id}}</a></td>
                 <td class="tdLeft">
                     <div class="d-flex align-items-center">
                         <div class="">
-                            <h4 class="m-b-0 font-16">New network setup</h4>
+                            <h4 class="m-b-0 font-16">{{item.service.name}}</h4>
                         </div>
                     </div>
                 </td>
                 <td class="tdLeft"><div class="d-flex">
                     <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
                     <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Smith</a></p>
+                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">{{(item.provider != null)? item.provider.first_name: '-'}}</a></p>
                     </div>
                   </div></td>
-                <td class="tdCenter"><label class="label label-dark">Remote</label></td>                          
+                <td class="tdCenter"><label class="label label-{{(item.title == 'On-site')? 'success' : 'dark'}}">{{item.title}}</label></td>                          
               
-                <td class="tdCenter"><label class="label label-success">Done</label></td>
-                <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-                
-            </tr>
-            <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">102</a></td>
-                <td class="tdLeft">
-                    <div class="d-flex align-items-center">
-                        <div class="">
-                            <h4 class="m-b-0 font-16">Poor network</h4>
-                        </div>
-                    </div>
-                </td>
-                <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Mark</a></p>
-                    </div>
-                  </div></td>
-               <td class="tdCenter"><label class="label label-dark">Remote</label></td>     
-              
-                <td class="tdCenter"><label class="label label-warning">Draft</label></td>
-                <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-                
-            </tr>
-            <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">103</a></td>
-                <td class="tdLeft">
-                    <div class="d-flex align-items-center">
-                        <div class="">
-                            <h4 class="m-b-0 font-16">Connectivity</h4>
-                        </div>
-                    </div>
-                </td>
-                <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Ronald King</a></p>
-                    </div>
-                  </div></td>
-                <td class="tdCenter"><label class="label label-success">On-site</label></td>                           
-                
-                <td class="tdCenter"><label class="label label-success">Done</label></td>
-                <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-                
-            </tr>
-            <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">104</a></td>
-                <td class="tdLeft">
-                    <div class="d-flex align-items-center">
-                        <div class="">
-                            <h4 class="m-b-0 font-16">Ac</h4>
-                        </div>
-                    </div>
-                </td>
-                <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Harry King</a></p>
-                    </div>
-                  </div></td>
-                <td class="tdCenter"><label class="label label-success">On-site</label></td>  
-              
-                <td class="tdCenter"><label class="label label-success">Done</label></td>
-                <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-                
-            </tr>
-            <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">105</a></td>
-                <td class="tdLeft">
-                    <div class="d-flex align-items-center">
-                        <div class="">
-                            <h4 class="m-b-0 font-16">New network connection</h4>
-                        </div>
-                    </div>
-                </td>
-                <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Jack Thomas</a></p>
-                    </div>
-                  </div></td>
-                <td class="tdCenter"><label class="label label-success">On-site</label></td>  
-                
-                <td class="tdCenter"><label class="label label-danger">Cancel</label></td>
-                <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
-                    <i class="ti-eye"></i></a>
-                 </td>
-                
-            </tr>
-            <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">106</a></td>
-                <td class="tdLeft">
-                    <div class="d-flex align-items-center">
-                        <div class="">
-                            <h4 class="m-b-0 font-16">New network setup</h4>
-                        </div>
-                    </div>
-                </td>
-                <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Jenny Wood</a></p>
-                    </div>
-                  </div></td>
-                <td class="tdCenter"><label class="label label-dark">Remote</label></td>  
-               
-                <td class="tdCenter"><label class="label label-success">Done</label></td>
+                <td class="tdCenter"><label class="label label-dark">{{item.status}}</label></td>
                 <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View">
                     <i class="ti-eye"></i></a>
                  </td>
