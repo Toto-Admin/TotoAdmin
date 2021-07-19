@@ -114,7 +114,13 @@ export class CategoriesComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   reStoreCat(ele: any) {
@@ -140,7 +146,13 @@ export class CategoriesComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
 

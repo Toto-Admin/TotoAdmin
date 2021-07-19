@@ -174,8 +174,13 @@ export class ServicesComponent implements OnInit {
         this.ServicesList = data.data;
         this.rerender();
       })
-    })
-    // .catch((error) => { })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   rerender(): void {

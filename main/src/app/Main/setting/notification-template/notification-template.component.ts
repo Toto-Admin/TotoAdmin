@@ -34,7 +34,13 @@ export class NotificationTemplateComponent implements OnInit {
       this.notificationList = data.data;
       console.log(this.notificationList)
       this.dtTrigger.next();
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      })
+    });
     
    }
   formsErrors = [];
@@ -131,7 +137,13 @@ export class NotificationTemplateComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
     //Submit and Update Notification Template
@@ -168,7 +180,13 @@ export class NotificationTemplateComponent implements OnInit {
           this.notificationList = data.data;
           this.rerender();
         })
-      })
+      }).catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: `${error}`,
+        }) 
+      });
     }
 
 }

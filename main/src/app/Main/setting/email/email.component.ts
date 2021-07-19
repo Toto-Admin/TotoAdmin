@@ -33,6 +33,12 @@ export class EmailComponent implements OnInit {
         to_email: settings.to_email,
         from_email: settings.from_email,
       });
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
     });
   }
 

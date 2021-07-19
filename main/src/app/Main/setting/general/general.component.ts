@@ -38,6 +38,12 @@ export class GeneralComponent implements OnInit {
         address: settings.address,
         fb_link: settings.fb_link
       });
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
     });
   }
 

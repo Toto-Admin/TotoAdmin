@@ -141,7 +141,13 @@ export class MobileContentComponent implements OnInit {
             })
           })
         }
-      })
+      }).catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: `${error}`,
+        }) 
+      });
     }
 
     rerender(): void {
@@ -185,7 +191,13 @@ export class MobileContentComponent implements OnInit {
         this.MobileContentList = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
 }

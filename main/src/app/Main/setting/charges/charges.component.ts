@@ -37,6 +37,12 @@ export class ChargesComponent implements OnInit {
         vat_charges: settings.vat_charges,
         poor_performance: settings.poor_performance,
       });
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
     });
   }
 

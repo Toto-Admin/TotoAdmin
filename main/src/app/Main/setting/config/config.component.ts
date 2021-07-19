@@ -30,6 +30,12 @@ export class ConfigComponent implements OnInit {
         stripe_private_key: settings.stripe_private_key,
         stripe_secrate_key: settings.stripe_secrate_key,
       });
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      })
     });
   }
 

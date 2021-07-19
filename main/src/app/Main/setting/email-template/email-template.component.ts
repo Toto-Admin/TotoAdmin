@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
   templateUrl: './email-template.component.html',
   styleUrls: ['./email-template.component.css']
 })
-export class EmailTemplateComponent  {
+export class EmailTemplateComponent  { 
   
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
@@ -32,7 +32,13 @@ export class EmailTemplateComponent  {
       this.emailService.get({page : 0,limit:100}).then(data=>{
         this.emailTemplateList = data.data;
         this.dtTrigger.next();
-      })
+      }).catch((error) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: `${error}`,
+        })
+      });
    }
   formsErrors = [];
   ngOnInit(): void {
@@ -121,7 +127,13 @@ export class EmailTemplateComponent  {
               'Email Template has been deleted.',
               'success'
             )
-          })
+          }).catch((error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: `${error}`,
+            }) 
+          });
         })
       }
     })
@@ -160,7 +172,13 @@ export class EmailTemplateComponent  {
         this.emailTemplateList = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
  
 }

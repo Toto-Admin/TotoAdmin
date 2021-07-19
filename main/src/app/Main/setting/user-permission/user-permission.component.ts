@@ -32,6 +32,12 @@ export class UserPermissionComponent implements OnInit {
     this.rolesService.getAllRoles().then(data => {
       this.roles = data;
       this.dtTrigger.next();
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      })
     });
    }
 

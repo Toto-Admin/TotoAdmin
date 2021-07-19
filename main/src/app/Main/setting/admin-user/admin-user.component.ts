@@ -162,7 +162,13 @@ export class AdminUserComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   blockUser(ele: any) {
@@ -188,7 +194,13 @@ export class AdminUserComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   activeUser(ele: any) {
@@ -214,7 +226,13 @@ export class AdminUserComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   onSubmit() {
@@ -257,7 +275,13 @@ export class AdminUserComponent implements OnInit {
         this.AdminUserList = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
 

@@ -71,6 +71,12 @@ export class InfoComponent implements OnInit {
         reliability_info: settings.reliability_info,
         correction_rate_info: settings.correction_rate_info,
       });
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      })
     });
   }
 

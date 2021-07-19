@@ -5,6 +5,7 @@ import { DataTableDirective } from 'angular-datatables';
 import { User } from '../user';
 import { Subject } from 'rxjs';
 import { EmailTemplateService } from '../../Services/settings/email-template.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-referral',
@@ -34,7 +35,13 @@ export class ReferralComponent implements OnInit {
         console.log(this.refferalList);
 
         this.dtTrigger.next()
-      })
+      }).catch((error) => {
+        Swal.fire({
+          icon: 'error', 
+          title: 'Error',
+          text: `${error}`,
+        }) 
+      });
    }
   formsErrors = [];
   ngOnInit(): void {

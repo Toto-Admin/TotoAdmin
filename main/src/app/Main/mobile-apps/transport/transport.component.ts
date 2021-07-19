@@ -130,7 +130,13 @@ export class TransportComponent implements OnInit {
           })
         })
       }
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
   }
 
   setImage($event : any) {
@@ -183,7 +189,13 @@ export class TransportComponent implements OnInit {
         this.transportList = data.data;
         this.rerender();
       })
-    })
+    }).catch((error) => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `${error}`,
+      }) 
+    });
 
   }
 }
