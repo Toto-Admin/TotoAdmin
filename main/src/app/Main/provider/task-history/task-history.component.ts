@@ -1,4 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProviderService } from '../../Services/provider/provider.service';
+import { DataTableDirective } from 'angular-datatables';
+import { Subject } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-task-history',
@@ -6,8 +11,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./task-history.component.css']
 })
 export class TaskHistoryComponent{
-
+  jobList : any;
+  dtTrigger: Subject<any> = new Subject();
+  dtOptions: DataTables.Settings = {};
+  @ViewChild(DataTableDirective, { static: false })
+  datatableElement!: DataTableDirective;
   
+
   @ViewChild('map4', { static: true }) map4:any = Object.create(null);
   lat = -34.397;
   lng = 150.644;
@@ -54,5 +64,30 @@ export class TaskHistoryComponent{
       ]
     }
   ];
+
+  constructor(private activatedRoute: ActivatedRoute, private providerServices: ProviderService){
+    this.activatedRoute.params.subscribe((params: any) => {
+      if (params.id) {
+        this.providerServices.contractorJob(parseInt(params.id)).then(contractor => {
+            this.jobList = contractor.jobs;
+            console.log(this.jobList)
+        }).catch((error) => {
+            //this.helper.errorMessage({ message: error.message });
+        });
+      }
+    })
+  }
+
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 10,
+      ordering: true,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, 'All']],
+      columnDefs: [
+        { orderable: false, targets: -1 }
+      ]
+    };
+  }
 
 }

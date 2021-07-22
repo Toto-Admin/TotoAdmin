@@ -335,4 +335,38 @@ export class CustomerService {
       })
 
   }
+
+
+  addUser(request: any) {
+
+
+    return this.apollo.mutate({
+        mutation: gql`
+            mutation addUserAdmin($request: UserInput!){
+                data : addUserAdmin(input : $request){
+                    message
+                }
+            }
+        `,
+        variables: {
+            request
+        }
+    })
+        .pipe(
+            map((resp: any) => {
+                console.log(resp, 'resp');
+                return resp.data.data;
+            }),
+            catchError((error) => {
+                return throwError(JSON.parse(JSON.stringify(error)));
+            })
+        )
+        .toPromise()
+        .then((data: any) => {
+            return data;
+        }).catch((error) => {
+            error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
+            throw error;
+        })
+}
 }

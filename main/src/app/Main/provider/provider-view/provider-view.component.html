@@ -16,26 +16,25 @@
                     <!-- column -->
                     <div class="col-lg-4" style="text-align: center;">
                         <div class="profile-pic m-b-20 m-t-20">
-                            <img src="assets/images/users/5.jpg" width="120" class="rounded-circle" alt="user" />
-                            <h4 class="m-t-20 m-b-0">Daniel King</h4>
-                            <a href="mailto:danielkristeen@gmail.com">danielking@gmail.com</a><br>
-                            <label>Royal Mail
-                                Flat 9, Wheatstone House</label><br>
+                            <img src="{{profile_file}}" width="120" class="rounded-circle" alt="user" />
+                            <h4 class="m-t-20 m-b-0">{{contractor.first_name}} {{contractor.last_name}}</h4>
+                            <a href="mailto:danielkristeen@gmail.com">{{contractor.email}}</a><br>
+                            <label>{{contractor.address}}</label><br>
                             <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span><span></span>
-                                <div class="badge badge-pill badge-success font-14 infoData" style="margin-left: 2%;">Active</div>
+                                <div class="badge badge-pill badge-success font-14 infoData" style="margin-left: 2%;">{{contractor.status}}</div>
 
                         </div>
                         
-                        <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
-                        <div class="badge badge-pill badge-light font-14 infoData">Male</div>
-                        <div class="badge badge-pill badge-light font-14 infoData">30/12/1993</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">{{contractor.phone}}</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">{{contractor.gender}}</div>
+                        <div class="badge badge-pill badge-light font-14 infoData">{{contractor.dob}}</div>
                         <hr>
-                        <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div>
-                        <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
+                        <div class="badge badge-pill badge-info font-14 infoData" >Referral : {{contractor.referral_code}}</div>
+                        <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : {{contractor.register_date | date : 'short'}}</div>
                         <hr>
                         <div class="row text-center ">
                             <div class="col-4">
@@ -79,7 +78,7 @@
                             </div>
                             <div>
                                 <span>Jobs</span>
-                                <h3 class="font-medium m-b-0">100</h3>
+                                <h3 class="font-medium m-b-0">{{assignJobCount}}</h3>
                             </div>
                         </div>
                     </div>
@@ -94,7 +93,7 @@
                             </div>
                             <div>
                                 <span>Revenue</span>
-                                <h3 class="font-medium m-b-0">250</h3>
+                                <h3 class="font-medium m-b-0">{{contractorRevenue}}</h3>
                             </div>
                         </div>
                     </div>

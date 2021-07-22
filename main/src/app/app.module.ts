@@ -93,7 +93,7 @@ const icons = {
     RouterModule.forRoot(Approutes, { relativeLinkResolution: 'legacy' }),
     PerfectScrollbarModule,
     NgMultiSelectDropDownModule.forRoot(),
-    AgmCoreModule.forRoot({ apiKey: 'AIzaSyDoliAneRffQDyA7Ul9cDk3tLe7vaU4yP8' }),
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyCyxMPQ3x9nvT7GGpgzYsbvPlP6esvbA-8' }),
     AuthModule,
     JwtModule.forRoot({
       config:{

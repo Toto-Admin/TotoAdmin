@@ -1,47 +1,59 @@
 <!-- //most recent job booking -->
 <div class="row">
   <div class="col-12">
-      <div class="card card-body">
+    <div class="card card-body">
 
-          <!-- title -->
-          <div class="d-md-flex align-items-center">
-              <div>
-                  <!-- <h4 class="card-title"></h4> -->
-              </div>
-          </div>
-          <!-- title -->
-          <agm-map [latitude]="lat"  [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
-            <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                <agm-info-window><a [routerLink]="['/jobs/jobview']">101</a><P>Pune</P></agm-info-window>
-            </agm-marker>
-            <agm-marker [latitude]="latA" [longitude]="lngA"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                <agm-info-window><a [routerLink]="['/jobs/jobview']">102</a><P>Banglore</P></agm-info-window>
-            </agm-marker>
-            <agm-marker [latitude]="latB" [longitude]="lngB"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                <agm-info-window><a [routerLink]="['/jobs/jobview']">103</a> <P>Mysore</P></agm-info-window>
-            </agm-marker>
-            <agm-marker [latitude]="latC" [longitude]="lngC"  [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
-                <agm-info-window><a [routerLink]="['/jobs/jobview']">104</a><P>Delhi</P> </agm-info-window>
-            </agm-marker>
-         
-        </agm-map>
+      <!-- title -->
+      <div class="d-md-flex align-items-center">
+        <div>
+          <!-- <h4 class="card-title"></h4> -->
+        </div>
       </div>
-  </div>
-  </div>
+      <!-- title -->
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" #map4>
+        <agm-marker [latitude]="lat" [longitude]="lng"
+          [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+          <agm-info-window><a [routerLink]="['/jobs/jobview']">101</a>
+            <P>Pune</P>
+          </agm-info-window>
+        </agm-marker>
+        <agm-marker [latitude]="latA" [longitude]="lngA"
+          [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+          <agm-info-window><a [routerLink]="['/jobs/jobview']">102</a>
+            <P>Banglore</P>
+          </agm-info-window>
+        </agm-marker>
+        <agm-marker [latitude]="latB" [longitude]="lngB"
+          [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+          <agm-info-window><a [routerLink]="['/jobs/jobview']">103</a>
+            <P>Mysore</P>
+          </agm-info-window>
+        </agm-marker>
+        <agm-marker [latitude]="latC" [longitude]="lngC"
+          [iconUrl]="{ url: 'img1', scaledSize: [20,20], origin: [0,0], anchoriconAnchor: [15,15] }">
+          <agm-info-window><a [routerLink]="['/jobs/jobview']">104</a>
+            <P>Delhi</P>
+          </agm-info-window>
+        </agm-marker>
 
-  <!-- //end map -->
+      </agm-map>
+    </div>
+  </div>
+</div>
+
+<!-- //end map -->
 <div>
-<div class="row">
+  <div class="row">
     <div class="col-12">
       <div class="card card-body">
-      
+
         <!-- <h4 class="card-title">Provider List</h4>
         <h5 class="card-subtitle">Here is the Provider list you can add, edit or delete the Provider</h5> -->
-        <div class="table-responsive">
+        <div datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
           <table class="table mb-0 no-wrap v-middle">
             <thead style="background: #92adfc;">
               <tr>
-                <th  scope="col"class="tdLeft backgroundColor tdLeft">JOB ID</th>
+                <th scope="col" class="tdLeft backgroundColor tdLeft">JOB ID</th>
                 <th scope="col" class="backgroundColor tdLeft">SERVICE</th>
                 <th scope="col" class="backgroundColor tdLeft">CUSTOMER</th>
                 <!-- <th scope="col" class="backgroundColor tdLeft">PROVIDER</th> -->
@@ -49,158 +61,29 @@
                 <th scope="col" class="backgroundColor tdCenter">TYPE</th>
                 <th scope="col" class="backgroundColor tdCenter">STATUS</th>
                 <th scope="col" class="backgroundColor tdRight">AMOUNT</th>
-               <th scope="col" class="backgroundColor tdCenter">ACTION</th>
-                
-                
-                <!-- <th scope="col">Action</th> -->
+                <th scope="col" class="backgroundColor tdCenter">ACTION</th>
               </tr>
             </thead>
             <tbody>
-              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-  
-                <td class="text-center">
-                  {{user.id}}
-                </td>
-  
-                <td>
-                  <div class="d-flex align-items-center">
-                    <img class="rounded-circle" [src]='user.imagePath' height=" 50px" width="50px">
+              <tr *ngFor="let item of jobList">
+                <td class="tdLeft"><a [routerLink]="['/jobs/jobview/item.id']">{{item.id}}</a></td>
+                <td class="tdLeft">{{item.service.name}}</td>
+                <td class="tdLeft">
+                  <div class="d-flex">
+                    <!-- <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px"> -->
                     <div class="ml-3">
-                      <p class="font-medium mb-0">{{ user.Name }}</p>
-                      <small>{{user.Position}}</small>
+                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view/item.user.id']">{{item.user.first_name}} {{item.user.last_name}}</a></p>
                     </div>
                   </div>
                 </td>
-                <td>{{ user.Email }}</td>
-  
-                <td>{{ user.Mobile }}</td>
-                <td>{{ user.DateOfJoining |date :'fullDate' }}</td>
-  
-                <td>{{ user.Salary }}</td>
-                <td>{{ user.Projects }}</td>
-                <td>
-                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
-                    placement="top" ngbTooltip="Edit">
-                    <i-feather name="edit-2" class="feather-sm"></i-feather>
-                  </a>
-                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
-                    ngbTooltip="Delete">
-                    <i-feather name="trash-2" class="feather-sm"></i-feather>
-                  </a>
+                <td class="tdLeft">{{item.service.duration}} {{item.service.price_type}}</td>
+                <td class="tdCenter"><label class="label label-{{(item.title == 'Remote')? 'dark' : 'success'}}">{{item.title}}</label></td>
+                <td class="tdCenter">{{item.status}}</td>
+                <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>{{item.service.price}}</td>
+                <td class="tdCenter"><a [routerLink]="['/jobs/jobview/item.id']" class="text-inverse p-r-10"
+                    data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>
                 </td>
-              </tr> -->
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">101</a></td>
-                  <td class="tdLeft">Poor wifi coverage</td>
-                  <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Polard Mark</a></p>
-                    </div>
-                  </div></td>
-                  <!-- <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">James Smith</a></p>
-                    </div>
-                  </div></td> -->
-                  <td class="tdLeft">1 Hour</td>
-                  <td class="tdCenter"><label class="label label-success">On-site</label></td>
-                  <td class="tdCenter">Publish</td>
-                  <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>29</td>
-                  <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a></td>
-                  
               </tr>
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">102</a></td>
-                  <td class="tdLeft">Tv</td>
-                  <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Jack Mark</a></p>
-                    </div>
-                  </div></td>
-                  <!-- <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Ronald Mark</a></p>
-                    </div>
-                  </div></td> -->
-                  <td class="tdLeft">1 Hour</td>
-                  <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                  <td class="tdCenter">Publish</td>
-                  <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>49</td>
-                  <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a></td>
-                  
-              </tr>
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">103</a></td>
-                  <td class="tdLeft">Network</td>
-                  <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sam Mark</a></p>
-                    </div>
-                  </div></td>
-                  <!-- <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Johan Smith</a></p>
-                    </div>
-                  </div></td> -->
-                  <td class="tdLeft">1 Hour</td>
-                  <td class="tdCenter"><label class="label label-success">On-site</label></td>
-                  <td class="tdCenter">Publish</td>
-                  <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>29</td>
-                  <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a></td>
-                  
-              </tr>
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">104</a></td>
-                  <td class="tdLeft">AC</td>
-                  <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Harry King</a></p>
-                    </div>
-                  </div></td>
-                  <!-- <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sam Wood</a></p>
-                    </div>
-                  </div></td> -->
-                  <td class="tdLeft">1 Hour</td>
-                  <td class="tdCenter"><label class="label label-success">On-site</label></td>
-                  <td class="tdCenter">Publish</td>
-                  <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>29</td>
-                  <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a></td>
-                  
-              </tr>
-              <tr>
-                <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">105</a></td>
-                  <td class="tdLeft">Mobile</td>
-                  <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Polard Mark</a></p>
-                    </div>
-                  </div></td>
-                  <!-- <td class="tdLeft"><div class="d-flex">
-                    <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">James Smith</a></p>
-                    </div>
-                  </div></td> -->
-                  <td class="tdLeft">2 Hour</td>
-                  <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                  <td class="tdCenter">Cancelled</td>
-                  <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>29</td>
-                  <td class="tdCenter"><a [routerLink]="['/jobs/jobview']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a></td>
-                  
-              </tr>
-             
-            
             </tbody>
           </table>
         </div>
@@ -211,7 +94,7 @@
     </div>
   </div>
 </div>
-  
+
 <!--   
   <ng-template #editUserModal let-modal>
   

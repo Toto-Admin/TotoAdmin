@@ -22,17 +22,17 @@ export class CustomerAddComponent implements OnInit {
     };
 
     this.regularForm = new FormGroup({
-      'inputFirstname':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
-      'inputLastname':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
-      'inputEmail': new FormControl(null, [Validators.required, Validators.email]),
+      'first_name':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
+      'last_name':new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*')]),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]),
-      'latitude':new FormControl(null,[Validators.required]),
-      'longitude':new FormControl(null,[Validators.required]),
-      'mobile':new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(10) , Validators.pattern("^[0-9]*$")]),
-      'referral':new FormControl(null,[Validators.required]),
+      // 'latitude':new FormControl(null,[Validators.required]),
+      // 'longitude':new FormControl(null,[Validators.required]),
+      // 'mobile':new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(10) , Validators.pattern("^[0-9]*$")]),
+      'address':new FormControl(null,[Validators.required]),
       'dob': new FormControl(null,[Validators.required]),
-      'pimg':new FormControl(null),
-      'radioOption': new FormControl('Option one is this')
+      'profile_pic':new FormControl(null),
+      'gender': new FormControl()
   }, {updateOn: 'blur'});
   }
 
@@ -44,11 +44,14 @@ export class CustomerAddComponent implements OnInit {
  
 
   onReactiveFormSubmit() {
-      this.regularForm.reset();
+    console.log(this.regularForm.value);
+    this.regularForm.reset();
   }
   cancelBtnClick(){
     this.router.navigate(['/customer/customer-list'])
   }
+
+  
  
 
 }

@@ -22,134 +22,25 @@
               </tr>
             </thead>
             <tbody>
-              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-  
-                <td class="text-center">
-                  {{user.id}}
-                </td>
-  
-                <td class="tdLeft">
-                  <div class="d-flex align-items-center">
-                    <img class="rounded-circle" [src]='user.imagePath' height=" 30px" width="30px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0">{{ user.Name }}</p>
-                      <small>{{user.Position}}</small>
-                    </div>
-                  </div>
-                </td>
-                <td class="tdLeft">{{ user.Email }}</td>
-  
-                <td class="tdLeft">{{ user.Mobile }}</td>
-                <td class="tdLeft">{{ user.DateOfJoining |date :'fullDate' }}</td>
-  
-                <td class="tdLeft">{{ user.Salary }}</td>
-                <td class="tdLeft">{{ user.Projects }}</td>
-                <td class="tdLeft">
-                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
-                    placement="top" ngbTooltip="Edit">
-                    <i-feather name="edit-2" class="feather-sm"></i-feather>
-                  </a>
-                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
-                    ngbTooltip="Delete">
-                    <i-feather name="trash-2" class="feather-sm"></i-feather>
-                  </a>
-                </td>
-              </tr> -->
-              <tr>
-                  <td class="tdLeft">1</td>
-                  <td class="tdLeft"><a [routerLink]="['/customer/view/1']">
-                    <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp;
-                    Johan Anderson
+              <tr *ngFor="let item of ratingReview; let i = index">
+                  <td class="tdLeft">{{i+1}}</td>
+                  <td class="tdLeft"><a href="#">
+                    <!-- <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/5.jpg">&nbsp; -->
+                    {{item.first_name}} {{item.last_name}}
                   </a></td>
-                  <td class="tdLeft">Ac service</td>
-                  <td class="tdLeft">13/10/2022, 4:40 AM</td>
+                  <td class="tdLeft">{{item.serviceName}}</td>
+                  <td class="tdLeft">{{item.created_at | date : 'short'}}</td>
                   <!-- <td class="tdLeft">12:03 PM</td> -->
-                  <td class="tdLeft"><span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span></td>
-                    <td><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
-                          
-                      <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                          <i class="ti-marker-alt"></i>
-                      </a>
-                      <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                          <i class="ti-trash"></i>
-                      </a> -->
-                    </td>
-               
-              </tr>
-             <tr> <td class="tdLeft">2</td>
-              <td class="tdLeft"><a [routerLink]="['/customer/view/1']">
-                <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
-                Johan Anderson
-              </a></td>
-              <td class="tdLeft">Mobile service</td>
-              <td class="tdLeft">10/05/2021, 3:50 PM</td>
-              <!-- <td class="tdLeft">1:03 PM</td> -->
-              <td class="tdLeft"><span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span></td>
-                <td><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
-                          
-                  <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                      <i class="ti-marker-alt"></i>
-                  </a>
-                  <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                      <i class="ti-trash"></i>
-                  </a> -->
-                </td>
-            </tr>
-            <tr> <td class="tdLeft">3</td>
-                <td class="tdLeft"><a [routerLink]="['/customer/view/1']">
-                  <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/3.jpg">&nbsp;
-                  Johan Anderson
-                </a></td>
-                <td class="tdLeft">Network setup</td>
-                <td class="tdLeft">03/08/2021, 7:40 PM</td>
-                <!-- <td class="tdLeft">11:03 PM</td> -->
-                <td class="tdLeft"><span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star "></span>
-                  <span class="fa fa-star"></span></td>
-                  <td><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
-                          
-                    <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                        <i class="ti-marker-alt"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                        <i class="ti-trash"></i>
-                    </a> -->
+                  <td class="tdLeft">
+                    <span class="fa fa-star" [ngClass]="1 <= item.rate ? 'checked' : ''"></span>
+                    <span class="fa fa-star" [ngClass]="2 <= item.rate ? 'checked' : ''"></span>
+                    <span class="fa fa-star" [ngClass]="3 <= item.rate ? 'checked' : ''"></span>
+                    <span class="fa fa-star" [ngClass]="4 <= item.rate ? 'checked' : ''"></span>
+                    <span class="fa fa-star" [ngClass]="5 <= item.rate ? 'checked' : ''"></span>
                   </td>
-              </tr>
-              <tr> <td class="tdLeft">4</td>
-                <td class="tdLeft"><a [routerLink]="['/customer/view/1']">
-                  <img  height=" 30px" width="30px" class="rounded-circle" src="assets/images/users/2.jpg">&nbsp;
-                  Johan Anderson
-                </a></td>
-                <td class="tdLeft">Poor wifi coverage</td>
-                <td class="tdLeft">13/05/2021, 7:40 AM</td>
-                <!-- <td class="tdLeft">09:03 PM</td> -->
-                <td class="tdLeft"><span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star "></span>
-                  <span class="fa fa-star"></span></td> 
-                  <td><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
-                          
-                    <!-- <a href="javascript:void(0)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                        <i class="ti-marker-alt"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                        <i class="ti-trash"></i>
-                    </a>-->
-                  </td> 
-              </tr>
-             
+                    <td><a [routerLink]="['/provider/provider-view/1']" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye "></i></a>
+                  </td>
+              </tr>  
             </tbody>
           </table>
         </div>

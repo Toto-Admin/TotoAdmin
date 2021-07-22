@@ -23,6 +23,10 @@
   .label-danger{
     font-weight: 800 !important;
   }
+
+  .label-info{
+    font-weight: 800 !important;
+  }
   
   .dataTables_filter input {
     border: 1px solid #b4b4b4 !important;

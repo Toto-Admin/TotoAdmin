@@ -1,229 +1,150 @@
-
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-      
-        <div class="table-responsive ">
-          <table class="table mb-0 no-wrap v-middle">
-            <thead style="background: #92adfc;">
-              <tr>
-                <th scope="col" class="backgroundColor tdLeft" >ID</th>
-                <th scope="col" class="backgroundColor tdLeft">NAME</th>
-                <th scope="col" class="backgroundColor tdLeft">TYPE</th>
-                <th scope="col" class="backgroundColor tdLeft">REJECT REASON</th>
-                <th scope="col" class="backgroundColor">VERIFIED</th>
-                <th scope="col" class="backgroundColor">STATUS</th>
-                <th scope="col" class="backgroundColor tdCenter">ACTION</th>
-                
-                
-                <!-- <th scope="col">Action</th> -->
-              </tr>
-            </thead>
-            <tbody>
-              <!-- <tr *ngFor="let user of filterArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-  
-                <td class="text-center">
-                  {{user.id}}
-                </td>
-  
-                <td>
-                  <div class="d-flex align-items-center">
-                    <img class="rounded-circle" [src]='user.imagePath' height=" 50px" width="50px">
-                    <div class="ml-3">
-                      <p class="font-medium mb-0">{{ user.Name }}</p>
-                      <small>{{user.Position}}</small>
-                    </div>
-                  </div>
-                </td>
-                <td>{{ user.Email }}</td>
-  
-                <td>{{ user.Mobile }}</td>
-                <td>{{ user.DateOfJoining |date :'fullDate' }}</td>
-  
-                <td>{{ user.Salary }}</td>
-                <td>{{ user.Projects }}</td>
-                <td>
-                  <a href="javascript: void(0);" (click)="openModal(editUserModal, user)" class="link mr-2"
-                    placement="top" ngbTooltip="Edit">
-                    <i-feather name="edit-2" class="feather-sm"></i-feather>
-                  </a>
-                  <a href="javascript: void(0);" class="link" (click)="deleteUser(user.id)" placement="top"
-                    ngbTooltip="Delete">
-                    <i-feather name="trash-2" class="feather-sm"></i-feather>
-                  </a>
-                </td>
-              </tr> -->
-              <tr>
-                  <td class="tdLeft">1</td>
-                  <td class="tdLeft">demo.docs</td>
-                  <td class="tdLeft">Dbs certificate</td>
-                  <td class="tdLeft">-</td>
-                  <td><i class="fas fa-check" style="color : green"></i></td>
-                  <td><label class="label label-success">Approved</label></td>
-                  <td class="tdCenter"><a href="javascript:void(0)" class="text-inverse" title="download" data-toggle="tooltip">
-                    <i class="ti-cloud-down"></i>
-                </a>
-                </td>
-               
-                  
-              </tr>
-              <tr>
-                <td class="tdLeft">2</td>
-                <td class="tdLeft">abc.jpg</td>
-                  <td class="tdLeft">Dbs certificate</td>
-                  <td class="tdLeft">Not correct document</td>
-                  <td><i class="fas fa-times" style="color : red"></i></td>
-                  <td><label class="label label-dark">Declined</label></td>
-              
-                  <td class="tdCenter"><a href="javascript:void(0)" class="text-inverse" title="download" data-toggle="tooltip">
-                    <i class="ti-cloud-down"></i>
-                </a>
-                </td>
-                
-            </tr>
+  <div class="col-12">
+    <div class="card card-body">
+
+      <div class="table-responsive ">
+        <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+          <thead style="background: #92adfc;">
             <tr>
-                <td class="tdLeft">3</td>
-                <td class="tdLeft">document.docs</td>
-                  <td class="tdLeft">Dbs certificate</td>
-                  <td class="tdLeft">-</td>
-                  <td><i class="fas fa-check" style="color : green"></i></td>
-                  <td><label class="label label-success">Approved</label></td>
-                  <td class="tdCenter"><a href="javascript:void(0)" class="text-inverse" title="download" data-toggle="tooltip">
-                    <i class="ti-cloud-down"></i>
-                </a>
-                </td>
-               
-            </tr> <tr>
-                <td class="tdLeft">4</td>
-                <td class="tdLeft">sample.pdf</td>
-                  <td class="tdLeft">Work permit</td>
-                  <td class="tdLeft">Not correct document</td>
-                  <td><i class="fas fa-times" style="color : red"></i></td>
-                  <td><label class="label label-dark">Declined</label></td>
-                  <td class="tdCenter"><a href="javascript:void(0)" class="text-inverse" title="download" data-toggle="tooltip">
-                    <i class="ti-cloud-down"></i>
-                </a>
-                </td>
+              <th scope="col" class="backgroundColor tdLeft">ID</th>
+              <th scope="col" class="backgroundColor tdLeft">NAME</th>
+              <th scope="col" class="backgroundColor tdLeft">TYPE</th>
+              <th scope="col" class="backgroundColor tdLeft">REJECT REASON</th>
+              <th scope="col" class="backgroundColor">VERIFIED</th>
+              <th scope="col" class="backgroundColor">STATUS</th>
+              <th scope="col" class="backgroundColor tdCenter">ACTION</th>
 
-            </tr> <tr>
-                <td class="tdLeft">5</td>
-                <td class="tdLeft">C620F5E.jpeg</td>
-                  <td class="tdLeft">Insurance</td>
-                  <td class="tdLeft">-</td>
-                  <td><i class="fas fa-check" style="color : green"></i></td>
-                  <td><label class="label label-success">Approved</label></td>
-                  <td class="tdCenter"><a href="javascript:void(0)" class="text-inverse" title="download" data-toggle="tooltip">
-                    <i class="ti-cloud-down"></i>
-                </a>
-                </td>
-                
 
-               
+              <!-- <th scope="col">Action</th> -->
             </tr>
-            
-            </tbody>
-          </table>
-        </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+          </thead>
+          <tbody>
+  
+            <tr *ngFor="let item of documentList; let i = index">
+              <td class="tdLeft">{{i+1}}</td>
+              <td class="tdLeft">{{item.name}}</td>
+              <td class="tdLeft">{{item.type}}</td>
+              <td class="tdLeft">{{item.rejectedReason == null ? '-' : item.rejectedReason}}</td> 
+              <!-- <td></td> -->
+              <td>
+                <i *ngIf="item.is_verified == false && item.isReject == false">-</i>
+                <i *ngIf="item.is_verified == false && item.isReject == true" class="ti-close red"></i>
+                <i *ngIf="item.is_verified == true && item.isReject == false" class="fas fa-check green"></i>
+              </td>
+              <td>
+                <label class="label label-warning" *ngIf="item.is_verified == false && item.isReject == false">Pending</label>
+                <label class="label label-dark" *ngIf="item.is_verified == false && item.isReject == true">Decline</label>
+                <label class="label label-success" *ngIf="item.is_verified == true">Approved</label>
+              </td>
+              <td class="tdCenter">
+                <i class="ti-check-box" (click)="documentVerification(item.id, true)" *ngIf="item.is_verified == false"></i>&nbsp;
+                <i class="ti-check-box" (click)="documentVerification(item.id, false)" *ngIf="item.is_verified == true" style="color : green"></i>&nbsp;
+                <a href="{{item.path}}" download class="text-inverse" title="download" data-toggle="tooltip">
+                  <i class="ti-cloud-down"></i>
+                </a>&nbsp;
+                <i class="ti-na" *ngIf="!item.is_verified" (click)="documentRejectDialogOpen(item.id)"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header">
-  
-      <h5 class="modal-title" id="editUserLabel">Add Provider</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-  
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">First Name</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
-              {{formsErrors.Name}}
-            </span>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Last Name</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Name">
-              {{formsErrors.Name}}
-            </span>
-          </div>
-        </div>
-  
-  
-        <div class="form-group row">
-          <label for="position" class="col-sm-4 col-form-label">Email</label>
-          <div class="col-sm-8">
-            <input type="email" class="form-control" formControlName="Position" id="position"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Position">
-              {{formsErrors.Position}}
-            </span>
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <label for="Password" class="col-sm-4 col-form-label">Password</label>
-          <div class="col-sm-8">
-            <input type="email" class="form-control" formControlName="Email" id="email"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Email">
-              {{formsErrors.Email}}
-            </span>
-          </div>
-        </div>
-  
-        <div class="form-group row">
-          <label for="mobile" class="col-sm-4 col-form-label">Mobile</label>
-          <div class="col-sm-8">
-            <input type="tel" class="form-control" formControlName="Mobile" id="mobile"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Mobile">
-              {{formsErrors.Mobile}}
-            </span>
-          </div>
-        </div>
-  
+</div>
 
-        <div class="form-group row">
-          <label for="projects" class="col-sm-4 col-form-label">Date of Birth</label>
-          <div class="col-sm-8">
-            <input type="Date" class="form-control" formControlName="Projects" id="projects"
-              (blur)=logValidationErrors(editUser)>
-            <span class="help-block" *ngIf="formsErrors.Projects">
-              {{formsErrors.Projects}}
-            </span>
-          </div>
-        </div> 
-  
-  
-  
-  
-  
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
-  
-          <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header">
+
+    <h5 class="modal-title" id="editUserLabel">Add Provider</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">First Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Name">
+            {{formsErrors.Name}}
+          </span>
         </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
+      </div>
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">Last Name</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="Name" id="name" (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Name">
+            {{formsErrors.Name}}
+          </span>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="position" class="col-sm-4 col-form-label">Email</label>
+        <div class="col-sm-8">
+          <input type="email" class="form-control" formControlName="Position" id="position"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Position">
+            {{formsErrors.Position}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="Password" class="col-sm-4 col-form-label">Password</label>
+        <div class="col-sm-8">
+          <input type="email" class="form-control" formControlName="Email" id="email"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Email">
+            {{formsErrors.Email}}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="mobile" class="col-sm-4 col-form-label">Mobile</label>
+        <div class="col-sm-8">
+          <input type="tel" class="form-control" formControlName="Mobile" id="mobile"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Mobile">
+            {{formsErrors.Mobile}}
+          </span>
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="projects" class="col-sm-4 col-form-label">Date of Birth</label>
+        <div class="col-sm-8">
+          <input type="Date" class="form-control" formControlName="Projects" id="projects"
+            (blur)=logValidationErrors(editUser)>
+          <span class="help-block" *ngIf="formsErrors.Projects">
+            {{formsErrors.Projects}}
+          </span>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Close</button>
+
+        <button type="submit" class="btn btn-primary" [disabled]="editUser.invalid">Save</button>
+      </div>
+
+
+    </form>
+  </div>
+</ng-template>

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'customer-list',component:CustomerListComponent,data: {title: 'Customer'}},
   {path:'view/:id',component:CustomerViewComponent,data: {title: 'Customer'}},
   {path: 'add',component:CustomerAddComponent,data: {title: 'Customer'}},
-  {path:'edit',component: CustomerEditComponent,data: {title: 'Customer'}}
+  {path:'edit/:id',component: CustomerEditComponent,data: {title: 'Customer'}}
 
   
 

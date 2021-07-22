@@ -7,10 +7,10 @@
         <div class="col-md-12">
           <ul ngbNav #nav="ngbNav" [(activeId)]="active" style="margin-left: -13px; color : black">
             <li [ngbNavItem]="1">
-                <a ngbNavLink>All</a>
+                <a ngbNavLink (click)="filterData('all')">All</a>
             </li>
             <li [ngbNavItem]="2">
-                <a ngbNavLink>Onboarding</a>
+                <a ngbNavLink (click)="filterData('on-boarding')">Onboarding</a>
             </li>
             <li [ngbNavItem]="3">
                 <a ngbNavLink="/provider-list">Schedule interview</a>
@@ -35,7 +35,7 @@
                 <table datatable [dtOptions]="dtOptions" class="row-border hover table">
                   <thead >
                     <tr>
-                      <th class="backgroundColor tdLeft">ID</th>
+                      <!-- <th class="backgroundColor tdLeft">ID</th> -->
                       <th class="backgroundColor tdLeft">NAME</th>
                       <th class="backgroundColor tdLeft">EMAIL</th>
                       <th class="backgroundColor tdLeft">MOBILE</th>
@@ -55,7 +55,7 @@
                     </tr>
                   </thead> -->
                   <tbody>
-                    <tr>
+                    <!-- <tr>
                       <td class="tdLeft">1</td>
                       <td class="tdLeft"><div class="d-flex">
                         <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
@@ -321,7 +321,7 @@
                             <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
                                 <i class="ti-trash"></i>
                             </a></td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>  
               </div>

@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from '../../Services/customer/customer.service';
 import {NgbNavChangeEvent} from '@ng-bootstrap/ng-bootstrap';
+import { param } from 'jquery';
 
 @Component({
   selector: 'app-customer-view',
@@ -88,9 +89,10 @@ export class CustomerViewComponent implements OnInit {
   ratingReview: any;
   userSaleAmount: any;
   userBookedSession: any;
+  activeID : any;
   constructor(private fb: FormBuilder, private modalService: NgbModal, private router: Router, private activatedRoute: ActivatedRoute, private userService : CustomerService) {
     this.activatedRoute.params.subscribe(params => {
-
+      this.activeID = params.id;
       this.userService.viewUser(parseInt(params.id)).then(user => {
         this.user = user;
         this.lat =  Number(this.user.lat);
@@ -187,6 +189,6 @@ export class CustomerViewComponent implements OnInit {
   }
 
   btnClick() {
-    this.router.navigate(['/customer/edit']);
+    this.router.navigate(['/customer/edit/'+this.activeID]);
   }
 }
