@@ -1,58 +1,40 @@
 
     <div class="row">
         <!-- Column -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card card-hover">
+        <div class="col-lg-3 col-md-6" *ngFor="let attachment of task" >
+            <div class="card card-hover"  *ngIf = "attachment?.type == 'image'">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-12">
-                            <img src="assets/tv2.jfif" alt="user" width="200px" height="200px">
+                        <div class="col-12" >
+                            <img [src]="attachment?.path" alt="user" width="200px" height="200px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-hover"  *ngIf = "attachment?.type == 'video'">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12" >
+                            <video width="320" height="240" controls>
+                                <source [src]="attachment?.path" type="video/mp4" />
+                                Browser not supported
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+           
+        </div>
+        <div class="col-lg-3 col-md-6"  *ngIf ="task">
+            <div class="card card-hover" >
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12" >
+                            No Data Found.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Column -->
-        <!-- Column -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card card-hover">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="assets/Air.jfif" alt="user" width="200px" height="200px">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Column -->
-        <!-- Column -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card card-hover">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="assets/mb1.jfif" alt="user" width="200px" height="200px">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Column -->
-        <!-- Column -->
-        <div class="col-lg-3 col-md-6">
-            <div class="card card-hover">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="assets/cell.jfif" alt="user" width="200px" height="200px">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Column -->
     </div>

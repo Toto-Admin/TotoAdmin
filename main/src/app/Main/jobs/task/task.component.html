@@ -18,16 +18,37 @@
                       <a ngbNavLink>All</a>
                   </li>
                   <li [ngbNavItem]="2">
-                      <a ngbNavLink>Pending</a>
+                      <a ngbNavLink>Draft</a>
                   </li>
                   <li [ngbNavItem]="3">
-                      <a ngbNavLink="/provider-list">Scheduled</a>
+                      <a ngbNavLink="/provider-list">Publish</a>
                   </li>
                   <li [ngbNavItem]="4">
-                      <a ngbNavLink="/provider-list">Completed</a>
+                      <a ngbNavLink="/provider-list">Active</a>
                   </li>
                   <li [ngbNavItem]="5">
-                      <a ngbNavLink="/provider-list">Cancelled</a>
+                      <a ngbNavLink="/provider-list">Scheduled</a>
+                  </li>
+                  <li [ngbNavItem]="6">
+                    <a ngbNavLink="/provider-list">Confirm</a>
+                  </li>
+                  <li [ngbNavItem]="7">
+                    <a ngbNavLink="/provider-list">On My Way</a>
+                  </li>
+                  <li [ngbNavItem]="8">
+                    <a ngbNavLink="/provider-list">Finish</a>
+                  </li>
+                  <li [ngbNavItem]="9">
+                    <a ngbNavLink="/provider-list">Completed</a>
+                  </li>
+                  <li [ngbNavItem]="10">
+                    <a ngbNavLink="/provider-list">Done</a>
+                  </li>
+                  <li [ngbNavItem]="11">
+                    <a ngbNavLink="/provider-list">Dispute</a>
+                  </li>
+                  <li [ngbNavItem]="12">
+                    <a ngbNavLink="/provider-list">Cancelled</a>
                   </li>
                 </ul>
             </div>
@@ -39,22 +60,23 @@
               <!-- <div class="card card-hover">
                 <div class="card-body"> -->
                   <div class="table-responsive">
-                    <table datatable [dtOptions]="dtOptions" class="row-border hover table" style="width:100%">
+                    <table datatable datatable [dtOptions]="dtOptions" class="row-border hover table ">
                       <thead >
                         <tr>
                           <th class="backgroundColor tdLeft">JOB ID</th>
                           <th class="backgroundColor tdLeft">SERVICE</th>
                           <th class="backgroundColor tdLeft">CUSTOMER</th>
                           <th class="backgroundColor tdLeft">PROVIDER</th>
-                          <th class="backgroundColor tdLeft">DURATION</th>
-                          <th class="backgroundColor tdLeft">Rating</th>
+                          <!-- <th class="backgroundColor tdLeft">DURATION</th>
+                          <th class="backgroundColor tdLeft">Rating</th> -->
                           <th class="backgroundColor ">TYPE</th>
                           <th class="backgroundColor">STATUS</th>
+                          <th class="backgroundColor">UPDATED AT</th>
                           <th class="backgroundColor">ACTION</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <!-- <tr>
                           <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">101</a></td>
                           <td class="tdLeft">Connectivity</td>
                           <td class="tdLeft"><div class="d-flex align-items-center">
@@ -77,234 +99,9 @@
                             <span class="fa fa-star"></span></td>
                             <td><label class="label label-success">On-site</label></td>
                             <td><label class="label label-success">Completed</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">102</a></td>
-                          <td class="tdLeft"> Voice modulation</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked "></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-success">On-site</label></td>
-                            <td><label class="label label-success">Completed</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>            
-                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">103</a></td>
-                          <td class="tdLeft">New network setup</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked "></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-success">On-site</label></td>
-                            <td><label class="label label-success">Completed</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">104</a></td>
-                          <td class="tdLeft">Internet speed</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked "></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-success">On-site</label></td>
-                            <td><label class="label label-success">Completed</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">105</a></td>
-                          <td class="tdLeft">Connectivity</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-dark">Remote</label></td>
-                            <td><label class="label label-warning">Scheduled</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">106</a></td>
-                          <td class="tdLeft">Poor wifi coverage</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-dark">Remote</label></td>
-                            <td><label class="label label-warning">Scheduled</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">107</a></td>
-                          <td class="tdLeft">Mobile hardware </td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Sushant Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">6 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star  "></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-dark">Remote</label></td>
-                            <td><label class="label label-danger">Cancelled</label></td>
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>
-                        </tr>
+                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>                       
+                       </tr> -->
                       
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">108</a></td>
-                          <td class="tdLeft">Stove repair</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/5.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Prathamesh Deasi</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Akashy Poundkar</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star  "></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-dark">Remote</label></td>
-                            <td><label class="label label-danger">Cancelled</label></td>
-
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>
-                        </tr>
-                        
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">109</a></td>
-                          <td class="tdLeft">Voice modulation</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/2.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Ashitosh Jadhav</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/4.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Pradip Sutar</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">2 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star  "></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star"></span></td>
-                            <td><label class="label label-dark">Remote</label></td>
-                            <td><label class="label label-danger">Cancelled</label></td>
-
-                            <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft" ><a [routerLink]="['/jobs/jobview']">110</a></td>
-                          <td class="tdLeft"> Poor wifi coverage</td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                            <img class="rounded-circle" src='assets/images/users/3.jpg' height=" 25px" width="25px">
-                            <div class="ml-3">
-                              <p class="font-medium mb-0"><a [routerLink]="['/customer/view/1']">Prakash Patil</a></p>
-                            </div>
-                          </div></td>
-                          <td class="tdLeft"><div class="d-flex align-items-center">
-                              <img class="rounded-circle" src='assets/images/users/1.jpg' height=" 25px" width="25px">
-                              <div class="ml-3">
-                                <p class="font-medium mb-0"><a [routerLink]="['/provider/provider-view/1']">Sushant Patil</a></p>
-                              </div>
-                            </div></td>
-                          <td class="tdLeft">3 hour</td>
-                          <td class="tdLeft"><span class="fa fa-star checked"></span>
-                            <span class="fa fa-star  "></span>
-                            <span class="fa fa-star  "></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star "></span></td>
-                            <td><label class="label label-dark">Remote</label></td>
-                            <td><label class="label" style="background-color: #6c757d;">Pending</label></td>
-
-                          <td data-toggle="tooltip" title="View" class="text-inverse p-r-10" ><a [routerLink]="['/jobs/jobview']"><i class="ti-eye"></i></a></td>
-                        </tr>
                       </tbody>
                     </table> 
                   </div> 

@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataTableDirective } from 'angular-datatables';
+import {Router,ActivatedRoute} from '@angular/router';
+import { Subject } from 'rxjs';
+import Swal from 'sweetalert2';
+//import services
+import { TaskService } from '../../Services/task/task.service';
 
 @Component({
   selector: 'app-reviews',
@@ -9,9 +14,34 @@ import { DataTableDirective } from 'angular-datatables';
 export class ReviewsComponent implements OnInit {
   @ViewChild(DataTableDirective, { static: false })
   datatableElement!: DataTableDirective;
-  dtOptions: DataTables.Settings = {};
-
-  constructor() { }
+  dtOptions: DataTables.Settings = {}; 
+  dtTrigger: Subject<any> = new Subject();
+  taskId :any;
+  task :any;
+  constructor(
+    private activatedRoute:ActivatedRoute,      
+    private router:Router, 
+    private taskService:TaskService,
+  ) {
+        this.activatedRoute.params.subscribe((params: any) => {
+        this.taskId = parseInt(params.id);
+        if (params.id) {
+          this.taskService.viewJob(this.taskId).then(job => {
+            this.task = job?.schedule;
+            this.dtTrigger.next();
+            console.log(this.task); 
+          }).catch((error) => {
+            console.log(error);  //this.loading = false;
+            this.router.navigate(['/jobs/task']);
+            Swal.fire({
+              icon: 'error',
+              title: "Job Not Found. Please Try Again.", 
+              text: `${error}`,
+            }) 
+          });
+        }
+      }) ;
+   }
   formsErrors = [];
   ngOnInit(): void {
     

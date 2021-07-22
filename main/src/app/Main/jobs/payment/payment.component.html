@@ -7,40 +7,21 @@
                         <table class="table table-hover">
                             <thead >
                                 <tr>
-                                    <th class="tdLeft backgroundColor">ID</th>
                                     <th class="tdLeft backgroundColor">TRANSACTION ID</th>
                                     <th class="tdLeft backgroundColor">PAYMENT TYPE</th>
                                     <th class="tdCenter backgroundColor">TYPE</th>
-                                    <th class="tdLeft backgroundColor">DATE</th>
                                     <th class="tdRight backgroundColor">AMOUNT</th>
+                                    <th class="tdLeft backgroundColor">DATE</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="tdLeft">1</td>
-                                    <td class="tdLeft">txn_1IeKjgAW3ioFkN7zMH6v</td>
-                                    <td class="tdLeft">Debit</td>
-                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                                    <td class="tdLeft"> 13/05/2021, 7:40 AM</td>
-                                    <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>13,848,00</td>
+                                <tr *ngFor="let item of task">
+                                    <td class="tdLeft"> {{item?.payment_gateway_id}}</td>
+                                    <td class="tdLeft">{{item?.description}}</td>
+                                    <td class="tdCenter"><label class="label label-dark"> {{item?.type}}</label></td>
+                                    <td class="tdRight"><i class="mdi mdi-currency-gbp"></i> €{{item?.amount}}</td>
+                                    <td class="tdLeft"> {{item?.created_at | date:'dd-MM-yyyy hh:mm a' }}</td>
                                     
-                                </tr>
-                                <tr>
-                                    <td class="tdLeft">2</td>
-                                    <td class="tdLeft">txn_1IeKjgAW3ioFkN7zMH6v</td>
-                                    <td class="tdLeft">Debit</td>
-                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                                    <td class="tdLeft"> 13/05/2021, 7:40 AM</td>
-                                    <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20,900,00</td>
-
-                                </tr>
-                                <tr>
-                                    <td class="tdLeft">3</td>
-                                    <td class="tdLeft">txn_1IeKjgAW3ioFkN7zMH6v</td>
-                                    <td class="tdLeft">Debit</td>
-                                    <td class="tdCenter"><label class="label label-dark">Remote</label></td>
-                                    <td class="tdLeft"> 13/05/2021, 7:40 AM</td>
-                                    <td class="tdRight"><i class="mdi mdi-currency-gbp"></i>20,900,00</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -52,14 +33,15 @@
     </div>
 </div>
 <div class="row" style="padding-left: 40px;">
-    <div class="col-md-6">         
+    <div class="col-md-6" *ngIf="paymentList">         
         <div class="pull-right m-t-30 ">
             <h4>Provider Payment</h4>
-            <p>Total amount:  <i class="mdi mdi-currency-gbp"></i>13,848</p>
-            <p>vat (10%) :  <i class="mdi mdi-currency-gbp"></i>138 </p>
+            <p>Total amount:  <i class="mdi mdi-currency-gbp"></i>€{{paymentList?.ServiceTotalAmount}}</p>
+            <p>Extra amount:  <i class="mdi mdi-currency-gbp"></i>€{{paymentList?.extraAmout}}</p>
+            <p>vat (10%) :  <i class="mdi mdi-currency-gbp"></i>-€{{paymentList?.adminVatFees}} </p>
             <hr>
             <h3>
-                <b>Total :</b> <i class="mdi mdi-currency-gbp"></i>13,986
+                <b>Total :</b> <i class="mdi mdi-currency-gbp"></i>€{{paymentList?.totalProviderFees}}
             </h3>
         </div>
         <div class="clearfix"></div>
@@ -69,13 +51,13 @@
         </div>
     </div>
     <div class="col-md-6">
-        <div class="pull-right m-t-30 ">
+        <div class="pull-right m-t-30 "  *ngIf="paymentList">
             <h4>Customer Payment</h4>
-            <p>Total amount:  <i class="mdi mdi-currency-gbp"></i>13,848</p>
-            <p>vat (10%) :  <i class="mdi mdi-currency-gbp"></i>138</p>
+            <p>Total amount:  <i class="mdi mdi-currency-gbp"></i>€{{paymentList?.totalSeekerFees}}</p>
+            <p>vat (10%) :  <i class="mdi mdi-currency-gbp"></i>€{{paymentList?.adminVatFees}}</p>
             <hr>
             <h3>
-                <b>Total :</b> <i class="mdi mdi-currency-gbp"></i>13,986
+                <b>Total :</b> <i class="mdi mdi-currency-gbp"></i>€{{paymentList?.totalSeekerPaid}}
             </h3>
         </div>
         <div class="clearfix"></div>

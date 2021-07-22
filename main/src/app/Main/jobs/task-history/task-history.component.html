@@ -35,7 +35,7 @@
     <div class="col-12">
 <div class="card card-body">
    <div class="table-responsive">
-          <table class="row-border hover table ">
+          <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table ">
             <thead>
               <tr>
                 <th scope="col" class=" backgroundColor tdLeft" >Date</th>
@@ -47,14 +47,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="tdLeft">03/23/2021</td>
-                <td class="tdLeft">12:00:00</td>
-                  <td class="tdLeft">Task start with in time</td>
-                  <td class="tdLeft">Afternoon</td>
-                  
-                  <td class="tdLeft">13/05/2021, 7:40 AM</td>
-                  <td class="tdLeft">13/05/2021, 5:40 PM</td>
+              <tr *ngFor="let scheduleData of task">
+                <td class="tdLeft">{{ (scheduleData?.date| date:'dd/MM/yyyy') || '-'}}</td>               
+                <td class="tdLeft">{{ (scheduleData?.timeSlots?.start_time ) || '-'}}</td>
+                <td class="tdLeft">{{ (scheduleData?.comment || '-' ) }}</td>
+                <td class="tdLeft">{{ scheduleData?.timeSlots?.name || '-'}}</td>
+                <td class="tdLeft">{{ (scheduleData?.timeSlots?.end_time) || '-'}}</td>
+                <td class="tdLeft">{{ (scheduleData?.created_at| date:'dd/MM/yyyy hh:mm a') || '-'}}</td>
               </tr>
             </tbody>
           </table>

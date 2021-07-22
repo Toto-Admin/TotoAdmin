@@ -379,4 +379,51 @@ export class PaymentService {
                 throw error;
             })
     }
+
+    viewJobPayment(id:any) {
+        return this.apollo.mutate({
+           fetchPolicy: 'no-cache',
+           mutation: gql`
+                   mutation jobTotalAmount($jobId:Int!){
+                       data : jobTotalAmount( jobId : $jobId){
+                           extraAmout
+                           extraPaidAmount
+                           ServiceTotalAmount
+                           ServicePayableAmout
+                           ServicePaidAmout
+                           SubTotalAmount
+                           isPaymentRemain
+                           adminSeekerFees
+                           adminProviderFees
+                           adminVatFees
+                           discountAmount
+                           totalProviderFees
+                           totalProviderPaid
+                           totalSeekerFees
+                           totalSeekerPaid
+                           referralCodeAmount
+                       }
+                   }
+               `,
+           variables: {
+               jobId: id
+           }
+       })
+           .pipe(
+               map((resp: any) => {
+                   return resp.data.data;
+               }),
+               catchError((error) => {
+                   return throwError(JSON.parse(JSON.stringify(error)));
+               })
+           )
+           .toPromise()
+           .then((data: any) => {
+               return data;
+           }).catch((error) => {
+               error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
+               throw error;
+           })
+   }
+
 }

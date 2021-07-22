@@ -21,7 +21,7 @@ const routes: Routes = [
     data: {title: 'Jobs'}
   },
   {
-    path:'jobview', component:JobDetailsComponent,
+    path:'jobview/:id', component:JobDetailsComponent,
     data: {title: 'Jobs'}
   },
   {

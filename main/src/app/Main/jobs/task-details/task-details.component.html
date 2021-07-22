@@ -7,18 +7,18 @@
         </div>
         <div class="card-body">
             <div class="profile-pic m-b-20 m-t-20">
-              <img src="assets/images/users/1.jpg" width="120" style="margin-left: 30%;" class="rounded-circle text-center" alt="Job Details" />
-              <h4 class="m-t-20 m-b-0">Poor Network Connection</h4>
-              <label>Price : <b class=" mdi mdi-currency-gbp">200</b></label><br><label>Price Type : <b>Hour</b></label><br>
-              <label>Promo Code : <b>ASD34R</b></label>
+              <img src="{{task?.service?.image}}" width="120" style="margin-left: 30%;" class="rounded-circle text-center" alt="Job Details" />
+              <h4 class="m-t-20 m-b-0">{{task?.service?.name}}</h4>
+              <label>Price : <b class=" mdi mdi-currency-gbp">{{task?.service?.price||"-"}}</b></label><br><label>Price Type : <b>{{task?.service?.price_type||"-"}}</b></label><br>
+              <label>Promo Code : <b>{{task?.promocodeUse?.promocode?.name||"-"}}</b></label>  
               <!-- <label>Type : <div class="badge badge-pill badge-success font-14 infoData">On-Site</div></label> -->
         </div>
           <div></div>
           <hr style="margin-top: 51px;">
-          <div class="badge badge-pill badge-warning font-14 infoData" style="margin-left: 0px;">Type : <b>On-Site</b></div>
-          <div class="badge badge-pill badge-success font-14 infoData">Status : <b>Completed</b></div>
+          <div class="badge badge-pill badge-warning font-14 infoData" style="margin-left: 0px;">Type : <b>{{task?.type||"-"}}</b></div>
+          <div class="badge badge-pill badge-success font-14 infoData">Status : <b>{{task?.status||"-" }}</b></div>
          
-        
+          
         </div>
       </div>
   </div>
@@ -31,9 +31,9 @@
       </div>
       <div class="card-body">
           <div class="profile-pic m-b-20 m-t-20">
-            <img src="assets/images/users/5.jpg" width="120" class="rounded-circle" alt="user" />
-            <h4 class="m-t-20 m-b-0"><a [routerLink]="['/customer/view/1']">Daniel Kristeen</a></h4>
-            <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a><br>
+            <img src="{{task?.user?.profile_pic || '--'}}" width="120" class="rounded-circle" alt="user" />
+            <h4 class="m-t-20 m-b-0"><a [routerLink]="['/customer/view/1']">{{task?.user?.first_name || "--"}}{{task?.user?.last_name}}</a></h4>
+            <a href="mailto:danielkristeen@gmail.com">{{task?.user?.email}}</a><br>
             <label>Royal Mail
                 Flat 9, Wheatstone House</label><br>
             <span class="fa fa-star checked"></span>
@@ -43,13 +43,13 @@
                 <span class="fa fa-star"></span>
         </div>
         
-        <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
-        <div class="badge badge-pill badge-light font-14 infoData">Male</div>
-        <div class="badge badge-pill badge-light font-14 infoData">30/12/1993</div><br>
+        <div class="badge badge-pill badge-light font-14 infoData">{{task?.user?.phone}}</div>
+        <div class="badge badge-pill badge-light font-14 infoData">{{task?.user?.gender}}</div>
+        <div class="badge badge-pill badge-light font-14 infoData">{{task?.user?.dob}}</div><br>
         <hr>
         <!-- <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div> -->
         <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
-        <div class="badge badge-pill badge-success font-14 infoData">Active</div>
+        <div class="badge badge-pill badge-success font-14 infoData">{{task?.user?.status|titlecase }}</div>
       </div>
     </div>
 </div>
@@ -62,9 +62,9 @@
     </div>
     <div class="card-body">
         <div class="profile-pic m-b-20 m-t-20">
-          <img src="assets/images/users/3.jpg" width="120" class="rounded-circle" alt="user" />
-          <h4 class="m-t-20 m-b-0"><a [routerLink]="['/provider/provider-view/1']">Daniel Kristeen</a></h4>
-          <a href="mailto:danielkristeen@gmail.com">danielkristeen@gmail.com</a><br>
+          <img src="{{task?.provider?.profile_pic}}" width="120" class="rounded-circle" alt="user" />
+          <h4 class="m-t-20 m-b-0"><a [routerLink]="['/provider/provider-view/1']">{{task?.provider?.first_name||"-"}}{{task?.provider?.last_name||"-"}}</a></h4>
+          <a href="mailto:danielkristeen@gmail.com">{{task?.provider?.email||"-"}}</a><br>
           <label>Royal Mail
               Flat 9, Wheatstone House</label><br>
           <span class="fa fa-star checked"></span>
@@ -74,13 +74,13 @@
               <span class="fa fa-star"></span>
       </div>
       
-      <div class="badge badge-pill badge-light font-14 infoData">020 7946 0581</div>
-      <div class="badge badge-pill badge-light font-14 infoData">Male</div>
-      <div class="badge badge-pill badge-light font-14 infoData">30/12/1993</div><br>
+      <div class="badge badge-pill badge-light font-14 infoData">{{task?.provider?.phone||"-"}}</div>
+      <div class="badge badge-pill badge-light font-14 infoData">{{task?.provider?.gender||"-"}}</div>
+      <div class="badge badge-pill badge-light font-14 infoData">{{task?.provider?.dob||"-"}}</div><br>
       <hr>
       <!-- <div class="badge badge-pill badge-info font-14 infoData" >Referral : 23423</div> -->
       <div class="badge badge-pill badge-warning font-14 infoData">Reg. Date : 12/12/2020</div>
-      <div class="badge badge-pill badge-success font-14 infoData">Active</div>
+      <div class="badge badge-pill badge-success font-14 infoData">{{(task?.provider?.status | titlecase )||"-"}}</div>
     </div>
   </div>
 </div>
