@@ -52,6 +52,7 @@ export class ChatsComponent implements OnInit {
   status : boolean = false;
   chatFinalData : any;
   chatMessageData : any;
+  chatNotExistsImages : boolean = false;
   userID : any;
   onNavChange(changeEvent: NgbNavChangeEvent) {
     if (changeEvent.nextId === 3) {
@@ -66,12 +67,22 @@ export class ChatsComponent implements OnInit {
         this.custdata=data;
         this.custdata.forEach((element:any)=>{
             // .owner_contactid =='6b6litzr'
+            console.log(element)
+        if(!element)
+        {
+            this.chatNotExistsImages = true;
+        }
+        else
+        {
+            this.chatNotExistsImages = false;
+        }
           if(element)
           {
-            // debugger
+            debugger
             var data : any = element;
             this.ProviderTicketsID.push(data);
 
+            
             if(this.ProviderTicketsID[0] !='')
             {
                 if(this.status == false){

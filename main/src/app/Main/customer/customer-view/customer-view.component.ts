@@ -80,6 +80,7 @@ export class CustomerViewComponent implements OnInit {
   userDetail: User | null = null;
 
   filterArray: User[] | null = null;
+  profile_file: any;
 
   joiningDate: string | null = null;
   editUser: FormGroup | null = null;
@@ -101,6 +102,12 @@ export class CustomerViewComponent implements OnInit {
         this.lngA =  Number(this.user.lngA);
 
         console.log(this.user)
+        if (this.user.profile_pic) {
+          this.profile_file = this.user.profile_pic;
+        }
+        else {
+          this.profile_file = 'assets/images/users/1.jpg';
+        }
         
         // let data = _.map(user.preference, function (element) {
         //   let event = {};

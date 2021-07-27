@@ -1,33 +1,32 @@
-
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Promo Code<span style="float: right;">
-            <button class="btn  backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        
-        <div class="">
-          <div class="row">
-            <div class="col-md-12 table-responsive">
-              <!-- <div class="card card-hover">
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Promo Code<span style="float: right;">
+          <button class="btn  backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
+      <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+
+      <div class="">
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table ">
-                    <thead >
-                      <tr>
-                        <th class="backgroundColor tdLeft">ID</th>
-                        <th class="backgroundColor tdLeft">NAME</th>
-                        <th class="backgroundColor tdRight">MAX USES</th>
-                        <th class="backgroundColor tdRight">MAX EACH USER</th>
-                        <th class="backgroundColor tdLeft">DISCOUNT TYPE</th>
-                        <th class="backgroundColor tdRight">IS FIXED</th>
-                        <th class="backgroundColor"><span style="margin-left: 10%;">DISCOUNT AMOUNT</span></th>
-                        <th class="backgroundColor tdRight">DISCOUNT IN %</th>
-                        <th class="backgroundColor tdLeft">STARTS AT</th>
-                        <th class="backgroundColor tdLeft">EXPIRES AT</th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table ">
+              <thead>
+                <tr>
+                  <!-- <th class="backgroundColor tdLeft">ID</th> -->
+                  <th class="backgroundColor tdLeft">NAME</th>
+                  <th class="backgroundColor tdRight">MAX USES</th>
+                  <th class="backgroundColor tdRight">MAX EACH USER</th>
+                  <th class="backgroundColor tdLeft">DISCOUNT TYPE</th>
+                  <th class="backgroundColor tdRight">IS FIXED</th>
+                  <th class="backgroundColor"><span style="margin-left: 10%;">DISCOUNT AMOUNT</span></th>
+                  <!-- <th class="backgroundColor tdRight">DISCOUNT IN %</th> -->
+                  <th class="backgroundColor tdLeft">STARTS AT</th>
+                  <th class="backgroundColor tdLeft">EXPIRES AT</th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+              <!-- <thead>
                       <tr>
                         <th><input type="text" placeholder="Search ID" name="search-id"/></th>
                         <th><input type="text" placeholder="Search name" name="search-name"/></th>
@@ -36,176 +35,107 @@
                         <th><input type="text" placeholder="Search status" name="search-status"/></th>
                       </tr>
                     </thead> -->
-                    <tbody>
-                        <tr>
-                          <td class="tdLeft">1</td>
-                          <td class="tdLeft">FESTIVE10</td>
-                          <td class="tdRight">10</td>
-                          <td class="tdRight">10</td>
-                          <td class="tdLeft">Fixed</td>
-                          <td class="tdRight">0</td>
-                          <td class="mdi mdi-currency-gbp tdRight">10</td>
-                          <td class="tdRight">-</td>
-                          <td class="tdLeft">02/04/2021</td>
-                          <td class="tdLeft">04/04/2021</td>
-                          <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                         </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft">2</td>
-                          <td class="tdLeft">Summerfest</td>
-                          <td class="tdRight">100</td>
-                          <td class="tdRight">10</td>
-                          <td class="tdLeft">Fixed</td>
-                          <td class="tdRight">1</td>
-                          <td class="mdi mdi-currency-gbp tdRight">30</td>
-                          <td class="tdRight">-</td>
-                          <td class="tdLeft">02/04/2021</td>
-                          <td class="tdLeft">04/04/2021</td>
-                          <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                         </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft">3</td>
-                          <td class="tdLeft">Seasonfest</td>
-                          <td class="tdRight">100</td>
-                          <td class="tdRight">05</td>
-                          <td class="tdLeft">Free</td>
-                          <td class="tdRight">1</td>
-                          <td class="mdi mdi-currency-gbp tdRight">50</td>
-                          <td class="tdRight">-</td>
-                          <td class="tdLeft">10/04/2021</td>
-                          <td class="tdLeft">15/04/2021</td>
-                          <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                         </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft">4</td>
-                          <td class="tdLeft">HOLIDAYSPIRIT
-                          </td>
-                          <td class="tdRight">120</td>
-                          <td class="tdRight">10</td>
-                          <td class="tdLeft">Fixed</td>
-                          <td class="tdRight">0</td>
-                          <td class="tdRight">-</td>
-                          <td class="tdRight">10</td>
-                          <td class="tdLeft">07/04/2021</td>
-                          <td class="tdLeft">11/04/2021</td>
-                          <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                         </td>
-                        </tr>
-                        <tr>
-                          <td class="tdLeft">5</td>
-                          <td class="tdLeft">Totofest</td>
-                          <td class="tdRight">200</td>
-                          <td class="tdRight">10</td>
-                          <td class="tdLeft">Free</td>
-                          <td class="tdRight">0</td>
-                          <td class="mdi mdi-currency-gbp tdRight">20</td>
-                          <td class="tdRight">-</td>
-                          <td class="tdLeft">07/04/2021</td>
-                          <td class="tdLeft">11/04/2021</td>
-                          <td>
-                            <a href="javascript:void(0)"  (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                <i class="ti-marker-alt"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                <i class="ti-trash"></i>
-                            </a>
-                         </td>
-                        </tr>
-                    </tbody>
-                  </table>  
-                <!-- </div>
+              <tbody>
+                <tr *ngFor="let item of promocodeList">
+                  <td class="tdLeft">{{item.name}}</td>
+                  <td class="tdRight">{{item.max_uses}}</td>
+                  <td class="tdRight">{{item.max_uses_user}}</td>
+                  <td class="tdLeft">{{item.discount_type}}</td>
+                  <td class="tdRight">{{(item.is_fixed == 1)? 'Yes' : 'No'}}</td>
+                  <td class="mdi mdi-currency-gbp tdRight">{{item.discount_amount}}</td>
+                  <!-- <td class="tdRight">-</td> -->
+                  <td class="tdLeft">{{item.starts_at | date : 'dd/MM/yyyy'}}</td>
+                  <td class="tdLeft">{{item.expires_at | date : 'dd/MM/yyyy'}}</td>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10"
+                      data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"
+                      (click)="deletePromoCode(item.id)">
+                      <i class="ti-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
-          
-          
         </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header ">
-  
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Promo Code</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-  
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter name here" (blur)=logValidationErrors(editUser)>
-            <!-- <span class="help-block" *ngIf="formsErrors.Name">
+</div>
+
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header ">
+
+    <h5 class="modal-title" id="editUserLabel">{{popupTitle}} Promo Code</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">Name<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="hidden" formControlName="id">
+          <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter name here"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
-            <small class="form-text text-danger"
+          <small class="form-text text-danger"
             *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
-            Name is required 
-            </small>
-          </div>
+            Name is required
+          </small>
         </div>
-        <div class="form-group row">
-          <label for="use" class="col-sm-4 col-form-label">Max Uses<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" formControlName="use" id="use" placeholder="Enter max uses" (blur)=logValidationErrors(editUser)>
-            <small class="form-text text-danger"
-            *ngIf="!editUser.get('use').valid && (editUser.get('use').dirty || editUser.get('use').touched)">
+      </div>
+      <div class="form-group row">
+        <label for="name" class="col-sm-4 col-form-label">Use<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="uses" id="uses" placeholder="Enter name here"
+            (blur)=logValidationErrors(editUser)>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="max_uses" class="col-sm-4 col-form-label">Max Uses<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="number" class="form-control" formControlName="max_uses" id="max_uses"
+            placeholder="Enter max uses" (blur)=logValidationErrors(editUser)>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('max_uses').valid && (editUser.get('max_uses').dirty || editUser.get('max_uses').touched)">
             This field is required
-            </small>
-           
-          </div>
+          </small>
+
         </div>
-        <div class="form-group row">
-          <label for="no_of_time" class="col-sm-4 col-form-label">Max Each User<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" formControlName="no_of_time" id="no_of_time"placeholder="Enter max each user" (blur)=logValidationErrors(editUser)>
-            <small class="form-text text-danger"
-            *ngIf="!editUser.get('no_of_time').valid && (editUser.get('no_of_time').dirty || editUser.get('no_of_time').touched)">
-            Max no. of time use field is required 
-            </small>
-          </div>
-          </div>
-          <!-- <div class="form-group row">
+      </div>
+      <div class="form-group row">
+        <label for="max_uses_user" class="col-sm-4 col-form-label">Max Each User<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="number" class="form-control" formControlName="max_uses_user" id="max_uses_user"
+            placeholder="Enter max each user" (blur)=logValidationErrors(editUser)>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('max_uses_user').valid && (editUser.get('max_uses_user').dirty || editUser.get('max_uses_user').touched)">
+            Max no. of time use field is required
+          </small>
+        </div>
+      </div>
+      <!-- <div class="form-group row">
             <label for="no_of_time_use" class="col-sm-4 col-form-label">Max No. of time use for user<span class="reqNote">*</span></label>
             <div class="col-sm-8">
               <input type="number" class="form-control" formControlName="no_of_time_use" id="no_of_time_use" (blur)=logValidationErrors(editUser)>
@@ -215,64 +145,77 @@
               </small>
             </div> 
             </div>-->
-            <div class="form-group row">
-              <label for="dis_type" class="col-sm-4 col-form-label">Discount Type<span class="reqNote">*</span></label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" formControlName="dis_type" id="dis_type"placeholder="Enter discount type"  (blur)=logValidationErrors(editUser)>
-                <small class="form-text text-danger"
-                *ngIf="!editUser.get('dis_type').valid && (editUser.get('dis_type').dirty || editUser.get('dis_type').touched)">
-                Discount type is required 
-                </small>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="dis_amt" class="col-sm-4 col-form-label">Discount Amount<span class="reqNote">*</span></label>
-              <div class="col-sm-8">
-                <input type="number" class="form-control" formControlName="dis_amt" id="dis_amt" placeholder="Enter discount amount" (blur)=logValidationErrors(editUser)>
-                <small class="form-text text-danger"
-                *ngIf="!editUser.get('dis_amt').valid && (editUser.get('dis_amt').dirty || editUser.get('dis_amt').touched)">
-                Discount amount is required 
-                </small>
-              </div>
-              </div>
+      <div class="form-group row">
+        <label for="discount_type" class="col-sm-4 col-form-label">Discount Type<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="discount_type" id="discount_type"
+            placeholder="Enter discount type" (blur)=logValidationErrors(editUser)>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('discount_type').valid && (editUser.get('discount_type').dirty || editUser.get('discount_type').touched)">
+            Discount type is required
+          </small>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="discount_amount" class="col-sm-4 col-form-label">Discount Amount<span
+            class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="number" class="form-control" formControlName="discount_amount" id="discount_amount"
+            placeholder="Enter discount amount" (blur)=logValidationErrors(editUser)>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('discount_amount').valid && (editUser.get('discount_amount').dirty || editUser.get('discount_amount').touched)">
+            Discount amount is required
+          </small>
+        </div>
+      </div>
 
-            <div class="form-group row">
-              <label for="desc" class="col-sm-4 col-form-label">Description</label>
-              <div class="col-sm-8">
-                <div class="form-group">
-                    <textarea class="form-control" rows="3" placeholder="Enter description here"></textarea>
-                </div>
-            </div>
-       </div>     
-        <div class="form-group row">
-          <label for="start_dt" class="col-sm-4 col-form-label">Start At<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="date" class="form-control" formControlName="start_dt" id="start_dt"  (blur)=logValidationErrors(editUser)>
-            <small class="form-text text-danger"
-            *ngIf="!editUser.get('start_dt').valid && (editUser.get('start_dt').dirty || editUser.get('start_dt').touched)">
-            Start date is required 
-            </small>
+      <div class="form-group row">
+        <label for="desc" class="col-sm-4 col-form-label">Description</label>
+        <div class="col-sm-8">
+          <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Enter description here" formControlName="description"></textarea>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="expire_dt" class="col-sm-4 col-form-label">Expire At<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="date" class="form-control" formControlName="expire_dt" id="expire_dt" (blur)=logValidationErrors(editUser)>
-            <small class="form-text text-danger"
-            *ngIf="!editUser.get('expire_dt').valid && (editUser.get('expire_dt').dirty || editUser.get('expire_dt').touched)">
-            Expire date is required 
-            </small>
+      </div>
+      <div class="form-group row">
+        <label for="desc" class="col-sm-4 col-form-label">Is-fixed</label>
+        <div class="col-sm-8">
+          <div class="form-group">
+            <input type="checkbox" class="form-control" formControlName="is_fixed">
           </div>
         </div>
-       
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-info" >Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
-  
-          
+      </div>
+      <div class="form-group row">
+        <label for="starts_at" class="col-sm-4 col-form-label">Start At<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" formControlName="starts_at" id="starts_at"
+            (blur)=logValidationErrors(editUser)>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('starts_at').valid && (editUser.get('starts_at').dirty || editUser.get('starts_at').touched)">
+            Start date is required
+          </small>
         </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
+      </div>
+      <div class="form-group row">
+        <label for="expires_at" class="col-sm-4 col-form-label">Expire At<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" formControlName="expires_at" id="expires_at"
+            (blur)=logValidationErrors(editUser)>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('expires_at').valid && (editUser.get('expires_at').dirty || editUser.get('expires_at').touched)">
+            Expire date is required
+          </small>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-info">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+
+
+      </div>
+
+
+    </form>
+  </div>
+</ng-template>

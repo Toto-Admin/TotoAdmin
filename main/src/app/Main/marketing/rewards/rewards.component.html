@@ -1,193 +1,124 @@
-
-
 <div class="row">
-    <div class="col-12">
-      <div class="card card-body">
-        <h4 class="card-title">Rewards<span style="float: right;">
-            <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null)">Add</button></span></h4>
-        <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
-        
-        <div class="">
-          <div class="row">
-            <div class="col-md-12 table-responsive">
-              <!-- <div class="card card-hover">
+  <div class="col-12">
+    <div class="card card-body">
+      <h4 class="card-title">Rewards<span style="float: right;">
+          <button class="btn backgroundColor ml-auto" (click)="openModal(editUserModal, null,'Add')">Add</button></span></h4>
+      <!-- <h5 class="card-subtitle">Here is the Customer list you can add, edit or delet the Customer</h5> -->
+
+      <div class="">
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <!-- <div class="card card-hover">
                 <div class="card-body"> -->
-                  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
-                    <thead >
-                      <tr>
-             
-                        <th class="backgroundColor tdLeft">OFFER</th>
-                        <th class="backgroundColor">IMAGE</th>
-                        <th class="backgroundColor"><span style="margin-left: 70%;">AMOUNT</span></th>
-                        <th class="backgroundColor">ACTION</th>
-                      </tr>
-                    </thead>
-                    <!-- <thead>
-                      <tr>
-                        <th><input type="text" placeholder="Search ID" name="search-id"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-name"/></th>
-                        <th><input type="text" placeholder="Search name" name="search-email"/></th>
-                        <th><input type="text" placeholder="Search mobile" name="search-mobile"/></th>
-                        <th><input type="text" placeholder="Search status" name="search-status"/></th>
-                      </tr>
-                    </thead> -->
-                    <tbody>
-                       <tr>
-                           <td class="tdLeft">Flat <i class="mdi mdi-currency-gbp"></i>200 off</td>
-                           <td><img height="30" width="30" src="assets/rw1.jpg" 
-                            class="ng-tns-c40-50 ng-star-inserted"></td>
-                            <td class="mdi mdi-currency-gbp tdRight">50</td>
-                            <td>
-                              <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                                  <i class="ti-marker-alt"></i>
-                              </a>
-                              <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                                  <i class="ti-trash"></i>
-                              </a>
-                          </td>
-                         
+            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover table">
+              <thead>
+                <tr>
 
-                       </tr>
-                    
-                    <tr>
-                        <td class="tdLeft">Free service</td>
-                        <td><img height="30" width="30" src="assets/rw4.jpg" 
-                         class="ng-tns-c40-50 ng-star-inserted"></td>
-                         <td class="mdi mdi-currency-gbp tdRight">30</td>
-                         <td>
-                          <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                              <i class="ti-marker-alt"></i>
-                          </a>
-                          <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                              <i class="ti-trash"></i>
-                          </a>
-                      </td>
-                     
-
-                    </tr>
-                    <tr>
-                      <td class="tdLeft">Flat 20% off</td>
-                      <td><img height="30" width="30" src="assets/rw3.jpg" 
-                       class="ng-tns-c40-50 ng-star-inserted"></td>
-                       <td class="mdi mdi-currency-gbp tdRight">30</td>
-                       <td>
-                        <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                            <i class="ti-marker-alt"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                            <i class="ti-trash"></i>
-                        </a>
-                      </td>
-                    
-                  </tr>
-                    <tr>
-                        <td class="tdLeft">60% off</td>
-                        <td><img height="30" width="30" src="assets/off.jpg" 
-                         class="ng-tns-c40-50 ng-star-inserted"></td>
-                         <td class="mdi mdi-currency-gbp tdRight">25</td>
-                         <td>
-                          <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                              <i class="ti-marker-alt"></i>
-                          </a>
-                          <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                              <i class="ti-trash"></i>
-                          </a>
-                       </td>
-                     
-
-                    </tr>
-                    <tr>
-                        <td class="tdLeft">20% discount</td>
-                        <td><img height="30" width="30" src="assets/dis.jpg" 
-                         class="ng-tns-c40-50 ng-star-inserted"></td>
-                         <td class="mdi mdi-currency-gbp tdRight">60</td>
-                         <td>
-                          <a href="javascript:void(0)" (click)="openModal(editUserModal, null)" class="text-inverse p-r-10" data-toggle="tooltip" title="Edit">
-                              <i class="ti-marker-alt"></i>
-                          </a>
-                          <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip">
-                              <i class="ti-trash"></i>
-                          </a>
+                  <th class="backgroundColor tdLeft">OFFER</th>
+                  <th class="backgroundColor">IMAGE</th>
+                  <th class="backgroundColor"><span style="margin-left: 70%;">AMOUNT</span></th>
+                  <th class="backgroundColor">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of rewardList">
+                  <td class="tdLeft">{{item.name}}</td>
+                  <td><img height="30" width="30" [src]="item.image" class="ng-tns-c40-50 ng-star-inserted"></td>
+                  <td class="mdi mdi-currency-gbp tdRight">{{item.amount}}</td>
+                  <td>
+                    <a href="javascript:void(0)" (click)="openModal(editUserModal, item,'Edit')" class="text-inverse p-r-10"
+                      data-toggle="tooltip" title="Edit">
+                      <i class="ti-marker-alt"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip" (click)="deleteReward(item.id)">
+                      <i class="ti-trash"></i>
+                    </a>
                   </td>
-
-                    </tr>
-                    </tbody>
-                  </table>  
-                <!-- </div>
+                </tr>
+              </tbody>
+            </table>
+            <!-- </div>
               </div> -->
-            </div>
           </div>
-          
-          
         </div>
-        <div class="d-flex justify-content-center mt-5">
-          <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
-        </div>
+
+
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <!-- <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="userList.length"></ngb-pagination> -->
       </div>
     </div>
   </div>
-  
-  
-  <ng-template #editUserModal let-modal>
-  
-    <div class="modal-header ">
-  
-      <h5 class="modal-title" id="editUserLabel">Add or Edit Rewards</h5>
-  
-      <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-  
-    </div>
-  
-    <div class="modal-body">
-  
-      <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
-  
-        <div class="form-group row">
-          <label for="name" class="col-sm-4 col-form-label">Offer<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="name" placeholder="Enter offer here" id="name" (blur)=logValidationErrors(editUser)>
-            <!-- <span class="help-block" *ngIf="formsErrors.Name">
+</div>
+
+
+<ng-template #editUserModal let-modal>
+
+  <div class="modal-header ">
+
+    <h5 class="modal-title" id="editUserLabel">{{popupTitle}} Rewards</h5>
+
+    <button type="button" class="close" (click)="closeBtnClick()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <form [formGroup]="editUser" (ngSubmit)="onSubmit()">
+
+      <div class="form-group row">
+        <input type="hidden" formControlName="id">
+        <label for="name" class="col-sm-4 col-form-label">Offer<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="name" placeholder="Enter offer here" id="name"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
-            <small class="form-text text-danger"
-              *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
-              Offer is required 
-              </small> 
-          </div>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('name').valid && (editUser.get('name').dirty || editUser.get('name').touched)">
+            Offer is required
+          </small>
         </div>
-        <div class="form-group row">
-          <label for="amt" class="col-sm-4 col-form-label">Amount<span class="reqNote">*</span></label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" formControlName="amt" id="amt" placeholder="Enter amount here" (blur)=logValidationErrors(editUser)>
-            <!-- <span class="help-block" *ngIf="formsErrors.Name">
+      </div>
+      <div class="form-group row">
+        <label for="amt" class="col-sm-4 col-form-label">Amount<span class="reqNote">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" formControlName="amount" id="amount" placeholder="Enter amount here"
+            (blur)=logValidationErrors(editUser)>
+          <!-- <span class="help-block" *ngIf="formsErrors.Name">
               {{formsErrors.Name}}
             </span> -->
-            <small class="form-text text-danger"
-              *ngIf="!editUser.get('amt').valid && (editUser.get('amt').dirty || editUser.get('amt').touched)">
-              Amount is required 
-              </small> 
-          </div>
+          <small class="form-text text-danger"
+            *ngIf="!editUser.get('amount').valid && (editUser.get('amount').dirty || editUser.get('amount').touched)">
+            Amount is required
+          </small>
         </div>
-        <div class="form-group row">
-          <label for="addimg" class="col-sm-4 col-form-label">Image</label>
-          <div class="col-sm-8">
-            <input type="file"  formControlName="addimg" id="addimg"
-              (blur)=logValidationErrors(editUser)>
-           
-          </div>
+      </div>
+      <div class="form-group row">
+        <label for="addimg" class="col-sm-4 col-form-label">Image</label>
+        <div class="col-sm-8">
+          <input type="file" formControlName="image" id="addimg" (change)="setImage($event)">
         </div>
-  
-        
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-info">Save</button>
-          <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
-  
-      
+      </div>
+      <div class="form-group row">
+        <label for="addimg" class="col-sm-4 col-form-label">Preview</label>
+        <div class="col-sm-8">
+          <img [src]="image" width="200" height="200">
         </div>
-  
-        
-      </form>
-    </div>
-  </ng-template>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-info">{{btnTitle}}</button>
+        <button type="button" class="btn btn-secondary" (click)="closeBtnClick()">Cancel</button>
+
+
+      </div>
+
+
+    </form>
+  </div>
+</ng-template>

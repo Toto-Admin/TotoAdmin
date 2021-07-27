@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { element } from 'protractor';
 import { Subject } from 'rxjs';
 import { SupportService } from '../../Services/support.service';
+import { DataTableDirective } from 'angular-datatables';
 
 @Component({
   selector: 'app-tickets',
@@ -13,7 +14,9 @@ import { SupportService } from '../../Services/support.service';
 export class TicketsComponent  {
 
   dtTrigger: Subject<any> = new Subject<any>();
-
+  dtOptions: DataTables.Settings = {};
+  @ViewChild(DataTableDirective, { static: false })
+  datatableElement!: DataTableDirective;
   editTicket: FormGroup | null = null;
   totalTicket : any;
   pending :number = 0;
@@ -33,7 +36,6 @@ export class TicketsComponent  {
        //  this.orignalTicketData = data;
        this.cust=data;
        this.custdata=this.cust;
-          console.log(this.custdata);
       
       this.custdata=data;
       this.custdata.forEach((element:any)=>{
@@ -53,7 +55,7 @@ export class TicketsComponent  {
           }
       
       });
-        this.dtTrigger.next();
+      this.dtTrigger.next();
     })
 
 
@@ -62,6 +64,17 @@ export class TicketsComponent  {
   ngOnDestroy(): void {
     // Do not forget to unsubscribe the event
     this.dtTrigger.unsubscribe();
+  }
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 10,
+      ordering: true,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, 'All']],
+      columnDefs: [
+        { orderable: false, targets: -1 }
+      ]
+    };
   }
    //Filter Data tab wise
    filterData(ele :any ,)

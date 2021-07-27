@@ -3,6 +3,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { param } from 'jquery';
 import { CustomerService } from '../../Services/customer/customer.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-customer-edit',
@@ -63,6 +64,8 @@ export class CustomerEditComponent implements OnInit {
           'status': user.status,
           'profile_pic': user.profile_pic,
         });
+
+        this.user.profile_pic = user.profile_pic;
       }).catch((error) => {
         //this.helper.errorMessage({ message: error.message });
       });
@@ -113,8 +116,12 @@ export class CustomerEditComponent implements OnInit {
       request.phone_verified = true;
       this.userService.addUser(request).then((data) => {
         // this.helper.successMessage({ message: data.message});
-        alert('Update data')
-        this.router.navigate(['/customers/view/'+this.activeID]);
+        Swal.fire(
+          'Updated!',
+          'Customer information has been updated.',
+          'success'
+        )        
+        this.router.navigate(['/customer/view/'+this.activeID]);
       }).catch((error) => {
         // this.helper.errorMessage({ message: error.message });
       })

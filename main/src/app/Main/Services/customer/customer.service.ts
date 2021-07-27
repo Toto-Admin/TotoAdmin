@@ -341,32 +341,125 @@ export class CustomerService {
 
 
     return this.apollo.mutate({
-        mutation: gql`
+      mutation: gql`
             mutation addUserAdmin($request: UserInput!){
                 data : addUserAdmin(input : $request){
                     message
                 }
             }
         `,
-        variables: {
-            request
-        }
+      variables: {
+        request
+      }
     })
-        .pipe(
-            map((resp: any) => {
-                console.log(resp, 'resp');
-                return resp.data.data;
-            }),
-            catchError((error) => {
-                return throwError(JSON.parse(JSON.stringify(error)));
-            })
-        )
-        .toPromise()
-        .then((data: any) => {
-            return data;
-        }).catch((error) => {
-            error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
-            throw error;
+      .pipe(
+        map((resp: any) => {
+          console.log(resp, 'resp');
+          return resp.data.data;
+        }),
+        catchError((error) => {
+          return throwError(JSON.parse(JSON.stringify(error)));
         })
-}
+      )
+      .toPromise()
+      .then((data: any) => {
+        return data;
+      }).catch((error) => {
+        error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
+        throw error;
+      })
+  }
+
+  blockContractor(request: any) {
+    return this.apollo.mutate({
+      mutation: gql`
+          mutation blockContractor($request: BlockContractorInput!){
+              data : blockContractor(input : $request){
+                  message
+              }
+          }
+      `,
+      variables: {
+        request
+      }
+
+    })
+      .pipe(
+        map((resp: any) => {
+          return resp.data.data;
+        }),
+        catchError((error) => {
+          return throwError(JSON.parse(JSON.stringify(error)));
+        })
+      )
+      .toPromise()
+      .then((data: any) => {
+        return data;
+      }).catch((error) => {
+        error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
+        throw error;
+      })
+  }
+
+
+  activeUser(id: any) {
+    return this.apollo.mutate({
+      mutation: gql`
+            mutation activeUser($id:Int!){
+                data : activeUser(id : $id){
+                    message
+                }
+            }
+        `,
+      variables: {
+        id
+      }
+    })
+      .pipe(
+        map((resp: any) => {
+          return resp.data.data;
+        }),
+        catchError((error) => {
+          return throwError(JSON.parse(JSON.stringify(error)));
+        })
+      )
+      .toPromise()
+      .then((data: any) => {
+        return data;
+      }).catch((error) => {
+        error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
+        throw error;
+      })
+  }
+
+  abusiveUser(id : any) {
+    return this.apollo.mutate({
+      mutation: gql`
+            mutation abusiveUser($id:Int!){
+                data : abusiveUser(id : $id){
+                    message
+                }
+            }
+        `,
+      variables: {
+        id
+      }
+
+    })
+      .pipe(
+        map((resp: any) => {
+          return resp.data.data;
+        }),
+        catchError((error) => {
+          return throwError(JSON.parse(JSON.stringify(error)));
+        })
+      )
+      .toPromise()
+      .then((data: any) => {
+        return data;
+      }).catch((error) => {
+        error = ((error.graphQLErrors && error.graphQLErrors[0]) ? error.graphQLErrors[0] : error);
+        throw error;
+      })
+  }
 }
