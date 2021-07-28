@@ -42,4 +42,4 @@ export class ActivityComponent implements OnInit {
 
   ngOnInit(): void {
   }
-}
+  }

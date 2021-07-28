@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'add',component:AddComponent,data:{title : 'Provider'}},
   {path:'tickets',component:TicketsComponent},
   {path:'chats',component:ChatsComponent},
-  {path:'edit/:id',component:EditComponent,data:{title : 'Provider'}},
+  {path:'add/:id',component:AddComponent,data:{title : 'Provider'}},
   {path:'assessment-click',component:AssessmentClickComponent}
 ];
 

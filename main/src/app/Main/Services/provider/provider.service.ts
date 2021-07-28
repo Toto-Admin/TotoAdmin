@@ -12,7 +12,7 @@ export const Fragments = {
           email
           role_id
           password
-          dob
+          dob 
           profile_pic
           gender
           status

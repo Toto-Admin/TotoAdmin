@@ -26,24 +26,24 @@ export class ProviderListComponent implements OnInit {
   editUser: FormGroup | null = null;
   dtOptions: DataTables.Settings = {};
 
-  constructor(private fb: FormBuilder,private modalService: NgbModal,private router:Router,private providerService : ProviderService) { }
+  constructor(
+    private fb: FormBuilder,
+    private modalService: NgbModal,
+    private router:Router,
+    private providerService : ProviderService
+    ) { }
 
   currentJustify = 'start';
   filterStatus = 'all';
-
   active=1;
-
   activeKeep=1;
-
   activeSelected=1;
-  disabled = true;
-
-  
+  disabled = true;  
   tabs = [1, 2, 3, 4, 5,6];
   counter = this.tabs.length + 1;
   activeDynamic=1;
-
   formsErrors = [];
+
   ngOnInit(): void {
     $('#backButton').hide();
 
@@ -125,7 +125,7 @@ export class ProviderListComponent implements OnInit {
           data: 'id',
           render: function (data : any) {
             // return '<a [routerLink]="["/payment/details"]" class="text-inverse p-r-10" data-toggle="tooltip" title="View"><i class="ti-eye"></i></a>';
-            return '<a href="/provider/provider-view/'+data+'"><i class="ti-eye"></i></a>   <a href="/provider/edit/'+data+'"><i class="ti-marker-alt"></i></a> <a href="/provider/edit/'+data+'"><i class="ti-trash"></i></a> <a href="/provider/edit/'+data+'"><i class="ti-na"></i></a>   <a href="/provider/edit/'+data+'"><i class="ti-face-sad"></i></a>'
+            return '<a href="/provider/provider-view/'+data+'"><i class="ti-eye"></i></a>   <a href="/provider/add/'+data+'"><i class="ti-marker-alt"></i></a> <a href="/provider/edit/'+data+'"><i class="ti-trash"></i></a> <a href="/provider/edit/'+data+'"><i class="ti-na"></i></a>   <a href="/provider/edit/'+data+'"><i class="ti-face-sad"></i></a>'
           }
         }
       ]
