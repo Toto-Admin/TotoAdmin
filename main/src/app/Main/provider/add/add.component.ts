@@ -133,38 +133,33 @@ export class AddComponent implements OnInit {
     //    if (this.regularForm.invalid) {
     //     return;
     // } else {
-    let request : any;
-    request.first_name = this.regularForm.value.first_name;
-    request.last_name = this.regularForm.value.last_name;
-    request.email = this.regularForm.value.email;
-    request.password = this.regularForm.value.password;
-    request.dob = this.regularForm.value.dob;
-    request.gender = this.regularForm.value.gender;
-    request.address = this.regularForm.value.address;
-    request.phone = this.regularForm.value.phone;
-    request.status = this.regularForm.value.status;
-    request.serviceId = this.regularForm.value.serviceId;
-    request.status = this.regularForm.value.status;
-    request.vatNum = this.regularForm.value.vatNum;
-    request.vatName = this.regularForm.value.vatName;
-    request.insurance_file = this.regularForm.value.insurance_file;
-    request.profile_pic = this.regularForm.value.profile_pic;
-    request.preference = this.regularForm.value.preference;
+
+    // let request = {
+    //   'id': 0,
+    //   'first_name': this.regularForm.value.first_name,
+    //   'last_name': this.regularForm.value.last_name,
+    //   'email': this.regularForm.value.email,
+    //   'password': this.regularForm.value.password,
+    //   'dob': this.regularForm.value.dob,
+    //   'gender': this.regularForm.value.gender,
+    //   'address': this.regularForm.value.address,
+    //   'phone': this.regularForm.value.phone,
+    //   'status': this.regularForm.value.status,
+    //   'serviceId': this.regularForm.value.serviceId,
+    //   'vatNum': this.regularForm.value.vatNum,
+    //   'vatName': this.regularForm.value.vatName,
+    //   'insurance_file': this.regularForm.value.insurance_file,
+    //   'profile_pic': this.regularForm.value.profile_pic,
+    //   'preference': this.regularForm.value.preference
+    // };
+    let request = this.regularForm.value;
     request.role_id = 3;
     request.saveType = 'admin';
     if (this.regularForm.value.id) {
       request.id = parseInt(this.regularForm.value.id);
+    }else{
+      request.id = 0;
     }
-
-    // if (request.id) {
-    //     request.isIssueRaised = this.issueRaised;
-    //     request.isRattingNegative = this.reviewRaised;
-    // }
-
-    // if (request.referral_code) {
-    //     request.referral_code = request.referral_code.toString();
-    // }
-
     if (this.provider.insurance_file) {
       request.insurance_file = this.provider.insurance_file;
     }
@@ -199,6 +194,7 @@ export class AddComponent implements OnInit {
         this.router.navigate(['/provider/provider-list']);
       })
       .catch(error => {
+        
         // this.helper.errorMessage({ message: error.message });
       });
     this.regularForm.reset();
